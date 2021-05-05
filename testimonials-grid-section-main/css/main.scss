@@ -1,0 +1,101 @@
+// Imports and Variables
+
+@import "reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+// Primary
+
+$violet: hsl(263, 55%, 52%);
+$grayish-blue: hsl(217, 19%, 35%);
+$blackish-blue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+
+// Neutral
+
+$light-gray: hsl(0, 0%, 81%);
+$light-grayish-blue: hsl(210, 46%, 95%);
+
+// Note for text colors:
+
+// 1. "Verified Graduate" has the same color as the person's name with 50% opacity
+// 2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+
+// Main SCSS
+
+body {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: $light-grayish-blue;
+}
+
+.container-outer {
+  margin: auto;
+}
+
+.container-testimonial {
+  margin: 2rem;
+  padding: 2rem;
+  color: $white;
+}
+
+.student-profile {
+  margin-bottom: 1rem;
+  display: flex;
+  img {
+    border-radius: 100%;
+    height: 2rem;
+    margin-right: 1.5rem;
+  }
+  p {
+    opacity: 1;
+    span {
+      display: block;
+      opacity: 0.5;
+    }
+  }
+}
+p.testimonial-text {
+  opacity: 0.7;
+  span {
+    display: block;
+    margin-bottom: 1rem;
+
+    font-size: 1.25em;
+    opacity: 100%; // WHY ISNT THIS WORKING!!!
+  }
+}
+
+// Styling for individual testimonials
+.container-testimonial {
+  &:nth-child(1) {
+    background-color: $violet;
+  }
+  &:nth-child(2) {
+    background-color: $grayish-blue;
+  }
+  &:nth-child(3),
+  &:nth-child(5) {
+    color: $blackish-blue;
+    background-color: $white;
+  }
+  &:nth-child(4) {
+    background-color: $blackish-blue;
+  }
+}
+
+.attribution {
+  margin: auto auto 1em auto;
+  text-align: center;
+  ul {
+    margin-top: 1em;
+    li {
+      display: inline-block;
+      margin: auto 1em;
+    }
+  }
+}
