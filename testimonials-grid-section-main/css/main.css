@@ -82,11 +82,12 @@ body {
 }
 
 .container-outer {
+  max-width: 75rem;
   margin: auto;
 }
 
 .container-testimonial {
-  margin: 2rem;
+  margin: 1rem;
   padding: 2rem;
   color: white;
   border-radius: 10px;
@@ -127,12 +128,8 @@ body {
   opacity: 0.9;
 }
 
-.container-testimonial:nth-child(odd) {
-  color: #19212e;
-  background-color: white;
-}
-
 .container-testimonial:nth-child(1) {
+  grid-area: one;
   color: white;
   background-color: #7541c8;
   background-image: url("/images/bg-pattern-quotation.svg");
@@ -141,11 +138,25 @@ body {
 }
 
 .container-testimonial:nth-child(2) {
+  grid-area: two;
   background-color: #48556a;
 }
 
+.container-testimonial:nth-child(3) {
+  grid-area: three;
+  color: #19212e;
+  background-color: white;
+}
+
 .container-testimonial:nth-child(4) {
+  grid-area: four;
   background-color: #19212e;
+}
+
+.container-testimonial:nth-child(5) {
+  grid-area: five;
+  color: #19212e;
+  background-color: white;
 }
 
 .attribution {
@@ -160,5 +171,21 @@ body {
 .attribution ul li {
   display: inline-block;
   margin: auto 1em;
+}
+
+@media screen and (min-width: 600px) {
+  .container-outer {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "one one two" "three four four" "five five five";
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .container-outer {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "one one one two five" "three four four four five";
+  }
 }
 /*# sourceMappingURL=main.css.map */

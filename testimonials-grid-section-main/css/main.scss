@@ -15,11 +15,6 @@ $white: hsl(0, 0%, 100%);
 $light-gray: hsl(0, 0%, 81%);
 $light-grayish-blue: hsl(210, 46%, 95%);
 
-// Note for text colors:
-
-// 1. "Verified Graduate" has the same color as the person's name with 50% opacity
-// 2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
-
 // Main SCSS
 
 body {
@@ -34,11 +29,12 @@ body {
 }
 
 .container-outer {
+  max-width: 75rem;
   margin: auto;
 }
 
 .container-testimonial {
-  margin: 2rem;
+  margin: 1rem;
   padding: 2rem;
   color: $white;
 
@@ -75,11 +71,8 @@ body {
 
 // Styling for individual testimonials
 .container-testimonial {
-  &:nth-child(odd) {
-    color: $blackish-blue;
-    background-color: $white;
-  }
   &:nth-child(1) {
+    grid-area: one;
     color: $white;
     background-color: $violet;
 
@@ -88,12 +81,26 @@ body {
     background-position-x: 80%;
   }
   &:nth-child(2) {
+    grid-area: two;
     background-color: $grayish-blue;
   }
+  &:nth-child(3) {
+    grid-area: three;
+    color: $blackish-blue;
+    background-color: $white;
+  }
   &:nth-child(4) {
+    grid-area: four;
     background-color: $blackish-blue;
   }
+  &:nth-child(5) {
+    grid-area: five;
+    color: $blackish-blue;
+    background-color: $white;
+  }
 }
+
+// FOOTER
 
 .attribution {
   margin: auto auto 1em auto;
@@ -104,5 +111,26 @@ body {
       display: inline-block;
       margin: auto 1em;
     }
+  }
+}
+
+// GRID / MEDIA QUERIES
+
+@media screen and (min-width: 600px) {
+  .container-outer {
+    display: grid;
+    grid-template-areas:
+      "one one two"
+      "three four four"
+      "five five five";
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .container-outer {
+    display: grid;
+    grid-template-areas:
+      "one one one two five"
+      "three four four four five";
   }
 }
