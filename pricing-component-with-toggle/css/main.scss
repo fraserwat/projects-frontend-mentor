@@ -1,0 +1,134 @@
+// IMPORTS AND VARIABLES
+
+@import "reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+$gradient: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+$v-light-gray-blue: hsl(240, 78%, 98%);
+$light-gray-blue: hsl(234, 14%, 74%);
+$gray-blue: hsl(233, 13%, 49%);
+$dark-gray-blue: hsl(232, 13%, 33%);
+
+$desktop-breakpoint: 870px;
+
+// MAIN CSS
+
+body {
+  color: $dark-gray-blue;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 100vw;
+
+  background-color: $v-light-gray-blue;
+  background-image: url("/images/bg-top.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-position-x: 50vw;
+  background-position-y: -10vh;
+  background-size: 80%;
+}
+
+.outer-container {
+  width: 100%;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 1.5rem;
+  font-size: 1.5rem;
+  color: $gray-blue;
+}
+
+.toggle {
+  margin-bottom: 2rem;
+  color: $light-gray-blue;
+  font-size: 0.8rem;
+}
+
+.pricing-plan-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .pricing-plan-container {
+    flex-direction: row;
+  }
+}
+
+.plan {
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: white;
+}
+
+// .plan__header {
+//   margin-bottom: 1rem;
+// }
+
+.plan__price--monthly {
+  margin: 0.5rem;
+  font-size: 3rem;
+}
+
+.plan__price--annual {
+  display: none;
+}
+
+.plan__features {
+  li {
+    border-top: 2px solid rgba(109, 112, 141, 0.1);
+    border-bottom: 2px solid rgba(109, 112, 141, 0.1);
+    padding: 0.5rem 0;
+  }
+  li + li {
+    border-top: none;
+  }
+}
+
+.plan__btn {
+  width: 100%;
+  margin-top: 1em;
+  padding: 0.5rem 0;
+  border: none;
+  border-radius: 6px;
+  background-image: $gradient;
+
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.plan:nth-child(2) {
+  background-image: $gradient;
+  color: white;
+  .plan__btn {
+    background-image: none;
+    background-color: white;
+    color: hsl(237, 63%, 64%);
+  }
+}
+
+// FOOTER
+
+.attribution {
+  margin: auto auto 2em auto;
+  text-align: center;
+  font-size: 0.9rem;
+  ul li {
+    padding: 0 2em;
+    display: inline-block;
+    a {
+      color: hsl(237, 63%, 64%);
+    }
+  }
+}
+
+// DESKTOP VIEW
