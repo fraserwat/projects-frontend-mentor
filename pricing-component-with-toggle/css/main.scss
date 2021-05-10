@@ -31,6 +31,12 @@ body {
   background-position-x: 50vw;
   background-position-y: -10vh;
   background-size: 80%;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    background-image: url("/images/bg-top.svg"), url("/images/bg-bottom.svg");
+    background-position: top right, bottom left;
+    background-size: 25%;
+  }
 }
 
 .outer-container {
