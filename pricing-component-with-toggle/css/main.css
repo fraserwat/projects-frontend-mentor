@@ -103,7 +103,7 @@ h1 {
 }
 
 .toggle {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   color: #b3b5c6;
   font-size: 0.8rem;
 }
@@ -116,14 +116,23 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-@media screen and (min-width: 870px) {
+@media screen and (min-width: 1000px) {
   .pricing-plan-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
   }
 }
 
@@ -132,22 +141,42 @@ h1 {
   padding: 2rem;
   border-radius: 10px;
   width: 100%;
+  max-width: 25rem;
   background-color: white;
+  -webkit-box-shadow: 30px 30px 50px -30px rgba(163, 168, 240, 0.5);
+          box-shadow: 30px 30px 50px -30px rgba(163, 168, 240, 0.5);
+}
+
+@media screen and (min-width: 1000px) {
+  .plan {
+    margin: auto 0;
+  }
 }
 
 .plan__price--monthly {
   margin: 0.5rem;
-  font-size: 3rem;
+  font-size: 3.5rem;
+}
+
+.plan__price--monthly span {
+  font-size: 2rem;
+  display: inline-block;
+  -webkit-transform: translateY(-0.25em) translateX(-5px);
+          transform: translateY(-0.25em) translateX(-5px);
 }
 
 .plan__price--annual {
   display: none;
 }
 
+.plan__features {
+  margin-bottom: 1.5rem;
+}
+
 .plan__features li {
-  border-top: 2px solid rgba(109, 112, 141, 0.1);
-  border-bottom: 2px solid rgba(109, 112, 141, 0.1);
-  padding: 0.5rem 0;
+  border-top: 2px solid rgba(109, 112, 141, 0.15);
+  border-bottom: 2px solid rgba(109, 112, 141, 0.15);
+  padding: 1rem 0;
 }
 
 .plan__features li + li {
@@ -157,14 +186,15 @@ h1 {
 .plan__btn {
   width: 100%;
   margin-top: 1em;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   border: none;
   border-radius: 6px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#a3a8f0), to(#696fdd));
   background-image: linear-gradient(#a3a8f0, #696fdd);
   color: white;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
 }
 
 .plan:nth-child(2) {
@@ -177,6 +207,44 @@ h1 {
   background-image: none;
   background-color: white;
   color: #696fdd;
+}
+
+.plan:nth-child(2) .plan__features li {
+  border-top: 2px solid rgba(246, 246, 254, 0.15);
+  border-bottom: 2px solid rgba(246, 246, 254, 0.15);
+  padding: 1rem 0;
+}
+
+.plan:nth-child(2) .plan__features li + li {
+  border-top: none;
+}
+
+@media screen and (min-width: 1000px) {
+  .plan:nth-child(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    justify-items: center;
+    margin-top: -1.5em;
+    margin-bottom: -1.5em;
+  }
+  .plan:nth-child(2) .plan__header {
+    margin-top: auto;
+  }
+  .plan:nth-child(2) .plan__btn {
+    margin-bottom: auto;
+  }
+  .plan:first-child {
+    margin-right: -0.5rem;
+  }
+  .plan:nth-child(3) {
+    margin-left: -0.5rem;
+    z-index: -1;
+  }
 }
 
 .attribution {

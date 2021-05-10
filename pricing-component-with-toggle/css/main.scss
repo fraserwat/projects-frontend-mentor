@@ -10,7 +10,7 @@ $light-gray-blue: hsl(234, 14%, 74%);
 $gray-blue: hsl(233, 13%, 49%);
 $dark-gray-blue: hsl(232, 13%, 33%);
 
-$desktop-breakpoint: 870px;
+$desktop-breakpoint: 1000px;
 
 // MAIN CSS
 
@@ -45,7 +45,7 @@ h1 {
 }
 
 .toggle {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   color: $light-gray-blue;
   font-size: 0.8rem;
 }
@@ -53,11 +53,11 @@ h1 {
 .pricing-plan-container {
   display: flex;
   flex-direction: column;
-}
-
-@media screen and (min-width: $desktop-breakpoint) {
-  .pricing-plan-container {
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: $desktop-breakpoint) {
     flex-direction: row;
+    align-items: unset;
   }
 }
 
@@ -66,16 +66,24 @@ h1 {
   padding: 2rem;
   border-radius: 10px;
   width: 100%;
+  max-width: 25rem;
   background-color: white;
-}
 
-// .plan__header {
-//   margin-bottom: 1rem;
-// }
+  box-shadow: 30px 30px 50px -30px rgba(163, 168, 240, 0.5);
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin: auto 0;
+  }
+}
 
 .plan__price--monthly {
   margin: 0.5rem;
-  font-size: 3rem;
+  font-size: 3.5rem;
+  span {
+    font-size: 2rem;
+    display: inline-block;
+    transform: translateY(-0.25em) translateX(-5px);
+  }
 }
 
 .plan__price--annual {
@@ -83,10 +91,11 @@ h1 {
 }
 
 .plan__features {
+  margin-bottom: 1.5rem;
   li {
-    border-top: 2px solid rgba(109, 112, 141, 0.1);
-    border-bottom: 2px solid rgba(109, 112, 141, 0.1);
-    padding: 0.5rem 0;
+    border-top: 2px solid rgba(109, 112, 141, 0.15);
+    border-bottom: 2px solid rgba(109, 112, 141, 0.15);
+    padding: 1rem 0;
   }
   li + li {
     border-top: none;
@@ -96,14 +105,15 @@ h1 {
 .plan__btn {
   width: 100%;
   margin-top: 1em;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   border: none;
   border-radius: 6px;
   background-image: $gradient;
 
   color: white;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
 }
 
 .plan:nth-child(2) {
@@ -113,6 +123,39 @@ h1 {
     background-image: none;
     background-color: white;
     color: hsl(237, 63%, 64%);
+  }
+  .plan__features {
+    li {
+      border-top: 2px solid rgba(246, 246, 254, 0.15);
+      border-bottom: 2px solid rgba(246, 246, 254, 0.15);
+      padding: 1rem 0;
+    }
+    li + li {
+      border-top: none;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .plan:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin-top: -1.5em;
+    margin-bottom: -1.5em;
+    .plan__header {
+      margin-top: auto;
+    }
+    .plan__btn {
+      margin-bottom: auto;
+    }
+  }
+  .plan:first-child {
+    margin-right: -0.5rem;
+  }
+  .plan:nth-child(3) {
+    margin-left: -0.5rem;
+    z-index: -1;
   }
 }
 
