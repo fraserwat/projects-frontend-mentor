@@ -85,6 +85,13 @@ select {
           align-items: center;
 }
 
+@media screen and (min-width: 1000px) {
+  .toggle {
+    padding-bottom: 3rem;
+    margin-bottom: auto;
+  }
+}
+
 .toggle p {
   padding: 0 1rem;
 }
@@ -145,7 +152,7 @@ input:checked + .slider::before {
 @media screen and (min-width: 1000px) {
   .pricing-toolbar {
     margin-right: 1rem;
-    margin-bottom: 0;
+    margin-bottom: 3rem;
   }
 }
 
@@ -256,7 +263,7 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: -1.5rem;
+  margin-top: auto;
 }
 
 @media screen and (min-width: 1000px) {
@@ -421,6 +428,7 @@ h1 {
 }
 
 .attribution {
+  padding-top: 3rem;
   margin: auto auto 2em auto;
   text-align: center;
   font-size: 0.9rem;

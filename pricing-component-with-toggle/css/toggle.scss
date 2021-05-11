@@ -16,6 +16,7 @@ $dark-gray-blue: hsl(232, 13%, 33%);
   align-items: center;
 
   @media screen and (min-width: $desktop-breakpoint) {
+    padding-bottom: 3rem;
     margin-bottom: auto;
   }
 }

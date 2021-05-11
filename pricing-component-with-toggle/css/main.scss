@@ -60,7 +60,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -1.5rem;
+  margin-top: auto;
   @media screen and (min-width: $desktop-breakpoint) {
     flex-direction: row;
     align-items: unset;
@@ -194,6 +194,7 @@ h1 {
 // FOOTER
 
 .attribution {
+  padding-top: 3rem;
   margin: auto auto 2em auto;
   text-align: center;
   font-size: 0.9rem;

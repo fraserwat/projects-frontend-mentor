@@ -19,6 +19,7 @@
 
 @media screen and (min-width: 1000px) {
   .toggle {
+    padding-bottom: 3rem;
     margin-bottom: auto;
   }
 }
