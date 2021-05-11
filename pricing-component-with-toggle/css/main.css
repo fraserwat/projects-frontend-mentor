@@ -205,6 +205,11 @@ h1 {
   letter-spacing: 0.1em;
 }
 
+.plan__btn:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
 .plan:nth-child(2) {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#a3a8f0), to(#696fdd));
   background-image: linear-gradient(#a3a8f0, #696fdd);
