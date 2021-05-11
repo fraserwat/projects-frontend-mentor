@@ -104,8 +104,37 @@ body {
   padding: 1rem;
 }
 
+.pricing-toolbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 1rem;
+}
+
+.pricing-toolbar ul li {
+  margin: 1rem;
+}
+
+.pricing-toolbar ul li img {
+  height: 1.8rem;
+  cursor: pointer;
+}
+
+.pricing-toolbar ul li img:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
 h1 {
   margin: 1.5rem;
+  margin-top: 1rem;
   font-size: 1.5rem;
   color: #6d708d;
 }

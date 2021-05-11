@@ -44,8 +44,26 @@ body {
   padding: 1rem;
 }
 
+.pricing-toolbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 1rem;
+  li {
+    margin: 1rem;
+    img {
+      height: 1.8rem;
+      cursor: pointer;
+      &:active {
+        transform: translateY(1px);
+      }
+    }
+  }
+}
+
 h1 {
   margin: 1.5rem;
+  margin-top: 1rem;
   font-size: 1.5rem;
   color: $gray-blue;
 }

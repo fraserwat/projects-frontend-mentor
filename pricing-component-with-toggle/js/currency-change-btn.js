@@ -1,4 +1,4 @@
-const flagBtns = [...document.querySelectorAll('.pricing-toolbar li')]
+const flagBtns = [...document.querySelectorAll('.pricing-toolbar li img')]
 const monthlyPriceLabels = [...document.querySelectorAll('.plan__price--monthly')]
 const annualPriceLabels = [...document.querySelectorAll('.plan__price--annual')]
 
