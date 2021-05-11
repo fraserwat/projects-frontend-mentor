@@ -13,21 +13,49 @@
     />
     <link rel="stylesheet" href="/css/main.css" />
     <title>Frontend Mentor | Pricing Component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
     <div class="outer-container">
       <div class="pricing-toolbar">
-        <ul>
-          <li id="GBP">GBP</li>
-          <li id="USD">USD</li>
-          <li id="CNY">CNY</li>
-        </ul>
+        <div class="toolbar">
+          <ul>
+            <li>
+              <img
+                src="/images/us.svg"
+                alt="U.S. flag"
+                id="USD"
+                class="active"
+              />
+            </li>
+            <li>
+              <img
+                src="/images/gb.svg"
+                alt="British flag"
+                id="GBP"
+                class="inactive"
+              />
+            </li>
+            <li>
+              <img
+                src="/images/cn.svg"
+                alt="Chinese flag"
+                id="CNY"
+                class="inactive"
+              />
+            </li>
+          </ul>
+        </div>
       </div>
       <h1>Our Pricing</h1>
-      <div class="toggle">Annually Monthly</div>
-      <div class="pricing-plan-container">
+      <div class="toggle">
+        <p>Monthly</p>
+        <label class="switch" id="checkbox">
+          <input type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+        <p>Annually</p>
+      </div>
+      <div class="pricing-plan-container" id="pricing-container">
         <div class="plan">
           <div class="plan__header">Basic</div>
           <div class="plan__price--monthly"><span>&dollar;</span>19.99</div>
@@ -83,5 +111,6 @@
     </div>
     <script src="js/currency-conversion.js"></script>
     <script src="js/currency-change-btn.js"></script>
+    <script src="js/pricing-plan-chnge.js"></script>
   </body>
 </html>

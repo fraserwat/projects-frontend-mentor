@@ -1,6 +1,7 @@
 // IMPORTS AND VARIABLES
 
 @import "reset.scss";
+@import "toggle.scss";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 $gradient: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
@@ -43,35 +44,55 @@ body {
   width: 100%;
   padding: 1rem;
 }
+.pricing-toolbar {
+  display: table;
+  margin: 0 auto 2rem auto;
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+}
 
-.pricing-toolbar ul {
+.toolbar ul {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  margin-right: 1rem;
+  // margin-right: 1rem;
+
+  padding: 0.4rem;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 30px 30px 50px -20px rgba(163, 168, 240, 0.5);
+
   li {
     margin: 1rem;
+    cursor: pointer;
+
     img {
-      height: 1.8rem;
-      cursor: pointer;
-      &:active {
-        transform: translateY(1px);
+      height: 1.2rem;
+      @media screen and (min-width: $desktop-breakpoint) {
+        height: 1.8rem;
       }
     }
   }
 }
 
-h1 {
-  margin: 1.5rem;
-  margin-top: 1rem;
-  font-size: 1.5rem;
-  color: $gray-blue;
+img.active {
+  outline: hsl(237, 63%, 64%) solid 4px;
+  outline-offset: -1px;
+  opacity: 100%;
+  filter: none;
+}
+img.inactive {
+  filter: brightness(75%);
 }
 
-.toggle {
-  margin-bottom: 4rem;
-  color: $light-gray-blue;
-  font-size: 0.8rem;
+h1 {
+  margin: 1rem;
+  font-size: 1.5rem;
+  color: $gray-blue;
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin-top: -1rem;
+  }
 }
 
 .pricing-plan-container {
@@ -79,9 +100,11 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: -1.5rem;
   @media screen and (min-width: $desktop-breakpoint) {
     flex-direction: row;
     align-items: unset;
+    margin-top: auto;
   }
 }
 
@@ -100,7 +123,8 @@ h1 {
   }
 }
 
-.plan__price--monthly {
+.plan__price--monthly,
+.plan__price--annual {
   margin: 0.5rem;
   font-size: 3.5rem;
   span {
@@ -108,9 +132,20 @@ h1 {
     display: inline-block;
     transform: translateY(-0.25em) translateX(-5px);
   }
+  @media screen and (max-width: 360px) {
+    font-size: 2.5rem;
+    span {
+      font-size: 1.5rem;
+    }
+  }
 }
-
 .plan__price--annual {
+  display: none;
+}
+.plan__price--annual.annual-plan {
+  display: block;
+}
+.plan__price--monthly.annual-plan {
   display: none;
 }
 
@@ -201,5 +236,3 @@ h1 {
     }
   }
 }
-
-// DESKTOP VIEW

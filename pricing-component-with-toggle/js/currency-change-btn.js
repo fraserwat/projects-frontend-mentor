@@ -6,6 +6,20 @@ flagBtns.forEach(button => {
     button.addEventListener('click', changeCurrency)
 })
 
+function toggleActiveInactive(newActive) {
+    flagBtns.forEach(button => {
+        // Remove active and inactive states from all three buttons
+        button.classList.remove('active');
+        button.classList.remove('inactive');
+
+        // Only give active class to the button we're setting as active
+        newButtonClass = (button.id === newActive) ? 'active' : 'inactive'
+
+        button.classList.add(newButtonClass)
+
+    })
+}
+
 function changeCurrency(buttonClick) {
     // Object for what we're going to replace the currency symbol with
     const currencySymbols = {
@@ -27,5 +41,7 @@ function changeCurrency(buttonClick) {
         const newSymbol = currencySymbols[buttonClick.target.id]
         monthlyPriceLabels[i].innerHTML = monthlyPriceLabels[i].innerHTML.replace(/<span>.*<\/span>/g, `<span>${newSymbol}</span>`)
         annualPriceLabels[i].innerHTML = annualPriceLabels[i].innerHTML.replace(/<span>.*<\/span>/g, `<span>${newSymbol}</span>`)
+
+        toggleActiveInactive(buttonClick.target.id);
     }
 }

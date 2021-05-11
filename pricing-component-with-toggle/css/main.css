@@ -66,6 +66,77 @@ select {
   }
 }
 
+.toggle {
+  margin-bottom: 3rem;
+  color: #b3b5c6;
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.toggle p {
+  padding: 0 1rem;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(#a3a8f0, #696fdd);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  border-radius: 35px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  border-radius: 50%;
+}
+
+input:checked + .slider::before {
+  -webkit-transform: translateX(26px);
+          transform: translateX(26px);
+}
+
 body {
   color: #494c5f;
   font-family: "Montserrat", sans-serif;
@@ -104,7 +175,19 @@ body {
   padding: 1rem;
 }
 
-.pricing-toolbar ul {
+.pricing-toolbar {
+  display: table;
+  margin: 0 auto 2rem auto;
+}
+
+@media screen and (min-width: 1000px) {
+  .pricing-toolbar {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.toolbar ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,37 +195,51 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-right: 1rem;
+  padding: 0.4rem;
+  background-color: white;
+  border-radius: 50px;
+  -webkit-box-shadow: 30px 30px 50px -20px rgba(163, 168, 240, 0.5);
+          box-shadow: 30px 30px 50px -20px rgba(163, 168, 240, 0.5);
 }
 
-.pricing-toolbar ul li {
+.toolbar ul li {
   margin: 1rem;
-}
-
-.pricing-toolbar ul li img {
-  height: 1.8rem;
   cursor: pointer;
 }
 
-.pricing-toolbar ul li img:active {
-  -webkit-transform: translateY(1px);
-          transform: translateY(1px);
+.toolbar ul li img {
+  height: 1.2rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .toolbar ul li img {
+    height: 1.8rem;
+  }
+}
+
+img.active {
+  outline: #696fdd solid 4px;
+  outline-offset: -1px;
+  opacity: 100%;
+  -webkit-filter: none;
+          filter: none;
+}
+
+img.inactive {
+  -webkit-filter: brightness(75%);
+          filter: brightness(75%);
 }
 
 h1 {
-  margin: 1.5rem;
-  margin-top: 1rem;
+  margin: 1rem;
   font-size: 1.5rem;
   color: #6d708d;
 }
 
-.toggle {
-  margin-bottom: 4rem;
-  color: #b3b5c6;
-  font-size: 0.8rem;
+@media screen and (min-width: 1000px) {
+  h1 {
+    margin-top: -1rem;
+  }
 }
 
 .pricing-plan-container {
@@ -159,6 +256,7 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: -1.5rem;
 }
 
 @media screen and (min-width: 1000px) {
@@ -170,6 +268,7 @@ h1 {
     -webkit-box-align: unset;
         -ms-flex-align: unset;
             align-items: unset;
+    margin-top: auto;
   }
 }
 
@@ -190,19 +289,40 @@ h1 {
   }
 }
 
-.plan__price--monthly {
+.plan__price--monthly,
+.plan__price--annual {
   margin: 0.5rem;
   font-size: 3.5rem;
 }
 
-.plan__price--monthly span {
+.plan__price--monthly span,
+.plan__price--annual span {
   font-size: 2rem;
   display: inline-block;
   -webkit-transform: translateY(-0.25em) translateX(-5px);
           transform: translateY(-0.25em) translateX(-5px);
 }
 
+@media screen and (max-width: 360px) {
+  .plan__price--monthly,
+  .plan__price--annual {
+    font-size: 2.5rem;
+  }
+  .plan__price--monthly span,
+  .plan__price--annual span {
+    font-size: 1.5rem;
+  }
+}
+
 .plan__price--annual {
+  display: none;
+}
+
+.plan__price--annual.annual-plan {
+  display: block;
+}
+
+.plan__price--monthly.annual-plan {
   display: none;
 }
 
