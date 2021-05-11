@@ -411,6 +411,7 @@ h1 {
     justify-items: center;
     margin-top: -1.5em;
     margin-bottom: -1.5em;
+    z-index: 1;
   }
   .plan:nth-child(2) .plan__header {
     margin-top: auto;
@@ -423,7 +424,6 @@ h1 {
   }
   .plan:nth-child(3) {
     margin-left: -0.5rem;
-    z-index: -1;
   }
 }
 
