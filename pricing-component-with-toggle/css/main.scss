@@ -2,6 +2,7 @@
 
 @import "reset.scss";
 @import "toggle.scss";
+@import "currency-toolbar.scss";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 $gradient: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
@@ -43,47 +44,6 @@ body {
 .outer-container {
   width: 100%;
   padding: 1rem;
-}
-.pricing-toolbar {
-  display: table;
-  margin: 0 auto 2rem auto;
-  @media screen and (min-width: $desktop-breakpoint) {
-    margin-right: 1rem;
-    margin-bottom: 0;
-  }
-}
-
-.toolbar ul {
-  display: flex;
-  flex-direction: row;
-  // margin-right: 1rem;
-
-  padding: 0.4rem;
-  background-color: white;
-  border-radius: 50px;
-  box-shadow: 30px 30px 50px -20px rgba(163, 168, 240, 0.5);
-
-  li {
-    margin: 1rem;
-    cursor: pointer;
-
-    img {
-      height: 1.2rem;
-      @media screen and (min-width: $desktop-breakpoint) {
-        height: 1.8rem;
-      }
-    }
-  }
-}
-
-img.active {
-  outline: hsl(237, 63%, 64%) solid 4px;
-  outline-offset: -1px;
-  opacity: 100%;
-  filter: none;
-}
-img.inactive {
-  filter: brightness(75%);
 }
 
 h1 {
@@ -173,10 +133,6 @@ h1 {
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.1em;
-
-  &:active {
-    transform: translateY(1px);
-  }
 }
 
 .plan:nth-child(2) {
@@ -186,6 +142,12 @@ h1 {
     background-image: none;
     background-color: white;
     color: hsl(237, 63%, 64%);
+    &:active {
+      color: white;
+      background-color: rgba(0, 0, 0, 0);
+      background-image: unset;
+      box-shadow: 0 0 3px rgba(#fff, 1);
+    }
   }
   .plan__features {
     li {
@@ -197,6 +159,13 @@ h1 {
       border-top: none;
     }
   }
+}
+
+.plan:nth-child(odd) .plan__btn:active {
+  background-image: unset;
+  color: rgb(105, 111, 221);
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 3px rgba(105, 111, 221, 1);
 }
 
 @media screen and (min-width: $desktop-breakpoint) {

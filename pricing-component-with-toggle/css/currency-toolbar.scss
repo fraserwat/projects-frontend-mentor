@@ -1,0 +1,42 @@
+$desktop-breakpoint: 1000px;
+
+.pricing-toolbar {
+  display: table;
+  margin: 0 auto 2rem auto;
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.toolbar ul {
+  display: flex;
+  flex-direction: row;
+
+  padding: 0.4rem;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 30px 30px 50px -20px rgba(163, 168, 240, 0.5);
+
+  li {
+    margin: 1rem;
+    cursor: pointer;
+
+    img {
+      height: 1.2rem;
+      @media screen and (min-width: $desktop-breakpoint) {
+        height: 1.8rem;
+      }
+    }
+  }
+}
+
+img.active {
+  outline: hsl(237, 63%, 64%) solid 4px;
+  outline-offset: -1px;
+  opacity: 100%;
+  filter: none;
+}
+img.inactive {
+  filter: brightness(75%);
+}
