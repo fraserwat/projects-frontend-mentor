@@ -133,6 +133,10 @@ h1 {
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.1em;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .plan:nth-child(2) {
