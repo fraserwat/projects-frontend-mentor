@@ -20,7 +20,7 @@ $progress-bar-position: calc(100% * (((1000 - 185) / 1000)));
   content: "";
   background-image: $gradient;
   border-radius: 100px;
-  animation: load-bar 1s;
+  animation: load-bar 1.25s;
   animation-fill-mode: forwards;
   z-index: 1;
 }
@@ -32,7 +32,7 @@ $progress-bar-position: calc(100% * (((1000 - 185) / 1000)));
   background-color: white;
   border-radius: 100%;
   transition: 400ms;
-  animation: load-circle 1s;
+  animation: load-circle 1.25s;
   animation-fill-mode: forwards;
   z-index: 2;
 }
@@ -54,11 +54,11 @@ $progress-bar-position: calc(100% * (((1000 - 185) / 1000)));
     left: 0;
   }
   50% {
-    left: $progress-bar-position / 2;
+    left: MAX($progress-bar-position, 1rem) / 2;
     transform: translateX(-1rem);
   }
   100% {
-    left: $progress-bar-position;
+    left: MAX($progress-bar-position, 1rem);
     transform: translateX(-1rem);
   }
 }

@@ -19,8 +19,8 @@
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ffa399), to(#ff4d97));
   background-image: linear-gradient(#ffa399, #ff4d97);
   border-radius: 100px;
-  -webkit-animation: load-bar 1s;
-          animation: load-bar 1s;
+  -webkit-animation: load-bar 1.25s;
+          animation: load-bar 1.25s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   z-index: 1;
@@ -35,8 +35,8 @@
   border-radius: 100%;
   -webkit-transition: 400ms;
   transition: 400ms;
-  -webkit-animation: load-circle 1s;
-          animation: load-circle 1s;
+  -webkit-animation: load-circle 1.25s;
+          animation: load-circle 1.25s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   z-index: 2;
@@ -71,12 +71,12 @@
     left: 0;
   }
   50% {
-    left: calc(100% * (((1000 - 185) / 1000)))/2;
+    left: MAX(calc(100% * (((1000 - 185) / 1000))), 1rem)/2;
     -webkit-transform: translateX(-1rem);
             transform: translateX(-1rem);
   }
   100% {
-    left: calc(100% * (((1000 - 185) / 1000)));
+    left: MAX(calc(100% * (((1000 - 185) / 1000))), 1rem);
     -webkit-transform: translateX(-1rem);
             transform: translateX(-1rem);
   }
@@ -87,12 +87,12 @@
     left: 0;
   }
   50% {
-    left: calc(100% * (((1000 - 185) / 1000)))/2;
+    left: MAX(calc(100% * (((1000 - 185) / 1000))), 1rem)/2;
     -webkit-transform: translateX(-1rem);
             transform: translateX(-1rem);
   }
   100% {
-    left: calc(100% * (((1000 - 185) / 1000)));
+    left: MAX(calc(100% * (((1000 - 185) / 1000))), 1rem);
     -webkit-transform: translateX(-1rem);
             transform: translateX(-1rem);
   }
