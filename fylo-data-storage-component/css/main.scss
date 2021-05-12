@@ -1,6 +1,7 @@
 // IMPORTS AND VARIABLES
 
 @import "reset.scss";
+@import "progress-bar.scss";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 
 $gradient: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));
@@ -82,14 +83,7 @@ p span {
   width: 100%;
   margin: 1rem 0;
 }
-.the-bar {
-  background: $v-dark-blue;
-  display: flex;
-  width: 100%;
-  height: 1rem;
-  margin-bottom: 0.5rem;
-  border-radius: 100px;
-}
+
 .bar-label {
   display: flex;
   width: 100%;
@@ -128,8 +122,10 @@ p span {
 .attribution {
   @include default-flex();
   margin-top: auto;
-  padding: 2rem auto;
   text-align: center;
+  ul {
+    margin: 1rem 0;
+  }
   li {
     display: inline-block;
     padding: 0 2rem;

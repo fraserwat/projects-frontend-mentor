@@ -1,0 +1,100 @@
+.the-bar {
+  position: relative;
+  background: #0c122c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 100px;
+  z-index: 0;
+}
+
+.the-bar::before {
+  position: absolute;
+  height: 100%;
+  width: 0;
+  content: "";
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffa399), to(#ff4d97));
+  background-image: linear-gradient(#ffa399, #ff4d97);
+  border-radius: 100px;
+  -webkit-animation: load-bar 1s;
+          animation: load-bar 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 1;
+}
+
+.the-bar::after {
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  content: "";
+  background-color: white;
+  border-radius: 100%;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  -webkit-animation: load-circle 1s;
+          animation: load-circle 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 2;
+}
+
+@-webkit-keyframes load-bar {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: calc(100% * (((1000 - 185) / 1000)))/2;
+  }
+  100% {
+    width: calc(100% * (((1000 - 185) / 1000)));
+  }
+}
+
+@keyframes load-bar {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: calc(100% * (((1000 - 185) / 1000)))/2;
+  }
+  100% {
+    width: calc(100% * (((1000 - 185) / 1000)));
+  }
+}
+
+@-webkit-keyframes load-circle {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: calc(100% * (((1000 - 185) / 1000)))/2;
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+  }
+  100% {
+    left: calc(100% * (((1000 - 185) / 1000)));
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+  }
+}
+
+@keyframes load-circle {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: calc(100% * (((1000 - 185) / 1000)))/2;
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+  }
+  100% {
+    left: calc(100% * (((1000 - 185) / 1000)));
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+  }
+}
+/*# sourceMappingURL=progress-bar.css.map */
