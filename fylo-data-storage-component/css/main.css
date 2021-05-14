@@ -227,6 +227,11 @@ body {
 
 .icons ul {
   margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .icons ul li {
@@ -259,6 +264,18 @@ body {
   height: 3rem;
   padding: 0.5rem;
   border-radius: 0.75rem;
+}
+
+.icons button:hover {
+  cursor: pointer;
+  border: solid 2px #ff4d97;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.icons button:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
 }
 
 .lower {
@@ -394,5 +411,77 @@ p span {
   background-size: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media screen and (min-width: 750px) {
+  body {
+    background: #0c122c url("/images/bg-desktop.png") no-repeat;
+    background-position: bottom left;
+  }
+  .outer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+  .upper {
+    width: 100%;
+    max-width: 20rem;
+    margin: 0;
+    margin-right: 2rem;
+    margin-top: 5rem;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .upper .icons {
+    width: auto;
+    margin-bottom: 1rem;
+  }
+  .lower {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    font-size: 0.9rem;
+    margin: 0;
+    width: 100%;
+    max-width: 40rem;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .lower .youve-used {
+    margin-right: auto;
+  }
+  .tooltip {
+    display: block;
+    margin: 0;
+    width: 12rem;
+    height: 4.5rem;
+    left: 69vw;
+    top: 30vh;
+    border-radius: 0.75rem 0.75rem 0 0.75rem;
+    position: absolute;
+  }
+  .tooltip p {
+    margin: 0;
+  }
+  .tooltip::after {
+    position: relative;
+    left: 10rem;
+    top: -1rem;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+    border-width: 0rem 2rem 2rem 0rem;
+    content: "";
+  }
+}
+
+.storage-bar-div {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=main.css.map */

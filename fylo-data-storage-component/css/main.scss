@@ -11,6 +11,8 @@ $grayish-blue: hsl(229, 7%, 55%);
 $dark-blue: hsl(228, 56%, 26%);
 $v-dark-blue: hsl(229, 57%, 11%);
 
+$desktop-breakpoint: 750px;
+
 @mixin default-flex {
   display: flex;
   flex-direction: column;
@@ -46,8 +48,10 @@ body {
 }
 .icons ul {
   margin-top: 1.5rem;
-  //   display: flex;
+  display: flex;
+  flex-wrap: wrap;
   li {
+    // margin: auto 0;
     display: inline-block;
     justify-items: flex-end;
     flex-wrap: wrap;
@@ -64,6 +68,15 @@ body {
   height: 3rem;
   padding: 0.5rem;
   border-radius: 0.75rem;
+
+  &:hover {
+    cursor: pointer;
+    border: solid 2px hsl(335, 100%, 65%);
+    transition: 200ms;
+  }
+  &:active {
+    transform: translateY(1px);
+  }
 }
 
 .lower {
@@ -137,4 +150,68 @@ p span {
       -webkit-text-fill-color: transparent;
     }
   }
+}
+
+// DESKTOP
+
+@media screen and (min-width: $desktop-breakpoint) {
+  body {
+    background: $v-dark-blue url("/images/bg-desktop.png") no-repeat;
+    background-position: bottom left;
+  }
+  .outer {
+    flex-direction: row;
+    width: 100%;
+  }
+  .upper {
+    width: 100%;
+    max-width: 20rem;
+    margin: 0;
+    margin-right: 2rem;
+    margin-top: 5rem;
+    align-self: flex-end;
+    .icons {
+      width: auto;
+      margin-bottom: 1rem;
+    }
+  }
+  .lower {
+    align-self: flex-end;
+    font-size: 0.9rem;
+    margin: 0;
+    width: 100%;
+    max-width: 40rem;
+    display: inline-flex;
+    flex-grow: 1;
+    .youve-used {
+      margin-right: auto;
+    }
+  }
+  .tooltip {
+    display: block;
+    margin: 0;
+    width: 12rem;
+    height: 4.5rem;
+    left: 69vw;
+    top: 30vh;
+    border-radius: 0.75rem 0.75rem 0 0.75rem;
+    position: absolute;
+    p {
+      margin: 0;
+    }
+    &::after {
+      position: relative;
+      left: 10rem;
+      top: -1rem;
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-color: transparent white transparent transparent;
+      border-width: 0rem 2rem 2rem 0rem;
+      content: "";
+    }
+  }
+}
+.storage-bar-div {
+  margin-bottom: 0;
 }
