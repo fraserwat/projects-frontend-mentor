@@ -296,7 +296,7 @@ body {
   background-color: #1d2c67;
   width: 100%;
   padding: 2rem;
-  font-size: 3.5vw;
+  font-size: 1rem;
 }
 
 p span {
@@ -336,7 +336,7 @@ p span {
 }
 
 .tooltip {
-  margin-top: -2rem;
+  margin-top: -1.5rem;
   background-color: white;
   color: #848794;
   font-weight: 700;
@@ -413,6 +413,29 @@ p span {
   -webkit-text-fill-color: transparent;
 }
 
+@media screen and (max-width: 750px) and (min-width: 550px) {
+  .upper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .upper .logo-div {
+    width: 100%;
+  }
+  .upper .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .upper .icons ul {
+    margin: 0 2rem 0 auto;
+  }
+}
+
 @media screen and (min-width: 750px) {
   body {
     background: #0c122c url("/images/bg-desktop.png") no-repeat;
@@ -483,5 +506,12 @@ p span {
 
 .storage-bar-div {
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 320px) {
+  .icons button {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
