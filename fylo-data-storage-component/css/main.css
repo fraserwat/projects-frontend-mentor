@@ -1,5 +1,9 @@
-/* Box sizing rules */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+:root {
+  font-size: 16px;
+}
+
+/* Box sizing rules */
 *,
 *::before,
 *::after {
