@@ -445,6 +445,7 @@ p span {
   body {
     background: #0c122c url("/images/bg-desktop.png") no-repeat;
     background-position: bottom left;
+    background-size: contain;
   }
   .outer {
     -webkit-box-orient: horizontal;
