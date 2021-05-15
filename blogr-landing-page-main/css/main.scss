@@ -1,0 +1,165 @@
+// IMPORTS AND VARIABLES
+
+@import "_reset";
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+
+:root {
+  font-size: 16px;
+}
+
+$light-red: hsl(356, 100%, 66%); // CTA text
+$v-light-red: hsl(355, 100%, 74%); // CTA hover background
+$v-dark-blue: hsl(208, 49%, 24%); // Headings
+
+$white: hsl(0, 0%, 100%);
+$grayish-blue: hsl(240, 2%, 79%); // Footer text
+$v-dark-greyish-blue: hsl(207, 13%, 34%); // Body copy
+$v-dark-black-blue: hsl(240, 10%, 16%); // Footer background
+
+$bg-gradient-orange: linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+$bg-gradient-dark: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+
+// MAIN SCSS
+
+body {
+  font-family: "Overpass", sans-serif;
+  text-align: center;
+}
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Ubuntu", sans-serif;
+}
+
+p {
+  color: $v-dark-greyish-blue;
+  letter-spacing: 0.03rem;
+}
+.section {
+  //   margin: 1rem 0;
+  //   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    margin: 1rem auto;
+  }
+  p,
+  h2 {
+    padding: 0 1.75rem;
+  }
+}
+
+.top-orange {
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  background: url("/images/bg-pattern-intro.svg"), $bg-gradient-orange;
+  background-size: 250%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: $white;
+  border-radius: 0 0 0 25%;
+  h2,
+  p {
+    color: $white;
+    max-width: 18rem;
+    margin: 0 auto 1.5rem auto;
+  }
+
+  nav {
+    width: 100%;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cta-btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0 6rem 0;
+  }
+  button {
+    border: none;
+    background: none;
+    border-radius: 9000px;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+  }
+  .cta-btns button:first-child {
+    color: $light-red;
+    background-color: $white;
+  }
+  .cta-btns button:last-child {
+    color: $white;
+    border: 1px solid $white;
+  }
+}
+.section img {
+  margin: 1rem 0;
+  width: 100vw;
+}
+
+.dark-blue-infrastructure {
+  border-radius: 0 25% 0 25%;
+  background-image: $bg-gradient-dark;
+  color: $white;
+  p {
+    color: $white;
+  }
+}
+
+.bottom-black {
+  margin-top: 5rem;
+  color: $grayish-blue;
+  background-color: $v-dark-black-blue;
+  border-radius: 0 25% 0 0;
+  img {
+    width: 8rem;
+    margin: 3rem auto;
+  }
+  .list-header {
+    color: $white;
+    font-weight: 600;
+    margin: 1.5rem;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  ul li {
+    padding: 0.35rem;
+  }
+}
+
+.bottom-black li:not(.list-header) {
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    color: $white;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 5rem;
+    margin: auto;
+    height: 1px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  &:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+}
