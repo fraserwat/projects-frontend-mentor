@@ -9,6 +9,10 @@ $desktop-breakpoint: 1000px;
   }
 }
 
+button {
+  border: none;
+}
+
 .toolbar ul {
   display: flex;
   flex-direction: row;

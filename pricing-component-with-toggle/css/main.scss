@@ -1,8 +1,8 @@
 // IMPORTS AND VARIABLES
 
-@import "reset.scss";
-@import "toggle.scss";
-@import "currency-toolbar.scss";
+@import "_reset";
+@import "_toggle";
+@import "_currency-toolbar";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 $gradient: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
@@ -25,6 +25,7 @@ body {
   align-items: center;
   text-align: center;
   max-width: 100vw;
+  margin-top: 1rem;
 
   background-color: $v-light-gray-blue;
   background-image: url("/images/bg-top.svg");
@@ -137,6 +138,9 @@ h1 {
   &:hover {
     cursor: pointer;
   }
+  &:active {
+    transform: translateY(1px);
+  }
 }
 
 .plan:nth-child(2) {
@@ -146,7 +150,7 @@ h1 {
     background-image: none;
     background-color: white;
     color: hsl(237, 63%, 64%);
-    &:active {
+    &:hover {
       color: white;
       background-color: rgba(0, 0, 0, 0);
       background-image: unset;
@@ -165,7 +169,7 @@ h1 {
   }
 }
 
-.plan:nth-child(odd) .plan__btn:active {
+.plan:nth-child(odd) .plan__btn:hover {
   background-image: unset;
   color: rgb(105, 111, 221);
   background-color: rgba(0, 0, 0, 0);

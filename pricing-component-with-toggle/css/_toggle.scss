@@ -1,24 +1,27 @@
-.toggle {
-  margin-bottom: 3rem;
-  color: #b3b5c6;
-  font-size: 0.8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+$desktop-breakpoint: 1000px;
+$gradient: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+$v-light-gray-blue: hsl(240, 78%, 98%);
+$light-gray-blue: hsl(234, 14%, 74%);
+$gray-blue: hsl(233, 13%, 49%);
+$dark-gray-blue: hsl(232, 13%, 33%);
+
+*:focus {
+  outline: 2px solid orange;
+  // z-index: 99;
+  outline-offset: 4px;
 }
 
-@media screen and (min-width: 1000px) {
-  .toggle {
+.toggle {
+  margin-bottom: 3rem;
+  color: $light-gray-blue;
+  font-size: 0.8rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: $desktop-breakpoint) {
     padding-bottom: 3rem;
     margin-bottom: auto;
   }
@@ -51,9 +54,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#a3a8f0), to(#696fdd));
-  background-image: linear-gradient(#a3a8f0, #696fdd);
-  -webkit-transition: 0.25s;
+  background-image: $gradient;
   transition: 0.25s;
   border-radius: 35px;
 }
@@ -66,13 +67,10 @@
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: 0.25s;
   transition: 0.25s;
   border-radius: 50%;
 }
 
 input:checked + .slider::before {
-  -webkit-transform: translateX(26px);
-          transform: translateX(26px);
+  transform: translateX(26px);
 }
-/*# sourceMappingURL=toggle.css.map */

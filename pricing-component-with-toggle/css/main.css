@@ -66,6 +66,11 @@ select {
   }
 }
 
+*:focus {
+  outline: 2px solid orange;
+  outline-offset: 4px;
+}
+
 .toggle {
   margin-bottom: 3rem;
   color: #b3b5c6;
@@ -156,6 +161,10 @@ input:checked + .slider::before {
   }
 }
 
+button {
+  border: none;
+}
+
 .toolbar ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -215,6 +224,7 @@ body {
           align-items: center;
   text-align: center;
   max-width: 100vw;
+  margin-top: 1rem;
   background-color: #f6f6fe;
   background-image: url("/images/bg-top.svg");
   background-repeat: no-repeat;
@@ -365,6 +375,11 @@ h1 {
   cursor: pointer;
 }
 
+.plan__btn:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
 .plan:nth-child(2) {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#a3a8f0), to(#696fdd));
   background-image: linear-gradient(#a3a8f0, #696fdd);
@@ -377,7 +392,7 @@ h1 {
   color: #696fdd;
 }
 
-.plan:nth-child(2) .plan__btn:active {
+.plan:nth-child(2) .plan__btn:hover {
   color: white;
   background-color: rgba(0, 0, 0, 0);
   background-image: unset;
@@ -395,7 +410,7 @@ h1 {
   border-top: none;
 }
 
-.plan:nth-child(odd) .plan__btn:active {
+.plan:nth-child(odd) .plan__btn:hover {
   background-image: unset;
   color: #696fdd;
   background-color: rgba(0, 0, 0, 0);
