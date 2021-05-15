@@ -490,6 +490,7 @@ p span {
     width: 12rem;
     height: 4.5rem;
     left: 69vw;
+    right: 25%;
     top: 30vh;
     border-radius: 0.75rem 0.75rem 0 0.75rem;
     position: absolute;
@@ -518,6 +519,12 @@ p span {
   .icons button {
     height: 2.25rem;
     width: 2.25rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .tooltip {
+    left: 62%;
   }
 }
 /*# sourceMappingURL=main.css.map */
