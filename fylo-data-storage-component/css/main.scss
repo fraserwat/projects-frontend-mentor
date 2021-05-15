@@ -1,7 +1,7 @@
 // IMPORTS AND VARIABLES
 
-@import "reset.scss";
-@import "progress-bar.scss";
+@import "_reset";
+@import "_progress-bar";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 
 $gradient: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));

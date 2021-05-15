@@ -11,6 +11,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-size: 16px;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
