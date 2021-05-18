@@ -19,6 +19,16 @@ $v-dark-black-blue: hsl(240, 10%, 16%); // Footer background
 $bg-gradient-orange: linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
 $bg-gradient-dark: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
 
+@mixin btn-white {
+  color: $light-red;
+  background-color: $white;
+}
+@mixin btn-red {
+  color: $white;
+  border: 1px solid $white;
+  background: none;
+}
+
 // MAIN SCSS
 
 body {
@@ -39,8 +49,6 @@ p {
   letter-spacing: 0.03rem;
 }
 .section {
-  //   margin: 1rem 0;
-  //   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,7 +61,9 @@ p {
     padding: 0 1.75rem;
   }
 }
-
+.img-shadow {
+  filter: drop-shadow(10px 40px 30px rgba(31, 63, 91, 0.25));
+}
 .top-orange {
   padding: 1.5rem;
   margin-bottom: 3rem;
@@ -86,6 +96,7 @@ p {
     margin: 2rem 0 6rem 0;
   }
   button {
+    cursor: pointer;
     border: none;
     background: none;
     border-radius: 9000px;
@@ -93,12 +104,16 @@ p {
     font-weight: 600;
   }
   .cta-btns button:first-child {
-    color: $light-red;
-    background-color: $white;
+    @include btn-white();
+    &:hover {
+      @include btn-red();
+    }
   }
   .cta-btns button:last-child {
-    color: $white;
-    border: 1px solid $white;
+    @include btn-red();
+    &:hover {
+      @include btn-white();
+    }
   }
 }
 .section img {
@@ -107,16 +122,35 @@ p {
 }
 
 .dark-blue-infrastructure {
+  position: relative;
   border-radius: 0 25% 0 25%;
-  background-image: $bg-gradient-dark;
-  color: $white;
+  background: $bg-gradient-dark;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .container {
+    bottom: 0;
+    overflow: hidden;
+    z-index: 1;
+    background: url("/images/bg-pattern-circles.svg");
+    background-size: 150%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
   p {
-    color: $white;
+    z-index: 1;
+    color: white;
+  }
+  img {
+    z-index: 2;
+    bottom: 0;
   }
 }
 
 .bottom-black {
   margin-top: 5rem;
+  padding-bottom: 2rem;
   color: $grayish-blue;
   background-color: $v-dark-black-blue;
   border-radius: 0 25% 0 0;
