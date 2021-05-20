@@ -19,10 +19,21 @@
       <p>No credit card required.</p>
     </div>
     <div class="component container">
-      <div class="pageviews"><span id="pageview-var"></span> Pageviews</div>
-      <div class="slider container"></div>
+      <div class="pageviews"><span id="pageview-var">100k</span> Pageviews</div>
+      <div class="slider container">
+        <div class="slidecontainer">
+          <input
+            type="range"
+            min="1"
+            max="1000"
+            value="100"
+            id="slider"
+            oninput="sliderChange(this.value)"
+          />
+        </div>
+      </div>
       <div class="pageviews">
-        $<span id="amount-var"></span> /<span id="month-year-var"></span>
+        $<span id="amount-var"></span><span id="month-year-var">16</span>
       </div>
       <div class="billing-toggle">
         <p>Monthly Billing</p>
@@ -48,5 +59,6 @@
         <li>Coded by <a href="#">Fraser Watt</a></li>
       </ul>
     </div>
+    <script src="js/price-display.js"></script>
   </body>
 </html>
