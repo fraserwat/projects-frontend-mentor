@@ -2,13 +2,14 @@
 
 @import "_reset";
 @import "_slider";
+@import "_button";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
 
 $light-grey-red: hsl(14, 92%, 95%); // Discount Background
 $light-red: hsl(15, 100%, 70%); // Discount Text
 $pale-blue: hsl(226, 100%, 87%); // CTA Text
 
-$white: hsl (0, 0%, 100%); // Pricing Component Background
+$white: hsl(0, 0%, 100%); // Pricing Component Background
 $v-pale-blue: hsl(230, 100%, 99%); // Main Background
 $light-grey-blue: hsl(223, 50%, 87%); // Toggle Background
 $grey-blue: hsl(225, 20%, 60%); // Text
@@ -38,10 +39,35 @@ body {
 }
 
 .header-text {
+  margin-top: auto;
   //   background: url(/images/bg-pattern.svg);
   h3 {
     color: $dark-desat-blue;
     font-weight: 800;
     padding: 1rem;
   }
+}
+
+.container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.component {
+  background-color: $white;
+  width: 100%;
+  max-width: 40rem;
+}
+
+.component ul li {
+  margin: auto;
+  list-style: url(/images/icon-check.svg);
+  width: fit-content;
+  text-indent: 1rem;
+}
+
+.attribution {
+  margin-top: auto;
+  padding-bottom: 2rem;
 }

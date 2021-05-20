@@ -1,0 +1,37 @@
+$dark-desat-blue: hsl(227, 35%, 25%); // Text & CTA Background
+$pale-blue: hsl(226, 100%, 87%); // CTA Text
+
+button {
+  position: relative;
+  overflow: hidden;
+  transition: background 400ms;
+  color: $pale-blue;
+  background-color: $dark-desat-blue;
+
+  margin: 2rem auto;
+  border: none;
+  max-width: 14rem;
+  font-weight: 800;
+  padding: 0.75rem 3.5rem;
+  border-radius: 100px;
+  &:hover {
+    color: $dark-desat-blue;
+    background-color: $pale-blue;
+    box-shadow: 0 0 0 1px $dark-desat-blue;
+  }
+}
+
+span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: $dark-desat-blue;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
