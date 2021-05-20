@@ -1,3 +1,74 @@
-// - Soft Cyan (Full Slider Bar): hsl(174, 77%, 80%)
-// - Strong Cyan (Slider Backround): hsl(174, 86%, 45%)
-// - Light Grayish Blue (Empty Slider Bar): hsl(224, 65%, 95%)
+$soft-cyan: hsl(174, 77%, 80%); // Full Slider Bar
+$strong-cyan: hsl(174, 86%, 45%); // Slider Backround
+$light-greyish-blue: hsl(224, 65%, 95%); // Empty Slider Bar
+
+.slider {
+  margin: 2rem;
+  display: flex;
+}
+
+@mixin slider-thumb {
+  width: 3rem;
+  height: 3rem;
+  transform: translateY(-33%);
+  background-color: $strong-cyan;
+  background-image: url(/images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 0 20px 40px 15px rgba(16, 213, 194, 0.3);
+}
+@mixin slider-bar() {
+  width: 80%;
+  height: 1em;
+  background-color: $light-greyish-blue;
+  border-radius: 1000px;
+}
+// For the thumb selector
+#slider {
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    @include slider-thumb();
+  }
+  &::-moz-range-thumb {
+    @include slider-thumb();
+  }
+  &::-ms-thumb {
+    @include slider-thumb();
+  }
+}
+// For the track
+#slider {
+  // Chrome
+  &::-webkit-slider-runnable-track {
+    @include slider-bar();
+    background: linear-gradient(
+      to right,
+      $soft-cyan 0%,
+      $soft-cyan 10%,
+      $light-greyish-blue 10%,
+      $light-greyish-blue 100%
+    );
+  }
+  // Mozilla
+  &::-moz-range-track {
+    @include slider-bar();
+  }
+  &::-moz-range-progress {
+    @include slider-bar();
+    background-color: $soft-cyan;
+  }
+  // IE
+  &::-ms-track {
+    @include slider-bar();
+  }
+  &::-ms-fill-lower {
+    @include slider-bar();
+    background-color: $soft-cyan;
+  }
+  &::-ms-fill-upper {
+    @include slider-bar();
+  }
+}

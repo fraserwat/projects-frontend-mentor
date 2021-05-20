@@ -19,19 +19,21 @@ $dark-desat-blue: hsl(227, 35%, 25%); // Text & CTA Background
 
 :root {
   font-size: 15px;
+  letter-spacing: 1px;
   font-family: "Manrope", sans-serif;
 }
 
 body {
+  background-image: url("/images/pattern-circles.svg");
   color: $grey-blue;
-  background-image: url(/images/bg-pattern.svg);
+
   background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
+  background-position: center 8vh;
+  background-size: 25vw;
   text-align: center;
   min-height: 100vh;
   padding: 1rem;
-  background: $v-pale-blue;
+  background-color: $v-pale-blue;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,16 +42,19 @@ body {
 
 .header-text {
   margin-top: auto;
-  //   background: url(/images/bg-pattern.svg);
+  margin-bottom: 3.5rem;
   h3 {
+    font-size: 1.5rem;
     color: $dark-desat-blue;
     font-weight: 800;
     padding: 1rem;
   }
+  p {
+    padding-bottom: 0.5rem;
+  }
 }
 
 .container {
-  padding: 1rem;
   display: flex;
   flex-direction: column;
 }
@@ -58,10 +63,63 @@ body {
   background-color: $white;
   width: 100%;
   max-width: 40rem;
+  box-shadow: 0px 1px 50px 1px rgba(133, 143, 173, 0.1);
 }
+.pageviews {
+  margin-top: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.amount {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  #amount-var {
+    margin-right: 0.5rem;
+    color: $dark-desat-blue;
+    font-size: 2.5rem;
+    font-weight: 800;
+    &::before {
+      content: "$";
+    }
+  }
+  #month-year-var {
+    font-size: 1.2rem;
+  }
+}
+
+.billing-toggle {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(205, 215, 238, 0.7);
+}
+
+.billing-toggle p:last-child::after {
+  overflow: hidden;
+  color: $light-red;
+  font-size: 0.8rem;
+  margin-left: 0.3rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 100px;
+  background-color: $light-grey-red;
+
+  content: "-25%";
+  @media screen and (min-width: 800px) {
+    content: "25% discount";
+  }
+}
+// .billing-toggle
 
 .component ul li {
   margin: auto;
+  padding: 0.3rem;
   list-style: url(/images/icon-check.svg);
   width: fit-content;
   text-indent: 1rem;
