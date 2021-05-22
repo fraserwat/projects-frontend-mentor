@@ -1,0 +1,164 @@
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"],
+li {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  font-size: 15px;
+  font-family: "Atala", sans-serif;
+}
+
+h2,
+.hero,
+.creations {
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.leader,
+.creations,
+.hero,
+nav {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.hero-bg-section {
+  background-image: url(/images/mobile/image-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 800px) {
+  .hero-bg-section {
+    background-image: url(/images/desktop/image-hero.jpg);
+  }
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav img {
+  height: 100%;
+}
+
+.hero {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  margin-bottom: 7.5rem;
+}
+
+.hero__text {
+  border: solid 2px white;
+}
+
+.hero__text h1 {
+  font-size: 10vw;
+  padding: 3rem 1.5rem 2rem 1.5rem;
+  font-weight: lighter;
+  color: white;
+  word-spacing: 100vw;
+  line-height: 10vw;
+}
+
+h2 {
+  margin: 3rem auto 2rem auto;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  letter-spacing: 3px;
+}
+
+.leader p {
+  text-align: center;
+  padding: 0 2.5rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: #8c8c8c;
+}
+
+.creations__preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 7.5rem;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  background-size: cover;
+}
+
+.creations__preview p {
+  width: 7rem;
+  margin-top: auto;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+/*# sourceMappingURL=main.css.map */
