@@ -471,6 +471,12 @@ footer .icons {
 
 footer .icons li {
   margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer .footer-end-list,
@@ -510,7 +516,21 @@ footer .copyright a {
     -ms-grid-column: 2;
     grid-area: icons;
   }
-  footer .icons img {
+  footer .icons li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .icons li button {
+    width: 100%;
+  }
+  footer .icons li button i {
     cursor: pointer;
   }
   footer .footer-menu {

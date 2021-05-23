@@ -33,10 +33,13 @@ footer {
   }
   .icons {
     margin-bottom: 1rem;
+    // cursor: pointer;
     justify-content: center;
     align-items: center;
     li {
       margin: auto;
+      align-items: center;
+      justify-content: center;
     }
   }
   .footer-end-list,
@@ -71,8 +74,18 @@ footer {
       margin: 0;
       margin-left: auto;
       grid-area: icons;
-      img {
-        cursor: pointer;
+      li {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        button {
+          width: 100%;
+          i {
+            cursor: pointer;
+          }
+        }
       }
     }
     .footer-menu {
