@@ -1,5 +1,8 @@
 /* Box sizing rules */
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
 *,
 *::before,
 *::after {
@@ -66,26 +69,6 @@ select {
   }
 }
 
-:root {
-  font-size: 15px;
-  font-family: "Atala", sans-serif;
-}
-
-h2,
-.hero,
-.creations {
-  text-transform: uppercase;
-  font-family: "Josefin Sans", sans-serif;
-}
-
-.leader,
-.creations,
-.hero,
-nav {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
 .hero-bg-section {
   background-image: url(/images/mobile/image-hero.jpg);
   background-size: cover;
@@ -95,17 +78,8 @@ nav {
 @media screen and (min-width: 800px) {
   .hero-bg-section {
     background-image: url(/images/desktop/image-hero.jpg);
+    background-size: cover auto;
   }
-}
-
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-nav img {
-  height: 100%;
 }
 
 .hero {
@@ -115,33 +89,36 @@ nav img {
 }
 
 .hero__text {
-  border: solid 2px white;
+  border: solid 3px white;
 }
 
 .hero__text h1 {
   font-size: 10vw;
   padding: 3rem 1.5rem 2rem 1.5rem;
-  font-weight: lighter;
   color: white;
   word-spacing: 100vw;
   line-height: 10vw;
 }
 
-h2 {
-  margin: 3rem auto 2rem auto;
-  font-weight: lighter;
-  text-align: center;
-  font-size: 2rem;
-  line-height: 2.2rem;
-  letter-spacing: 3px;
+@media screen and (min-width: 800px) {
+  .hero {
+    width: 50%;
+    margin: 8rem auto;
+    margin: 0;
+    padding: 0;
+    justify-self: flex-start;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .hero__text h1 {
+    font-size: 4rem;
+    line-height: 3.9rem;
+    word-spacing: normal;
+  }
 }
 
-.leader p {
-  text-align: center;
-  padding: 0 2.5rem;
-  font-weight: 500;
-  line-height: 1.5rem;
-  color: #8c8c8c;
+.creations {
+  width: 100%;
 }
 
 .creations__preview {
@@ -160,5 +137,226 @@ h2 {
   color: white;
   font-size: 1.2rem;
   letter-spacing: 1px;
+}
+
+.creations__all {
+  margin: 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.creations__all button {
+  cursor: pointer;
+  height: 2.6rem;
+  letter-spacing: 2px;
+  line-height: calc(2.5rem / 2);
+  background-color: white;
+  border: solid 1px black;
+  text-transform: uppercase;
+  padding: 0.75rem 3rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.creations__all button:hover {
+  color: white;
+  background-color: black;
+}
+
+@media screen and (min-width: 800px) {
+  .creations {
+    display: -ms-grid;
+    display: grid;
+    gap: 2rem;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: 1fr 4fr 4fr;
+        grid-template-rows: 1fr 4fr 4fr;
+        grid-template-areas: "title title seeall seeall" "card1 card2 card3 card4" "card5 card6 card7 card8";
+    margin-bottom: 8rem;
+  }
+  .creations h2 {
+    margin-left: 0;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: title;
+  }
+  .creations .creations__all {
+    margin-right: 0;
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-area: seeall;
+  }
+  .creations .creations__preview {
+    margin: 0;
+    height: 100%;
+  }
+  .creations .creations__preview p {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+}
+
+nav {
+  padding-top: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .menu {
+  display: none;
+  color: white;
+}
+
+@media screen and (min-width: 800px) {
+  nav .menu {
+    display: inline;
+  }
+  nav .menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  nav .menu ul li {
+    margin-left: 1.75rem;
+  }
+}
+
+nav button {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  background: none;
+  border: none;
+}
+
+@media screen and (min-width: 800px) {
+  nav button {
+    display: none;
+  }
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav img {
+  height: 100%;
+}
+
+:root {
+  font-size: 15px;
+  font-family: "Alata", sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h2,
+.hero,
+.creations {
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+nav,
+footer,
+.leader,
+.creations,
+.hero {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  margin: 3rem auto 2rem auto;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  letter-spacing: 3px;
+}
+
+.leader p {
+  text-align: center;
+  padding: 0 2.5rem;
+  line-height: 1.5rem;
+  color: #8c8c8c;
+  margin-bottom: 6rem;
+}
+
+footer {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+footer .logo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 2rem auto;
+}
+
+footer li {
+  margin-bottom: 1.5rem;
+}
+
+footer .footer-end-list {
+  color: #8c8c8c;
+}
+
+footer .footer-end-list a {
+  color: white;
+}
+
+@media screen and (min-width: 800px) {
+  nav,
+  .leader,
+  .creations,
+  .hero {
+    max-width: 75rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

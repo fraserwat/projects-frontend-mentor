@@ -1,0 +1,39 @@
+@import "_variables.scss";
+
+nav {
+  padding-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  .menu {
+    display: none;
+    color: $white;
+    @media screen and (min-width: $desktop-breakpoint) {
+      display: inline;
+      ul {
+        display: flex;
+        flex-direction: row;
+        li {
+          margin-left: 1.75rem;
+        }
+      }
+    }
+  }
+}
+nav button {
+  cursor: pointer;
+  $hamburger-size: 2rem;
+  width: $hamburger-size;
+  height: $hamburger-size;
+  background: none;
+  border: none;
+  @media screen and (min-width: $desktop-breakpoint) {
+    display: none;
+  }
+}
+
+nav {
+  display: flex;
+  img {
+    height: 100%;
+  }
+}

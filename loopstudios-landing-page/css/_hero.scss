@@ -1,0 +1,47 @@
+@import "_variables";
+
+.hero-bg-section {
+  background-image: url(/images/mobile/image-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    background-image: url(/images/desktop/image-hero.jpg);
+    background-size: cover auto;
+  }
+}
+
+.hero {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  margin-bottom: 7.5rem;
+}
+
+.hero__text {
+  border: solid 3px $white;
+  h1 {
+    font-size: 10vw;
+    padding: 3rem 1.5rem 2rem 1.5rem;
+    color: $white;
+    word-spacing: 100vw;
+    line-height: 10vw;
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .hero {
+    width: 50%;
+    margin: 8rem auto;
+    margin: 0;
+    padding: 0;
+    justify-self: flex-start;
+    align-self: flex-start;
+  }
+  .hero__text {
+    h1 {
+      font-size: 4rem;
+      line-height: 3.9rem;
+      word-spacing: normal;
+    }
+  }
+}

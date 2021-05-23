@@ -1,9 +1,18 @@
 @import "_reset";
 @import "_variables";
+@import "_hero";
+@import "_creations";
+@import "_nav";
 
 :root {
   font-size: 15px;
-  font-family: "Atala", sans-serif;
+  font-family: "Alata", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h2,
@@ -12,50 +21,20 @@ h2,
   text-transform: uppercase;
   font-family: "Josefin Sans", sans-serif;
 }
+
+nav,
+footer,
 .leader,
 .creations,
-.hero,
-nav {
+.hero {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.hero-bg-section {
-  background-image: url(/images/mobile/image-hero.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  @media screen and (min-width: $desktop-breakpoint) {
-    background-image: url(/images/desktop/image-hero.jpg);
-  }
-}
-
-nav {
-  display: flex;
-  img {
-    height: 100%;
-  }
-}
-
-.hero {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-  margin-bottom: 7.5rem;
-}
-.hero__text {
-  border: solid 2px $white;
-  h1 {
-    font-size: 10vw;
-    padding: 3rem 1.5rem 2rem 1.5rem;
-    font-weight: lighter;
-    color: $white;
-    word-spacing: 100vw;
-    line-height: 10vw;
-  }
-}
 h2 {
   margin: 3rem auto 2rem auto;
-  font-weight: lighter;
   text-align: center;
   font-size: 2rem;
   line-height: 2.2rem;
@@ -64,23 +43,40 @@ h2 {
 .leader p {
   text-align: center;
   padding: 0 2.5rem;
-  font-weight: 500;
   line-height: 1.5rem;
   color: $dark-grey;
+  margin-bottom: 6rem;
 }
 
-.creations__preview {
+footer {
+  padding: 2rem;
   display: flex;
-  height: 7.5rem;
-  padding: 1.5rem;
-  margin: 1rem 0;
-  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $black;
+  text-align: center;
+  color: $white;
 
-  p {
-    width: 7rem;
-    margin-top: auto;
-    color: white;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+  .logo {
+    width: fit-content;
+    margin: 2rem auto;
+  }
+  li {
+    margin-bottom: 1.5rem;
+  }
+  .footer-end-list {
+    color: $dark-grey;
+    a {
+      color: white;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  nav,
+  .leader,
+  .creations,
+  .hero {
+    max-width: 75rem;
   }
 }
