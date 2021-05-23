@@ -326,6 +326,7 @@ nav .menu.active {
       -ms-flex-direction: column;
           flex-direction: column;
   position: fixed;
+  z-index: 2;
 }
 
 nav .menu.active .header {
@@ -677,6 +678,7 @@ a {
 .footer-menu li {
   position: relative;
   cursor: pointer;
+  z-index: 1;
 }
 
 .menu ul li::after,

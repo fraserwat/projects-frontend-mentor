@@ -23,6 +23,7 @@ nav {
     display: flex;
     flex-direction: column;
     position: fixed;
+    z-index: 2;
     ul li {
       font-family: "Josefin Sans", sans-serif;
       font-size: 1.75rem;
