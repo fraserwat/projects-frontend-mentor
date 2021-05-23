@@ -4,11 +4,14 @@
   width: 100%;
 }
 .creations__preview {
+  cursor: pointer;
   display: flex;
   height: 7.5rem;
   padding: 1.5rem;
   margin: 1rem 0;
   background-size: cover;
+  transition: all 0.5s;
+  overflow: hidden;
 
   p {
     width: 7rem;

@@ -78,7 +78,7 @@ select {
   background-repeat: no-repeat;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 940px) {
   .hero-bg-section {
     background-image: url(/images/desktop/image-hero.jpg);
     background-size: cover auto;
@@ -104,7 +104,7 @@ select {
   line-height: 10vw;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 940px) {
   .hero {
     margin: 0;
     padding-top: 6rem;
@@ -137,6 +137,7 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 5rem;
 }
 
 .leader p {
@@ -144,14 +145,14 @@ select {
   padding: 0 2.5rem;
   line-height: 1.5rem;
   color: #8c8c8c;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 }
 
 .leader picture {
   margin: auto;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 940px) {
   .leader {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -198,6 +199,7 @@ select {
 }
 
 .creations__preview {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -205,6 +207,9 @@ select {
   padding: 1.5rem;
   margin: 1rem 0;
   background-size: cover;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  overflow: hidden;
 }
 
 .creations__preview p {
@@ -246,7 +251,7 @@ select {
   background-color: black;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 940px) {
   .creations {
     display: -ms-grid;
     display: grid;
@@ -292,12 +297,57 @@ nav {
           justify-content: space-between;
 }
 
+nav .menu .header {
+  padding-top: 2.5rem;
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20vh;
+}
+
+nav .menu.active {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+}
+
+nav .menu.active .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .menu.active ul li {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+}
+
+nav .menu.active ul li + li {
+  margin-top: 1rem;
+}
+
 nav .menu {
   display: none;
   color: white;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 940px) {
   nav .menu {
     display: inline;
   }
@@ -323,7 +373,7 @@ nav button {
   border: none;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 940px) {
   nav button {
     display: none;
   }
@@ -408,8 +458,23 @@ footer li {
   margin-bottom: 1.5rem;
 }
 
+footer .icons {
+  margin-bottom: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .icons li {
+  margin: auto;
+}
+
 footer .footer-end-list,
 footer .copyright {
+  padding: 1rem 0;
   color: #8c8c8c;
 }
 
@@ -418,7 +483,7 @@ footer .copyright a {
   color: white;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 940px) {
   footer {
     width: 100%;
   }
@@ -480,6 +545,7 @@ footer .copyright a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    padding-top: 0;
   }
 }
 
@@ -547,6 +613,7 @@ h2,
 }
 
 nav,
+.menu.active,
 .footer__container,
 .leader,
 .creations,
@@ -565,7 +632,7 @@ h2 {
   letter-spacing: 3px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 940px) {
   footer {
     margin-bottom: 0;
   }
@@ -576,5 +643,35 @@ h2 {
   .hero {
     max-width: 75rem;
   }
+}
+
+.menu ul li,
+.footer-menu li {
+  position: relative;
+  cursor: pointer;
+}
+
+.menu ul li::after,
+.footer-menu li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  height: 2px;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  background-color: white;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.menu ul li:hover::after,
+.footer-menu li:hover::after {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 /*# sourceMappingURL=main.css.map */

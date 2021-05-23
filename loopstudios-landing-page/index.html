@@ -19,8 +19,9 @@
     <div class="hero-bg-section">
       <nav>
         <img src="/images/logo.svg" alt="Logo" />
-        <button><img src="/images/icon-hamburger.svg" alt="" /></button>
+        <button onclick="menuClick()"><img src="/images/icon-hamburger.svg" alt="" /></button>
         <div class="menu">
+          <div class="header"><img src="/images/logo.svg" alt="Logo"><button onclick="menuClick()"><img src="/images/icon-close.svg" alt="Close Menu"></button></div>
           <ul>
             <li>About</li>
             <li>Careers</li>
@@ -38,12 +39,10 @@
     </div>
     <div class="leader">
       <picture>
-        <!-- CHANGE THIS IF YOU CHANGE DESKTOP BREAKPOINT!!!! -->
         <source
           srcset="/images/desktop/image-interactive.jpg"
-          media="(min-width: 800px)"
+          media="(min-width: 940px)"
         />
-        <!-- CHANGE THIS IF YOU CHANGE DESKTOP BREAKPOINT!!!! -->
         <img
           src="/images/mobile/image-interactive.jpg"
           alt="Guy using VR headset having a good time"
@@ -104,5 +103,6 @@
       
     </div>
     <script src="js/creation-images.js"></script>
+    <script src="js/hamburger.js"></script>
   </body>
 </html>

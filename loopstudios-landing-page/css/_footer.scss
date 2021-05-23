@@ -31,8 +31,17 @@ footer {
   li {
     margin-bottom: 1.5rem;
   }
+  .icons {
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+    li {
+      margin: auto;
+    }
+  }
   .footer-end-list,
   .copyright {
+    padding: 1rem 0;
     color: $dark-grey;
     a {
       color: white;
@@ -85,6 +94,7 @@ footer {
       grid-area: attribution;
       display: flex;
       justify-content: space-between;
+      padding-top: 0;
     }
   }
 }

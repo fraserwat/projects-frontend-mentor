@@ -4,6 +4,34 @@ nav {
   padding-top: 2.5rem;
   display: flex;
   justify-content: space-between;
+  .menu .header {
+    padding-top: 2.5rem;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20vh;
+  }
+  .menu.active {
+    .header {
+      display: flex;
+    }
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    ul li {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 1.75rem;
+      text-transform: uppercase;
+    }
+    ul li + li {
+      margin-top: 1rem;
+    }
+  }
   .menu {
     display: none;
     color: $white;
