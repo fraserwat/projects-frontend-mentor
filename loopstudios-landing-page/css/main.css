@@ -107,8 +107,8 @@ select {
 @media screen and (min-width: 940px) {
   .hero {
     margin: 0;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
     justify-self: flex-start;
     -ms-flex-item-align: start;
         align-self: flex-start;
@@ -362,6 +362,7 @@ nav .menu {
   }
   nav .menu ul li {
     margin-left: 1.75rem;
+    font-size: 1.25rem;
   }
 }
 
