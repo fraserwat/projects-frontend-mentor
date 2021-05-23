@@ -3,6 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
 *,
 *::before,
 *::after {
@@ -70,6 +72,7 @@ select {
 }
 
 .hero-bg-section {
+  width: 100%;
   background-image: url(/images/mobile/image-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -83,6 +86,7 @@ select {
 }
 
 .hero {
+  width: 100%;
   padding-top: 10rem;
   padding-bottom: 10rem;
   margin-bottom: 7.5rem;
@@ -102,18 +106,90 @@ select {
 
 @media screen and (min-width: 800px) {
   .hero {
-    width: 50%;
-    margin: 8rem auto;
     margin: 0;
-    padding: 0;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
     justify-self: flex-start;
     -ms-flex-item-align: start;
         align-self: flex-start;
+  }
+  .hero__text {
+    width: 50%;
   }
   .hero__text h1 {
     font-size: 4rem;
     line-height: 3.9rem;
     word-spacing: normal;
+  }
+}
+
+.leader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.leader p {
+  text-align: center;
+  padding: 0 2.5rem;
+  line-height: 1.5rem;
+  color: #8c8c8c;
+  margin-bottom: 6rem;
+}
+
+.leader picture {
+  margin: auto;
+}
+
+@media screen and (min-width: 800px) {
+  .leader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 10rem;
+  }
+  .leader picture {
+    margin-left: 0;
+    width: 55vw;
+  }
+  .leader .leader__text {
+    margin-right: 0;
+    margin-left: auto;
+    margin-top: -25%;
+    width: 50%;
+    background-color: white;
+    padding: 4rem;
+  }
+  .leader .leader__text h2,
+  .leader .leader__text p {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+  .leader .leader__text h2 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -263,6 +339,185 @@ nav img {
   height: 100%;
 }
 
+/*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../../images/webfonts/fa-brands-400.eot");
+  src: url("../../images/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../../images/webfonts/fa-brands-400.woff2") format("woff2"), url("../../images/webfonts/fa-brands-400.woff") format("woff"), url("../../images/webfonts/fa-brands-400.ttf") format("truetype"), url("../../images/webfonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+
+.fab {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+}
+
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.icons li {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.icons button {
+  margin-left: 1rem;
+  border: none;
+  color: white;
+  background: none;
+  font-size: 1.5rem;
+}
+
+footer {
+  width: 100%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+footer .logo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 2rem auto;
+}
+
+footer li {
+  margin-bottom: 1.5rem;
+}
+
+footer .footer-end-list,
+footer .copyright {
+  color: #8c8c8c;
+}
+
+footer .footer-end-list a,
+footer .copyright a {
+  color: white;
+}
+
+@media screen and (min-width: 800px) {
+  footer {
+    width: 100%;
+  }
+  footer .footer__container {
+    width: 100%;
+    margin-top: 1rem;
+    display: -ms-grid;
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+        grid-template-areas: "logo icons" "navbar copyright" "attribution attribution";
+    gap: 1rem;
+  }
+  footer .logo {
+    margin: 0;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: logo;
+  }
+  footer .icons {
+    margin: 0;
+    margin-left: auto;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: icons;
+  }
+  footer .icons img {
+    cursor: pointer;
+  }
+  footer .footer-menu {
+    margin: 0;
+    margin-right: auto;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: navbar;
+  }
+  footer .footer-menu li {
+    margin-right: 2rem;
+    display: inline;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer .copyright {
+    margin: 0;
+    margin-left: auto;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: copyright;
+  }
+  footer .footer-end-list {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: attribution;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+/*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+.fa,
+.fas,
+.far,
+.fal,
+.fad,
+.fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.fa-facebook:before {
+  content: "\f09a";
+}
+
+.fa-twitter:before {
+  content: "\f099";
+}
+
+.fa-pinterest:before {
+  content: "\f0d2";
+}
+
+.fa-instagram:before {
+  content: "\f16d";
+}
+
 :root {
   font-size: 15px;
   font-family: "Alata", sans-serif;
@@ -279,6 +534,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 h2,
@@ -289,7 +547,7 @@ h2,
 }
 
 nav,
-footer,
+.footer__container,
 .leader,
 .creations,
 .hero {
@@ -307,52 +565,12 @@ h2 {
   letter-spacing: 3px;
 }
 
-.leader p {
-  text-align: center;
-  padding: 0 2.5rem;
-  line-height: 1.5rem;
-  color: #8c8c8c;
-  margin-bottom: 6rem;
-}
-
-footer {
-  padding: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: black;
-  text-align: center;
-  color: white;
-}
-
-footer .logo {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 2rem auto;
-}
-
-footer li {
-  margin-bottom: 1.5rem;
-}
-
-footer .footer-end-list {
-  color: #8c8c8c;
-}
-
-footer .footer-end-list a {
-  color: white;
-}
-
 @media screen and (min-width: 800px) {
+  footer {
+    margin-bottom: 0;
+  }
   nav,
+  .footer__container,
   .leader,
   .creations,
   .hero {

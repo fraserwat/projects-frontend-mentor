@@ -1,8 +1,11 @@
 @import "_reset";
 @import "_variables";
 @import "_hero";
+@import "_leader";
 @import "_creations";
 @import "_nav";
+@import "_footer";
+@import "fontawesome/fontawesome.scss";
 
 :root {
   font-size: 15px;
@@ -10,9 +13,7 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include standard-flex();
 }
 
 h2,
@@ -23,7 +24,7 @@ h2,
 }
 
 nav,
-footer,
+.footer__container,
 .leader,
 .creations,
 .hero {
@@ -40,40 +41,13 @@ h2 {
   line-height: 2.2rem;
   letter-spacing: 3px;
 }
-.leader p {
-  text-align: center;
-  padding: 0 2.5rem;
-  line-height: 1.5rem;
-  color: $dark-grey;
-  margin-bottom: 6rem;
-}
-
-footer {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: $black;
-  text-align: center;
-  color: $white;
-
-  .logo {
-    width: fit-content;
-    margin: 2rem auto;
-  }
-  li {
-    margin-bottom: 1.5rem;
-  }
-  .footer-end-list {
-    color: $dark-grey;
-    a {
-      color: white;
-    }
-  }
-}
 
 @media screen and (min-width: $desktop-breakpoint) {
+  footer {
+    margin-bottom: 0;
+  }
   nav,
+  .footer__container,
   .leader,
   .creations,
   .hero {

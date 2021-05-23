@@ -1,0 +1,90 @@
+@import "_variables";
+@import "./fontawesome/brands.scss";
+
+.icons {
+  display: flex;
+  li {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  button {
+    margin-left: 1rem;
+    border: none;
+    color: white;
+    background: none;
+    font-size: 1.5rem;
+  }
+}
+
+footer {
+  width: 100%;
+  padding: 2rem;
+  @include standard-flex();
+  background-color: $black;
+  text-align: center;
+  color: $white;
+
+  .logo {
+    width: fit-content;
+    margin: 2rem auto;
+  }
+  li {
+    margin-bottom: 1.5rem;
+  }
+  .footer-end-list,
+  .copyright {
+    color: $dark-grey;
+    a {
+      color: white;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  footer {
+    width: 100%;
+    .footer__container {
+      width: 100%;
+      margin-top: 1rem;
+      display: grid;
+      grid-auto-columns: 1fr 1fr;
+      grid-template-areas:
+        "logo icons"
+        "navbar copyright"
+        "attribution attribution";
+      gap: 1rem;
+    }
+    .logo {
+      margin: 0;
+      grid-area: logo;
+    }
+    .icons {
+      margin: 0;
+      margin-left: auto;
+      grid-area: icons;
+      img {
+        cursor: pointer;
+      }
+    }
+    .footer-menu {
+      margin: 0;
+      margin-right: auto;
+      grid-area: navbar;
+      li {
+        margin-right: 2rem;
+        display: inline;
+        flex-direction: row;
+      }
+    }
+    .copyright {
+      margin: 0;
+      margin-left: auto;
+      grid-area: copyright;
+    }
+    .footer-end-list {
+      grid-area: attribution;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

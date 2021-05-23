@@ -1,6 +1,7 @@
 @import "_variables";
 
 .hero-bg-section {
+  width: 100%;
   background-image: url(/images/mobile/image-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -12,6 +13,7 @@
 }
 
 .hero {
+  width: 100%;
   padding-top: 10rem;
   padding-bottom: 10rem;
   margin-bottom: 7.5rem;
@@ -30,14 +32,14 @@
 
 @media screen and (min-width: $desktop-breakpoint) {
   .hero {
-    width: 50%;
-    margin: 8rem auto;
     margin: 0;
-    padding: 0;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
     justify-self: flex-start;
     align-self: flex-start;
   }
   .hero__text {
+    width: 50%;
     h1 {
       font-size: 4rem;
       line-height: 3.9rem;

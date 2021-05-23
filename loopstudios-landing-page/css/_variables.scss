@@ -6,3 +6,10 @@ $dark-grey: hsl(0, 0%, 55%);
 $v-dark-grey: hsl(0, 0%, 41%);
 
 $desktop-breakpoint: 800px;
+
+@mixin standard-flex() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

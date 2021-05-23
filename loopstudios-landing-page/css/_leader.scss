@@ -1,0 +1,45 @@
+@import "_variables";
+
+.leader {
+  @include standard-flex();
+  p {
+    text-align: center;
+    padding: 0 2.5rem;
+    line-height: 1.5rem;
+    color: $dark-grey;
+    margin-bottom: 6rem;
+  }
+  picture {
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .leader {
+    @include standard-flex();
+    margin-top: 10rem;
+    picture {
+      margin-left: 0;
+      width: 55vw;
+    }
+    .leader__text {
+      margin-right: 0;
+      margin-left: auto;
+      margin-top: -25%;
+      width: 50%;
+      background-color: $white;
+      padding: 4rem;
+      h2,
+      p {
+        padding: 0;
+        margin: 0;
+        text-align: left;
+      }
+      h2 {
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
