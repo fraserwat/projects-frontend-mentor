@@ -8,11 +8,11 @@ button {
   color: $pale-blue;
   background-color: $dark-desat-blue;
 
-  margin: 2rem auto;
+  margin: 2rem auto 3rem auto;
   border: none;
-  max-width: 14rem;
+  max-width: 16rem;
   font-weight: 800;
-  padding: 0.75rem 3.5rem;
+  padding: 1.1rem 4.2rem;
   border-radius: 100px;
   &:hover {
     color: $dark-desat-blue;

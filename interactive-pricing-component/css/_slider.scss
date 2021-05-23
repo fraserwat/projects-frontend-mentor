@@ -1,15 +1,20 @@
+@import "_variables";
+
 $soft-cyan: hsl(174, 77%, 80%); // Full Slider Bar
 $strong-cyan: hsl(174, 86%, 45%); // Slider Backround
 $light-greyish-blue: hsl(224, 65%, 95%); // Empty Slider Bar
 
 .slider {
-  margin: 2rem;
+  margin: 3rem;
   display: flex;
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin: 3rem 0;
+  }
 }
 
 @mixin slider-thumb {
-  width: 3rem;
-  height: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
   transform: translateY(-33%);
   background-color: $strong-cyan;
   background-image: url(/images/icon-slider.svg);
@@ -18,7 +23,7 @@ $light-greyish-blue: hsl(224, 65%, 95%); // Empty Slider Bar
   background-size: 60%;
   border-radius: 100%;
   cursor: pointer;
-  box-shadow: 0 20px 40px 15px rgba(16, 213, 194, 0.3);
+  box-shadow: 0 20px 30px 10px rgba(16, 213, 194, 0.35);
 }
 @mixin slider-bar() {
   width: 80%;

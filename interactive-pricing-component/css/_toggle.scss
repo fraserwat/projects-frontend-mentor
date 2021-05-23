@@ -1,0 +1,59 @@
+@import "_variables.scss";
+
+.toggle {
+  margin: 0.75rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 4rem;
+  height: 2rem;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle input:focus {
+  outline-offset: 50px;
+  outline: solid black 2px;
+}
+
+/* The slider */
+.toggle-bg {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $light-grey-blue;
+  border-radius: 34px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.toggle-bg::before {
+  $toggle-button-size: 20px;
+  content: "";
+  position: absolute;
+
+  height: $toggle-button-size;
+  width: $toggle-button-size;
+  background-color: white;
+  border-radius: $toggle-button-size;
+  left: 6px;
+  bottom: 16%;
+  transition: 0.4s;
+}
+
+.switch input:checked + .toggle-bg {
+  background-color: $strong-cyan;
+  &::before {
+    transform: translateX(28px);
+  }
+}

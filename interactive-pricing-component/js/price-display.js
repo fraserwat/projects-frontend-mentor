@@ -3,9 +3,9 @@ function sliderChange(val) {
     document.getElementById('amount-var').innerHTML = calculatePrice(val);
 }
 
-function calculatePrice(val=100) {
+function calculatePrice(val) {
     let cost; 
-    if (val < 50) {
+    if ((val ) < 50) {
         cost = 8
     } else 
     if (val < 100) {
@@ -19,5 +19,5 @@ function calculatePrice(val=100) {
     } else {
         cost = 36
     }
-    return cost.toFixed(2)
+    return (pricingPlan === 'monthly') ? cost.toFixed(2) : (cost * 12 * 0.75).toFixed(2)
 }

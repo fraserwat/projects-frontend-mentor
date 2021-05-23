@@ -15,10 +15,12 @@
   <body>
     <div class="header-text container">
       <h3>Simple, traffic-based pricing</h3>
-      <p>Sign-up for our 30-day trial.</p>
-      <p>No credit card required.</p>
+      <div class="header-para">
+        <p>Sign-up for our 30-day trial.</p>
+        <p>No credit card required.</p>
+      </div>
     </div>
-    <div class="component container">
+    <div class="component">
       <div class="pageviews">
         <p><span id="pageview-var">100k</span> pageviews</p>
       </div>
@@ -29,7 +31,7 @@
           max="1000"
           value="100"
           id="slider"
-          oninput="sliderChange(this.value)"
+          oninput="sliderChange(this.value); sliderBarUpdate(this);"
         />
       </div>
       <div class="amount">
@@ -38,15 +40,20 @@
       </div>
       <div class="billing-toggle">
         <p>Monthly Billing</p>
-        <div class="toggle"></div>
+        <div class="toggle">
+          <label class="switch">
+            <input type="checkbox" oninput="changePlan(this.checked)" />
+            <span class="toggle-bg"></span>
+          </label>
+        </div>
         <p>Yearly Billing</p>
       </div>
-      <ul>
+      <ul class="tick-list">
         <li>Unlimited websites</li>
         <li>100% data ownership</li>
         <li>Email reports</li>
       </ul>
-      <button>Start my trial</button>
+      <button class="trial">Start my trial</button>
     </div>
     <div class="attribution container">
       <ul>
@@ -62,5 +69,6 @@
     <script src="js/price-display.js"></script>
     <script src="js/button-ripples.js"></script>
     <script src="js/slider-bg.js"></script>
+    <script src="js/toggle-plan.js"></script>
   </body>
 </html>
