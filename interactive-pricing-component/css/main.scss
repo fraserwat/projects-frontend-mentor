@@ -148,6 +148,10 @@ body {
   padding: 3rem 0 2.5rem 0;
   margin-bottom: 2rem;
   border-bottom: 1px solid rgba(205, 215, 238, 0.7);
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin-left: 3rem;
+    padding: 1rem 0 2.5rem 0;
+  }
 }
 
 .billing-toggle p:last-child::after {
