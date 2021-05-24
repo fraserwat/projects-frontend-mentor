@@ -4,6 +4,10 @@
   margin: 0.75rem;
 }
 
+.toggle:focus-within.toggle:focus-visible {
+  outline: 2px solid hsl(227, 35%, 25%);
+}
+
 .switch {
   position: relative;
   display: inline-block;
