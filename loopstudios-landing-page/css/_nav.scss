@@ -1,5 +1,14 @@
 @import "_variables.scss";
 
+@keyframes xSpin {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 nav {
   padding-top: 2.5rem;
   display: flex;
@@ -12,6 +21,9 @@ nav {
     margin-bottom: 20vh;
   }
   .menu.active {
+    button {
+      animation: xSpin 1s;
+    }
     .header {
       display: flex;
     }

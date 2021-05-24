@@ -289,6 +289,28 @@ select {
   }
 }
 
+@-webkit-keyframes xSpin {
+  0% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes xSpin {
+  0% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
 nav {
   padding-top: 2.5rem;
   display: -webkit-box;
@@ -327,6 +349,11 @@ nav .menu.active {
           flex-direction: column;
   position: fixed;
   z-index: 2;
+}
+
+nav .menu.active button {
+  -webkit-animation: xSpin 1s;
+          animation: xSpin 1s;
 }
 
 nav .menu.active .header {
@@ -422,7 +449,7 @@ nav img {
   margin-top: 0;
 }
 
-.icons button {
+.icons a {
   margin-left: 1rem;
   border: none;
   color: white;
@@ -449,6 +476,23 @@ footer {
   background-color: black;
   text-align: center;
   color: white;
+}
+
+footer nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
 }
 
 footer .logo {
@@ -530,20 +574,23 @@ footer .copyright a {
         -ms-flex-align: center;
             align-items: center;
   }
-  footer .icons li button {
+  footer .icons li a {
     width: 100%;
   }
-  footer .icons li button i {
+  footer .icons li a i {
     cursor: pointer;
   }
-  footer .footer-menu {
+  footer nav {
+    margin-left: 0;
+  }
+  footer nav .footer-menu {
     margin: 0;
     margin-right: auto;
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: navbar;
   }
-  footer .footer-menu li {
+  footer nav .footer-menu li {
     margin-right: 2rem;
     display: inline;
     -webkit-box-orient: horizontal;

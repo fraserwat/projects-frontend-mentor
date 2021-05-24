@@ -7,7 +7,7 @@
     margin-bottom: 0;
     margin-top: 0;
   }
-  button {
+  a {
     margin-left: 1rem;
     border: none;
     color: white;
@@ -23,7 +23,10 @@ footer {
   background-color: $black;
   text-align: center;
   color: $white;
-
+  nav {
+    @include standard-flex();
+    padding: 0;
+  }
   .logo {
     width: fit-content;
     margin: 2rem auto;
@@ -80,7 +83,7 @@ footer {
         justify-content: center;
         align-items: center;
 
-        button {
+        a {
           width: 100%;
           i {
             cursor: pointer;
@@ -88,14 +91,17 @@ footer {
         }
       }
     }
-    .footer-menu {
-      margin: 0;
-      margin-right: auto;
-      grid-area: navbar;
-      li {
-        margin-right: 2rem;
-        display: inline;
-        flex-direction: row;
+    nav {
+      margin-left: 0;
+      .footer-menu {
+        margin: 0;
+        margin-right: auto;
+        grid-area: navbar;
+        li {
+          margin-right: 2rem;
+          display: inline;
+          flex-direction: row;
+        }
       }
     }
     .copyright {
