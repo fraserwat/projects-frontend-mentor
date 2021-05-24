@@ -1,5 +1,4 @@
 /* Box sizing rules */
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
 *,
 *::before,
 *::after {
@@ -304,46 +303,6 @@ span.ripple {
           transform: translateX(28px);
 }
 
-@media screen and (min-width: 800px) {
-  .component {
-    display: -ms-grid;
-    display: grid;
-        grid-template-areas: "pageviews price" "bar bar" "toggle toggle" "checklist trial";
-  }
-  .component .pageviews {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: pageviews;
-  }
-  .component .amount {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: price;
-  }
-  .component .slider {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: bar;
-  }
-  .component .billing-toggle {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: toggle;
-  }
-  .component .tick-list {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-    grid-area: checklist;
-  }
-  .component .trial {
-    -ms-grid-row: 4;
-    -ms-grid-column: 2;
-    grid-area: trial;
-  }
-}
-
 :root {
   font-size: 15px;
   letter-spacing: 1px;
@@ -357,7 +316,6 @@ body {
   background-position: center 8vh;
   background-size: 25vw;
   text-align: center;
-  min-height: 100vh;
   padding: 1rem;
   background-color: #fafbff;
   display: -webkit-box;
@@ -367,12 +325,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media screen and (min-width: 800px) {
@@ -635,5 +587,6 @@ body {
 .attribution {
   margin-top: auto;
   padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

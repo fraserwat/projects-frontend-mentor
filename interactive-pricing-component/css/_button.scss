@@ -1,5 +1,4 @@
-$dark-desat-blue: hsl(227, 35%, 25%); // Text & CTA Background
-$pale-blue: hsl(226, 100%, 87%); // CTA Text
+@import "_variables";
 
 button {
   position: relative;

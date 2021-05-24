@@ -3,8 +3,6 @@
 @import "_button";
 @import "_toggle";
 @import "_variables";
-@import "_grid";
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
 
 :root {
   font-size: 15px;
@@ -20,13 +18,10 @@ body {
   background-position: center 8vh;
   background-size: 25vw;
   text-align: center;
-  min-height: 100vh;
   padding: 1rem;
   background-color: $v-pale-blue;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   @media screen and (min-width: $desktop-breakpoint) {
     background-size: 20vh;
   }
@@ -90,7 +85,6 @@ body {
 
 .header-text {
   margin: auto;
-  // margin-bottom: 3.5rem;
   h3 {
     font-size: 1.5rem;
     color: $dark-desat-blue;
@@ -101,7 +95,6 @@ body {
     padding-bottom: 0.5rem;
   }
   @media screen and (min-width: $desktop-breakpoint) {
-    // padding-top: 5rem;
     width: 100%;
     .header-para {
       display: flex;
@@ -146,6 +139,7 @@ body {
     font-size: 1.2rem;
   }
 }
+
 .billing-toggle {
   display: flex;
   justify-content: center;
@@ -182,4 +176,5 @@ body {
 .attribution {
   margin-top: auto;
   padding-bottom: 1rem;
+  padding-top: 1rem;
 }
