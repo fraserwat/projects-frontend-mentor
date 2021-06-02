@@ -1,0 +1,11 @@
+.social-sh {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: $dark-grey-blue;
+  overflow: hidden;
+}
+.social-sh > ul {
+  display: flex;
+  flex-direction: row;
+}

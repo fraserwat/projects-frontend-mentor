@@ -18,7 +18,9 @@
   </head>
   <body>
     <div class="container">
-      <div class="img-container"></div>
+      <div class="img-container">
+        <!-- <img src="/images/drawers.jpg" alt="" /> -->
+      </div>
       <div class="article-container">
         <div class="article-preview">
           <h2>
@@ -37,13 +39,37 @@
             alt="Profile image of author Michelle Appleton"
           />
           <div class="author"><span>Michelle Appleton</span> 28 Jun 2020</div>
-          <div class="share-icon">
-            <img
-              src="/images/icon-share.svg"
-              alt="share icon"
-              style="display: block !important"
-              ;
-            />
+          <div class="sh-container">
+            <div class="sh-icon">
+              <button
+                class="sh-button"
+                aria-label="share"
+                onclick="shareButton()"
+              >
+                <img src="/images/icon-sh.svg" alt="" ; />
+              </button>
+            </div>
+          </div>
+          <div class="social-sh hide" id="share-popup">
+            <ul>
+              <li>Share</li>
+              <li>
+                <img src="/images/icon-f.svg" alt="facebook icon" />
+              </li>
+              <li><img src="/images/icon-t.svg" alt="twitter icon" /></li>
+              <li>
+                <img src="/images/icon-p.svg" alt="pintrest icon" />
+              </li>
+            </ul>
+            <div class="sh-icon">
+              <button
+                class="sh-button"
+                aria-label="share"
+                onclick="shareButton()"
+              >
+                <img src="/images/icon-sh.svg" alt="" ; />
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -62,6 +88,7 @@
           <li>Coded by <a href="#">Fraser Watt</a>.</li>
         </ul>
       </div>
+      <script src="/js/sh-button.js"></script>
     </footer>
   </body>
 </html>
