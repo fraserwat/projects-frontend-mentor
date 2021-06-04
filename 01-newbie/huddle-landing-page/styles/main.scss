@@ -1,0 +1,253 @@
+@import "scss/fontawesome.scss";
+@import "scss/solid.scss";
+@import "scss/brands.scss";
+
+// Breakpoints and Colour Scheme
+$mobile-breakpoint: 1000px;
+$violet: hsl(257, 40%, 49%);
+$soft-magenta: hsl(300, 69%, 71%);
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: "Open Sans";
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  //   background-color: ;
+
+  background: $violet url("/images/bg-mobile.svg") no-repeat;
+  background-size: auto 100vw;
+}
+header {
+  margin: 2em;
+  img {
+    width: 7em;
+  }
+}
+
+.image-container {
+  grid-area: image;
+  text-align: center;
+  img {
+    width: 70%;
+    margin: 2em auto;
+  }
+}
+
+.content {
+  grid-area: content;
+  text-align: center;
+  h1 {
+    font-family: "Poppins", sans-serif;
+    margin: 0.5em 2em;
+  }
+  p {
+    margin: 0 2.5em;
+    margin-bottom: 1em;
+  }
+}
+
+input[type="button"],
+button {
+  font-family: "Poppins";
+  color: $violet;
+  padding: 0.75em;
+  margin: 1em;
+  width: 50%;
+  max-width: 15em;
+  border-radius: 99999px;
+  border: none;
+  box-shadow: 0px 2px 10px 2px rgba($color: #000000, $alpha: 0.25);
+
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.sm-icons {
+  grid-area: socials;
+  ul {
+    list-style: none;
+    margin: 2em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li {
+      margin: 0.3em;
+      display: inline;
+      overflow: hidden;
+      font-size: 1.5rem;
+
+      $radius: 1.7em;
+      border: white 1px solid;
+      width: $radius;
+      height: $radius;
+      line-height: 1.65em;
+      border-radius: 50%;
+      text-align: center;
+      transition: 500ms;
+
+      vertical-align: top;
+      &:hover {
+        transition: 500ms;
+        background: white;
+        color: $violet;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.attribution {
+  text-align: center;
+  display: flex;
+  margin-top: auto;
+  margin-bottom: 1.5em;
+  ul {
+    margin: 0 auto;
+    li {
+      display: inline-block;
+      margin: 0.25em 1em;
+      a {
+        color: $soft-magenta;
+      }
+    }
+  }
+}
+
+.overlay {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  background: rgba($color: #000000, $alpha: 0.7);
+  z-index: 999;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.overlay:target {
+  transition: opacity 500ms;
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  max-width: 90%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px 5px rgba($color: #000000, $alpha: 0.75);
+  text-align: right;
+
+  a {
+    align-self: flex-end;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 0.5em 1em;
+    transition: 500ms;
+    &:hover {
+      color: $soft-magenta;
+      transition: 500ms;
+    }
+  }
+
+  form {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 0 3em;
+    padding-bottom: 1em;
+    color: $violet;
+    font-weight: 600;
+
+    input[type="text"] {
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      padding: 1em;
+      margin-top: 1em;
+      margin-bottom: 1.5em;
+
+      display: block;
+      border: 2px solid hsl(257, 40%, 49%);
+      border-radius: 5px;
+    }
+    button {
+      font-size: 1.25rem;
+      color: white;
+      background-color: $violet;
+      padding-left: 2em;
+      padding-right: 2em;
+      width: auto;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-breakpoint) {
+  body {
+    background: $violet url("/images/bg-desktop.svg") no-repeat;
+    background-size: cover;
+    font-size: 1.5vw;
+    justify-content: center;
+  }
+
+  header img {
+    width: 15vw;
+  }
+
+  .main {
+    display: grid;
+    align-items: center;
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+    grid-template-areas:
+      "image content"
+      "socials socials";
+  }
+
+  .content {
+    text-align: left;
+
+    h1 {
+      margin-left: 0;
+      max-width: 13em;
+    }
+    p {
+      margin-left: 0;
+      max-width: 27.5em;
+    }
+
+    button {
+      font-size: 1.25rem;
+      margin-left: 0;
+      max-width: 12em;
+      padding: 1em 0.75em;
+    }
+  }
+
+  .sm-icons ul {
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0 2em 0 0;
+  }
+}

@@ -1,0 +1,52 @@
+@import "variables.scss";
+
+footer {
+  ul {
+    text-align: center;
+    margin-bottom: 2em;
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 0.5em;
+    }
+  }
+  .sm-icons {
+    color: $blue-main;
+    margin-bottom: 1em;
+    li {
+      border: 1px solid rgba(150, 150, 150, 0.2);
+      border-radius: 100%;
+      $radius: 1.6em;
+      width: $radius;
+      height: $radius;
+      line-height: 1.6em;
+      vertical-align: top;
+      transition: 500ms;
+
+      &:hover {
+        cursor: pointer;
+        transition: 500ms;
+        border: 1px solid $blue-main;
+        background-color: $blue-main;
+        color: white;
+      }
+    }
+  }
+  @mixin footer-text {
+    font-size: 0.75rem;
+    color: $gray;
+  }
+  p {
+    @include footer-text();
+    text-align: center;
+  }
+  .attribution {
+    @include footer-text();
+    li {
+      margin-bottom: 0;
+    }
+    a {
+      color: $blue-main;
+    }
+  }
+}

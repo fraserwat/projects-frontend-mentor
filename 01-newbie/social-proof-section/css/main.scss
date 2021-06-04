@@ -1,0 +1,194 @@
+$very-dark-magenta: hsl(300, 43%, 22%);
+$soft-pink: hsl(333, 80%, 67%);
+$dark-grayish-magenta: hsl(303, 10%, 53%);
+$light-grayish-magenta: hsl(300, 24%, 96%);
+
+$desktop-breakpoint: 1080px;
+
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+@import "reset.scss";
+
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin stagger-elements {
+  :nth-child(1) {
+    align-self: flex-start;
+  }
+  :nth-child(2) {
+    align-self: center;
+  }
+  :nth-child(3) {
+    align-self: flex-end;
+  }
+}
+
+:root {
+  font-size: 15px;
+  font-family: "Spartan";
+}
+
+body {
+  @include flex-center;
+  text-align: center;
+  background: url("/images/bg-pattern-top-mobile.svg") no-repeat;
+
+  @media only screen and (min-width: $desktop-breakpoint) {
+    justify-content: center;
+    text-align: left;
+    background: url("/images/bg-pattern-top-desktop.svg") no-repeat,
+      url("/images/bg-pattern-bottom-desktop.svg") no-repeat;
+    background-position: 0 0, right bottom;
+  }
+}
+
+.container {
+  margin: 3rem auto;
+  padding: 1.5em;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: $desktop-breakpoint) {
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+      "text stars"
+      "reviews reviews";
+  }
+}
+
+footer {
+  display: flex;
+  justify-self: flex-end;
+  align-self: flex-end;
+  margin: 2em auto;
+}
+
+.header-text {
+  @include flex-center;
+  padding: 1em;
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1em;
+    max-width: 30rem;
+    color: $very-dark-magenta;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin: 1rem 0 2rem 0;
+    max-width: 30rem;
+    color: $dark-grayish-magenta;
+  }
+  @media only screen and (min-width: $desktop-breakpoint) {
+    grid-area: text;
+    align-items: flex-start;
+    width: 100%;
+    h1 {
+      font-size: 3.25em;
+    }
+    p {
+      font-size: 1.2em;
+      max-width: 36rem;
+    }
+  }
+}
+
+.rating-container {
+  @include flex-center;
+  width: 100%;
+  margin-bottom: 2em;
+
+  .rating-box {
+    display: flex;
+    flex-direction: column;
+    background-color: $light-grayish-magenta;
+    color: $very-dark-magenta;
+    font-weight: 700;
+    border-radius: 10px;
+    max-width: 30rem;
+    width: 100%;
+    margin: 0.25em 0;
+    padding: 1em 0;
+
+    .rating-stars {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 1em;
+
+      img {
+        padding: 0 0.25em;
+      }
+    }
+  }
+  @media only screen and (min-width: $desktop-breakpoint) {
+    @include stagger-elements();
+    align-items: flex-end;
+    grid-area: stars;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 0 3em;
+    .rating-box {
+      flex-direction: row;
+      width: 85%;
+      min-width: 35em;
+      margin: 0.5em;
+      padding: 1.5em;
+      .rating-stars {
+        margin: 0 2em;
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.testimonial-container {
+  @include flex-center();
+  text-align: left;
+
+  @media only screen and (min-width: $desktop-breakpoint) {
+    grid-area: reviews;
+    flex-direction: row;
+    min-height: 23rem;
+    margin-top: 2em;
+    @include stagger-elements();
+  }
+
+  .review-container {
+    display: flex;
+    flex-direction: column;
+
+    margin: 1em 0;
+    padding: 2em;
+    max-width: 30rem;
+    border-radius: 10px;
+    background-color: $very-dark-magenta;
+    color: white;
+    @media only screen and (min-width: $desktop-breakpoint) {
+      margin: 1em;
+      width: 100%;
+    }
+    .review-header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 1em 0 2em 0;
+      color: $soft-pink;
+      span {
+        color: white;
+        font-weight: 700;
+      }
+      img {
+        margin-right: 2em;
+        border-radius: 50%;
+        width: 3em;
+      }
+    }
+  }
+}

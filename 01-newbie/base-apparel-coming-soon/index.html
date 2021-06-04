@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="/images/logo.svg" alt="">
+      </div>
+      <div class="image-container">
+        <picture>
+          <source srcset="/images/hero-desktop.jpg" media="(min-width: 800px)"/>
+          <img src="/images/hero-mobile.jpg" alt="Photo of woman infront of plant" class="image-mobile">  
+        </picture>
+      </div>
+      <div class="form-container">
+        <h1>We're<span> coming soon</span></h1>
+        <p class="message">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+        <form action="#" onsubmit="return false">
+          <input type="email" placeholder="Email Address" aria-label="email"></input>
+          <img src="/images/icon-error.svg" alt="" class="error-icon ">
+          <button onclick="return validateEmail(event)"><img src="/images/icon-arrow.svg" alt="Submit button"></button>
+        </form>
+        <p class="error-message ">Please provide a valid email</p>
+      </div>
+      <footer class="attribution">
+        <ul>
+          <li>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a></li> 
+          <li>Coded by <a href="#">Fraser Watt</a></li>
+        </ul>
+      </footer>
+    </div>
+    <script src="/js/validation.js"></script>
+    
+  </body>
+</html>

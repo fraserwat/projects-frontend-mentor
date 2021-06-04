@@ -1,0 +1,249 @@
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"],
+li {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+input:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:root {
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+  color: #4a4b5e;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background-image: linear-gradient(to bottom, #af67e9, #6565e7);
+  padding: 2rem;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 35em;
+  margin: 10em auto 0 auto;
+  background-color: white;
+  border-radius: 25px;
+  padding: 0 1em;
+  -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.5);
+}
+
+.image-container {
+  height: 10rem;
+  margin-right: 2rem;
+}
+
+.image-container img {
+  margin: auto;
+  -webkit-transform: translateY(-9em);
+          transform: translateY(-9em);
+  -webkit-filter: drop-shadow(0px 25px 1px rgba(101, 101, 231, 0.2));
+          filter: drop-shadow(0px 25px 1px rgba(101, 101, 231, 0.2));
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.faq-container {
+  margin-bottom: 2em;
+}
+
+.faq-container p {
+  padding: 0.5em 0;
+}
+
+li {
+  cursor: pointer;
+  border-bottom: 1px solid #e7e7e9;
+  padding: 0 0 0.5em 0;
+  margin: 1em 0;
+}
+
+label .answer {
+  color: #787887;
+  display: none;
+  font-weight: 400;
+}
+
+label .question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+label .question img {
+  margin: auto 1em auto auto;
+}
+
+label .question:hover {
+  color: #f47c57;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  font-weight: 700;
+}
+
+input:checked + label .answer {
+  display: inline;
+}
+
+@media screen and (min-width: 635px) {
+  .container {
+    width: 80%;
+    max-width: 900px;
+    height: 36em;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "image faq";
+    grid-auto-columns: 1fr 1fr;
+  }
+  picture {
+    background-image: url(/images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: right center;
+  }
+  .box {
+    background: none;
+    -webkit-transform: translateX(-205%) translateY(30%);
+            transform: translateX(-205%) translateY(30%);
+  }
+  h1 {
+    margin-top: 1.5em;
+    text-align: left;
+    font-size: 2.5em;
+  }
+  .image-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: image;
+    height: 100%;
+    margin: auto;
+  }
+  .image-container picture {
+    height: 100%;
+    margin-left: -20%;
+    display: fixed;
+  }
+  .image-container img {
+    margin: auto;
+    -webkit-transform: none;
+            transform: none;
+    -webkit-filter: none;
+            filter: none;
+  }
+  .faq-container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: faq;
+    padding-right: 2em;
+    padding-top: 1em;
+    margin-bottom: 0;
+  }
+  .faq-actual {
+    max-height: 26em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: auto;
+    margin-bottom: 0;
+  }
+}
+
+.attribution {
+  color: white;
+  margin: auto auto 1em auto;
+}
+
+.attribution ul {
+  margin-top: 2em;
+}
+
+.attribution a {
+  color: white;
+  font-weight: 700;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,133 @@
+// Variables and Imports
+
+@import "reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+$white: hsla(0, 0, 100%, 1); // main heading, stats
+$slightly-transparent-white: hsla(0, 0, 100%, 0.6); // paragraph, stat headings
+
+$very-dark-blue: hsl(233, 47%, 7%);
+$desaturated-blue: hsl(244, 38%, 16%);
+$soft-violet: hsl(277, 64%, 61%);
+
+$desktop-breakpoint: 956px;
+
+// Main SCSS
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  min-height: 100vh;
+  background-color: $very-dark-blue;
+  color: $slightly-transparent-white;
+}
+
+h1,
+span {
+  color: $white;
+}
+
+.container {
+  margin: auto;
+  max-width: 30rem;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: $desaturated-blue;
+
+  .image-container {
+    height: 17em;
+    width: 100%;
+    background-image: url("../images/image-header-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 1em;
+
+    .overlay {
+      height: 100%;
+      width: 100%;
+      opacity: 0.5;
+      background-color: hsl(277, 100%, 40%);
+    }
+  }
+
+  h1 {
+    margin: auto;
+    margin-bottom: 0.5em;
+    max-width: 15em;
+    span {
+      color: $soft-violet;
+    }
+  }
+  .grid-container {
+    padding: 2em;
+    p {
+      margin-bottom: 1em;
+    }
+  }
+
+  li {
+    text-transform: uppercase;
+    span {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      text-transform: none;
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .container {
+    max-width: 65rem;
+    padding-bottom: 0;
+    display: grid;
+    grid-template-areas:
+      "text hero"
+      "stats hero";
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+
+    .image-container {
+      grid-area: hero;
+      height: 100%;
+      background: url("../images/image-header-desktop.jpg") no-repeat right
+        center;
+      background-size: cover;
+    }
+    .grid-container {
+      padding: 5em;
+    }
+    .text-container {
+      grid-area: text;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 4em;
+      h1 {
+        margin-bottom: 0.75em;
+      }
+    }
+    .stats-container {
+      grid-area: stats;
+      display: flex;
+      ul {
+        display: flex;
+        width: 100%;
+        li {
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}
+
+.attribution {
+  justify-self: flex-end;
+  margin-top: 2em;
+  a {
+    color: $soft-violet;
+  }
+}

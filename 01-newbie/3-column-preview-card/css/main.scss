@@ -1,0 +1,145 @@
+// Imports and Variables
+@import "reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+$desktop-breakpoint: 826px;
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Lexend Deca";
+  color: hsla(0, 0%, 100%, 0.75);
+  padding: 2em;
+}
+
+.container {
+  display: flex;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-direction: column;
+  margin: auto auto 3em auto;
+  max-width: auto;
+
+  @media only screen and (min-width: $desktop-breakpoint) {
+    flex-direction: row;
+    margin: auto;
+    max-width: 950px;
+  }
+}
+
+.car-category {
+  // width: 100%;
+  flex-basis: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2.5em;
+  padding-bottom: 2em;
+  transition: 500ms ease-in-out;
+
+  @media only screen and (max-width: $desktop-breakpoint) {
+    max-width: 350px;
+  }
+  @media only screen and (min-width: $desktop-breakpoint) {
+    max-width: auto;
+    height: 26em;
+  }
+
+  img {
+    width: 4rem;
+    margin-bottom: 1.5em;
+  }
+  h1 {
+    font-family: "Big Shoulders Display";
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  p {
+    margin-bottom: 1em;
+  }
+}
+
+button {
+  width: 9em;
+  margin-top: auto;
+  border: none;
+  border-radius: 999px;
+  padding: 0.75em 1.2em;
+  box-shadow: 1px 1px 1px 1px rgba($color: #000000, $alpha: 0.15);
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+@mixin button-colors($theme-color) {
+  background-color: $theme-color;
+  button {
+    color: $theme-color;
+    transition: 500ms;
+    &:hover {
+      cursor: pointer;
+      color: white;
+      background-color: $theme-color;
+      box-shadow: 0 0 0 1px white;
+    }
+  }
+}
+
+#sedan {
+  @include button-colors($bright-orange);
+}
+#suv {
+  @include button-colors($dark-cyan);
+}
+#luxury {
+  @include button-colors($very-dark-cyan);
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .car-category.inactive {
+    flex: 1;
+    padding: 1em;
+    transition: 750ms ease-in-out;
+    img,
+    p,
+    h1 {
+      transition: 350ms ease-in-out;
+      opacity: 0;
+      overflow: hidden;
+      white-space: keep-all;
+    }
+    button {
+      display: none;
+    }
+  }
+}
+.car-category.active {
+  transition: 750ms ease-in-out;
+  flex: 10;
+}
+.learn-more {
+  display: none;
+}
+.active .learn-more {
+  display: inherit;
+  margin-bottom: 1em;
+}
+
+.attribution {
+  justify-self: flex-end;
+  align-self: center;
+  color: black;
+  text-align: center;
+  li {
+    display: inline-block;
+  }
+  li + li {
+    margin-left: 1.5em;
+  }
+}

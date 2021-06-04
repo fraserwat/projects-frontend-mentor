@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Huddle landing page with single introductory section
+    </title>
+  </head>
+  <body>
+    <header>
+      <img src="/images/logo.svg" alt="" />
+    </header>
+    <section class="main">
+      <div class="image-container">
+        <img src="/images/illustration-mockups.svg" alt="" />
+      </div>
+      <div class="content">
+        <h1>Build The Community Your Fans Will Love</h1>
+        <p>
+          Huddle re-imagines the way we build communities. You have a voice, but
+          so does your audience. Create connections with your users as you
+          engage in genuine discussion.
+        </p>
+        <a href="#overlay"><button>Register</button></a>
+      </div>
+      <div class="sm-icons">
+        <ul>
+          <li><i class="fab fa-facebook"></i></li>
+          <li><i class="fab fa-twitter"></i></li>
+          <li><i class="fab fa-instagram"></i></li>
+        </ul>
+      </div>
+    </section>
+    <footer class="attribution">
+      <ul>
+        <li>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >
+        </li>
+        <li>Coded by <a href="#">Fraser Watt</a></li>
+      </ul>
+    </footer>
+
+    <div class="overlay" id="overlay">
+      <div class="popup-container">
+        <a class="close" href="#"><span>&times;</span></a>
+        <form action="">
+          <label for="name" aria-label="name">Name</label>
+          <input type="text" name="email" id="name" placeholder="Your Name" />
+
+          <label for="email" aria-label="email">Email</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="someone@gmail.com"
+          />
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

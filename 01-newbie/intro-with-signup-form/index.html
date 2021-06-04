@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <div class="content-container">
+      <div class="hero-content">
+        <h1>Learn to code by watching others</h1>
+        <p class="hero-blurb">
+          See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think
+          is invaluable.
+        </p>
+      </div>
+      <div class="right-hand-content">
+        <div class="try-free">
+          <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+        </div>
+        <div class="form-container">
+        
+           <form action="#" onsubmit="return validateForm(event)">
+             <div class="error-check">
+               <input type="text" class="firstname-check" placeholder="First Name" aria-label="first-name"></input>
+               <p class="error firstname-check">First Name cannot be empty.</p>
+             </div>
+             <div class="error-check">
+               <input type="text" class="lastname-check" placeholder="Last Name" aria-label="last-name"></input>
+               <p class="error lastname-check">Last Name cannot be empty.</p>
+             </div>
+             <div class="error-check">
+               <input type="email" class="email-check" id="email-input" placeholder="Email Address" aria-label="email"></input>
+               <p class="error email-check">Must be a valid email address.</p>
+             </div>
+             <div class="error-check">
+               <input type="password" class="password-check" placeholder="Password" aria-label="password"></input>
+               <p class="error password-check">Password must be at least 8 characters.</p>
+             </div>
+             <button class="pushable"><span class="button-front">Claim your free trial</span></button>
+          </form>
+          <p class="terms">
+            By clicking the button,
+            you are agreeing to our <span>Terms and Services</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <ul class="attribution">
+        <li>Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          ></li>
+           <li>Coded by <a href="#">Fraser Watt</a></li>
+      </ul>
+    </footer>
+    <script src="js/validation.js"></script>
+  </body>
+</html>

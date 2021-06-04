@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Frontend Mentor | Ping coming soon page</title>
+  </head>
+  <body>
+    <header>
+      <img src="/images/logo.svg" alt="Ping logo" />
+    </header>
+    <section class="main">
+      <div class="main-heading">
+        <h1 class="launching">We are launching <span>soon!</span></h1>
+        <p>Subscribe and get notified</p>
+      </div>
+      <div class="form-container">
+        <form name="notify-me" novalidate onsubmit="return false">
+          <div class="email-container">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              aria-label="email"
+              placeholder="Your email address..."
+              class="validation"
+            />
+            <p class="validation" id="error-message">
+              Please provide a valid email address
+            </p>
+          </div>
+          <button type="submit" id="form-submit">Notify Me</button>
+        </form>
+      </div>
+      <div class="dashboard-img-container">
+        <img
+          src="/images/illustration-dashboard.png"
+          alt="Illustration of dashboard with four graphs in"
+        />
+      </div>
+    </section>
+    <footer>
+      <ul class="sm-icons">
+        <li><i class="fab fa-facebook-f"></i></li>
+        <li><i class="fab fa-twitter"></i></li>
+        <li><i class="fab fa-instagram"></i></li>
+      </ul>
+      <p>&copy; Copyright Ping. All rights reserved.</p>
+      <ul class="attribution">
+        <li>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >
+        </li>
+        <li>Coded by <a href="#">Fraser Watt</a>.</li>
+      </ul>
+    </footer>
+
+    <script src="/js/validation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-container">
+        <picture>
+          <source
+            srcset="/images/illustration-woman-online-desktop.svg"
+            media="(min-width: 635px)"
+          />
+          <img
+            src="/images/illustration-woman-online-mobile.svg"
+            alt="Illustration of woman at computer standing up"
+          />
+        </picture>
+        <picture class="box">
+          <source
+            srcset="/images/illustration-box-desktop.svg"
+            media="(min-width: 635px)"
+          />
+          <img src="" alt="" />
+        </picture>
+      </div>
+
+      <div class="faq-container">
+        <h1>FAQ</h1>
+        <div class="faq-actual">
+          <ul>
+            <li class="qna-container">
+              <input id="question-1" type="checkbox" />
+              <label for="question-1">
+                <div class="question">
+                  <p>How many team members can I invite?</p>
+                  <img
+                    src="/images/icon-arrow-down.svg"
+                    alt="Click arrow to expand question"
+                  />
+                </div>
+                <p class="answer">
+                  You can invite up to 2 additional users on the Free plan.
+                  There is no limit on team members for the Premium plan.
+                </p>
+              </label>
+            </li>
+            <li class="qna-container">
+              <input id="question-2" type="checkbox" />
+              <label for="question-2">
+                <div class="question">
+                  <p>What is the maximum file upload size?</p>
+                  <img
+                    src="/images/icon-arrow-down.svg"
+                    alt="Click arrow to expand question"
+                  />
+                </div>
+                <p class="answer">
+                  No more than 2GB. All files in your account must fit your
+                  allotted storage space.
+                </p>
+              </label>
+            </li>
+            <li class="qna-container">
+              <input id="question-3" type="checkbox" />
+              <label for="question-3">
+                <div class="question">
+                  <p>How do I reset my password?</p>
+                  <img
+                    src="/images/icon-arrow-down.svg"
+                    alt="Click arrow to expand question"
+                  />
+                </div>
+                <p class="answer">
+                  Click “Forgot password” from the login page or “Change
+                  password” from your profile page. A reset link will be emailed
+                  to you.
+                </p>
+              </label>
+            </li>
+            <li class="qna-container">
+              <input id="question-4" type="checkbox" />
+              <label for="question-4">
+                <div class="question">
+                  <p>Can I cancel my subscription?</p>
+                  <img
+                    src="/images/icon-arrow-down.svg"
+                    alt="Click arrow to expand question"
+                  />
+                </div>
+                <p class="answer">
+                  Yes! Send us a message and we’ll process your request no
+                  questions asked.
+                </p>
+              </label>
+            </li>
+            <li class="qna-container">
+              <input id="question-5" type="checkbox" />
+              <label for="question-5">
+                <div class="question">
+                  <p>Do you provide additional support?</p>
+                  <img
+                    src="/images/icon-arrow-down.svg"
+                    alt="Click arrow to expand question"
+                  />
+                </div>
+                <p class="answer">
+                  Chat and email support is available 24/7. Phone lines are open
+                  during normal business hours.
+                </p>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Fraser Watt</a>.
+    </div>
+  </body>
+</html>

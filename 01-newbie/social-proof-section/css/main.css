@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+/* Box sizing rules */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  font-size: 15px;
+  font-family: "Spartan";
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background: url("/images/bg-pattern-top-mobile.svg") no-repeat;
+}
+
+@media only screen and (min-width: 1080px) {
+  body {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: left;
+    background: url("/images/bg-pattern-top-desktop.svg") no-repeat, url("/images/bg-pattern-bottom-desktop.svg") no-repeat;
+    background-position: 0 0, right bottom;
+  }
+}
+
+.container {
+  margin: 3rem auto;
+  padding: 1.5em;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (min-width: 1080px) {
+  .container {
+    margin: 0;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "text stars" "reviews reviews";
+  }
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 2em auto;
+}
+
+.header-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+}
+
+.header-text h1 {
+  font-size: 2.5rem;
+  line-height: 1em;
+  max-width: 30rem;
+  color: #502050;
+  margin-bottom: 1rem;
+}
+
+.header-text p {
+  margin: 1rem 0 2rem 0;
+  max-width: 30rem;
+  color: #937b92;
+}
+
+@media only screen and (min-width: 1080px) {
+  .header-text {
+    grid-area: text;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+  .header-text h1 {
+    font-size: 3.25em;
+  }
+  .header-text p {
+    font-size: 1.2em;
+    max-width: 36rem;
+  }
+}
+
+.rating-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.rating-container .rating-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f7f2f7;
+  color: #502050;
+  font-weight: 700;
+  border-radius: 10px;
+  max-width: 30rem;
+  width: 100%;
+  margin: 0.25em 0;
+  padding: 1em 0;
+}
+
+.rating-container .rating-box .rating-stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1em;
+}
+
+.rating-container .rating-box .rating-stars img {
+  padding: 0 0.25em;
+}
+
+@media only screen and (min-width: 1080px) {
+  .rating-container {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    grid-area: stars;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 0 3em;
+  }
+  .rating-container :nth-child(1) {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .rating-container :nth-child(2) {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .rating-container :nth-child(3) {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .rating-container .rating-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 85%;
+    min-width: 35em;
+    margin: 0.5em;
+    padding: 1.5em;
+  }
+  .rating-container .rating-box .rating-stars {
+    margin: 0 2em;
+  }
+  .rating-container .rating-box .rating-stars img {
+    height: 100%;
+  }
+}
+
+.testimonial-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+}
+
+@media only screen and (min-width: 1080px) {
+  .testimonial-container {
+    grid-area: reviews;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    min-height: 23rem;
+    margin-top: 2em;
+  }
+  .testimonial-container :nth-child(1) {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .testimonial-container :nth-child(2) {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .testimonial-container :nth-child(3) {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+
+.testimonial-container .review-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1em 0;
+  padding: 2em;
+  max-width: 30rem;
+  border-radius: 10px;
+  background-color: #502050;
+  color: white;
+}
+
+@media only screen and (min-width: 1080px) {
+  .testimonial-container .review-container {
+    margin: 1em;
+    width: 100%;
+  }
+}
+
+.testimonial-container .review-container .review-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em 0 2em 0;
+  color: #ee68a4;
+}
+
+.testimonial-container .review-container .review-header span {
+  color: white;
+  font-weight: 700;
+}
+
+.testimonial-container .review-container .review-header img {
+  margin-right: 2em;
+  border-radius: 50%;
+  width: 3em;
+}
+/*# sourceMappingURL=main.css.map */

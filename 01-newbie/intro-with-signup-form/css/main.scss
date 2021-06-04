@@ -1,0 +1,227 @@
+@import "reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+// variables
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+
+$blue: hsl(248, 32%, 49%);
+$dark-blue: hsl(249, 10%, 26%);
+$grayish-blue: hsl(246, 25%, 77%);
+
+@mixin box-shadow {
+  box-shadow: 1px 8px 0 0 rgba($color: #000000, $alpha: 0.15);
+}
+
+body {
+  background-color: $red;
+  background-image: url("/images/bg-intro-mobile.png");
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+.content-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  // flex-grow: 1;
+  text-align: center;
+  color: white;
+  max-width: 400px;
+}
+
+.hero-content {
+  h1 {
+    margin: 2.5em 1em 1em 1em;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 4em;
+  }
+}
+
+.try-free {
+  @include box-shadow;
+  margin: 0 auto;
+  max-width: 360px;
+  background-color: $blue;
+  font-size: 1rem;
+  line-height: 1.75em;
+  font-weight: 400;
+  padding: 1.1em 2em;
+  margin-bottom: 2em;
+  border-radius: 10px;
+  p {
+    margin: 0 auto;
+  }
+  span {
+    font-weight: 600;
+  }
+}
+
+.form-container {
+  @include box-shadow();
+  max-width: 360px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1em;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  margin-bottom: 1em;
+
+  input {
+    font-weight: 500;
+    width: 100%;
+    padding: 0.75em 0.5em;
+    padding-left: 1.5em;
+    margin: 0.5em auto;
+    border-radius: 12px;
+    border: hsl(246, 25%, 90%) 1px solid;
+  }
+}
+
+input {
+  &:focus {
+    outline: none;
+    border: $blue solid 1px;
+    border-radius: 12px;
+  }
+}
+
+button.pushable {
+  margin-top: 0.75em;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: hsl(150, 59%, 35%);
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+
+  span.button-front {
+    display: block;
+    padding: 1em 2em;
+    border-radius: 12px;
+    color: white;
+    background-color: hsl(154, 59%, 51%);
+
+    will-change: transform; // hint to browser we're going to animate the element - so it optimizes for this case.
+    transition: transform 600ms; // this is much longer than hover or active, it will rise slower than it does anything else
+    transform: translateY(-5px);
+
+    &:hover {
+      transform: translateY(-6px);
+      transition: transform 250ms;
+    }
+    &:active {
+      transform: translateY(-2px);
+      transition: transform 34ms;
+    }
+  }
+}
+
+p.terms {
+  margin: 1.5em auto 2.5em auto;
+  color: $grayish-blue;
+  font-size: 0.75rem;
+  span {
+    font-weight: 600;
+    color: $red;
+  }
+}
+
+// The below removes outline UNLESS someone has settings that benefit from visual focus indecator (e.g. keyboard navigation)
+button.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+footer {
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-size: 0.75rem;
+  display: flex;
+  margin: auto;
+  flex: 0;
+  ul {
+    text-align: center;
+    margin: 0 auto;
+  }
+  li {
+    display: inline-block;
+    margin: 0 1em;
+    a {
+      font-weight: 600;
+      color: $blue;
+    }
+  }
+}
+
+@media only screen and (min-width: 775px) {
+  .content-container {
+    flex-direction: row;
+    width: 100%;
+    max-width: 1450px;
+  }
+  .hero-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    padding: 1em;
+    text-align: left;
+    h1 {
+      margin: auto;
+      font-size: 3.25rem;
+      margin-bottom: 0.5em;
+    }
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 0;
+    }
+  }
+  .right-hand-content {
+    width: 50%;
+    $rh-width: 600px;
+
+    .try-free {
+      max-width: $rh-width;
+    }
+    .form-container {
+      max-width: $rh-width;
+    }
+  }
+  footer {
+    font-size: 1rem;
+  }
+}
+
+.error {
+  font-size: 0.7rem;
+  text-align: center;
+  color: red;
+  margin-top: -0.5em;
+  padding-top: 0;
+  opacity: 0;
+}
+
+.activated {
+  input {
+    border: 1px solid red;
+  }
+  p {
+    opacity: 1;
+  }
+}
