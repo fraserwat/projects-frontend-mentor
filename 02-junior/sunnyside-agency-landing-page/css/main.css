@@ -1,5 +1,290 @@
-:root {
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'],
+li {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.creatives {
+  padding: 2rem 1rem;
+  background-color: #3ebfff;
+  background-image: url("/images/mobile/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom center;
+}
+
+.creatives nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.creatives nav button {
+  height: 100%;
+  background: none;
+  border: none;
+}
+
+.creatives h1 {
+  color: white;
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  font-size: 10vw;
+  font-weight: 800;
+  letter-spacing: 5px;
+  line-height: 10vw;
+  margin: 5rem 1rem 2rem 1rem;
+  text-align: center;
+}
+
+.creatives__arrow {
+  margin: auto;
+  margin-bottom: 25vw;
+}
+
+.graphic-design,
+.photography {
+  padding-top: 25rem;
+  padding-bottom: 2rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.graphic-design h2,
+.photography h2 {
+  margin-top: 0;
+  opacity: 0.6;
+}
+
+.graphic-design {
+  background-color: #9adaca;
+  background-image: url("/images/mobile/image-graphic-design.jpg");
+}
+
+.photography {
+  background-color: #65cdff;
+  background-image: url("/images/mobile/image-photography.jpg");
+}
+
+.client-testimonials {
+  background-color: #fcfaf7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5rem;
+}
+
+.client-testimonials h2 {
+  color: #818498;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.client-testimonials .client-testimonials__testimonial {
+  margin-top: 3rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.client-testimonials .client-testimonials__testimonial img {
+  margin: auto;
+  margin-bottom: 2rem;
+  height: 5rem;
+  border-radius: 100%;
+}
+
+.client-testimonials__name {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-family: "Fraunces", serif;
+  color: #23303e;
+}
+
+.client-testimonials__title {
+  margin-top: 0.5rem;
+  opacity: 0.5;
+}
+
+.learn-more {
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  margin: 2rem 0 3rem 0;
+}
+
+.learn-more a {
+  position: relative;
+  color: #23303e;
+  text-decoration: none;
+}
+
+.learn-more a::after {
+  content: "";
+  height: 0.5rem;
+  width: 110%;
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  opacity: 0.25;
+  border-radius: 1rem;
+}
+
+.stand-out a::after {
+  background-color: #fe7867;
+}
+
+.transform a::after {
+  background-color: #fad400;
+}
+
+.footer {
+  padding-bottom: 2rem;
+  background-color: #98cdc2;
+  color: #25564b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer img {
+  width: 13rem;
+  margin: 2.5rem auto 1.5rem auto;
+  -webkit-filter: invert(46%) sepia(48%) saturate(379%) hue-rotate(118deg) brightness(70%) contrast(88%);
+          filter: invert(46%) sepia(48%) saturate(379%) hue-rotate(118deg) brightness(70%) contrast(88%);
+}
+
+.footer .footer__bottom,
+.footer .footer__sm-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 0.5rem;
+}
+
+.footer .footer__bottom li,
+.footer .footer__sm-icons li {
+  opacity: 0.8;
+}
+
+.footer__attribution {
+  padding: 0 2rem;
+}
+
+.footer__attribution li {
+  color: #25564b;
+  margin-bottom: 0.5rem;
+}
+
+.footer__attribution li a {
+  color: black;
+}
+
+body {
+  background-color: #fcfaf7;
+  text-align: center;
   font-family: "Barlow", sans-serif;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-family: "Fraunces", serif;
+  margin: 3rem auto 1rem auto;
+  padding: 0 2rem;
+}
+
+p {
+  color: #5a636c;
+  padding: 0 1.5rem;
+}
+
+.gallary {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
 }
 
 .desktop-navbar {

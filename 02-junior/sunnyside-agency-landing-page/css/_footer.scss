@@ -1,0 +1,34 @@
+@import "_variables";
+
+.footer {
+  padding-bottom: 2rem;
+  background-color: hsl(168, 34%, 70%);
+  color: $dark-desat-cyan;
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 13rem;
+    margin: 2.5rem auto 1.5rem auto;
+    filter: invert(46%) sepia(48%) saturate(379%) hue-rotate(118deg)
+      brightness(70%) contrast(88%);
+  }
+  .footer__bottom,
+  .footer__sm-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0.5rem;
+    li {
+      opacity: 0.8;
+    }
+  }
+}
+.footer__attribution {
+  padding: 0 2rem;
+  li {
+    color: $dark-desat-cyan;
+    margin-bottom: 0.5rem;
+    a {
+      color: black;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.learn-more {
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  margin: 2rem 0 3rem 0;
+  a {
+    position: relative;
+    color: $v-dark-desat-blue;
+    text-decoration: none;
+  }
+  a::after {
+    content: "";
+    height: 0.5rem;
+    width: 110%;
+    position: absolute;
+    bottom: -10%;
+    left: -5%;
+    opacity: 0.25;
+    border-radius: 1rem;
+  }
+}
+
+.stand-out a::after {
+  background-color: $soft-red;
+}
+.transform a::after {
+  background-color: $yellow;
+}

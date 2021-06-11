@@ -1,0 +1,38 @@
+.client-testimonials {
+  background-color: $biege;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 5rem;
+
+  h2 {
+    color: $dark-grayish-blue;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+
+  .client-testimonials__testimonial {
+    margin-top: 3rem;
+    padding: 0 2rem;
+    text-align: center;
+
+    img {
+      margin: auto;
+      margin-bottom: 2rem;
+      height: 5rem;
+      border-radius: 100%;
+    }
+  }
+}
+.client-testimonials__name {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-family: "Fraunces", serif;
+  color: $v-dark-desat-blue;
+}
+.client-testimonials__title {
+  margin-top: 0.5rem;
+  opacity: 0.5;
+}

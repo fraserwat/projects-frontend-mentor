@@ -1,82 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/main.css">
-  
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;800&display=swap" rel="stylesheet">
-  
-  <title>Frontend Mentor | Sunnyside agency landing page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/main.css" />
 
-</head>
-<body>
-  <div class="hero-top">
-    <nav>
-      <img src="/images/logo.svg" alt="Sunnyside logo">
-      <img src="/images/icon-hamburger.svg" alt="Navbar menu">
-      <ul class="desktop-navbar">
-        <li><a href="">About</a></li>
-        <li><a href="">Services</a></li>
-        <li><a href="">Projects</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
-    </nav>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+  </head>
+  <body>
     <div class="creatives">
+      <nav>
+        <img src="/images/logo.svg" alt="Sunnyside logo" />
+        <button>
+          <img src="/images/icon-hamburger.svg" alt="Navbar menu" />
+        </button>
+        <ul class="desktop-navbar">
+          <li><a href="">About</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </nav>
       <h1>We are creatives</h1>
-      <img src="/images/icon-arrow-down.svg" alt="">
+      <img src="/images/icon-arrow-down.svg" alt="" class="creatives__arrow" />
     </div>
     <div class="transform">
+      <picture>
+        <!-- COME BACK TO MEDIA QUERY -->
+        <img
+          src="/images/mobile/image-transform.jpg"
+          alt="Egg on yellow background"
+        />
+        <source
+          srcset="/images/desktop/image-transform.jpg"
+          media="(min-width: 800px)"
+        />
+      </picture>
       <h2>Transform your brand</h2>
       <p>
-        We are a full-service creative agency specializing in helping brands grow fast. 
-          Engage your clients through compelling visuals that do most of the marketing for you.
+        We are a full-service creative agency specializing in helping brands
+        grow fast. Engage your clients through compelling visuals that do most
+        of the marketing for you.
       </p>
-      <a href="" class="transform__cta">Learn more</a>
+      <p class="learn-more"><a href="">Learn more</a></p>
     </div>
     <div class="stand-out">
+      <picture>
+        <!-- COME BACK TO MEDIA QUERY -->
+        <img
+          src="/images/mobile/image-stand-out.jpg"
+          alt="Cup on red background"
+        />
+        <source
+          srcset="/images/desktop/image-stand-out.jpg"
+          media="(min-width: 800px)"
+        />
+      </picture>
       <h2>Stand out to the right audience</h2>
-      <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. </p>
-      <a href="">Learn more</a>
+      <p>
+        Using a collaborative formula of designers, researchers, photographers,
+        videographers, and copywriters, we’ll build and extend your brand in
+        digital places.
+      </p>
+      <p class="learn-more"><a href="">Learn more</a></p>
     </div>
     <div class="graphic-design">
       <h2>Graphic design</h2>
-      <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+      <p>
+        Great design makes you memorable. We deliver artwork that underscores
+        your brand message and captures potential clients’ attention.
+      </p>
     </div>
     <div class="photography">
       <h2>Photography</h2>
-      <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+      <p>
+        Increase your credibility by getting the most stunning, high-quality
+        photos that improve your business image.
+      </p>
     </div>
     <div class="client-testimonials">
       <h2>Client testimonials</h2>
       <div class="client-testimonials__testimonial">
-        <img src="/images/image-emily.jpg" alt="Emily R">
-        <p class="client-testimonials__text">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+        <img src="/images/image-emily.jpg" alt="Emily R" />
+        <p class="client-testimonials__text">
+          We put our trust in Sunnyside and they delivered, making sure our
+          needs were met and deadlines were always hit.
+        </p>
         <p class="client-testimonials__name">Emily R.</p>
         <p class="client-testimonials__title">Marketing Director</p>
       </div>
       <div class="client-testimonials__testimonial">
-        <img src="/images/image-thomas.jpg" alt="Thomas S">
-        <p class="client-testimonials__text">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+        <img src="/images/image-thomas.jpg" alt="Thomas S" />
+        <p class="client-testimonials__text">
+          Sunnyside’s enthusiasm coupled with their keen interest in our brand’s
+          success made it a satisfying and enjoyable experience.
+        </p>
         <p class="client-testimonials__name">Thomas S.</p>
         <p class="client-testimonials__title">Chief Operating Officer</p>
       </div>
       <div class="client-testimonials__testimonial">
-        <img src="/images/image-jennie.jpg" alt="Jennie F">
-        <p class="client-testimonials__text">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+        <img src="/images/image-jennie.jpg" alt="Jennie F" />
+        <p class="client-testimonials__text">
+          Incredible end result! Our sales increased over 400% when we worked
+          with Sunnyside. Highly recommended!
+        </p>
         <p class="client-testimonials__name">Jennie F.</p>
         <p class="client-testimonials__title">Business Owner</p>
       </div>
     </div>
+    <div class="gallary">
+      <picture class="milkbottles">
+        <img src="/images/mobile/image-gallery-milkbottles.jpg" alt="" />
+        <source
+          srcset="/images/mobile/image-gallery-milkbottles.jpg"
+          media="(min-width: 800px)"
+        />
+      </picture>
+      <picture class="orange">
+        <img src="/images/mobile/image-gallery-orange.jpg" alt="" />
+        <source
+          srcset="/images/mobile/image-gallery-orange.jpg"
+          media="(min-width: 800px)"
+        />
+      </picture>
+      <picture class="cone">
+        <img src="/images/mobile/image-gallery-cone.jpg" alt="" />
+        <source
+          srcset="/images/mobile/image-gallery-cone.jpg"
+          media="(min-width: 800px)"
+        />
+      </picture>
+      <picture class="sugar-cubes">
+        <img src="/images/mobile/image-gallery-sugar-cubes.jpg" alt="" />
+        <source
+          srcset="/images/mobile/image-gallery-sugar-cubes.jpg"
+          media="(min-width: 800px)"
+        />
+      </picture>
+    </div>
     <div class="footer">
-      <img src="/images/logo.svg" alt="Sunnyside logo"> 
+      <img src="/images/logo.svg" alt="Sunnyside logo" />
       <ul class="footer__bottom">
         <li>About</li>
-  <li>Services</li>
-  <li>Projects</li>
+        <li>Services</li>
+        <li>Projects</li>
       </ul>
       <ul class="footer__sm-icons">
         <li></li>
@@ -85,10 +166,14 @@
         <li></li>
       </ul>
       <ul class="footer__attribution">
-        <li>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a></li>
+        <li>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >
+        </li>
         <li>Coded by <a href="#">Fraser Watt</a></li>
       </ul>
     </div>
-  </div>
-</body>
+  </body>
 </html>

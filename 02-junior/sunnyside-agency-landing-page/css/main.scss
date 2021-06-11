@@ -1,9 +1,35 @@
+@import "_reset";
 @import "_variables";
+@import "_creatives";
+@import "_design-photography";
+@import "_testimonials";
+@import "_cta-button";
+@import "_footer";
 
-:root {
-    font-family: "Barlow", sans-serif;
+body {
+  background-color: $biege;
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-family: "Fraunces", serif;
+  margin: 3rem auto 1rem auto;
+  padding: 0 2rem;
+}
+
+p {
+  color: $v-dark-gray-blue;
+  padding: 0 1.5rem;
+}
+
+.gallary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .desktop-navbar {
-    display: none;
+  display: none;
 }

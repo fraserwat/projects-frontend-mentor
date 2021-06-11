@@ -1,0 +1,36 @@
+.creatives {
+  padding: 2rem 1rem;
+  background-color: #3ebfff;
+  background-image: url("/images/mobile/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom center;
+}
+.creatives nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    height: 100%;
+    background: none;
+    border: none;
+  }
+}
+.creatives h1 {
+  color: white;
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  font-size: 10vw;
+  font-weight: 800;
+  letter-spacing: 5px;
+  line-height: 10vw;
+
+  margin: 5rem 1rem 2rem 1rem;
+  text-align: center;
+}
+
+.creatives__arrow {
+  margin: auto;
+  margin-bottom: 25vw;
+}
