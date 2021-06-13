@@ -369,7 +369,7 @@ select {
   .photography p {
     margin-bottom: 2rem;
     max-width: 400px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #23303e;
     opacity: 0.5;
   }
