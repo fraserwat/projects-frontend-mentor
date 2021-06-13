@@ -1,6 +1,7 @@
 @import "_reset";
 @import "_variables";
 @import "_creatives";
+@import "_transform-standout";
 @import "_design-photography";
 @import "_testimonials";
 @import "_cta-button";
@@ -20,7 +21,7 @@ h2 {
 }
 
 p {
-  color: $v-dark-gray-blue;
+  color: $dark-grayish-blue;
   padding: 0 1.5rem;
 }
 
@@ -28,4 +29,11 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  img {
+    width: 100%;
+  }
+  @media screen and (min-width: $desktop-breakpoint) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: none;
+  }
 }

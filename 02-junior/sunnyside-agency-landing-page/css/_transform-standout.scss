@@ -1,0 +1,55 @@
+@import "_variables";
+
+.transform__hero p,
+.stand-out__hero p {
+  font-size: 1rem;
+}
+.transform__hero h2,
+.stand-out__hero h2 {
+  line-height: 2rem;
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .transform,
+  .stand-out {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .transform {
+    grid-template-areas: "hero img";
+  }
+  .stand-out {
+    grid-template-areas: "img hero";
+  }
+  .transform img,
+  .stand-out img {
+    grid-area: img;
+    width: 50vw;
+  }
+  .transform__hero,
+  .stand-out__hero {
+    grid-area: hero;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: left;
+    h2,
+    p {
+      margin-left: 0;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    h2 {
+      font-size: 3.5vw;
+      line-height: 3.5vw;
+      margin-bottom: 1.5rem;
+      margin-top: auto;
+      span {
+        display: block;
+      }
+    }
+    p {
+      font-size: 1.5vw;
+    }
+  }
+}

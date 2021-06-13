@@ -1,4 +1,6 @@
 @import "_variables";
+@import "fontawesome/fontawesome.scss";
+@import "./fontawesome/brands.scss";
 
 .footer {
   padding-bottom: 2rem;
@@ -14,12 +16,29 @@
   }
   .footer__bottom,
   .footer__sm-icons {
+    max-width: 500px;
+    margin: auto;
     display: flex;
-    justify-content: space-around;
+    gap: 3rem;
     margin-bottom: 0.5rem;
     li {
       opacity: 0.8;
+      a {
+        color: $dark-desat-cyan;
+      }
     }
+  }
+  .footer__bottom li a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .footer__sm-icons {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    gap: 1.5rem;
   }
 }
 .footer__attribution {

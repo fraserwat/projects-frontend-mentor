@@ -2,9 +2,20 @@
 .photography {
   h2 {
     margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
     opacity: 0.6;
   }
+  p {
+    margin: 1rem auto;
+  }
   padding-top: 25rem;
+  @media screen and (min-width: 500px) {
+    padding-top: 35rem;
+  }
+  @media screen and (min-width: 650px) {
+    padding-top: 40rem;
+  }
   padding-bottom: 2rem;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -19,4 +30,38 @@
 .photography {
   background-color: #65cdff;
   background-image: url("/images/mobile/image-photography.jpg");
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .design-photography {
+    display: grid;
+    grid-template-areas: "design photography";
+    grid-template-columns: 1fr 1fr;
+  }
+  .graphic-design {
+    grid-area: design;
+    background-image: url(/images/desktop/image-graphic-design.jpg);
+  }
+  .photography {
+    grid-area: photography;
+    background-image: url(/images/desktop/image-photography.jpg);
+  }
+  .graphic-design,
+  .photography {
+    padding-top: 25vw;
+    p {
+      margin-bottom: 2rem;
+      max-width: 400px;
+      font-size: 0.8rem;
+      color: $v-dark-desat-blue;
+      opacity: 0.5;
+    }
+  }
+}
+
+h2 {
+  font-size: 4vw;
+  line-height: 4vw;
+  margin-bottom: 4rem;
+  margin-top: auto;
 }

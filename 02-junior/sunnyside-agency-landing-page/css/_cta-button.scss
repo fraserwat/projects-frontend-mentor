@@ -1,7 +1,12 @@
+@import "_variables";
+
 .learn-more {
   font-family: "Fraunces", serif;
   text-transform: uppercase;
   margin: 2rem 0 3rem 0;
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin-bottom: auto;
+  }
   a {
     position: relative;
     color: $v-dark-desat-blue;
