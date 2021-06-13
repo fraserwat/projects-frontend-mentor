@@ -12,7 +12,7 @@
       href="./images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | [Blogr]</title>
+    <title>Frontend Mentor | Blogr</title>
 
     <link rel="stylesheet" href="/css/main.css" />
   </head>
@@ -21,14 +21,38 @@
       <nav>
         <img src="/images/logo.svg" alt="Blogr logo" />
         <div class="menu-container">
-          <img src="/images/icon-hamburger.svg" alt="Nav menu" />
-          <!-- <div class="nav-menu-items">
-            <ul>
-              Product Overview Pricing Marketplace Features Integrations Company
-              About Team Blog Careers Connect Contact Newsletter LinkedIn Login
-              Sign Up
+          <button class="hamburger">
+            <img
+              src="/images/icon-hamburger.svg"
+              alt="Nav menu"
+              class="nav-button outer"
+            />
+          </button>
+          <ul class="nav-menu outer">
+            <li class="nav-button product">Product</li>
+            <ul class="nav-menu product">
+              <li>Overview</li>
+              <li>Pricing</li>
+              <li>Marketplace</li>
+              <li>Features</li>
+              <li>Integrations</li>
             </ul>
-          </div> -->
+            <li class="nav-button company">Company</li>
+            <ul class="nav-menu company">
+              <li>About</li>
+              <li>Team</li>
+              <li>Blog</li>
+              <li>Careers</li>
+            </ul>
+            <li class="nav-button connect">Connect</li>
+            <ul class="nav-menu connect">
+              <li>Contact</li>
+              <li>Newsletter</li>
+              <li>LinkedIn</li>
+            </ul>
+            <li>Login</li>
+            <li class="sign-up">Sign Up</li>
+          </ul>
         </div>
       </nav>
       <h2>A modern publishing platform</h2>
@@ -130,5 +154,6 @@
         <li>Coded by Fraser Watt</li>
       </ul>
     </div>
+    <script src="js/menu-toggle.js"></script>
   </body>
 </html>

@@ -66,6 +66,20 @@ select {
   }
 }
 
+.nav-menu:not(.active) {
+  display: none;
+}
+
+.top-orange .hamburger {
+  padding: 0;
+  margin: 0;
+}
+
+.outer li {
+  border: red 1px solid;
+  margin-bottom: 1rem;
+}
+
 :root {
   font-size: 16px;
 }
