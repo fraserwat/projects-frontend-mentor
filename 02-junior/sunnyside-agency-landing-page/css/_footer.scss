@@ -39,6 +39,10 @@
     margin-bottom: 1rem;
     font-size: 1.2rem;
     gap: 1.5rem;
+    i:hover {
+      transition: 500ms;
+      color: white;
+    }
   }
 }
 .footer__attribution {
