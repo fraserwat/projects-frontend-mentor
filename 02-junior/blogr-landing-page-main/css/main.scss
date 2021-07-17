@@ -1,24 +1,14 @@
 // IMPORTS AND VARIABLES
 
+@import "_variables";
 @import "_reset";
 @import "_menu";
+@import "_infrastructure";
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
 
 :root {
   font-size: 16px;
 }
-
-$light-red: hsl(356, 100%, 66%); // CTA text
-$v-light-red: hsl(355, 100%, 74%); // CTA hover background
-$v-dark-blue: hsl(208, 49%, 24%); // Headings
-
-$white: hsl(0, 0%, 100%);
-$grayish-blue: hsl(240, 2%, 79%); // Footer text
-$v-dark-greyish-blue: hsl(207, 13%, 34%); // Body copy
-$v-dark-black-blue: hsl(240, 10%, 16%); // Footer background
-
-$bg-gradient-orange: linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
-$bg-gradient-dark: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
 
 @mixin btn-white {
   color: $light-red;
@@ -54,12 +44,12 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  img {
+  picture {
     margin: 1rem auto;
   }
   p,
   h2 {
-    padding: 0 1.75rem;
+    padding: 0 2rem;
   }
 }
 .img-shadow {
@@ -120,33 +110,6 @@ p {
 .section img {
   margin: 1rem 0;
   width: 100vw;
-}
-
-.dark-blue-infrastructure {
-  position: relative;
-  border-radius: 0 25% 0 25%;
-  background: $bg-gradient-dark;
-  color: white;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  .container {
-    bottom: 0;
-    overflow: hidden;
-    z-index: 1;
-    background: url("/images/bg-pattern-circles.svg");
-    background-size: 150%;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  p {
-    z-index: 1;
-    color: white;
-  }
-  img {
-    z-index: 2;
-    bottom: 0;
-  }
 }
 
 .bottom-black {

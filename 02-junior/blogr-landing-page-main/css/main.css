@@ -80,6 +80,33 @@ select {
   margin-bottom: 1rem;
 }
 
+.dark-blue-infrastructure {
+  margin-top: 17rem;
+  margin-bottom: 3rem;
+  border-radius: 0 25% 0 25%;
+  color: white;
+  background: url("/images/bg-pattern-circles.svg"), -webkit-gradient(linear, left top, left bottom, from(#2c2d3f), to(#3f4164));
+  background: url("/images/bg-pattern-circles.svg"), linear-gradient(#2c2d3f, #3f4164);
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position-x: center, center;
+  background-position-y: 300%, center;
+}
+
+.dark-blue-infrastructure p {
+  color: white;
+}
+
+.dark-blue-infrastructure img {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.dark-blue-infrastructure .section {
+  margin-top: -15rem;
+  margin-bottom: 5rem;
+}
+
 :root {
   font-size: 16px;
 }
@@ -118,13 +145,13 @@ p {
           align-items: center;
 }
 
-.section img {
+.section picture {
   margin: 1rem auto;
 }
 
 .section p,
 .section h2 {
-  padding: 0 1.75rem;
+  padding: 0 2rem;
 }
 
 .img-shadow {
@@ -209,36 +236,6 @@ p {
 .section img {
   margin: 1rem 0;
   width: 100vw;
-}
-
-.dark-blue-infrastructure {
-  position: relative;
-  border-radius: 0 25% 0 25%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#2c2d3f), to(#3f4164));
-  background: linear-gradient(#2c2d3f, #3f4164);
-  color: white;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.dark-blue-infrastructure .container {
-  bottom: 0;
-  overflow: hidden;
-  z-index: 1;
-  background: url("/images/bg-pattern-circles.svg");
-  background-size: 150%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.dark-blue-infrastructure p {
-  z-index: 1;
-  color: white;
-}
-
-.dark-blue-infrastructure img {
-  z-index: 2;
-  bottom: 0;
 }
 
 .bottom-black {

@@ -1,0 +1,31 @@
+@import "_variables";
+
+.dark-blue-infrastructure {
+  margin-top: 17rem;
+  margin-bottom: 3rem;
+
+  border-radius: 0 25% 0 25%;
+  color: white;
+  background: url("/images/bg-pattern-circles.svg"), $bg-gradient-dark;
+
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position-x: center, center;
+  background-position-y: 300%, center;
+
+  .container {
+  }
+  h1 {
+  }
+  p {
+    color: white;
+  }
+  img {
+    transform: translateY(-50%);
+    // margin-bottom: ;
+  }
+  .section {
+    margin-top: -15rem;
+    margin-bottom: 5rem;
+  }
+}
