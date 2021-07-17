@@ -1,0 +1,32 @@
+@import "_variables";
+
+footer {
+  padding: 2rem;
+  img {
+    padding: 2rem 1rem 2rem 1rem;
+  }
+  ul {
+    margin-bottom: 2rem;
+    li {
+      padding-bottom: 1rem;
+      a {
+        color: $white;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+          color: $cyan;
+          transition: 250ms;
+        }
+      }
+    }
+  }
+  ul:first-of-type {
+    li:nth-child(1) {
+    }
+    li:nth-child(2) {
+    }
+    li:nth-child(3) {
+      margin-bottom: 4rem;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "_variables";
+
+.cta__container {
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: $dark-blue-intro;
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      padding: 1rem;
+      border-radius: 500px;
+      border: none;
+      margin-bottom: 2rem;
+    }
+    input[type="email"] {
+      margin-top: 2rem;
+    }
+    input[type="button"] {
+      background: linear-gradient(90deg, $cyan, $blue);
+      margin-bottom: 1rem;
+      font-weight: bolder;
+      color: white;
+    }
+  }
+}

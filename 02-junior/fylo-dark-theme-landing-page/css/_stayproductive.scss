@@ -1,0 +1,46 @@
+@import "_variables";
+
+.stay-productive__container {
+  margin-left: 2rem;
+  img {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3rem;
+  }
+  h3 {
+    text-align: left;
+  }
+  p {
+    text-align: left;
+    margin-bottom: 1rem;
+    padding-right: 2rem;
+  }
+  a {
+    display: flex;
+    text-decoration: none;
+    margin-right: 0;
+
+    p {
+      margin: auto 0;
+      font-size: 0.8rem;
+      color: $cyan;
+      display: inline;
+      padding-right: 0.4rem;
+    }
+    img {
+      bottom: 0;
+      margin: auto 0;
+      height: 1.1rem;
+      width: auto;
+      display: inline;
+    }
+  }
+}
+
+.stay-productive__container a::after {
+  content: "";
+  height: 1px;
+  width: 8.8rem;
+  border-bottom: 1px solid $cyan;
+  transform: translateX(-8.9rem) translateY(1.5rem);
+}

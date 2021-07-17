@@ -1,0 +1,90 @@
+@import "_reset";
+@import "_variables";
+@import "_footer";
+@import "_form";
+@import "_stayproductive";
+@import "_testimonial";
+
+:root {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  background-color: $dark-blue-bg;
+  color: $white;
+}
+
+p {
+  text-align: center;
+}
+
+h2,
+h3 {
+  text-align: center;
+  margin-bottom: 0.75em;
+  font-family: "Open Sans", sans-serif;
+}
+
+.bg-container {
+  background-color: $dark-blue-intro;
+  background-image: url(/images/bg-curvy-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+nav {
+  font-size: 0.9rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  img {
+    height: 2rem;
+  }
+  .nav-items {
+    margin: auto 0;
+    margin-left: auto;
+    ul {
+      display: flex;
+      flex-direction: row;
+      li + li {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  margin-bottom: 3rem;
+  img {
+    width: 80%;
+    margin: 2rem auto;
+  }
+}
+
+.hero__text {
+  margin-bottom: 1.75rem;
+}
+
+.hero__button {
+  margin: auto;
+  background: linear-gradient(90deg, $cyan, $blue);
+  color: $white;
+  padding: 0.75rem 4rem;
+  border: none;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.features__container {
+  padding: 0 2rem;
+  margin-bottom: 10rem;
+}
+.features__item {
+  margin-top: 5rem;
+  img {
+    margin: 2rem auto;
+    height: 4rem;
+  }
+}

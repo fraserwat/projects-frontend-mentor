@@ -1,0 +1,51 @@
+@import "_variables";
+
+.testimonial__container {
+  margin-top: 6rem;
+  padding: 2.5rem;
+}
+
+.testimonial__object {
+  background-color: $dark-blue-testimonials;
+  border-radius: 5px;
+  margin-bottom: 1.25rem;
+  padding: 1.5rem;
+
+  &:nth-child(1)::before {
+    content: "";
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    transform: translateY(-3rem) translateX(-1.5rem);
+
+    background-image: url("/images/bg-quotes.png");
+    background-repeat: no-repeat;
+    background-size: 90% auto;
+  }
+
+  p {
+    text-align: left;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial__person {
+    display: flex;
+    img {
+      border-radius: 500px;
+      width: 2rem;
+      margin-right: 0.5rem;
+    }
+    p {
+      span {
+        display: block;
+        font-weight: bolder;
+        font-size: 0.75rem;
+        margin-bottom: 0.25rem;
+      }
+      margin-bottom: 0;
+      font-size: 0.5rem;
+      letter-spacing: 1px;
+    }
+  }
+}

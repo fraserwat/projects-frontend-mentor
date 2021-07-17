@@ -1,0 +1,350 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"],
+li {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+footer {
+  padding: 2rem;
+}
+
+footer img {
+  padding: 2rem 1rem 2rem 1rem;
+}
+
+footer ul {
+  margin-bottom: 2rem;
+}
+
+footer ul li {
+  padding-bottom: 1rem;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+  color: #65cde2;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+footer ul:first-of-type li:nth-child(3) {
+  margin-bottom: 4rem;
+}
+
+.cta__container {
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #1c2431;
+}
+
+.cta__container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cta__container form input {
+  padding: 1rem;
+  border-radius: 500px;
+  border: none;
+  margin-bottom: 2rem;
+}
+
+.cta__container form input[type="email"] {
+  margin-top: 2rem;
+}
+
+.cta__container form input[type="button"] {
+  background: -webkit-gradient(linear, left top, right top, from(#65cde2), to(#339ecc));
+  background: linear-gradient(90deg, #65cde2, #339ecc);
+  margin-bottom: 1rem;
+  font-weight: bolder;
+  color: white;
+}
+
+.stay-productive__container {
+  margin-left: 2rem;
+}
+
+.stay-productive__container img {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+.stay-productive__container h3 {
+  text-align: left;
+}
+
+.stay-productive__container p {
+  text-align: left;
+  margin-bottom: 1rem;
+  padding-right: 2rem;
+}
+
+.stay-productive__container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  margin-right: 0;
+}
+
+.stay-productive__container a p {
+  margin: auto 0;
+  font-size: 0.8rem;
+  color: #65cde2;
+  display: inline;
+  padding-right: 0.4rem;
+}
+
+.stay-productive__container a img {
+  bottom: 0;
+  margin: auto 0;
+  height: 1.1rem;
+  width: auto;
+  display: inline;
+}
+
+.stay-productive__container a::after {
+  content: "";
+  height: 1px;
+  width: 8.8rem;
+  border-bottom: 1px solid #65cde2;
+  -webkit-transform: translateX(-8.9rem) translateY(1.5rem);
+          transform: translateX(-8.9rem) translateY(1.5rem);
+}
+
+.testimonial__container {
+  margin-top: 6rem;
+  padding: 2.5rem;
+}
+
+.testimonial__object {
+  background-color: #202a3c;
+  border-radius: 5px;
+  margin-bottom: 1.25rem;
+  padding: 1.5rem;
+}
+
+.testimonial__object:nth-child(1)::before {
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  -webkit-transform: translateY(-3rem) translateX(-1.5rem);
+          transform: translateY(-3rem) translateX(-1.5rem);
+  background-image: url("/images/bg-quotes.png");
+  background-repeat: no-repeat;
+  background-size: 90% auto;
+}
+
+.testimonial__object p {
+  text-align: left;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial__object .testimonial__person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.testimonial__object .testimonial__person img {
+  border-radius: 500px;
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.testimonial__object .testimonial__person p {
+  margin-bottom: 0;
+  font-size: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.testimonial__object .testimonial__person p span {
+  display: block;
+  font-weight: bolder;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+:root {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  background-color: #181f2a;
+  color: white;
+}
+
+p {
+  text-align: center;
+}
+
+h2,
+h3 {
+  text-align: center;
+  margin-bottom: 0.75em;
+  font-family: "Open Sans", sans-serif;
+}
+
+.bg-container {
+  background-color: #1c2431;
+  background-image: url(/images/bg-curvy-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+nav {
+  font-size: 0.9rem;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+nav img {
+  height: 2rem;
+}
+
+nav .nav-items {
+  margin: auto 0;
+  margin-left: auto;
+}
+
+nav .nav-items ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+nav .nav-items ul li + li {
+  margin-left: 1rem;
+}
+
+.hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 2rem;
+  margin-bottom: 3rem;
+}
+
+.hero__container img {
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.hero__text {
+  margin-bottom: 1.75rem;
+}
+
+.hero__button {
+  margin: auto;
+  background: -webkit-gradient(linear, left top, right top, from(#65cde2), to(#339ecc));
+  background: linear-gradient(90deg, #65cde2, #339ecc);
+  color: white;
+  padding: 0.75rem 4rem;
+  border: none;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.features__container {
+  padding: 0 2rem;
+  margin-bottom: 10rem;
+}
+
+.features__item {
+  margin-top: 5rem;
+}
+
+.features__item img {
+  margin: 2rem auto;
+  height: 4rem;
+}
+/*# sourceMappingURL=main.css.map */
