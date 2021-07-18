@@ -93,7 +93,25 @@ footer ul li a:hover {
   transition: 250ms;
 }
 
+footer ul:first-of-type a {
+  margin-left: 1rem;
+}
+
+footer ul:first-of-type li:nth-child(1) {
+  list-style: url(/images/icon-location.svg);
+  margin-left: 1.4rem;
+  text-indent: -1rem;
+  padding-left: 1.1rem;
+}
+
+footer ul:first-of-type li:nth-child(2) {
+  list-style: url(/images/icon-phone.svg);
+  margin-left: 1.5rem;
+}
+
 footer ul:first-of-type li:nth-child(3) {
+  list-style: url(/images/icon-email.svg);
+  margin-left: 1.5rem;
   margin-bottom: 4rem;
 }
 
@@ -239,6 +257,89 @@ footer ul:first-of-type li:nth-child(3) {
   font-weight: bolder;
   font-size: 0.75rem;
   margin-bottom: 0.25rem;
+}
+
+@media screen and (min-width: 800px) {
+  .hero__container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+  }
+  .features__container {
+    display: -ms-grid;
+    display: grid;
+    grid-template: "one two" "three four";
+    max-width: 80rem;
+    margin: auto;
+  }
+  .features__item {
+    max-width: 20rem;
+    margin: auto;
+  }
+  .stay-productive__container {
+    display: -ms-grid;
+    display: grid;
+    grid-template: "image text";
+    grid-auto-columns: 50% 50%;
+    padding-right: 2rem;
+  }
+  .stay-productive__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .stay-productive__text h3 {
+    font-size: 2rem;
+  }
+  .stay-productive__text h3 span {
+    display: block;
+  }
+  .stay-productive__text p {
+    max-width: 35rem;
+  }
+  .testimonial__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 10rem;
+  }
+  .testimonial__object {
+    margin-bottom: 0;
+  }
+  .testimonial__object + .testimonial__object {
+    margin-left: 1rem;
+  }
+  .cta__container {
+    max-width: calc(100vw / 3 * 2);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta__container p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40rem;
+  }
+  .cta__container form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .cta__container form input {
+    width: 100%;
+  }
+  .cta__container form input[type="button"] {
+    width: 50%;
+    margin: auto;
+    margin-left: 2rem;
+  }
 }
 
 :root {

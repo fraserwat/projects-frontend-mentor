@@ -21,11 +21,22 @@ footer {
     }
   }
   ul:first-of-type {
+    a {
+      margin-left: 1rem;
+    }
     li:nth-child(1) {
+      list-style: url(/images/icon-location.svg);
+      margin-left: 1.4rem;
+      text-indent: -1rem;
+      padding-left: 1.1rem;
     }
     li:nth-child(2) {
+      list-style: url(/images/icon-phone.svg);
+      margin-left: 1.5rem;
     }
     li:nth-child(3) {
+      list-style: url(/images/icon-email.svg);
+      margin-left: 1.5rem;
       margin-bottom: 4rem;
     }
   }

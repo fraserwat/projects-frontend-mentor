@@ -1,0 +1,70 @@
+@import "_variables";
+
+@media screen and (min-width: 800px) {
+  .hero__container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+  }
+  .features__container {
+    display: grid;
+    grid-template: "one two" "three four";
+    max-width: 80rem;
+    margin: auto;
+  }
+  .features__item {
+    max-width: 20rem;
+    margin: auto;
+  }
+  .stay-productive__container {
+    display: grid;
+    grid-template: "image text";
+    grid-auto-columns: 50% 50%;
+    padding-right: 2rem;
+  }
+  .stay-productive__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3 {
+      font-size: 2rem;
+      span {
+        display: block;
+      }
+    }
+    p {
+      max-width: 35rem;
+    }
+  }
+  .testimonial__container {
+    display: flex;
+    margin-bottom: 10rem;
+  }
+  .testimonial__object {
+    margin-bottom: 0;
+  }
+  .testimonial__object + .testimonial__object {
+    margin-left: 1rem;
+  }
+  .cta__container {
+    max-width: calc(100vw / 3 * 2);
+    margin-left: auto;
+    margin-right: auto;
+    p {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 40rem;
+    }
+    form {
+      flex-direction: row;
+      input {
+        width: 100%;
+      }
+      input[type="button"] {
+        width: 50%;
+        margin: auto;
+        margin-left: 2rem;
+      }
+    }
+  }
+}
