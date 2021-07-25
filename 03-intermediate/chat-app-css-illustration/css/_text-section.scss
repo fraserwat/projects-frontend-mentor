@@ -19,6 +19,14 @@
     margin-bottom: 2rem;
     a {
       // https://fossheim.io/writing/posts/css-text-gradient/
+      background-image: linear-gradient(to top, $light-magenta, $light-violet);
+      background-size: 100%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+      font-weight: bolder;
     }
   }
 }

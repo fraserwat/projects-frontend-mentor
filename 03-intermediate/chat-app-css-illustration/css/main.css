@@ -166,6 +166,18 @@ button {
   margin-bottom: 2rem;
 }
 
+.divider__text ul a {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#e942ff), to(#8838ff));
+  background-image: linear-gradient(to top, #e942ff, #8838ff);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-weight: bolder;
+}
+
 body {
   position: relative;
   background-color: #f5f3f7;
