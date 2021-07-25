@@ -1,0 +1,198 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"],
+li,
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.divider__phone {
+  padding-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.mobile__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+  margin: auto;
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 0.75rem;
+}
+
+.mobile__container::before {
+  content: "";
+  position: relative;
+  margin: auto;
+  margin-top: -0.75rem;
+  top: 0;
+  border-radius: 1000px;
+  background-color: white;
+  width: 66%;
+  height: 2rem;
+}
+
+.mobile__chat-window {
+  background-color: #f5f3f7;
+  border-radius: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: -1.25rem;
+}
+
+.mobile__top-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 1.5rem 1.5rem 0.75rem 0.75rem;
+  background: -webkit-gradient(linear, right top, left top, from(#e942ff), to(#8838ff));
+  background: linear-gradient(to left, #e942ff, #8838ff);
+}
+
+.mobile__top-bar img {
+  width: 3rem;
+  border-radius: 999px;
+}
+
+.divider__text {
+  color: #a39daa;
+  padding: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.divider__text h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: #3e2753;
+}
+
+.divider__text p {
+  margin-bottom: 1rem;
+}
+
+.divider__text ul {
+  margin-bottom: 2rem;
+}
+
+body {
+  position: relative;
+  background-color: #f5f3f7;
+  font-family: "Rubik", sans-serif;
+}
+
+body::before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  width: 50vw;
+  height: 70vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e942ff), to(#8838ff));
+  background: linear-gradient(to bottom, #e942ff, #8838ff);
+  border-radius: 0 0 1000px 0;
+}
+
+body::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  content: "";
+  width: 50vw;
+  height: 70vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f0edf3), to(#f5f3f7));
+  background: linear-gradient(to bottom, #f0edf3, #f5f3f7);
+  border-radius: 1000px 0 0 0;
+}
+/*# sourceMappingURL=main.css.map */

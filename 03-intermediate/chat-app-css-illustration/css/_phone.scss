@@ -1,0 +1,49 @@
+@import "_variables";
+
+button {
+  background: none;
+  border: none;
+}
+
+.divider__phone {
+  padding-top: 4rem;
+  margin-bottom: 4rem;
+}
+.mobile__container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+  background-color: $white;
+  border-radius: 1.5rem;
+  padding: 0.75rem;
+}
+.mobile__container::before {
+  content: "";
+  position: relative;
+  margin: auto;
+  margin-top: -0.75rem;
+  top: 0;
+  border-radius: 1000px;
+  background-color: $white;
+  width: 66%;
+  height: 2rem;
+}
+
+.mobile__chat-window {
+  background-color: hsl(270, 20%, 96%);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: -1.25rem;
+}
+.mobile__top-bar {
+  display: flex;
+  flex-direction: row;
+  border-radius: 1.5rem 1.5rem 0.75rem 0.75rem;
+  background: linear-gradient(to left, $light-magenta, $light-violet);
+  img {
+    width: 3rem;
+    border-radius: 999px;
+  }
+}
