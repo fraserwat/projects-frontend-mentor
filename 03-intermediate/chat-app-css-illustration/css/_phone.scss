@@ -15,7 +15,7 @@ button {
   flex-direction: column;
   width: 75%;
   height: 41rem;
-  max-width: 18rem;
+  max-width: 20rem;
   margin: auto;
   background-color: $white;
   border-radius: 1.5rem;
@@ -35,7 +35,6 @@ button {
 }
 
 .mobile__chat-window {
-  // height: 41.1rem;
   font-size: 0.6rem;
   background-color: hsl(270, 20%, 96%);
   border-radius: 1.5rem;
@@ -74,7 +73,6 @@ button {
     color: $white;
     margin-right: auto;
     p:first-of-type {
-      // border: red 1px solid;
       font-size: 0.75rem;
     }
     p:last-of-type {
@@ -201,7 +199,6 @@ button[type="submit"] {
   align-items: center;
   justify-content: center;
   i {
-    // margin: -0.25rem;
     margin-left: 1px;
     padding: 0;
     color: $white;
