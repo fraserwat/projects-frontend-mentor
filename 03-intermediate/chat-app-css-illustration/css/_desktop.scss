@@ -1,0 +1,45 @@
+@import "_variables";
+
+@media screen and (min-width: 900px) {
+  body {
+    display: grid;
+    grid-template-areas: "phone text";
+    grid-auto-columns: 1fr 1fr;
+    &::before {
+      left: -10%;
+      width: 45vw !important;
+      height: 90vh !important;
+      border-bottom-left-radius: 1000px !important;
+    }
+  }
+  body::after {
+    width: 20vw !important;
+    background: linear-gradient(
+      to bottom,
+      hsl(270, 40%, 93%),
+      $light-grayish-violet
+    ) !important;
+  }
+
+  .divider__phone,
+  .divider__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .mobile__container {
+    margin-right: 5vw;
+  }
+  .divider__text {
+    text-align: left;
+    margin-left: 0;
+    align-items: flex-start;
+    h1 {
+      margin: 0;
+    }
+    p {
+      max-width: 30rem;
+      margin: 2rem 0;
+    }
+  }
+}

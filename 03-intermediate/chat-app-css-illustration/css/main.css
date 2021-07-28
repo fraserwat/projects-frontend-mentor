@@ -87,10 +87,13 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 75%;
+  max-width: 18rem;
   margin: auto;
   background-color: white;
   border-radius: 1.5rem;
   padding: 0.75rem;
+  -webkit-box-shadow: 5px 5px 50px 20px rgba(163, 157, 170, 0.2);
+          box-shadow: 5px 5px 50px 20px rgba(163, 157, 170, 0.2);
 }
 
 .mobile__container::before {
@@ -225,12 +228,11 @@ button {
       flex-wrap: wrap;
   width: 100%;
   padding: 0;
-  margin-top: 0;
 }
 
 .photo img {
   border-radius: 0.5rem;
-  margin: 1rem 0 0 1rem;
+  margin: auto 0 auto 1rem;
   height: 3.5rem;
 }
 
@@ -242,6 +244,110 @@ button {
 .message__you:not(.photo) {
   -webkit-box-shadow: 0 6px 6px -3px rgba(128, 102, 153, 0.15);
           box-shadow: 0 6px 6px -3px rgba(128, 102, 153, 0.15);
+}
+
+.message__click {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  color: white;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e942ff), to(#8838ff));
+  background-image: linear-gradient(to right, #e942ff, #8838ff);
+}
+
+.message__click p:nth-of-type(1) {
+  margin-right: auto;
+}
+
+.message__click p:nth-of-type(2) {
+  margin-right: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.message__click::before {
+  content: "";
+  position: relative;
+  cursor: pointer;
+  z-index: 3;
+  width: 0.9rem;
+  height: 0.9rem;
+  border: rgba(255, 255, 255, 0.5) 1px solid;
+  border-radius: 9999px;
+  margin-right: 0.75rem;
+}
+
+.message__click::before:hover {
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  background-color: white;
+  border: white 1px solid;
+}
+
+.mobile__type-message {
+  color: #9241c8;
+  background-color: white;
+  margin: 0.5rem 0.5rem;
+  padding: 0 0.25rem 0 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid #f0edf3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+input[type="text"] {
+  border: none;
+  margin: auto;
+  height: 1.75rem;
+  word-wrap: break-word;
+  background-color: none;
+  width: 100%;
+}
+
+input[type="text"] ::-webkit-input-placeholder {
+  color: #c6cacd;
+}
+
+input[type="text"] :-ms-input-placeholder {
+  color: #c6cacd;
+}
+
+input[type="text"] ::-ms-input-placeholder {
+  color: #c6cacd;
+}
+
+input[type="text"] ::placeholder {
+  color: #c6cacd;
+}
+
+button[type="submit"] {
+  cursor: pointer;
+  height: 30px;
+  width: calc(30px + 0.4rem);
+  border-radius: 50%;
+  margin: 0.2rem 0rem;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+button[type="submit"] i {
+  margin-left: 1px;
+  padding: 0;
+  color: white;
+  font-size: 0.8rem;
 }
 
 .divider__text {
@@ -286,7 +392,58 @@ button {
   font-weight: bolder;
 }
 
+@media screen and (min-width: 900px) {
+  body {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "phone text";
+    grid-auto-columns: 1fr 1fr;
+  }
+  body::before {
+    left: -10%;
+    width: 45vw !important;
+    height: 90vh !important;
+    border-bottom-left-radius: 1000px !important;
+  }
+  body::after {
+    width: 20vw !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ede6f4), to(#f5f3f7)) !important;
+    background: linear-gradient(to bottom, #ede6f4, #f5f3f7) !important;
+  }
+  .divider__phone,
+  .divider__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .mobile__container {
+    margin-right: 5vw;
+  }
+  .divider__text {
+    text-align: left;
+    margin-left: 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .divider__text h1 {
+    margin: 0;
+  }
+  .divider__text p {
+    max-width: 30rem;
+    margin: 2rem 0;
+  }
+}
+
 body {
+  min-height: 100vh;
   position: relative;
   background-color: #f5f3f7;
   font-family: "Rubik", sans-serif;

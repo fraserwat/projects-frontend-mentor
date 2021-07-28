@@ -2,8 +2,10 @@
 @import "_variables";
 @import "_phone";
 @import "_text-section";
+@import "_desktop";
 
 body {
+  min-height: 100vh;
   position: relative;
   background-color: $light-grayish-violet;
   font-family: "Rubik", sans-serif;
