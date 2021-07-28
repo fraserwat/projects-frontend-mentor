@@ -71,6 +71,7 @@ select {
 button {
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .divider__phone {
@@ -87,6 +88,7 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 75%;
+  height: 41rem;
   max-width: 18rem;
   margin: auto;
   background-color: white;
@@ -187,6 +189,7 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-top: 0.5rem;
+  height: 32rem;
 }
 
 .message__them {

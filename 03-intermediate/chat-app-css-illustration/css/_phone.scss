@@ -3,6 +3,7 @@
 button {
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .divider__phone {
@@ -13,6 +14,7 @@ button {
   display: flex;
   flex-direction: column;
   width: 75%;
+  height: 41rem;
   max-width: 18rem;
   margin: auto;
   background-color: $white;
@@ -33,6 +35,7 @@ button {
 }
 
 .mobile__chat-window {
+  // height: 41.1rem;
   font-size: 0.6rem;
   background-color: hsl(270, 20%, 96%);
   border-radius: 1.5rem;
@@ -84,6 +87,7 @@ button {
   display: flex;
   flex-direction: column;
   padding-top: 0.5rem;
+  height: 32rem;
 }
 .message__them {
   color: $moderate-violet;
