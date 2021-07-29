@@ -1,0 +1,34 @@
+@import "_variables";
+@import "_reset";
+@import "_nav";
+@import "_content";
+@import "_footer";
+
+body {
+  text-align: center;
+  font-family: "Karla", sans-serif;
+}
+h1 {
+  font-family: "DM Serif Display", serif;
+  font-size: 3rem;
+  line-height: 3.1rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+h2 {
+  font-family: "DM Serif Display", serif;
+  margin-bottom: 1rem;
+}
+
+.white-on-blue {
+  background-color: $dark-violet;
+  color: rgba(250, 250, 250, 0.8);
+  border: 2px solid rgba(250, 250, 250, 0.8);
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
+  &:hover {
+    transition: 250ms;
+    color: $dark-violet;
+    background-color: rgba(250, 250, 250, 0.8);
+  }
+}

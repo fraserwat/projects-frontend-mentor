@@ -1,0 +1,88 @@
+@import "_variables.scss";
+
+.hero__container {
+  margin-bottom: 10rem;
+}
+
+.hero__image {
+  width: 100%;
+}
+.hero__text,
+.more-info__container {
+  padding: 6rem 2rem;
+  color: $v-light-grey;
+  background-color: $dark-violet;
+  p {
+    opacity: 0.8;
+    margin-bottom: 2rem;
+  }
+}
+.more-info__container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 8rem;
+  padding: 4rem 2rem;
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  background-image: url(/images/bg-pattern-how-we-work-mobile.svg);
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+.hero__text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  transform: translateY(-6rem);
+  width: 50vw;
+  height: 60vw;
+  background-image: url(/images/bg-pattern-intro-left-mobile.svg);
+  background-repeat: no-repeat;
+}
+.hero__text::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  transform: translateY(-3rem);
+  width: 8rem;
+  height: 30rem;
+  background-image: url(/images/bg-pattern-intro-right-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.features__container::before {
+  position: absolute;
+  width: calc(100vw / 3);
+  height: 0;
+  content: "";
+  border: 1px solid #9f96c6;
+  margin: auto;
+}
+
+.features__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+.features__feature-list,
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+
+  img {
+    // margin-bottom: 2rem;
+    margin: 2rem;
+  }
+  p {
+    color: $dark-grayish-violet;
+  }
+}
