@@ -12,6 +12,7 @@
     />
     <script src="https://kit.fontawesome.com/785bcfb039.js" async></script>
     <script src="js/send-message.js" async></script>
+    <script src="js/button-press.js" async></script>
 
     <title>Frontend Mentor | Chat App</title>
   </head>
@@ -29,7 +30,15 @@
                 <p id="name">Samuel Green</p>
                 <p id="status">Available to Walk</p>
               </div>
-              <button><i class="fas fa-ellipsis-v fa_ellipsis_v"></i></button>
+              <div class="ellipsis__container">
+                <button><i class="fas fa-ellipsis-v fa_ellipsis_v"></i></button>
+                <div class="ellipsis__menu">
+                  <ul>
+                    <li>Add to Contacts</li>
+                    <li>Block</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
           <div class="mobile__chat-messages">

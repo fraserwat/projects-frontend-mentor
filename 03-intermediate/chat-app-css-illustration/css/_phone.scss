@@ -130,7 +130,8 @@ button {
 }
 
 .message__them:not(.photo),
-.message__you:not(.photo) {
+.message__you:not(.photo),
+.ellipsis__menu {
   box-shadow: 0 6px 6px -3px rgba(128, 102, 153, 0.15);
 }
 
@@ -204,4 +205,26 @@ button[type="submit"] {
     color: $white;
     font-size: 0.8rem;
   }
+}
+.ellipsis__container {
+  position: relative;
+}
+.ellipsis__menu {
+  display: none;
+
+  position: absolute;
+  left: -7rem;
+  width: 7rem;
+  background-color: $white;
+
+  color: $desat-dark-violet;
+  padding: 0.75rem;
+  border-radius: 0.5rem 0 0.5rem 0.5rem;
+
+  li:first-of-type {
+    margin-bottom: 0.75rem;
+  }
+}
+.active {
+  display: flex;
 }
