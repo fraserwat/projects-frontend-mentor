@@ -27,14 +27,19 @@ button {
   position: relative;
   margin: auto;
   margin-top: -0.75rem;
+  margin-bottom: 0;
   top: 0;
   border-radius: 1000px;
   background-color: $white;
   width: 66%;
   height: 2rem;
+  z-index: 5;
 }
 
 .mobile__chat-window {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
   font-size: 0.6rem;
   background-color: hsl(270, 20%, 96%);
   border-radius: 1.5rem;
@@ -46,6 +51,7 @@ button {
 .mobile__top-bar {
   display: flex;
   flex-direction: row;
+  z-index: 2;
   padding: 1.75rem 0rem 0 1rem;
   border-radius: 1.5rem 1.5rem 0.5rem 0.5rem;
   background: linear-gradient(to left, $light-magenta, $light-violet);
@@ -82,10 +88,12 @@ button {
   }
 }
 .mobile__chat-messages {
+  position: absolute;
+  bottom: 3.5rem;
   display: flex;
   flex-direction: column;
   padding-top: 0.5rem;
-  height: 32rem;
+  width: -webkit-fill-available;
 }
 .message__them {
   color: $moderate-violet;
@@ -170,13 +178,18 @@ button {
 }
 
 .message__click.active {
+  box-sizing: border-box;
   transition: 300ms;
-  border: solid 2px white;
+  box-shadow: inset 0px 0px 0px 1px white, 0px 0px 0px 1px white,
+    0px 0px 0px 0px white;
+  overflow: hidden;
   &::before {
     background-color: white;
   }
 }
 .mobile__type-message {
+  position: absolute;
+  bottom: 0;
   color: $moderate-violet;
   background-color: $white;
   margin: 0.5rem 0.5rem;
@@ -184,6 +197,7 @@ button {
   border-radius: 9999px;
   border: 1px solid hsl(270, 20%, 94%);
   display: flex;
+  width: -webkit-fill-available;
 }
 input[type="text"] {
   border: none;
@@ -192,10 +206,11 @@ input[type="text"] {
   word-wrap: break-word;
   background-color: none;
   width: 100%;
-  ::placeholder {
-    color: $grayish-blue; // WHY ISNT THIS WORKING???
-  }
 }
+input[type="text"]::-webkit-input-placeholder {
+  color: $grayish-blue;
+}
+
 button[type="submit"] {
   cursor: pointer;
   height: 30px;
@@ -218,6 +233,7 @@ button[type="submit"] {
 }
 .ellipsis__menu {
   display: none;
+  overflow: hidden;
 
   position: absolute;
   left: -7rem;
@@ -225,11 +241,18 @@ button[type="submit"] {
   background-color: $white;
 
   color: $desat-dark-violet;
-  padding: 0.75rem;
   border-radius: 0.5rem 0 0.5rem 0.5rem;
-
-  li:first-of-type {
-    margin-bottom: 0.75rem;
+  ul {
+    width: 100%;
+  }
+  li {
+    width: 100%;
+    padding: 0.75rem;
+    overflow: hidden;
+  }
+  li:hover {
+    cursor: pointer;
+    background-color: $light-grayish-violet;
   }
 }
 .active {

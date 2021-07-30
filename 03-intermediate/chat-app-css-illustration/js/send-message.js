@@ -21,7 +21,6 @@ function postMessage(message) {
   // Add class and message to empty div
   newMessageDiv.classList.add("message__you");
   newMessageDiv.innerHTML = `<p>${message}</p>`;
-  console.log(newMessageDiv);
 
   // Add message div to screen
   chatWindow.appendChild(newMessageDiv);

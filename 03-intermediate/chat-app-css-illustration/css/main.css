@@ -103,14 +103,19 @@ button {
   position: relative;
   margin: auto;
   margin-top: -0.75rem;
+  margin-bottom: 0;
   top: 0;
   border-radius: 1000px;
   background-color: white;
   width: 66%;
   height: 2rem;
+  z-index: 5;
 }
 
 .mobile__chat-window {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
   font-size: 0.6rem;
   background-color: #f5f3f7;
   border-radius: 1.5rem;
@@ -132,6 +137,7 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  z-index: 2;
   padding: 1.75rem 0rem 0 1rem;
   border-radius: 1.5rem 1.5rem 0.5rem 0.5rem;
   background: -webkit-gradient(linear, right top, left top, from(#e942ff), to(#8838ff));
@@ -181,6 +187,8 @@ button {
 }
 
 .mobile__chat-messages {
+  position: absolute;
+  bottom: 3.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,7 +197,7 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-top: 0.5rem;
-  height: 32rem;
+  width: -webkit-fill-available;
 }
 
 .message__them {
@@ -293,9 +301,13 @@ button {
 }
 
 .message__click.active {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-transition: 300ms;
   transition: 300ms;
-  border: solid 2px white;
+  -webkit-box-shadow: inset 0px 0px 0px 1px white, 0px 0px 0px 1px white, 0px 0px 0px 0px white;
+          box-shadow: inset 0px 0px 0px 1px white, 0px 0px 0px 1px white, 0px 0px 0px 0px white;
+  overflow: hidden;
 }
 
 .message__click.active::before {
@@ -303,6 +315,8 @@ button {
 }
 
 .mobile__type-message {
+  position: absolute;
+  bottom: 0;
   color: #9241c8;
   background-color: white;
   margin: 0.5rem 0.5rem;
@@ -312,6 +326,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: -webkit-fill-available;
 }
 
 input[type="text"] {
@@ -323,19 +338,7 @@ input[type="text"] {
   width: 100%;
 }
 
-input[type="text"] ::-webkit-input-placeholder {
-  color: #c6cacd;
-}
-
-input[type="text"] :-ms-input-placeholder {
-  color: #c6cacd;
-}
-
-input[type="text"] ::-ms-input-placeholder {
-  color: #c6cacd;
-}
-
-input[type="text"] ::placeholder {
+input[type="text"]::-webkit-input-placeholder {
   color: #c6cacd;
 }
 
@@ -370,17 +373,28 @@ button[type="submit"] i {
 
 .ellipsis__menu {
   display: none;
+  overflow: hidden;
   position: absolute;
   left: -7rem;
   width: 7rem;
   background-color: white;
   color: #6e5d7e;
-  padding: 0.75rem;
   border-radius: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.ellipsis__menu li:first-of-type {
-  margin-bottom: 0.75rem;
+.ellipsis__menu ul {
+  width: 100%;
+}
+
+.ellipsis__menu li {
+  width: 100%;
+  padding: 0.75rem;
+  overflow: hidden;
+}
+
+.ellipsis__menu li:hover {
+  cursor: pointer;
+  background-color: #f5f3f7;
 }
 
 .active {
