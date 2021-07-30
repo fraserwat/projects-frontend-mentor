@@ -1,6 +1,6 @@
 @import "_variables";
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 750px) {
   body {
     display: grid;
     grid-template-areas: "phone text";

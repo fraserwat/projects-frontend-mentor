@@ -137,7 +137,7 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  z-index: 2;
+  z-index: 5;
   padding: 1.75rem 0rem 0 1rem;
   border-radius: 1.5rem 1.5rem 0.5rem 0.5rem;
   background: -webkit-gradient(linear, right top, left top, from(#e942ff), to(#8838ff));
@@ -445,7 +445,7 @@ button[type="submit"] i {
   font-weight: bolder;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 750px) {
   body {
     display: -ms-grid;
     display: grid;
