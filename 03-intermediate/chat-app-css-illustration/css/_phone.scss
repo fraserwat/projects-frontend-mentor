@@ -169,6 +169,13 @@ button {
   }
 }
 
+.message__click.active {
+  transition: 300ms;
+  border: solid 2px white;
+  &::before {
+    background-color: white;
+  }
+}
 .mobile__type-message {
   color: $moderate-violet;
   background-color: $white;

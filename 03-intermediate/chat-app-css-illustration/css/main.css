@@ -292,6 +292,16 @@ button {
   border: white 1px solid;
 }
 
+.message__click.active {
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  border: solid 2px white;
+}
+
+.message__click.active::before {
+  background-color: white;
+}
+
 .mobile__type-message {
   color: #9241c8;
   background-color: white;
