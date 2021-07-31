@@ -26,15 +26,20 @@
       <button><img src="/images/icon-hamburger.svg" alt="menu" /></button>
     </nav>
     <div class="hero__container">
-      <img class="hero__image" src="/images/image-intro-mobile.jpg" alt="A family holding hands" />
+      <picture class="hero__image">
+        <source srcset="/images/image-intro-desktop.jpg" media="(min-width:800)">
+        <img src="/images/image-intro-mobile.jpg" alt="A family holding hands">
+      </picture>      
       <div class="hero__text">
-        <h1>Humanizing your insurance.</h1>
-        <p>
-          Get your life insurance coverage easier and faster. We blend our
-          expertise and technology to help you find the plan that’s right for you.
-          Ensure you and your loved ones are protected.
-        </p>
-        <button class="white-on-blue">View plans</button>
+        <div class="hero__text-inner">
+          <h1>Humanizing your insurance.</h1>
+          <p>
+            Get your life insurance coverage easier and faster. We blend our
+            expertise and technology to help you find the plan that’s right for you.
+            Ensure you and your loved ones are protected.
+          </p>
+          <button class="white-on-blue">View plans</button>
+        </div>
       </div>
     </div>
 

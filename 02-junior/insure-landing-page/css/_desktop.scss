@@ -1,0 +1,107 @@
+@import "_variables";
+
+$breakpoint: 800px;
+
+@media screen and (min-width: $breakpoint) {
+  // margin reset
+  .features__feature-list,
+  .more-info__container,
+  .parent-list {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .hero__text {
+    padding-left: 0;
+  }
+  .parent-list {
+    width: 100%;
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  h1,
+  h2,
+  body,
+  li {
+    text-align: left;
+  }
+  .white-on-blue {
+    max-height: 3rem;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .hero__container {
+    // display: grid;
+    position: relative;
+  }
+  .hero__image {
+    position: absolute;
+    left: 55%;
+    transform: translateY(3rem);
+  }
+  .hero__text {
+    text-align: left;
+    // grid-area: hero-text;
+  }
+  .hero__text-inner {
+    width: 50%;
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .features__container {
+    align-items: flex-start;
+    h1 {
+      text-align: left;
+    }
+  }
+  .features__feature-list {
+    flex-direction: row;
+    align-items: space-between;
+  }
+  .feature {
+    margin: 1rem 0;
+    text-align: left;
+    align-items: flex-start;
+    img {
+      margin-left: 0;
+    }
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .more-info__container {
+    display: flex;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    background-image: url(/images/bg-pattern-how-we-work-desktop.svg);
+    h1 {
+      margin: 0;
+      margin-right: auto;
+      max-width: 23rem;
+    }
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  footer {
+    background-color: $v-light-grey;
+    background-image: url(/images/bg-pattern-footer-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: calc(100vw / 2.5);
+  }
+  .footer__pre-footer-logo {
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: none;
+    img,
+    .footer__socials {
+      margin: 0;
+    }
+  }
+  .parent-list {
+    display: flex;
+    justify-content: space-between;
+    li:first-of-type {
+      margin-left: 0;
+    }
+  }
+}
