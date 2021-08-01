@@ -23,7 +23,9 @@
         <div class="mobile__chat-window">
           <div class="mobile__top-bar">
             <div class="mobile__top-bar-ui">
-              <button><i class="fas fa-angle-left fa_angle_left"></i></button>
+              <button aria-label="back">
+                <i class="fas fa-angle-left fa_angle_left"></i>
+              </button>
               <button>
                 <img src="/images/avatar.jpg" alt="Profile picture" />
               </button>
@@ -32,7 +34,9 @@
                 <p id="status">Available to Walk</p>
               </div>
               <div class="ellipsis__container">
-                <button><i class="fas fa-ellipsis-v fa_ellipsis_v"></i></button>
+                <button aria-label="contact-menu">
+                  <i class="fas fa-ellipsis-v fa_ellipsis_v"></i>
+                </button>
                 <div class="ellipsis__menu">
                   <ul>
                     <li>Add to Contacts</li>
@@ -73,7 +77,12 @@
           </div>
           <form class="mobile__type-message" onsubmit="sendNewMessage(event);">
             <input type="text" placeholder="Type a message..." />
-            <button type="submit" id="submit" value="">
+            <button
+              type="submit"
+              id="submit"
+              value=""
+              aria-label="send-message"
+            >
               <i class="fas fa-angle-right fa_angle_right"></i>
             </button>
           </form>
