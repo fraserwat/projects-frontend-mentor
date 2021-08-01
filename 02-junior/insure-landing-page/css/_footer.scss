@@ -3,6 +3,9 @@
 footer {
   display: flex;
   flex-direction: column;
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
 .footer__pre-footer-logo {
@@ -31,11 +34,11 @@ footer {
   }
 }
 
-.parent-list {
+.parent-list,
+.attribution {
   //   border: red solid 1px;
-  margin: 3rem auto 2rem auto;
+  margin: 3rem auto 0 auto;
   width: 80vw;
-  border-top: 1px solid rgba(131, 125, 135, 0.3);
   a,
   li {
     color: $v-dark-violet;
@@ -48,7 +51,12 @@ footer {
     color: $dark-grayish-violet;
   }
 }
-
+.parent-list {
+  border-top: 1px solid rgba(131, 125, 135, 0.3);
+}
+.attribution {
+  margin: 0 auto 2rem auto;
+}
 .attribution li:first-of-type {
   margin: 0;
   margin-top: 2rem;
@@ -56,4 +64,32 @@ footer {
 }
 .attribution li {
   color: $dark-grayish-violet;
+}
+
+@media screen and (min-width: $breakpoint) {
+  footer {
+    background-color: $v-light-grey;
+    background-image: url(/images/bg-pattern-footer-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: calc(100vw / 2.5);
+  }
+  .footer__pre-footer-logo {
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: none;
+    img,
+    .footer__socials {
+      margin: 0;
+    }
+  }
+  .parent-list {
+    display: flex;
+    justify-content: space-between;
+    li:first-of-type {
+      margin-left: 0;
+    }
+  }
+  .attribution {
+    margin-left: 0;
+  }
 }

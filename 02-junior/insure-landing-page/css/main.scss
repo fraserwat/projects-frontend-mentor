@@ -1,11 +1,13 @@
 @import "_variables";
 @import "_reset";
 @import "_nav";
-@import "_content";
+@import "_hero";
+@import "_features";
+@import "_more-info";
 @import "_footer";
-@import "_desktop";
 
 body {
+  max-width: 100vw;
   text-align: center;
   font-family: "Karla", sans-serif;
 }
@@ -27,9 +29,60 @@ h2 {
   border: 2px solid rgba(250, 250, 250, 0.8);
   padding: 0.5rem 1.5rem;
   text-transform: uppercase;
+  z-index: 3;
   &:hover {
     transition: 250ms;
     color: $dark-violet;
     background-color: rgba(250, 250, 250, 0.8);
+  }
+}
+// for the blue sections in her and "more info sections
+.hero__text,
+.more-info__container {
+  padding: 6rem 2rem;
+  color: $v-light-grey;
+  background-color: $dark-violet;
+  p {
+    opacity: 0.8;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  // margin reset
+  .features__feature-list,
+  .more-info__container,
+  .parent-list {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .hero__text {
+    padding-left: 0;
+  }
+  .parent-list {
+    width: 100%;
+  }
+  // put margins back into the page (some will need to be via padding for bg reasons)
+  .more-info__container,
+  .features__container {
+    margin-left: 9vw;
+    margin-right: 9vw;
+  }
+  footer,
+  .hero__text {
+    padding-left: 9vw;
+    padding-right: 9vw;
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  h1,
+  h2,
+  body,
+  li {
+    text-align: left;
+  }
+  .white-on-blue {
+    max-height: 3rem;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 }

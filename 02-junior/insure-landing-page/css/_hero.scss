@@ -1,0 +1,65 @@
+@import "_variables.scss";
+
+.hero__container {
+  margin-bottom: 10rem;
+}
+.hero__image {
+  width: 100%;
+}
+.hero__text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  transform: translateY(-6rem);
+  width: 50vw;
+  height: 60vw;
+  background-image: url(/images/bg-pattern-intro-left-mobile.svg);
+  background-repeat: no-repeat;
+}
+.hero__text::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  transform: translateY(-3rem);
+  width: 8rem;
+  height: 30rem;
+  background-image: url(/images/bg-pattern-intro-right-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media screen and (min-width: $breakpoint) {
+  .hero__container {
+    // display: grid;
+    position: relative;
+  }
+  .hero__image {
+    position: absolute;
+    left: 55%;
+    transform: translateY(3rem);
+    img {
+      width: 24rem;
+    }
+  }
+  .hero__text {
+    text-align: left;
+  }
+  .hero__text-inner {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: $breakpoint) {
+  .hero__text::before {
+    width: 10rem;
+    background-size: contain;
+    background-image: url(/images/bg-pattern-intro-left-desktop.svg);
+    transform: translateY(12.5rem);
+  }
+  .hero__text::after {
+    width: 18rem;
+    background-size: contain;
+    background-image: url(/images/bg-pattern-intro-right-desktop.svg);
+    top: 3rem;
+  }
+}
