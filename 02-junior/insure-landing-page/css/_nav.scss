@@ -89,6 +89,11 @@ li {
 }
 
 @media screen and (min-width: $breakpoint) {
+  nav {
+    margin-left: 0;
+    padding-right: 9vw;
+    padding-left: 9vw;
+  }
   .hamburger {
     display: none;
   }
@@ -96,7 +101,6 @@ li {
   .nav-cta,
   li {
     display: flex;
-    ul,
     li {
       padding-right: 1.5rem;
     }
