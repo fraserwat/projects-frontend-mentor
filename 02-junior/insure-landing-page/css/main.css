@@ -265,6 +265,7 @@ li a:hover {
 @media screen and (min-width: 800px) {
   .hero__container {
     position: relative;
+    margin-bottom: 25rem;
   }
   .hero__image {
     position: absolute;
@@ -274,7 +275,6 @@ li a:hover {
   .hero__image img {
     margin-left: auto;
     margin-right: 9vw;
-    width: 21rem;
   }
   .hero__text {
     text-align: left;
@@ -284,9 +284,9 @@ li a:hover {
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   .hero__image img {
-    width: 24.5rem;
+    width: 39vw;
   }
   .hero__img {
     -webkit-transform: translateY(3rem);
@@ -296,7 +296,7 @@ li a:hover {
 
 @media screen and (min-width: 1200px) {
   .hero__text-inner {
-    width: 60%;
+    width: 50%;
   }
 }
 
@@ -435,7 +435,9 @@ li a:hover {
   .more-info__container h1 {
     margin: 0;
     margin-right: auto;
-    max-width: 23rem;
+    font-size: 4.5vw;
+    line-height: 4.5vw;
+    max-width: 50vw;
   }
 }
 
@@ -653,6 +655,10 @@ h2 {
 }
 
 @media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4.5vw;
+    line-height: 4.5vw;
+  }
   h1,
   h2,
   body,
