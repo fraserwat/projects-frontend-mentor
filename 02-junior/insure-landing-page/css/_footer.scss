@@ -45,12 +45,16 @@ footer {
     font-weight: bolder;
     text-decoration: none;
   }
-  a {
-    padding-left: 5px;
-  }
+}
+.parent-list {
   li:first-of-type {
     margin: 2rem;
     color: $dark-grayish-violet;
+  }
+}
+.attribution {
+  a {
+    padding-left: 5px;
   }
 }
 .parent-list {
@@ -93,5 +97,8 @@ footer {
   }
   .attribution {
     margin-left: 0;
+  }
+  .attribution li:first-of-type {
+    margin-top: 0;
   }
 }

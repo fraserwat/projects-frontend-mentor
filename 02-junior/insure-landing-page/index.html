@@ -22,12 +22,12 @@
     <script src="/js/menu-toggle.js" async></script>
   </head>
   <body>
-    <nav>
+    <nav role='navigation'>
       <img src="/images/logo.svg" alt="Insure logo" />
       <div class="nav-links">
-        <nav class="nav-open-menu">
+        <nav class="nav-open-menu" role='navigation'>
           <img src="/images/logo.svg" alt="Insure logo" />
-          <button><img src="/images/icon-close.svg" alt="close" class="hamburger"/></button>
+          <button><img src="/images/icon-close.svg" alt="close" aria-label="hamburger" class="hamburger"/></button>
         </nav>
         <ul>
           <li><a href="">How we work</a></li>
@@ -36,11 +36,11 @@
           <li><button class="nav-cta">View plans</button></li>
         </ul>
       </div>
-      <button><img src="/images/icon-hamburger.svg" alt="menu" class="hamburger"/></button>
+      <button><img src="/images/icon-hamburger.svg" alt="menu" aria-label="hamburger" class="hamburger"/></button>
     </nav>
-    <div class="hero__container">
+    <div class="hero__container" role='banner'>
       <picture class="hero__image">
-        <source srcset="/images/image-intro-desktop.jpg" media="(min-width:800)">
+        <source srcset="/images/image-intro-desktop.jpg" media="(min-width:800px)">
         <img src="/images/image-intro-mobile.jpg" alt="A family holding hands">
       </picture>      
       <div class="hero__text">
@@ -56,7 +56,7 @@
       </div>
     </div>
 
-    <div class="features__container">
+    <div class="features__container" role='region'>
       <h1>We’re different</h1>
       <div class="features__feature-list">
         <div class="feature snappy">
@@ -89,12 +89,12 @@
         
       </div>
     </div>
-    <div class="more-info__container">
+    <div class="more-info__container" role='region'>
       <h1>Find out more about how we work</h1>
       <button class="white-on-blue">How we work</button>
     </div>
     <footer>
-      <div class="footer__pre-footer-logo">
+      <div class="footer__pre-footer-logo" role='navigation'>
         <img src="/images/logo.svg" alt="Insure logo">
         <div class="footer__socials">
           <img src="/images/icon-facebook.svg" alt="Facebook logo">
@@ -104,32 +104,40 @@
         </div>
       </div>
       <ul class="parent-list">
-        <ul>
-          <li>Our company</li>
-          <li><a href="">How we work</a></li>
-          <li><a href="">Why Insure?</a></li>
-          <li><a href="">Check price</a></li>
-          <li><a href="">Reviews</a></li>
-        </ul>
-        <ul>
-          <li>Help me</li>
-          <li><a href="">FAQ</a></li>
-          <li><a href="">Terms of use</a></li>
-          <li><a href="">Privacy policy</a></li>
-          <li><a href="">Cookies</a></li>
-        </ul>
-        <ul>
-          <li>Contact</li>
-          <li><a href="">Sales</a></li>
-          <li><a href="">Support</a></li>
-          <li><a href="">Live chat</a></li>
-        </ul>
-        <ul>
-          <li>Others</li>
-          <li><a href="">Careers</a></li>
-          <li><a href="">Press</a></li>
-          <li><a href="">Licenses</a></li>
-        </ul>
+        <li>
+          <ul>
+            <li>Our company</li>
+            <li><a href="">How we work</a></li>
+            <li><a href="">Why Insure?</a></li>
+            <li><a href="">Check price</a></li>
+            <li><a href="">Reviews</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li>Help me</li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Terms of use</a></li>
+            <li><a href="">Privacy policy</a></li>
+            <li><a href="">Cookies</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li>Contact</li>
+            <li><a href="">Sales</a></li>
+            <li><a href="">Support</a></li>
+            <li><a href="">Live chat</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li>Others</li>
+            <li><a href="">Careers</a></li>
+            <li><a href="">Press</a></li>
+            <li><a href="">Licenses</a></li>
+          </ul>
+        </li>
       </ul>
       <ul class="attribution">
         <li>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a></li>
