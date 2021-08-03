@@ -29,7 +29,8 @@ h2 {
   border: 2px solid rgba(250, 250, 250, 0.8);
   padding: 0.5rem 1.5rem;
   text-transform: uppercase;
-  z-index: 3;
+  position: relative;
+  z-index: 5;
   &:hover {
     transition: 250ms;
     color: $dark-violet;
@@ -68,6 +69,7 @@ h2 {
     margin-right: 9vw;
   }
   footer,
+  // .nav-links,
   .hero__text {
     padding-left: 9vw;
     padding-right: 9vw;
@@ -84,5 +86,11 @@ h2 {
     max-height: 3rem;
     margin-top: auto;
     margin-bottom: auto;
+  }
+}
+// Dealing with v tiny screens
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 2.4rem;
   }
 }

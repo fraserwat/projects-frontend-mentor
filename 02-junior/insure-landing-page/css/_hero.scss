@@ -5,6 +5,9 @@
 }
 .hero__image {
   width: 100%;
+  img {
+    width: 100%;
+  }
 }
 .hero__text::before {
   content: "";
@@ -30,15 +33,15 @@
 
 @media screen and (min-width: $breakpoint) {
   .hero__container {
-    // display: grid;
     position: relative;
   }
   .hero__image {
     position: absolute;
-    left: 55%;
-    transform: translateY(3rem);
+    transform: translateY(6rem);
     img {
-      width: 24rem;
+      margin-left: auto;
+      margin-right: 3rem;
+      width: 21rem;
     }
   }
   .hero__text {
@@ -46,6 +49,19 @@
   }
   .hero__text-inner {
     width: 50%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .hero__image img {
+    width: 24.5rem;
+  }
+  .hero__img {
+    transform: translateY(3rem);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__text-inner {
+    width: 60%;
   }
 }
 

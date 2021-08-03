@@ -1,9 +1,104 @@
+@import "_variables";
+
 nav {
+  position: relative;
   display: flex;
   padding: 1.5rem;
   align-items: center;
   img {
     margin-right: auto;
     height: 100%;
+  }
+  ul {
+    display: flex;
+    li:last-of-type {
+      padding: 0;
+    }
+  }
+}
+
+.nav-links {
+  display: none;
+}
+.nav-cta,
+li {
+  text-transform: uppercase;
+  align-items: center;
+  a {
+    color: $dark-grayish-violet;
+    text-decoration: none;
+    &:hover {
+      color: black;
+    }
+  }
+}
+.nav-cta {
+  background-color: white;
+  border: solid 2px black;
+  padding: 0.5rem 1.5rem;
+  &:hover {
+    transition: 400ms;
+    color: white;
+    background-color: $v-dark-violet;
+  }
+}
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background: url(../images/bg-pattern-mobile-nav.svg) $v-dark-violet no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  width: 100vw;
+  height: 100vh;
+  ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  li {
+    margin: 1rem;
+    &:last-of-type button,
+    a {
+      font-size: 5vw;
+      background-color: $v-dark-violet;
+      color: $v-light-grey;
+    }
+    &:last-of-type button {
+      border: $v-light-grey solid 2px;
+      width: 90%;
+    }
+  }
+}
+.nav-open-menu {
+  display: none;
+}
+.nav-open-menu.active {
+  display: flex;
+  background-color: white;
+  padding: 1.5rem;
+  img {
+    height: auto;
+  }
+}
+.nav-links.active ul {
+  margin: 2rem auto;
+}
+
+@media screen and (min-width: $breakpoint) {
+  .hamburger {
+    display: none;
+  }
+  .nav-links,
+  .nav-cta,
+  li {
+    display: flex;
+    ul,
+    li {
+      padding-right: 1.5rem;
+    }
   }
 }

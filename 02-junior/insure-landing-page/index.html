@@ -19,11 +19,24 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/css/main.css" />
+    <script src="/js/menu-toggle.js" async></script>
   </head>
   <body>
     <nav>
       <img src="/images/logo.svg" alt="Insure logo" />
-      <button><img src="/images/icon-hamburger.svg" alt="menu" /></button>
+      <div class="nav-links">
+        <nav class="nav-open-menu">
+          <img src="/images/logo.svg" alt="Insure logo" />
+          <button><img src="/images/icon-close.svg" alt="close" class="hamburger"/></button>
+        </nav>
+        <ul>
+          <li><a href="">How we work</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Account</a></li>
+          <li><button class="nav-cta">View plans</button></li>
+        </ul>
+      </div>
+      <button><img src="/images/icon-hamburger.svg" alt="menu" class="hamburger"/></button>
     </nav>
     <div class="hero__container">
       <picture class="hero__image">
