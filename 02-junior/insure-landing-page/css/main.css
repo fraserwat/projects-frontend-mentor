@@ -428,6 +428,7 @@ li a:hover {
     padding-left: 4rem;
     padding-right: 4rem;
     background-image: url(/images/bg-pattern-how-we-work-desktop.svg);
+    background-size: auto 100%;
   }
   .more-info__container h1 {
     margin: 0;
