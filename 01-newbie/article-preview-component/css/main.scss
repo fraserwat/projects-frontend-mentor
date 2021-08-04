@@ -25,7 +25,7 @@ body {
   padding: 2em;
 }
 
-.container {
+.wrapper {
   @include center-flex();
   z-index: 1;
   overflow: hidden;
@@ -36,6 +36,7 @@ body {
   // max-width: 31em;
   border-radius: 1em;
   box-shadow: 2px 4px 15px 2px rgba($color: #000000, $alpha: 0.05);
+  max-width: 550px;
 
   @media only screen and (min-width: $desktop-breakpoint) {
     flex-direction: row;
@@ -45,12 +46,9 @@ body {
 }
 
 .article-container {
-  // padding: 3em;
   position: relative;
-  // overflow: visible;
   display: flex;
   flex-direction: column;
-  // padding-bottom: 2rem;
 }
 
 .img-container {
@@ -92,6 +90,7 @@ body {
   justify-content: flex-start;
   font-size: 1.22rem;
   padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
   padding-right: 3rem;
   img {
     border-radius: 50%;

@@ -180,15 +180,20 @@ select {
           flex-direction: row;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 990px) {
+  .article-footer,
+  .wrapper,
   .social-sh {
-    position: fixed;
+    overflow: initial !important;
+  }
+  .social-sh {
+    position: absolute;
     height: 4rem;
     width: auto;
     padding: 0 2rem;
     border-radius: 1rem;
-    left: 70%;
-    top: 47.5%;
+    right: -14.5%;
+    bottom: 100%;
   }
   .social-sh .sh-icon {
     display: none;
@@ -280,7 +285,7 @@ body {
   padding: 2em;
 }
 
-.container {
+.wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -302,10 +307,11 @@ body {
   border-radius: 1em;
   -webkit-box-shadow: 2px 4px 15px 2px rgba(0, 0, 0, 0.05);
           box-shadow: 2px 4px 15px 2px rgba(0, 0, 0, 0.05);
+  max-width: 550px;
 }
 
-@media only screen and (min-width: 700px) {
-  .container {
+@media only screen and (min-width: 990px) {
+  .wrapper {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -335,7 +341,7 @@ body {
   height: 20em;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 990px) {
   .img-container {
     background: url("../images/drawers.jpg") no-repeat scroll left;
     height: 23em;
@@ -372,6 +378,7 @@ body {
           justify-content: flex-start;
   font-size: 1.22rem;
   padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
   padding-right: 3rem;
 }
 

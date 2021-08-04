@@ -16,7 +16,6 @@
   bottom: 0;
   padding: 0 3rem;
   background-color: $dark-grey-blue;
-  // overflow: hidden;
 
   text-transform: uppercase;
   color: $gray-blue;
@@ -47,18 +46,25 @@
 }
 
 @media screen and (min-width: $desktop-breakpoint) {
+  .article-footer,
+  .wrapper,
+  .social-sh {
+    overflow: initial !important;
+  }
   .social-sh {
     .sh-icon {
       display: none;
     }
-    position: fixed;
+    position: absolute;
     height: 4rem;
     width: auto;
     padding: 0 2rem;
     border-radius: 1rem;
+    right: -14.5%;
+    bottom: 100%;
 
-    left: 70%;
-    top: 47.5%;
+    // left: 70%;
+    // top: 47.5%;
   }
   .social-sh::after {
     content: "";
