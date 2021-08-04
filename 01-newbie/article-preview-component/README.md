@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/article-preview-component-KgEXks30y](https://www.frontendmentor.io/solutions/article-preview-component-KgEXks30y)
 - Live Site URL: [https://article-preview-component-ruddy.vercel.app/](https://article-preview-component-ruddy.vercel.app/)
 
 ## My process
