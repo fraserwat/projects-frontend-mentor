@@ -3,15 +3,20 @@
 @import "fontawesome/brands.scss";
 
 .social-sh {
+  .sh-button {
+    background-image: url("/images/icon-sh-active.svg");
+    background-color: $desaturated-dark-blue;
+  }
   position: absolute;
   display: flex;
+  bottom: 0;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 6rem;
   bottom: 0;
   padding: 0 3rem;
   background-color: $dark-grey-blue;
-  overflow: hidden;
+  // overflow: hidden;
 
   text-transform: uppercase;
   color: $gray-blue;
@@ -39,4 +44,33 @@
 .social-sh > ul {
   display: flex;
   flex-direction: row;
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .social-sh {
+    .sh-icon {
+      display: none;
+    }
+    position: fixed;
+    height: 4rem;
+    width: auto;
+    padding: 0 2rem;
+    border-radius: 1rem;
+
+    left: 70%;
+    top: 47.5%;
+  }
+  .social-sh::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-top: 1rem solid $dark-grey-blue;
+
+    top: 100%;
+    left: 45%;
+  }
 }

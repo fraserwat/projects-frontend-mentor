@@ -46,8 +46,11 @@ body {
 
 .article-container {
   // padding: 3em;
+  position: relative;
+  // overflow: visible;
   display: flex;
   flex-direction: column;
+  // padding-bottom: 2rem;
 }
 
 .img-container {
@@ -88,7 +91,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   font-size: 1.22rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1.25rem;
   padding-right: 3rem;
   img {
     border-radius: 50%;
@@ -101,7 +104,7 @@ body {
   }
 }
 .author {
-  margin: auto;
+  margin-right: auto;
 }
 .sh-container {
   margin-left: auto;
@@ -116,13 +119,19 @@ body {
 .sh-button {
   border: none;
   background-color: $light-gray-blue;
-  border-radius: 50%;
-  height: 2rem;
-  width: 2rem;
+  background-image: url("/images/icon-sh.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 50%;
+  border-radius: 9999px;
+  // padding: 0.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
   img {
     margin: auto;
-    width: 2rem;
-    height: 2rem;
+    margin-bottom: 0;
+    width: 1.5rem;
+    // height: auto;
     // padding: 0.75rem;
   }
 }
