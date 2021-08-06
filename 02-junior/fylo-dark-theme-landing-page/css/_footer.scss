@@ -1,7 +1,20 @@
 @import "_variables";
+@import "fontawesome/fontawesome.scss";
+@import "./fontawesome/brands.scss";
+
+// NEEDED TO CALCULATE CTA / FOOTER OVERLAP
+$footer-overlap: 9rem;
+
+.cta__container {
+  transform: translateY($footer-overlap);
+  margin-top: $footer-overlap * -1;
+}
 
 footer {
   padding: 2rem;
+  background-color: $dark-blue-footer;
+  padding-top: $footer-overlap + 2rem;
+
   img {
     padding: 2rem 1rem 2rem 1rem;
   }
@@ -20,7 +33,7 @@ footer {
       }
     }
   }
-  ul:first-of-type {
+  ul:first-of-type:not(.attribution) {
     a {
       margin-left: 1rem;
     }
@@ -38,6 +51,37 @@ footer {
       list-style: url(/images/icon-email.svg);
       margin-left: 1.5rem;
       margin-bottom: 4rem;
+    }
+  }
+  ul:last-of-type:not(.attribution) {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    button {
+      cursor: pointer;
+      color: $white;
+      background-color: rgba($color: #000000, $alpha: 0);
+      border-radius: 9999px;
+      border: 1px solid $white;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      position: relative;
+      i,
+      i::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-left: 1px;
+        padding-bottom: 1px;
+        font-size: 1.25rem;
+      }
+      &:hover {
+        transition: 400ms;
+        background-color: rgba($color: #fff, $alpha: 1);
+        color: $dark-blue-bg;
+      }
     }
   }
 }

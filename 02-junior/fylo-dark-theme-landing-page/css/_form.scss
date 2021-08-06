@@ -16,8 +16,12 @@
       border: none;
       margin-bottom: 2rem;
     }
+    input::-webkit-input-placeholder {
+      color: rgba($color: #000, $alpha: 0.3);
+    }
     input[type="email"] {
       margin-top: 2rem;
+      text-indent: 1rem;
     }
     input[type="button"] {
       background: linear-gradient(90deg, $cyan, $blue);

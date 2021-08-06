@@ -65,8 +65,69 @@ select {
   }
 }
 
+/*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+.fa,
+.fas,
+.far,
+.fal,
+.fad,
+.fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.fa-facebook:before {
+  content: "\f09a";
+}
+
+.fa-twitter:before {
+  content: "\f099";
+}
+
+.fa-pinterest:before {
+  content: "\f0d2";
+}
+
+.fa-instagram:before {
+  content: "\f16d";
+}
+
+/*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../../images/webfonts/fa-brands-400.eot");
+  src: url("../../images/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../../images/webfonts/fa-brands-400.woff2") format("woff2"), url("../../images/webfonts/fa-brands-400.woff") format("woff"), url("../../images/webfonts/fa-brands-400.ttf") format("truetype"), url("../../images/webfonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+
+.fab {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+}
+
+.cta__container {
+  -webkit-transform: translateY(9rem);
+          transform: translateY(9rem);
+  margin-top: -9rem;
+}
+
 footer {
   padding: 2rem;
+  background-color: #0b1523;
+  padding-top: 11rem;
 }
 
 footer img {
@@ -93,26 +154,69 @@ footer ul li a:hover {
   transition: 250ms;
 }
 
-footer ul:first-of-type a {
+footer ul:first-of-type:not(.attribution) a {
   margin-left: 1rem;
 }
 
-footer ul:first-of-type li:nth-child(1) {
+footer ul:first-of-type:not(.attribution) li:nth-child(1) {
   list-style: url(/images/icon-location.svg);
   margin-left: 1.4rem;
   text-indent: -1rem;
   padding-left: 1.1rem;
 }
 
-footer ul:first-of-type li:nth-child(2) {
+footer ul:first-of-type:not(.attribution) li:nth-child(2) {
   list-style: url(/images/icon-phone.svg);
   margin-left: 1.5rem;
 }
 
-footer ul:first-of-type li:nth-child(3) {
+footer ul:first-of-type:not(.attribution) li:nth-child(3) {
   list-style: url(/images/icon-email.svg);
   margin-left: 1.5rem;
   margin-bottom: 4rem;
+}
+
+footer ul:last-of-type:not(.attribution) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer ul:last-of-type:not(.attribution) button {
+  cursor: pointer;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 9999px;
+  border: 1px solid white;
+  width: 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+footer ul:last-of-type:not(.attribution) button i,
+footer ul:last-of-type:not(.attribution) button i::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding-left: 1px;
+  padding-bottom: 1px;
+  font-size: 1.25rem;
+}
+
+footer ul:last-of-type:not(.attribution) button:hover {
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  background-color: white;
+  color: #181f2a;
 }
 
 .cta__container {
@@ -139,8 +243,13 @@ footer ul:first-of-type li:nth-child(3) {
   margin-bottom: 2rem;
 }
 
+.cta__container form input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .cta__container form input[type="email"] {
   margin-top: 2rem;
+  text-indent: 1rem;
 }
 
 .cta__container form input[type="button"] {
@@ -230,7 +339,6 @@ footer ul:first-of-type li:nth-child(3) {
 
 .testimonial__object p {
   text-align: left;
-  font-size: 0.75rem;
   margin-bottom: 1rem;
 }
 
@@ -242,28 +350,39 @@ footer ul:first-of-type li:nth-child(3) {
 
 .testimonial__object .testimonial__person img {
   border-radius: 500px;
-  width: 2rem;
-  margin-right: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1rem;
 }
 
 .testimonial__object .testimonial__person p {
+  font-size: 0.75rem;
   margin-bottom: 0;
-  font-size: 0.5rem;
   letter-spacing: 1px;
 }
 
 .testimonial__object .testimonial__person p span {
   display: block;
   font-weight: bolder;
-  font-size: 0.75rem;
   margin-bottom: 0.25rem;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 850px) {
+  .bg-container,
+  .features__container,
+  .stay-productive__container,
+  .testimonial__container {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .hero__container {
     margin-left: auto;
     margin-right: auto;
     max-width: 50%;
+  }
+  .hero__title {
+    font-size: 2rem;
   }
   .features__container {
     display: -ms-grid;
@@ -282,6 +401,18 @@ footer ul:first-of-type li:nth-child(3) {
     grid-template: "image text";
     grid-auto-columns: 50% 50%;
     padding-right: 2rem;
+  }
+  .stay-productive__hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .stay-productive__text {
     display: -webkit-box;
@@ -308,7 +439,8 @@ footer ul:first-of-type li:nth-child(3) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 10rem;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
   }
   .testimonial__object {
     margin-bottom: 0;
@@ -317,9 +449,12 @@ footer ul:first-of-type li:nth-child(3) {
     margin-left: 1rem;
   }
   .cta__container {
-    max-width: calc(100vw / 3 * 2);
+    max-width: calc(90vw / 3 * 2);
     margin-left: auto;
     margin-right: auto;
+  }
+  .cta__container h2 {
+    font-size: 2rem;
   }
   .cta__container p {
     margin-left: auto;
@@ -334,11 +469,48 @@ footer ul:first-of-type li:nth-child(3) {
   }
   .cta__container form input {
     width: 100%;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
   .cta__container form input[type="button"] {
     width: 50%;
     margin: auto;
     margin-left: 2rem;
+  }
+  .footer__first-list {
+    display: -ms-grid;
+    display: grid;
+    width: 60%;
+        grid-template-areas: "address phone" "address email";
+    -ms-grid-columns: 3fr 2fr;
+        grid-template-columns: 3fr 2fr;
+  }
+  .footer__first-list li:nth-of-type(1) {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: address;
+    padding-right: 2rem;
+  }
+  .footer__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 1rem;
+  }
+  .footer__nav ul:not(.footer__first-list) {
+    margin-bottom: 0;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .attribution {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .attribution li + li {
+    margin-left: auto;
   }
 }
 
@@ -351,8 +523,10 @@ footer ul:first-of-type li:nth-child(3) {
 
 p {
   text-align: center;
+  color: rgba(255, 255, 255, 0.7);
 }
 
+h1,
 h2,
 h3 {
   text-align: center;
@@ -420,6 +594,10 @@ nav .nav-items ul li + li {
   margin: 2rem auto;
 }
 
+h1 {
+  font-size: 1.5rem;
+}
+
 .hero__text {
   margin-bottom: 1.75rem;
 }
@@ -447,5 +625,11 @@ nav .nav-items ul li + li {
 .features__item img {
   margin: 2rem auto;
   height: 4rem;
+}
+
+.testimonial__object,
+.cta__container {
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 /*# sourceMappingURL=main.css.map */

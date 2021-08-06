@@ -15,8 +15,10 @@
 
 p {
   text-align: center;
+  color: rgba($color: #fff, $alpha: 0.7);
 }
 
+h1,
 h2,
 h3 {
   text-align: center;
@@ -64,6 +66,10 @@ nav {
   }
 }
 
+h1 {
+  font-size: 1.5rem;
+}
+
 .hero__text {
   margin-bottom: 1.75rem;
 }
@@ -88,4 +94,9 @@ nav {
     margin: 2rem auto;
     height: 4rem;
   }
+}
+
+.testimonial__object,
+.cta__container {
+  box-shadow: 5px 5px 10px 0px rgba($color: #000000, $alpha: 0.3);
 }

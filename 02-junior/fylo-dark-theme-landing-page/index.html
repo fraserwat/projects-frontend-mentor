@@ -34,9 +34,9 @@
           src="/images/illustration-intro.png"
           alt="Cartoon of people pulling files out folder"
         />
-        <h2 class="hero__title">
+        <h1 class="hero__title">
           All your files in one secure location, accessible anywhere.
-        </h2>
+        </h1>
         <p class="hero__text">
             Fylo stores all your most important files in one secure location.
             Access them wherever you need, share and collaborate with friends
@@ -90,18 +90,20 @@
         src="/images/illustration-stay-productive.png"
         alt="Illustration for productivity, three people working"
       />
-      <h3>Stay productive, wherever you are</h3>
-      <p>
-        Never let location be an issue when accessing your files. Fylo has you
-        covered for all of your file storage needs.
-      </p>
-      <p>
-        Securely share files and folders with friends, family and colleagues for
-        live collaboration. No email attachments required.
-      </p>
-        <a href=""
-          ><p>See how Fylo works</p> <img src="/images/icon-arrow.svg" alt=""
-        /></a>
+      <div class="stay-productive__hero">
+        <h3>Stay productive, wherever you are</h3>
+        <p>
+          Never let location be an issue when accessing your files. Fylo has you
+          covered for all of your file storage needs.
+        </p>
+        <p>
+          Securely share files and folders with friends, family and colleagues for
+          live collaboration. No email attachments required.
+        </p>
+          <a href=""
+            ><p>See how Fylo works</p> <img src="/images/icon-arrow.svg" alt=""
+          /></a>
+      </div>
     </div>
     <div class="testimonial__container">
       <div class="testimonial__object">
@@ -146,33 +148,53 @@
         help you.
       </p>
       <form action="">
-        <input type="email" />
+        <input type="email" placeholder="email@example.com"/>
         <input type="button" value="Get Started For Free" />
       </form>
     </div>
     <footer>
       <img src="/images/logo.svg" alt="Fylo logo" />
-      <ul>
-        <li>
-          <a href="https://goo.gl/maps/oYDCpUrCiRA8pgPEA">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
-          </a>
+      <div class="footer__nav">
+        <ul class="footer__first-list">
+          <li>
+            <a href="https://goo.gl/maps/oYDCpUrCiRA8pgPEA">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </a>
+          </li>
+          <li><a href="tel:+1-543-123-4567">+1-543-123-4567</a></li>
+          <li><a href="mailto:example@fylo.com">example@fylo.com</a></li>
+        </ul>
+        <ul>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Jobs</a></li>
+          <li><a href="">Press</a></li>
+          <li><a href="">Blog</a></li>
+        </ul>
+        <ul>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Terms</a></li>
+          <li><a href="">Privacy</a></li>
+        </ul>
+        <ul>
+          <li><button
+            class="facebook"
+            aria-label="facebook (new window)"
+            ><i class="fab fa-facebook"></i
+          ></button>
+          <li><button
+            class="twitter"
+            aria-label="twitter (new window)"
+            ><i class="fab fa-twitter"></i
+          ></button>
+          <li><button
+            class="instagram"
+            aria-label="instagram (new window)"
+            ><i class="fab fa-instagram"></i
+          ></button>
         </li>
-        <li><a href="tel:+1-543-123-4567">+1-543-123-4567</a></li>
-        <li><a href="mailto:example@fylo.com">example@fylo.com</a></li>
-      </ul>
-      <ul>
-        <li><a href="">About Us</a></li>
-        <li><a href="">Jobs</a></li>
-        <li><a href="">Press</a></li>
-        <li><a href="">Blog</a></li>
-      </ul>
-      <ul>
-        <li><a href="">Contact Us</a></li>
-        <li><a href="">Terms</a></li>
-        <li><a href="">Privacy</a></li>
-      </ul>
+        </ul>
+      </div>
       <ul class="attribution">
         <li>Challenge by
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a></li></li>
