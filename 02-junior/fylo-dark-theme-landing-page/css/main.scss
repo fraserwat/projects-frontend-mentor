@@ -13,6 +13,11 @@
   color: $white;
 }
 
+button,
+input[type="button"] {
+  cursor: pointer;
+}
+
 p {
   text-align: center;
   color: rgba($color: #fff, $alpha: 0.7);
@@ -48,6 +53,15 @@ nav {
     ul {
       display: flex;
       flex-direction: row;
+      li a {
+        color: $white;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+          color: $cyan;
+          transition: 250ms;
+        }
+      }
       li + li {
         margin-left: 1rem;
       }

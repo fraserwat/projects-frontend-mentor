@@ -521,6 +521,11 @@ footer ul:last-of-type:not(.attribution) button:hover {
   color: white;
 }
 
+button,
+input[type="button"] {
+  cursor: pointer;
+}
+
 p {
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
@@ -571,6 +576,18 @@ nav .nav-items ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+nav .nav-items ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav .nav-items ul li a:hover {
+  text-decoration: underline;
+  color: #65cde2;
+  -webkit-transition: 250ms;
+  transition: 250ms;
 }
 
 nav .nav-items ul li + li {
