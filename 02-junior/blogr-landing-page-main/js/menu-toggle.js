@@ -7,7 +7,6 @@ for (i = 0; i < btns.length; i++) {
 
   btns[i].addEventListener("click", menuToggle);
 }
-
 // functions for toggling '.active' class on menu / submenus
 function menuToggle(e) {
   let menuName = [...e.target.classList];

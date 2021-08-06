@@ -6,12 +6,14 @@
 
   border-radius: 0 25% 0 25%;
   color: white;
-  background: url("/images/bg-pattern-circles.svg"), $bg-gradient-dark;
+  background: $bg-gradient-dark;
 
+  background: url("/images/bg-pattern-circles.svg"), $bg-gradient-dark;
   background-repeat: no-repeat;
-  background-size: 150%;
+  background-size: 35rem, auto;
+  background-position: fixed;
   background-position-x: center, center;
-  background-position-y: 300%, center;
+  background-position-y: -12rem, center;
 
   .container {
   }
@@ -21,8 +23,8 @@
     color: white;
   }
   img {
+    position: relative;
     transform: translateY(-50%);
-    // margin-bottom: ;
   }
   .section {
     margin-top: -15rem;

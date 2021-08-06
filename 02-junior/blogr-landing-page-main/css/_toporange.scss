@@ -1,0 +1,50 @@
+@import "_variables.scss";
+
+.top-orange {
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  background: url("/images/bg-pattern-intro.svg"), $bg-gradient-orange;
+  background-size: 250%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: $white;
+  border-radius: 0 0 0 25%;
+  h1 {
+    margin-bottom: 1rem;
+  }
+  p {
+    color: $white;
+    max-width: 80%;
+    margin-bottom: 2rem;
+  }
+
+  nav {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cta-btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 8rem;
+  }
+
+  .cta-btns button:first-child {
+    @include btn-white();
+    &:hover {
+      @include btn-red();
+    }
+  }
+  .cta-btns button:last-child {
+    @include btn-red();
+    &:hover {
+      @include btn-white();
+    }
+  }
+}
