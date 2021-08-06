@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/fylo-dark-theme-landing-page-56ecfAcox](https://www.frontendmentor.io/solutions/fylo-dark-theme-landing-page-56ecfAcox)
 - Live Site URL: [https://fylo-dar-mode.vercel.app/](https://fylo-dar-mode.vercel.app/)
 
 ## My process
