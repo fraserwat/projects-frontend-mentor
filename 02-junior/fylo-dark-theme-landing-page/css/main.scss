@@ -24,11 +24,14 @@ p {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   text-align: center;
   margin-bottom: 0.75em;
   font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+  font-size: 1.25rem;
 }
 
 .bg-container {

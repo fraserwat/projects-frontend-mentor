@@ -270,7 +270,7 @@ footer ul:last-of-type:not(.attribution) button:hover {
   margin-bottom: 3rem;
 }
 
-.stay-productive__container h3 {
+.stay-productive__container h2 {
   text-align: left;
 }
 
@@ -426,10 +426,10 @@ footer ul:last-of-type:not(.attribution) button:hover {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .stay-productive__text h3 {
+  .stay-productive__text h2 {
     font-size: 2rem;
   }
-  .stay-productive__text h3 span {
+  .stay-productive__text h2 span {
     display: block;
   }
   .stay-productive__text p {
@@ -532,11 +532,14 @@ p {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   text-align: center;
   margin-bottom: 0.75em;
   font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+  font-size: 1.25rem;
 }
 
 .bg-container {
