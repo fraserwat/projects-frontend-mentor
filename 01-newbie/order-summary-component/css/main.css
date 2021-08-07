@@ -1,0 +1,212 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"],
+li,
+ul {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1.5rem;
+  font-family: "Red Hat Display", sans-serif;
+  background-color: #f5f7ff;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 650px) {
+  body {
+    background-image: url(/images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% 50vh;
+  }
+}
+
+.order-summary-container {
+  margin: auto;
+  overflow: hidden;
+  max-width: 27rem;
+  border-radius: 1.25rem;
+  background-color: white;
+  -webkit-box-shadow: 0 5px 50px 5px rgba(31, 47, 86, 0.2);
+          box-shadow: 0 5px 50px 5px rgba(31, 47, 86, 0.2);
+}
+
+.illustration__container {
+  width: 100%;
+  height: 12rem;
+  margin-bottom: 1rem;
+  background: url(/images/illustration-hero.svg) no-repeat center;
+  background-size: cover;
+}
+
+.details__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #7280a7;
+  padding: 1rem 2rem;
+}
+
+h1 {
+  color: #1f2f56;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.details__text {
+  margin-bottom: 1rem;
+}
+
+.plan__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f5f7ff;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  border-radius: 0.65rem;
+}
+
+.plan__container p {
+  margin-left: 1rem;
+}
+
+.plan__container span {
+  display: block;
+  color: #1f2f56;
+  font-weight: 900;
+}
+
+.plan__container a {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #3829e0;
+  margin: auto 0;
+  margin-left: auto;
+}
+
+button {
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+  height: 2.5rem;
+  width: 100%;
+  margin-bottom: 1.25rem;
+  background: none;
+  border: none;
+  border-radius: 0.65rem;
+  color: #7280a7;
+}
+
+button:first-of-type {
+  color: white;
+  background-color: #3829e0;
+  -webkit-box-shadow: 0 10px 10px 5px rgba(56, 41, 224, 0.2);
+          box-shadow: 0 10px 10px 5px rgba(56, 41, 224, 0.2);
+}
+
+button:first-of-type:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  background-color: rgba(56, 41, 224, 0.75);
+  -webkit-box-shadow: 0 7px 10px 5px rgba(56, 41, 224, 0.2);
+          box-shadow: 0 7px 10px 5px rgba(56, 41, 224, 0.2);
+}
+
+button:last-of-type:active {
+  color: black;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  -webkit-box-shadow: inset 1px 1px 1px 1px rgba(31, 47, 86, 0.1);
+          box-shadow: inset 1px 1px 1px 1px rgba(31, 47, 86, 0.1);
+}
+
+.attribution {
+  padding-top: 2.5rem;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.attribution a {
+  color: #3829e0;
+  font-weight: 700;
+}
+/*# sourceMappingURL=main.css.map */
