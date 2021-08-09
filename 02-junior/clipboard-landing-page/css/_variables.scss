@@ -1,0 +1,27 @@
+$cyan: hsl(171, 66%, 44%);
+$light-blue: hsl(233, 100%, 69%);
+$dark-grayish-blue: hsl(210, 10%, 33%);
+$grayish-blue: hsl(201, 11%, 66%);
+
+$desktop-breakpoint: 850px;
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+@mixin button-format($colour) {
+  background-color: $colour;
+  box-shadow: 0 3px 0 0 darken($colour, 15%);
+  &:active {
+    background-color: lighten($colour, 10%);
+    box-shadow: 0 1px 0 0 darken($colour, 15%);
+  }
+}

@@ -1,0 +1,30 @@
+@import "_variables";
+
+.hero__container {
+  padding-top: 5rem;
+  img {
+    margin-bottom: 3.5rem;
+  }
+  margin-bottom: 3.5rem;
+}
+.hero__buttons {
+  width: 100%;
+}
+.features__container {
+  margin-bottom: 4rem;
+}
+.feature-list li {
+  margin-top: 3rem;
+  img {
+    margin-bottom: 2rem;
+  }
+}
+.access-anywhere__container {
+  img {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+.endorsements__list li {
+  margin: 4rem 0;
+}

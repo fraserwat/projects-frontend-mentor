@@ -1,0 +1,64 @@
+@import "_variables";
+@import "_reset";
+@import "_sections";
+@import "_footer";
+@import "_desktop";
+
+* {
+  margin: auto;
+  font-family: "Bai Jamjuree", sans-serif;
+}
+main,
+section,
+footer {
+  @include flex-column();
+  padding: 1.5rem;
+  color: $grayish-blue;
+}
+h1,
+h2,
+h3 {
+  color: $dark-grayish-blue;
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+p {
+  margin-bottom: 2rem;
+  max-width: 35rem;
+}
+main {
+  background-image: url("/images/bg-header-mobile.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+  img {
+    margin: auto;
+    width: 8rem;
+  }
+}
+
+button {
+  width: 80%;
+  max-width: 19rem;
+  border-radius: 900px;
+  padding: 0.6rem 0;
+  margin: 0.75rem auto;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  &:active {
+    transform: translateY(2px);
+  }
+}
+button:first-of-type {
+  @include button-format($cyan);
+}
+button:last-of-type {
+  @include button-format($light-blue);
+}

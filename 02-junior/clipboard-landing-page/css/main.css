@@ -1,0 +1,400 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"],
+li,
+ul {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.hero__container {
+  padding-top: 5rem;
+  margin-bottom: 3.5rem;
+}
+
+.hero__container img {
+  margin-bottom: 3.5rem;
+}
+
+.hero__buttons {
+  width: 100%;
+}
+
+.features__container {
+  margin-bottom: 4rem;
+}
+
+.feature-list li {
+  margin-top: 3rem;
+}
+
+.feature-list li img {
+  margin-bottom: 2rem;
+}
+
+.access-anywhere__container img {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.endorsements__list li {
+  margin: 4rem 0;
+}
+
+footer {
+  background-color: #f7f8f8;
+}
+
+footer img {
+  width: 4rem;
+  margin-bottom: 2rem;
+}
+
+footer li {
+  color: #4c545d;
+  margin-bottom: 1.5rem;
+}
+
+footer a {
+  color: #4c545d;
+  text-decoration: none;
+}
+
+footer a:hover {
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+  color: #26baa4;
+}
+
+footer .nav__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .nav__attribution a {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 850px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .hero__container {
+    background-image: url("/images/bg-header-desktop.png");
+  }
+  .hero__buttons button {
+    margin: auto 0.5rem;
+    max-width: 14rem;
+  }
+  .features__container {
+    display: -ms-grid;
+    display: grid;
+    left: 0;
+        grid-template-areas: "computer features";
+    -ms-grid-columns: 50fr 50fr;
+        grid-template-columns: 50fr 50fr;
+    padding-left: 0;
+  }
+  .features__container img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: computer;
+    margin: 0;
+  }
+  .features__container .feature-list {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: features;
+    text-align: left;
+    max-width: 22rem;
+    margin-left: 5em;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .supercharge__container {
+    margin-bottom: 3rem;
+  }
+  .supercharge__container .supercharge__features {
+    max-width: 65rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: auto;
+    gap: 1rem;
+  }
+  .supercharge__container .supercharge__features li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .supercharge__container .supercharge__features li img {
+    height: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .supercharge__container .supercharge__features li p {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .endorsements__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: auto;
+    gap: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .download__container {
+    margin-bottom: 6rem;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  footer {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+  footer img {
+    margin-bottom: auto;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .nav__links {
+    margin: auto 2rem;
+    margin-right: auto;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "one three five" "two four six";
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+  }
+  .nav__links li {
+    margin: 0.25rem auto;
+    margin-left: 0;
+  }
+  .nav__links li:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: one;
+  }
+  .nav__links li:nth-child(2) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: two;
+  }
+  .nav__links li:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: three;
+  }
+  .nav__links li:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: four;
+  }
+  .nav__links li:nth-child(5) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: five;
+  }
+}
+
+* {
+  margin: auto;
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+main,
+section,
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  color: #9fabb2;
+}
+
+h1,
+h2,
+h3 {
+  color: #4c545d;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+p {
+  margin-bottom: 2rem;
+  max-width: 35rem;
+}
+
+main {
+  background-image: url("/images/bg-header-mobile.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+}
+
+main img {
+  margin: auto;
+  width: 8rem;
+}
+
+button {
+  width: 80%;
+  max-width: 19rem;
+  border-radius: 900px;
+  padding: 0.6rem 0;
+  margin: 0.75rem auto;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+button:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+button:first-of-type {
+  background-color: #26baa4;
+  -webkit-box-shadow: 0 3px 0 0 #197b6c;
+          box-shadow: 0 3px 0 0 #197b6c;
+}
+
+button:first-of-type:active {
+  background-color: #3cd7c0;
+  -webkit-box-shadow: 0 1px 0 0 #197b6c;
+          box-shadow: 0 1px 0 0 #197b6c;
+}
+
+button:last-of-type {
+  background-color: #6173ff;
+  -webkit-box-shadow: 0 3px 0 0 #1430ff;
+          box-shadow: 0 3px 0 0 #1430ff;
+}
+
+button:last-of-type:active {
+  background-color: #94a0ff;
+  -webkit-box-shadow: 0 1px 0 0 #1430ff;
+          box-shadow: 0 1px 0 0 #1430ff;
+}
+/*# sourceMappingURL=main.css.map */

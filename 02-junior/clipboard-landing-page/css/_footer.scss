@@ -1,0 +1,27 @@
+@import "_variables";
+
+footer {
+  background-color: lighten($grayish-blue, 31%);
+  img {
+    width: 4rem;
+    margin-bottom: 2rem;
+  }
+  li {
+    color: $dark-grayish-blue;
+    margin-bottom: 1.5rem;
+  }
+  a {
+    color: $dark-grayish-blue;
+    text-decoration: none;
+  }
+  a:hover {
+    transition: 150ms ease-in-out;
+    color: $cyan;
+  }
+  .nav__socials {
+    display: flex;
+  }
+  .nav__attribution a {
+    font-weight: bold;
+  }
+}
