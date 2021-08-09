@@ -1,0 +1,14 @@
+$red: hsl(0, 100%, 68%);
+$v-dark-blue: hsl(230, 29%, 20%);
+$dark-grey-blue: hsl(230, 11%, 40%);
+$grey-blue: hsl(231, 7%, 65%);
+$light-grey-blue: hsl(207, 33%, 95%);
+
+@mixin monograph-text {
+  color: $grey-blue;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 4px;
+}
+
+$desktop-breakpoint: 800px;

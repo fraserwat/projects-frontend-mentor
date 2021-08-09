@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Project tracking intro component</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <img src="/images/logo.svg" alt="Monograph Logo" />
+      <button class="hamburger" onclick="return toggleMenu(event)"></button>
+      <div class="menu__container">
+        <ul>
+          <li>Product</li>
+          <li>Features</li>
+          <li>Pricing</li>
+          <li>Login</li>
+        </ul>
+      </div>
+    </nav>
+    <main class="hero__container">
+      <div class="hero__img">
+        <img
+          src="/images/illustration-devices.svg"
+          alt="Illustration of computer"
+        />
+      </div>
+      <div class="hero__text">
+        <p class="product-name"><span>New</span>Monograph Dashboard</p>
+        <h1>Powerful insights into your team</h1>
+        <p class="tagline">
+          Project planning and time tracking for agile teams
+        </p>
+        <form class="cta__container">
+          <button>Schedule a demo</button>
+          <p>to see a preview</p>
+        </form>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      <ul>
+        <li>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >
+        </li>
+        <li>Coded by <a href="#">Fraser Watt</a></li>
+      </ul>
+    </footer>
+    <script src="js/menu-toggle.js"></script>
+  </body>
+</html>

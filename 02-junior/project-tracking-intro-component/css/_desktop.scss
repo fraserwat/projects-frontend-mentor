@@ -1,0 +1,44 @@
+@import "_variables";
+
+@media screen and (min-width: $desktop-breakpoint) {
+  body {
+    padding-left: 10%;
+  }
+  body::after {
+    height: 50vh !important;
+  }
+  nav {
+    margin-bottom: 5rem;
+    padding-right: 10%;
+  }
+
+  .hero__container {
+    display: grid;
+    grid-template-areas: "text image";
+    grid-template-columns: 40vw 40vw;
+    align-items: center;
+    margin: auto 0;
+  }
+  .hero__img {
+    grid-area: image;
+    img {
+      width: 80vw;
+    }
+  }
+
+  .hero__text {
+    grid-area: text;
+  }
+  .hero__text h1 {
+    // font-size: 4rem;
+    font-size: 4.5vw;
+    line-height: 4.5vw;
+    padding-right: 3rem;
+    // margin-bottom: 2rem;
+    margin-bottom: 2vw;
+  }
+  .hero__text .tagline {
+    width: 60%;
+    margin-bottom: 4vw;
+  }
+}

@@ -1,0 +1,35 @@
+@import "_variables";
+
+.active ~ .menu__container {
+  display: inline;
+  position: relative;
+}
+.active ~ .menu__container ul {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 10%;
+  top: 6rem;
+  width: 80vw;
+  padding: 1rem 0;
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 10px 1px rgba($color: #000000, $alpha: 0.1);
+  li {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+  li:last-of-type {
+    margin-top: 2rem;
+  }
+  li:last-of-type::before {
+    content: "";
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    height: 0;
+    border: solid 1px rgba($color: $grey-blue, $alpha: 0.25);
+    transform: translateY(-1.5rem);
+  }
+}

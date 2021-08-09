@@ -1,0 +1,105 @@
+@import "_variables";
+@import "_reset";
+@import "_nav";
+@import "_desktop";
+@import "_popup";
+
+body {
+  font-family: "Barlow", sans-serif;
+  max-width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  color: $v-dark-blue;
+}
+body::after {
+  content: "";
+  width: 50vw;
+  height: 120vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba($color: $light-grey-blue, $alpha: 0.75);
+  z-index: -1;
+  border-radius: 0 0 0 5rem;
+}
+
+h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.25rem;
+  line-height: 2.35rem;
+  margin-bottom: 1rem;
+}
+
+main {
+  overflow: hidden;
+}
+
+.hero__img {
+  width: 150vw;
+  max-width: none;
+  margin-bottom: 5rem;
+}
+
+main,
+footer {
+  padding: 0 1.5rem;
+}
+
+.product-name {
+  @include monograph-text();
+  margin-bottom: 1rem;
+
+  span {
+    margin-right: 1rem;
+    padding: 0.25rem 0.5rem 0.25rem 0.7rem;
+    font-weight: 700;
+    background-color: $v-dark-blue;
+    color: white;
+    border-radius: 9000px;
+    @media screen and (max-width: 350px) {
+      display: inline-block;
+      margin-right: 20rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.tagline {
+  color: $dark-grey-blue;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+form {
+  @include monograph-text();
+  display: flex;
+
+  button {
+    background-color: $red;
+    border: none;
+    color: white;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+    margin-right: 1rem;
+  }
+  p {
+    margin-top: auto;
+    margin-bottom: auto;
+    align-self: center;
+  }
+}
+
+footer {
+  margin-top: auto;
+  margin: 1rem 0 2.5rem 0;
+  a {
+    letter-spacing: 1px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: bold;
+    color: $red;
+  }
+}
