@@ -14,7 +14,6 @@ $desktop-breakpoint: 850px;
 @mixin flex-row {
   display: flex;
   flex-direction: row;
-  margin: auto;
 }
 
 @mixin button-format($colour) {

@@ -4,6 +4,9 @@
 @import "_footer";
 @import "_desktop";
 
+@import "./fontawesome/fontawesome.scss";
+@import "./fontawesome/brands.scss";
+
 * {
   margin: auto;
   font-family: "Bai Jamjuree", sans-serif;
