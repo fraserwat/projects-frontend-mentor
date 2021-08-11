@@ -1,0 +1,107 @@
+@import "_variables";
+
+.stay-productive,
+.testimonial {
+  position: relative;
+  background-color: #f8f8fe;
+}
+.stay-productive::before {
+  content: "";
+  left: 0;
+  top: -14.1vw;
+  position: absolute;
+  width: 100vw;
+  height: 20vw;
+  background-image: url(/images/bg-curve-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.stay-productive {
+  img {
+    margin-bottom: 6rem;
+  }
+  h2 {
+    margin-bottom: 2rem;
+  }
+  p {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    color: $moderate-cyan;
+  }
+  p:not(.stay-productive__cta-text) {
+    color: rgba($color: $very-dark-blue, $alpha: 0.6);
+  }
+  .stay-productive__cta {
+    position: relative;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    p {
+      margin: 0;
+      margin-right: 0.25rem;
+    }
+    img {
+      margin: auto 0;
+      padding-top: 2px;
+    }
+  }
+}
+.stay-productive__cta::after {
+  position: absolute;
+  width: 10.4rem;
+  height: 0px;
+  content: "";
+  bottom: 0.7rem;
+  margin: auto;
+  border: 1px $moderate-cyan solid;
+  transform: translateX(-1px);
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .stay-productive {
+    display: grid;
+    grid-template-areas: "productive illustration" "testimonial illustration";
+    grid-template-columns: 55% 45%;
+    text-align: left;
+    gap: 3rem;
+    padding-bottom: 7.5rem;
+    align-items: center;
+  }
+  .stay-productive__illustration {
+    grid-area: illustration;
+    margin: 0;
+  }
+  .stay-productive__inner {
+    grid-area: productive;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    p {
+      margin-bottom: 0.75rem;
+    }
+    .stay-productive__cta {
+      padding-left: 0;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+    .stay-productive__cta p {
+      margin-left: 0;
+    }
+    .stay-productive__cta img {
+      margin-right: auto;
+    }
+    .stay-productive__cta::after {
+      left: 0;
+    }
+  }
+
+  .testimonial {
+    grid-area: testimonial;
+    padding-left: 0;
+    max-width: 30rem;
+  }
+  .testimonial__container {
+    margin: 0;
+  }
+}

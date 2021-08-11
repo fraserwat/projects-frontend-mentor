@@ -1,0 +1,48 @@
+@import "_variables";
+
+form,
+.cta-upper__left {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .cta-lower {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 1fr 1fr;
+    gap: 10%;
+    text-align: left;
+  }
+  .cta-lower p {
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  .cta-lower button,
+  .cta-lower input[type="email"] {
+    margin-left: 0;
+  }
+  .cta-lower__right {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+    input[type="email"],
+    button {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+    input[type="email"] {
+      width: 100%;
+      max-width: 12.5rem * 2.5;
+      margin-right: 0;
+    }
+    button {
+      max-width: 12.5rem;
+      margin-bottom: 0;
+    }
+  }
+}

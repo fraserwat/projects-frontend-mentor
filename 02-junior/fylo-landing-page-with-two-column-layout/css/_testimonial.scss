@@ -1,0 +1,42 @@
+@import "_variables";
+
+.testimonial__container {
+  position: relative;
+  margin: 3.5rem auto 5.5rem auto;
+  padding: 1.5rem;
+  padding-top: 3rem;
+  color: rgba($color: $very-dark-blue, $alpha: 0.8);
+  border-radius: 0.3rem;
+  background-color: white;
+  text-align: left;
+  box-shadow: 0 0 10px 2px rgba($color: #000000, $alpha: 0.05);
+}
+.testimonial__container::before {
+  position: absolute;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background-image: url(/images/icon-quotes.svg);
+  background-repeat: no-repeat;
+  background-size: 1rem auto;
+  background-position: center left;
+  top: 1rem;
+}
+.testimonial__person {
+  margin-top: 1rem;
+  img {
+    margin: auto 0;
+    border-radius: 999px;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 0.75rem;
+  }
+  p {
+    font-size: 0.75rem;
+  }
+  span {
+    display: block;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}

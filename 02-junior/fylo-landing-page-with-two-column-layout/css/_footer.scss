@@ -1,0 +1,37 @@
+@import "_variables";
+
+footer {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  background-color: $very-dark-blue;
+  img {
+    filter: brightness(0) invert(1);
+  }
+  ul {
+    margin-top: 2rem;
+  }
+  li,
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  li + li {
+    padding-top: 0.75rem;
+  }
+}
+.attribution a {
+  font-weight: bold;
+}
+
+// List styling
+footer ul:first-of-type li:first-of-type {
+  list-style-image: url("/images/icon-phone.svg");
+}
+footer ul:first-of-type li:nth-of-type(2) {
+  list-style-image: url("/images/icon-email.svg");
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  footer {
+  }
+}

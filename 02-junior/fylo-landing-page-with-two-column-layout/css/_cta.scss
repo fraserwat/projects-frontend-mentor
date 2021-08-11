@@ -1,0 +1,73 @@
+@import "_variables";
+
+.cta-upper {
+  color: $very-dark-blue;
+  img {
+    margin-bottom: 3.5rem;
+  }
+  h1,
+  p {
+    margin-bottom: 1.5rem;
+  }
+  margin-bottom: calc(6rem + 3vw);
+}
+
+.cta-lower {
+  color: $light-grayish-blue;
+  background-color: $desaturated-blue;
+  padding-top: 3rem;
+  h2,
+  p {
+    margin-bottom: 1.25rem;
+  }
+  p {
+    padding: 0 1rem;
+  }
+  input[type="email"],
+  button {
+    font-size: 0.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 18.5rem;
+  }
+  button {
+    margin-bottom: 5rem;
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .cta-upper {
+    margin-bottom: 20vw;
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 55% 45%;
+    text-align: left;
+    img {
+      grid-area: right;
+    }
+    .cta-upper__left {
+      padding-right: 5vw;
+      h1 {
+        font-size: 2.4rem;
+      }
+      margin: auto;
+    }
+    .cta-upper__input {
+      max-width: 40rem;
+      input {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 0.5rem;
+        width: 50%;
+        min-width: 12rem;
+        transform: translateY(1px);
+      }
+      button {
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 35%;
+      }
+    }
+  }
+}

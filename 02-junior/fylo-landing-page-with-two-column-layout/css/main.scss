@@ -1,0 +1,75 @@
+@import "_variables";
+@import "_reset";
+@import "_nav";
+@import "_cta";
+@import "_form";
+@import "_stay-productive";
+@import "_testimonial";
+@import "_footer";
+@import "_desktop";
+
+body {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+nav,
+section,
+form,
+footer {
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.25rem;
+}
+a,
+button,
+h1,
+h2 {
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+}
+
+li,
+nav,
+nav ul,
+.socials-list,
+.stay-productive__cta,
+.testimonial,
+.testimonial__person {
+  display: flex;
+  flex-direction: row;
+}
+
+button,
+input[type="email"] {
+  border-radius: 0.25rem;
+  margin: 0.5rem 0;
+}
+
+input[type="email"] {
+  padding: calc(0.5rem - 1px) 1rem;
+  border: $very-dark-blue solid 1px;
+}
+::placeholder {
+  opacity: 0.5;
+}
+
+button {
+  border: none;
+  padding: 0.5rem 1rem;
+  background-color: $bright-blue;
+  font-weight: bold;
+  color: $light-grayish-blue;
+  box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.2);
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 0.2);
+    background-color: lighten($bright-blue, 10%);
+  }
+}
