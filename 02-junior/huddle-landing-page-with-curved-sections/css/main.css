@@ -150,13 +150,25 @@ nav button:active {
   content: url(/images/icon-messages.svg);
 }
 
+@media screen and (min-width: 800px) {
+  .stats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .stats p span {
+    font-size: 4.5rem;
+  }
+  .stats p {
+    font-size: 1.15rem;
+  }
+}
+
 h2 {
   margin-bottom: 1.25rem;
 }
 
 .alternating {
-  display: -ms-grid;
-  display: grid;
   justify-items: center;
   padding: 6rem 0;
 }
@@ -164,10 +176,9 @@ h2 {
 .alternating img {
   width: 85%;
   margin-bottom: 4rem;
-}
-
-.alternating:nth-of-type(odd) {
-  background-color: #f5faff;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
 }
 
 .stats {
@@ -176,6 +187,10 @@ h2 {
   background-position: center bottom;
   background-size: 100vw;
   padding-bottom: 4rem;
+}
+
+.alternating:nth-of-type(odd) {
+  background-color: #f5faff;
 }
 
 .grow {
@@ -201,6 +216,51 @@ h2 {
   background-position: center top, center bottom;
   background-size: 100vw;
   padding: 12rem 0;
+}
+
+@media screen and (min-width: 800px) {
+  .stats {
+    padding-bottom: 10rem;
+    background-image: url(/images/bg-section-top-desktop-1.svg);
+  }
+  .flow {
+    background-image: url(/images/bg-section-bottom-desktop-1.svg), url(/images/bg-section-top-desktop-2.svg);
+  }
+  .cta {
+    background-image: url(/images/bg-section-bottom-desktop-2.svg), url(/images/bg-footer-top-desktop.svg);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .alternating {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .alternating:nth-of-type(odd) {
+        grid-template-areas: "feature illustration";
+  }
+  .alternating:nth-of-type(even) {
+        grid-template-areas: "illustration feature";
+  }
+  .alternating img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: illustration;
+    margin: auto;
+  }
+  .alternating .text {
+    text-align: left;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: feature;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .alternating .text p {
+    margin-bottom: 0;
+  }
 }
 
 footer {
@@ -233,11 +293,23 @@ input[type="email"] {
   padding: 0.4rem;
   border: none;
   border-radius: 5px;
+  margin-left: auto;
+  max-width: 420px;
+}
+
+.form__fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 input[type="email"] ~ button {
   border-radius: 5px;
-  margin-top: 1rem;
+  margin: 1rem 0 5rem auto;
 }
 
 footer form button {
@@ -291,6 +363,65 @@ footer li i {
 
 .contact-list li:last-of-type {
   list-style-image: url(/images/icon-email.svg);
+}
+
+@media screen and (min-width: 800px) {
+  footer {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "contact newsletter";
+    gap: 3rem;
+  }
+  footer form {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: newsletter;
+  }
+  footer .contact {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: contact;
+  }
+  footer form,
+  footer .contact {
+    max-width: 500px;
+    padding-top: 6rem;
+  }
+  footer h3,
+  footer .contact img {
+    margin-top: 0;
+  }
+  footer form p {
+    margin-bottom: 2rem;
+  }
+  footer .form__fields {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2rem;
+  }
+  footer input[type="email"] {
+    max-width: none;
+    width: 100%;
+  }
+  footer input[type="email"] ~ button {
+    margin: 0;
+    padding: 0.75rem 2.5rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  main * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    max-width: 30rem;
+  }
 }
 
 /*!
@@ -350,7 +481,8 @@ body {
 nav,
 main section,
 footer,
-.alternating {
+.alternating,
+.cta {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
@@ -372,6 +504,7 @@ nav,
 }
 
 button {
+  cursor: pointer;
   font-weight: 600;
   padding: 0.75rem 2.5rem;
   border-radius: 999px;
@@ -392,11 +525,38 @@ button:active {
           box-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.1);
 }
 
+@media screen and (min-width: 800px) {
+  button {
+    font-size: 1rem;
+    padding: 1.25rem 5rem;
+  }
+}
+
+.hero img {
+  width: 80vw;
+  max-width: 850px;
+}
+
 main section img {
   margin-bottom: 5rem;
 }
 
 .attribution p {
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 800px) {
+  nav,
+  main section,
+  footer,
+  .alternating,
+  .cta {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  nav img {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
 }
 /*# sourceMappingURL=main.css.map */

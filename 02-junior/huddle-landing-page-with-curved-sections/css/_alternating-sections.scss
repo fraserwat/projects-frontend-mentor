@@ -5,17 +5,15 @@ h2 {
 }
 
 .alternating {
-  display: grid;
   justify-items: center;
   padding: 6rem 0;
   img {
     width: 85%;
     margin-bottom: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
   }
-}
-
-.alternating:nth-of-type(odd) {
-  background-color: $v-pale-blue;
 }
 
 // BACKGROUNDS
@@ -25,6 +23,9 @@ h2 {
   background-position: center bottom;
   background-size: 100vw;
   padding-bottom: 4rem;
+}
+.alternating:nth-of-type(odd) {
+  background-color: $v-pale-blue;
 }
 .grow {
   padding-bottom: 2rem;
@@ -48,4 +49,46 @@ h2 {
   background-position: center top, center bottom;
   background-size: 100vw;
   padding: 12rem 0;
+}
+// BACKGROUNDS DESKTOP
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .stats {
+    padding-bottom: 10rem;
+    background-image: url(/images/bg-section-top-desktop-1.svg);
+  }
+  .flow {
+    background-image: url(/images/bg-section-bottom-desktop-1.svg),
+      url(/images/bg-section-top-desktop-2.svg);
+  }
+  .cta {
+    background-image: url(/images/bg-section-bottom-desktop-2.svg),
+      url(/images/bg-footer-top-desktop.svg);
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .alternating {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &:nth-of-type(odd) {
+      grid-template-areas: "feature illustration";
+    }
+    &:nth-of-type(even) {
+      grid-template-areas: "illustration feature";
+    }
+  }
+  .alternating img {
+    grid-area: illustration;
+    margin: auto;
+  }
+  .alternating .text {
+    text-align: left;
+    grid-area: feature;
+    margin-top: auto;
+    margin-bottom: auto;
+    p {
+      margin-bottom: 0;
+    }
+  }
 }

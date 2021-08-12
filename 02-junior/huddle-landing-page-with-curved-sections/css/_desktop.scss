@@ -1,0 +1,14 @@
+@import "variables";
+
+@media screen and (min-width: $desktop-breakpoint) {
+  main * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    max-width: 30rem;
+  }
+}

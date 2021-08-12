@@ -31,3 +31,15 @@
   left: 3rem;
   content: url(/images/icon-messages.svg);
 }
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .stats {
+    display: flex;
+  }
+  .stats p span {
+    font-size: 4.5rem;
+  }
+  .stats p {
+    font-size: 1.15rem;
+  }
+}

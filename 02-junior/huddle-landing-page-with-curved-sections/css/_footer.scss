@@ -22,10 +22,16 @@ input[type="email"] {
   padding: 0.4rem;
   border: none;
   border-radius: 5px;
+  margin-left: auto;
+  max-width: 420px;
+}
+.form__fields {
+  display: flex;
+  flex-direction: column;
 }
 input[type="email"] ~ button {
   border-radius: 5px;
-  margin-top: 1rem;
+  margin: 1rem 0 5rem auto;
 }
 footer form button {
   margin-left: auto;
@@ -68,4 +74,42 @@ footer li {
 }
 .contact-list li:last-of-type {
   list-style-image: url(/images/icon-email.svg);
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  footer {
+    display: grid;
+    grid-template-areas: "contact newsletter";
+    gap: 3rem;
+    form {
+      grid-area: newsletter;
+    }
+    .contact {
+      grid-area: contact;
+    }
+    form,
+    .contact {
+      max-width: 500px;
+      padding-top: 6rem;
+    }
+    h3,
+    .contact img {
+      margin-top: 0;
+    }
+    form p {
+      margin-bottom: 2rem;
+    }
+    .form__fields {
+      flex-direction: row;
+      gap: 2rem;
+    }
+    input[type="email"] {
+      max-width: none;
+      width: 100%;
+    }
+    input[type="email"] ~ button {
+      margin: 0;
+      padding: 0.75rem 2.5rem;
+    }
+  }
 }
