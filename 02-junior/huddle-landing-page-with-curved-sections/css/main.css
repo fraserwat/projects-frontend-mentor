@@ -1,0 +1,402 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"],
+li,
+ul {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+nav {
+  padding: 2rem 1.5rem;
+  margin-bottom: 4rem;
+}
+
+nav img {
+  height: 1.25rem;
+  margin: auto;
+  margin-left: 0;
+}
+
+nav button {
+  font-weight: 400;
+  padding: 0.25rem 1.25rem;
+  margin-bottom: auto;
+  color: #ff52bf;
+  background-color: rgba(255, 82, 191, 0);
+  border: 1px solid #ff52bf;
+  -webkit-box-shadow: 0 0 3px 3px rgba(255, 143, 216, 0.1);
+          box-shadow: 0 0 3px 3px rgba(255, 143, 216, 0.1);
+}
+
+nav button:active {
+  color: #ff8fd8;
+  border: 1px solid #ff8fd8;
+  background-color: rgba(255, 82, 191, 0);
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+  -webkit-box-shadow: 0 0 3px 3px rgba(255, 143, 216, 0.1);
+          box-shadow: 0 0 3px 3px rgba(255, 143, 216, 0.1);
+}
+
+.stats div {
+  padding: 3rem 0;
+  position: relative;
+  max-width: 18rem;
+  margin: auto;
+}
+
+.stats p {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.stats p span {
+  font-weight: 700;
+  font-size: 4rem;
+  display: block;
+  color: black;
+}
+
+.stats div::before {
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  top: 1.5rem;
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
+}
+
+.stats div:nth-of-type(1)::before {
+  left: 3.5rem;
+  content: url(/images/icon-communities.svg);
+}
+
+.stats div:nth-of-type(2)::before {
+  left: 3rem;
+  content: url(/images/icon-messages.svg);
+}
+
+h2 {
+  margin-bottom: 1.25rem;
+}
+
+.alternating {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  padding: 6rem 0;
+}
+
+.alternating img {
+  width: 85%;
+  margin-bottom: 4rem;
+}
+
+.alternating:nth-of-type(odd) {
+  background-color: #f5faff;
+}
+
+.stats {
+  background-image: url(/images/bg-section-top-mobile-1.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100vw;
+  padding-bottom: 4rem;
+}
+
+.grow {
+  padding-bottom: 2rem;
+}
+
+.flow {
+  background-image: url(/images/bg-section-bottom-mobile-1.svg), url(/images/bg-section-top-mobile-2.svg);
+  background-repeat: no-repeat;
+  background-position: center top, center bottom;
+  background-size: 100vw;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.user {
+  padding-bottom: 0;
+}
+
+.cta {
+  background-image: url(/images/bg-section-bottom-mobile-2.svg), url(/images/bg-footer-top-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center top, center bottom;
+  background-size: 100vw;
+  padding: 12rem 0;
+}
+
+footer {
+  text-align: left;
+  background-color: #00252e;
+  padding-bottom: 3rem;
+}
+
+h3 {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+footer form,
+footer section {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+input[type="email"] {
+  width: 100%;
+  display: block;
+  padding: 0.4rem;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type="email"] ~ button {
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+footer form button {
+  margin-left: auto;
+}
+
+footer section img {
+  height: 2rem;
+  width: auto;
+  margin: auto auto 1rem 0;
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+
+footer section img + p {
+  font-weight: 600;
+}
+
+footer section a {
+  color: white;
+}
+
+footer ul,
+footer li {
+  margin: auto 0;
+}
+
+footer ul {
+  margin-bottom: 1rem;
+}
+
+footer li {
+  padding: 0.5rem 0;
+}
+
+footer li i {
+  font-size: 1.75rem;
+  margin: auto;
+  margin-right: 1rem;
+}
+
+.contact-list li {
+  list-style-position: outside;
+  padding-left: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+.contact-list li:first-of-type {
+  list-style-image: url(/images/icon-phone.svg);
+}
+
+.contact-list li:last-of-type {
+  list-style-image: url(/images/icon-email.svg);
+}
+
+/*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+.fa,
+.fas,
+.far,
+.fal,
+.fad,
+.fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.fa-facebook-square:before {
+  content: "\f082";
+}
+
+.fa-twitter-square:before {
+  content: "\f081";
+}
+
+.fa-instagram:before {
+  content: "\f16d";
+}
+
+/*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../../images/webfonts/fa-brands-400.eot");
+  src: url("../../images/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../../images/webfonts/fa-brands-400.woff2") format("woff2"), url("../../images/webfonts/fa-brands-400.woff") format("woff"), url("../../images/webfonts/fa-brands-400.ttf") format("truetype"), url("../../images/webfonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+
+.fab {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+nav,
+main section,
+footer,
+.alternating {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+h1 {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-bottom: 3rem;
+}
+
+nav,
+.socials-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+button {
+  font-weight: 600;
+  padding: 0.75rem 2.5rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  border: none;
+  color: white;
+  background-color: #ff52bf;
+  -webkit-box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 6rem;
+}
+
+button:active {
+  background-color: #ff8fd8;
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+  -webkit-box-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.1);
+}
+
+main section img {
+  margin-bottom: 5rem;
+}
+
+.attribution p {
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=main.css.map */

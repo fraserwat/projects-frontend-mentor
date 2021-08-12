@@ -1,0 +1,33 @@
+@import "variables";
+
+.stats div {
+  padding: 3rem 0;
+  position: relative;
+  max-width: 18rem;
+  margin: auto;
+}
+
+.stats p {
+  color: rgba($color: #000000, $alpha: 0.5);
+  span {
+    font-weight: 700;
+    font-size: 4rem;
+    display: block;
+    color: black;
+  }
+}
+.stats div::before {
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  top: 1.5rem;
+  transform: scale(0.75);
+}
+.stats div:nth-of-type(1)::before {
+  left: 3.5rem;
+  content: url(/images/icon-communities.svg);
+}
+.stats div:nth-of-type(2)::before {
+  left: 3rem;
+  content: url(/images/icon-messages.svg);
+}

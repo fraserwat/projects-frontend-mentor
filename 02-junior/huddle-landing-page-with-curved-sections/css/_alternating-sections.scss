@@ -1,0 +1,51 @@
+@import "variables";
+
+h2 {
+  margin-bottom: 1.25rem;
+}
+
+.alternating {
+  display: grid;
+  justify-items: center;
+  padding: 6rem 0;
+  img {
+    width: 85%;
+    margin-bottom: 4rem;
+  }
+}
+
+.alternating:nth-of-type(odd) {
+  background-color: $v-pale-blue;
+}
+
+// BACKGROUNDS
+.stats {
+  background-image: url(/images/bg-section-top-mobile-1.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100vw;
+  padding-bottom: 4rem;
+}
+.grow {
+  padding-bottom: 2rem;
+}
+.flow {
+  background-image: url(/images/bg-section-bottom-mobile-1.svg),
+    url(/images/bg-section-top-mobile-2.svg);
+  background-repeat: no-repeat;
+  background-position: center top, center bottom;
+  background-size: 100vw;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+.user {
+  padding-bottom: 0;
+}
+.cta {
+  background-image: url(/images/bg-section-bottom-mobile-2.svg),
+    url(/images/bg-footer-top-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center top, center bottom;
+  background-size: 100vw;
+  padding: 12rem 0;
+}

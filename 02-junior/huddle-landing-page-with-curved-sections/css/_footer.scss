@@ -1,0 +1,71 @@
+@import "variables";
+
+footer {
+  text-align: left;
+  background-color: $v-dark-cyan;
+  padding-bottom: 3rem;
+}
+h3 {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+footer form,
+footer section {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+input[type="email"] {
+  width: 100%;
+  display: block;
+  padding: 0.4rem;
+  border: none;
+  border-radius: 5px;
+}
+input[type="email"] ~ button {
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+footer form button {
+  margin-left: auto;
+}
+
+footer section img {
+  height: 2rem;
+  width: auto;
+  margin: auto auto 1rem 0;
+  filter: brightness(0) invert(1);
+}
+footer section img + p {
+  font-weight: 600;
+}
+footer section a {
+  color: white;
+}
+footer ul,
+footer li {
+  margin: auto 0;
+}
+footer ul {
+  margin-bottom: 1rem;
+}
+footer li {
+  padding: 0.5rem 0;
+  i {
+    font-size: 1.75rem;
+    margin: auto;
+    margin-right: 1rem;
+  }
+}
+.contact-list li {
+  list-style-position: outside;
+  padding-left: 0.5rem;
+  margin-left: 1.5rem;
+}
+.contact-list li:first-of-type {
+  list-style-image: url(/images/icon-phone.svg);
+}
+.contact-list li:last-of-type {
+  list-style-image: url(/images/icon-email.svg);
+}

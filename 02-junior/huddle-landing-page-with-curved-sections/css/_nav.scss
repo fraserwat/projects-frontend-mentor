@@ -1,0 +1,27 @@
+@import "variables";
+
+nav {
+  padding: 2rem 1.5rem;
+  margin-bottom: 4rem;
+  img {
+    height: 1.25rem;
+    margin: auto;
+    margin-left: 0;
+  }
+  button {
+    font-weight: 400;
+    padding: 0.25rem 1.25rem;
+    margin-bottom: auto;
+    color: rgba($color: $pink, $alpha: 1);
+    background-color: rgba($color: $pink, $alpha: 0);
+    border: 1px solid $pink;
+    box-shadow: 0 0 3px 3px rgba($color: $light-pink, $alpha: 0.1);
+    &:active {
+      color: rgba($color: $light-pink, $alpha: 1);
+      border: 1px solid $light-pink;
+      background-color: rgba($color: $pink, $alpha: 0);
+      transform: translateY(1px);
+      box-shadow: 0 0 3px 3px rgba($color: $light-pink, $alpha: 0.1);
+    }
+  }
+}

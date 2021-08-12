@@ -1,0 +1,9 @@
+.#{$fa-css-prefix}-facebook-square:before {
+  content: fa-content($fa-var-facebook-square);
+}
+.#{$fa-css-prefix}-twitter-square:before {
+  content: fa-content($fa-var-twitter-square);
+}
+.#{$fa-css-prefix}-instagram:before {
+  content: fa-content($fa-var-instagram);
+}
