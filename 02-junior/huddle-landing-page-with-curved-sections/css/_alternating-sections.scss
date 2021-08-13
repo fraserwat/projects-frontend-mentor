@@ -50,18 +50,32 @@ h2 {
   background-size: 100vw;
   padding: 12rem 0;
 }
+footer {
+  margin-top: -1px;
+}
 // BACKGROUNDS DESKTOP
 
 @media screen and (min-width: $desktop-breakpoint) {
+  $curve-padding: 6vw;
   .stats {
-    padding-bottom: 10rem;
+    padding-bottom: $curve-padding * 2;
     background-image: url(/images/bg-section-top-desktop-1.svg);
   }
   .flow {
+    padding-top: $curve-padding * 3;
+    padding-bottom: $curve-padding * 3;
     background-image: url(/images/bg-section-bottom-desktop-1.svg),
       url(/images/bg-section-top-desktop-2.svg);
   }
+  .user {
+    padding-bottom: $curve-padding;
+  }
   .cta {
+    button {
+      margin: 0;
+    }
+    padding-top: $curve-padding * 3;
+    padding-bottom: $curve-padding * 3;
     background-image: url(/images/bg-section-bottom-desktop-2.svg),
       url(/images/bg-footer-top-desktop.svg);
   }
@@ -70,6 +84,7 @@ h2 {
 @media screen and (min-width: $desktop-breakpoint) {
   .alternating {
     display: grid;
+    gap: 3rem;
     grid-template-columns: 1fr 1fr;
     &:nth-of-type(odd) {
       grid-template-areas: "feature illustration";
@@ -80,13 +95,13 @@ h2 {
   }
   .alternating img {
     grid-area: illustration;
-    margin: auto;
+    margin: auto 0;
   }
   .alternating .text {
     text-align: left;
     grid-area: feature;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto 0;
+    max-width: 500px;
     p {
       margin-bottom: 0;
     }

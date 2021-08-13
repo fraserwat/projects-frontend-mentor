@@ -218,16 +218,30 @@ h2 {
   padding: 12rem 0;
 }
 
+footer {
+  margin-top: -1px;
+}
+
 @media screen and (min-width: 800px) {
   .stats {
-    padding-bottom: 10rem;
+    padding-bottom: 12vw;
     background-image: url(/images/bg-section-top-desktop-1.svg);
   }
   .flow {
+    padding-top: 18vw;
+    padding-bottom: 18vw;
     background-image: url(/images/bg-section-bottom-desktop-1.svg), url(/images/bg-section-top-desktop-2.svg);
   }
+  .user {
+    padding-bottom: 6vw;
+  }
   .cta {
+    padding-top: 18vw;
+    padding-bottom: 18vw;
     background-image: url(/images/bg-section-bottom-desktop-2.svg), url(/images/bg-footer-top-desktop.svg);
+  }
+  .cta button {
+    margin: 0;
   }
 }
 
@@ -235,6 +249,7 @@ h2 {
   .alternating {
     display: -ms-grid;
     display: grid;
+    gap: 3rem;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
@@ -248,15 +263,15 @@ h2 {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: illustration;
-    margin: auto;
+    margin: auto 0;
   }
   .alternating .text {
     text-align: left;
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: feature;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto 0;
+    max-width: 500px;
   }
   .alternating .text p {
     margin-bottom: 0;
@@ -264,6 +279,7 @@ h2 {
 }
 
 footer {
+  position: relative;
   text-align: left;
   background-color: #00252e;
   padding-bottom: 3rem;
@@ -365,7 +381,7 @@ footer li i {
   list-style-image: url(/images/icon-email.svg);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 950px) {
   footer {
     display: -ms-grid;
     display: grid;
@@ -408,6 +424,32 @@ footer li i {
   footer input[type="email"] ~ button {
     margin: 0;
     padding: 0.75rem 2.5rem;
+  }
+  footer i:hover {
+    -webkit-transition: ease-in-out 200ms;
+    transition: ease-in-out 200ms;
+    color: #5f9fd3;
+  }
+}
+
+.active #email {
+  -webkit-box-shadow: inset 0px 0px 0px 2px #f00;
+          box-shadow: inset 0px 0px 0px 2px #f00;
+  position: relative;
+}
+
+.active.form__fields::after {
+  content: "Please check your email";
+  color: red;
+  position: absolute;
+  -webkit-transform: translateY(3.1rem);
+          transform: translateY(3.1rem);
+}
+
+@media screen and (max-width: 950px) {
+  .active.form__fields::after {
+    right: 1.5rem;
+    top: 5.5em;
   }
 }
 
@@ -553,6 +595,14 @@ main section img {
   .cta {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+  nav h2,
+  main section h2,
+  footer h2,
+  .alternating h2,
+  .cta h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
   nav img {
     -webkit-transform: scale(1.25);

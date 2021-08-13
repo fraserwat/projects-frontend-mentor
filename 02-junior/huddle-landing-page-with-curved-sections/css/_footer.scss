@@ -1,6 +1,7 @@
 @import "variables";
 
 footer {
+  position: relative;
   text-align: left;
   background-color: $v-dark-cyan;
   padding-bottom: 3rem;
@@ -76,7 +77,7 @@ footer li {
   list-style-image: url(/images/icon-email.svg);
 }
 
-@media screen and (min-width: $desktop-breakpoint) {
+@media screen and (min-width: 950px) {
   footer {
     display: grid;
     grid-template-areas: "contact newsletter";
@@ -111,5 +112,28 @@ footer li {
       margin: 0;
       padding: 0.75rem 2.5rem;
     }
+    i:hover {
+      transition: ease-in-out 200ms;
+      color: rgba($color: hsl(207, 57%, 60%), $alpha: 1);
+    }
+  }
+}
+
+// REGEX CHECK
+.active #email {
+  // border: 3px inset solid red;
+  box-shadow: inset 0px 0px 0px 2px #f00;
+  position: relative;
+}
+
+.active.form__fields::after {
+  content: "Please check your email";
+  color: red;
+  position: absolute;
+  transform: translateY(3.1rem);
+  // display: block;
+  @media screen and (max-width: 950px) {
+    right: 1.5rem;
+    top: 5.5em;
   }
 }
