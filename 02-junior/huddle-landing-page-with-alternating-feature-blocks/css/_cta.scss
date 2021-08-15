@@ -1,0 +1,25 @@
+@import "variables";
+
+.cta {
+  position: relative;
+  z-index: 2;
+  margin: 2rem 1.25rem;
+  margin-top: 0;
+  transform: translateY(5.5rem);
+  border-radius: 1rem;
+  padding: 0;
+  overflow: hidden;
+  h2 {
+    font-size: 4.5vw;
+    margin-bottom: 1.5rem;
+  }
+}
+.cta__container {
+  padding: 2rem 0;
+  padding-left: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  height: 100%;
+}

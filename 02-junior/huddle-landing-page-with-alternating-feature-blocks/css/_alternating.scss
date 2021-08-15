@@ -1,0 +1,18 @@
+@import "variables";
+
+main {
+  margin-top: 4rem;
+}
+
+.alternating {
+  margin: 2rem 1.25rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.alternating img {
+  margin: 3rem 2rem;
+}
+.alternating h2 {
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,87 @@
+@import "variables";
+
+// NAV
+
+.nav-hero__container {
+  background-image: url(/images/bg-hero-mobile.svg),
+    linear-gradient(lighten(#c9f0ff, 6%), lighten(#c9f0ff, 8%));
+  @media screen and (min-width: $desktop-breakpoint) {
+    background-image: url(/images/bg-hero-desktop.svg),
+      linear-gradient(lighten(#c9f0ff, 6%), lighten(#c9f0ff, 8%));
+  }
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top center;
+}
+
+nav {
+  padding: 2rem 1.5rem;
+  margin-bottom: 4rem;
+  img {
+    height: 1.25rem;
+    margin: auto;
+    margin-left: 0;
+  }
+  button {
+    font-weight: 400;
+    padding: 0.25rem 1.5rem;
+    font-weight: bold;
+    margin-bottom: auto;
+    color: $very-dark-cyan;
+    background-color: white;
+    box-shadow: 0 2px 5px 0 rgba($color: black, $alpha: 0.1);
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+}
+@media screen and (min-width: $desktop-breakpoint) {
+  nav button {
+    padding: 0.75rem 3.5rem;
+  }
+}
+
+// HERO
+.hero {
+  display: flex;
+  flex-direction: column;
+  * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  button {
+    margin-bottom: 3.5rem;
+  }
+}
+
+.hero img {
+  width: 80vw;
+  max-width: 850px;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .hero {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 40fr 60fr;
+    img,
+    .hero__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      width: 100%;
+      * {
+        margin-left: 0;
+      }
+      h1 {
+        // border: 1px solid red;
+        font-size: 2.75rem;
+      }
+      button {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

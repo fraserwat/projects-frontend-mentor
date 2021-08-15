@@ -1,0 +1,505 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"],
+li,
+ul {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.nav-hero__container {
+  background-image: url(/images/bg-hero-mobile.svg), -webkit-gradient(linear, left top, left bottom, from(#e8f9ff), to(#f2fbff));
+  background-image: url(/images/bg-hero-mobile.svg), linear-gradient(#e8f9ff, #f2fbff);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top center;
+}
+
+@media screen and (min-width: 850px) {
+  .nav-hero__container {
+    background-image: url(/images/bg-hero-desktop.svg), -webkit-gradient(linear, left top, left bottom, from(#e8f9ff), to(#f2fbff));
+    background-image: url(/images/bg-hero-desktop.svg), linear-gradient(#e8f9ff, #f2fbff);
+  }
+}
+
+nav {
+  padding: 2rem 1.5rem;
+  margin-bottom: 4rem;
+}
+
+nav img {
+  height: 1.25rem;
+  margin: auto;
+  margin-left: 0;
+}
+
+nav button {
+  font-weight: 400;
+  padding: 0.25rem 1.5rem;
+  font-weight: bold;
+  margin-bottom: auto;
+  color: #00252e;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+nav button:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+@media screen and (min-width: 850px) {
+  nav button {
+    padding: 0.75rem 3.5rem;
+  }
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero button {
+  margin-bottom: 3.5rem;
+}
+
+.hero img {
+  width: 80vw;
+  max-width: 850px;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 850px) {
+  .hero {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 40fr 60fr;
+  }
+  .hero img,
+  .hero .hero__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: left;
+    width: 100%;
+  }
+  .hero img *,
+  .hero .hero__text * {
+    margin-left: 0;
+  }
+  .hero img h1,
+  .hero .hero__text h1 {
+    font-size: 2.75rem;
+  }
+  .hero img button,
+  .hero .hero__text button {
+    margin-bottom: 0;
+  }
+}
+
+main {
+  margin-top: 4rem;
+}
+
+.alternating {
+  margin: 2rem 1.25rem;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.alternating img {
+  margin: 3rem 2rem;
+}
+
+.alternating h2 {
+  margin-bottom: 1rem;
+}
+
+.cta {
+  position: relative;
+  z-index: 2;
+  margin: 2rem 1.25rem;
+  margin-top: 0;
+  -webkit-transform: translateY(5.5rem);
+          transform: translateY(5.5rem);
+  border-radius: 1rem;
+  padding: 0;
+  overflow: hidden;
+}
+
+.cta h2 {
+  font-size: 4.5vw;
+  margin-bottom: 1.5rem;
+}
+
+.cta__container {
+  padding: 2rem 0;
+  padding-left: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  height: 100%;
+}
+
+footer {
+  position: relative;
+  text-align: left;
+  background-color: #00252e;
+  padding-bottom: 3rem;
+  padding-top: 7rem;
+  z-index: 1;
+}
+
+footer section {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer section img {
+  height: 2rem;
+  width: auto;
+  margin: auto auto 1rem 0;
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+
+footer section img + p {
+  font-weight: 600;
+}
+
+footer section a {
+  color: white;
+}
+
+footer ul,
+footer li {
+  margin: auto 0;
+}
+
+footer ul {
+  margin-bottom: 1rem;
+}
+
+.socials-list {
+  margin: auto;
+  gap: 1rem;
+}
+
+.socials-list a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socials-list i {
+  font-size: 1rem;
+  margin: auto;
+  border: 1px solid white;
+  -webkit-transform: translateX(1px);
+          transform: translateX(1px);
+  border-radius: 9999px;
+  padding: 0.25rem;
+}
+
+footer li {
+  padding: 0.5rem 0;
+}
+
+.contact-list li {
+  list-style-position: outside;
+  padding-left: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+.contact-list li:nth-of-type(1) {
+  list-style-image: url(/images/icon-location.svg);
+}
+
+.contact-list li:nth-of-type(2) {
+  list-style-image: url(/images/icon-phone.svg);
+}
+
+.contact-list li:nth-of-type(3) {
+  list-style-image: url(/images/icon-email.svg);
+}
+
+footer li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+@media screen and (min-width: 950px) {
+  footer {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "contact newsletter";
+    gap: 3rem;
+  }
+  footer form {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: newsletter;
+  }
+  footer .contact {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: contact;
+  }
+  footer .contact {
+    max-width: 500px;
+    padding-top: 6rem;
+  }
+  footer i:hover {
+    -webkit-transition: ease-in-out 200ms;
+    transition: ease-in-out 200ms;
+    color: #5f9fd3;
+  }
+}
+
+/*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+.fa,
+.fas,
+.far,
+.fal,
+.fad,
+.fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.fa-facebook:before {
+  content: "\f09a";
+}
+
+.fa-twitter:before {
+  content: "\f099";
+}
+
+.fa-instagram:before {
+  content: "\f16d";
+}
+
+/*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../../images/webfonts/fa-brands-400.eot");
+  src: url("../../images/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../../images/webfonts/fa-brands-400.woff2") format("woff2"), url("../../images/webfonts/fa-brands-400.woff") format("woff"), url("../../images/webfonts/fa-brands-400.ttf") format("truetype"), url("../../images/webfonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+
+.fab {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+nav,
+main section,
+footer,
+.hero,
+.alternating {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.alternating,
+.cta__container,
+.cta {
+  -webkit-box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-bottom: 3rem;
+}
+
+nav,
+.socials-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.75rem 2.5rem;
+  border-radius: 999px;
+  max-width: 18rem;
+  font-size: 0.8rem;
+  border: none;
+  color: white;
+  background-color: #ff52bf;
+  -webkit-box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+  -webkit-box-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 850px) {
+  button {
+    font-size: 1rem;
+    padding: 1.25rem 5rem;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  nav,
+  main section,
+  footer,
+  .alternating {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  nav h2,
+  main section h2,
+  footer h2,
+  .alternating h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  nav img {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,97 @@
+@import "variables";
+
+footer {
+  position: relative;
+  text-align: left;
+  background-color: $very-dark-cyan;
+  padding-bottom: 3rem;
+  padding-top: 7rem;
+  z-index: 1;
+}
+
+footer section {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+footer section img {
+  height: 2rem;
+  width: auto;
+  margin: auto auto 1rem 0;
+  filter: brightness(0) invert(1);
+}
+footer section img + p {
+  font-weight: 600;
+}
+footer section a {
+  color: white;
+}
+footer ul,
+footer li {
+  margin: auto 0;
+}
+footer ul {
+  margin-bottom: 1rem;
+}
+.socials-list {
+  margin: auto;
+  gap: 1rem;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  i {
+    font-size: 1rem;
+    margin: auto;
+    border: 1px solid white;
+    transform: translateX(1px);
+    border-radius: 9999px;
+    padding: 0.25rem;
+  }
+}
+footer li {
+  padding: 0.5rem 0;
+}
+.contact-list li {
+  list-style-position: outside;
+  padding-left: 0.5rem;
+  margin-left: 1.5rem;
+}
+.contact-list li:nth-of-type(1) {
+  list-style-image: url(/images/icon-location.svg);
+}
+.contact-list li:nth-of-type(2) {
+  list-style-image: url(/images/icon-phone.svg);
+}
+.contact-list li:nth-of-type(3) {
+  list-style-image: url(/images/icon-email.svg);
+}
+
+footer li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+@media screen and (min-width: 950px) {
+  footer {
+    display: grid;
+    grid-template-areas: "contact newsletter";
+    gap: 3rem;
+    form {
+      grid-area: newsletter;
+    }
+    .contact {
+      grid-area: contact;
+    }
+
+    .contact {
+      max-width: 500px;
+      padding-top: 6rem;
+    }
+    i:hover {
+      transition: ease-in-out 200ms;
+      color: rgba($color: hsl(207, 57%, 60%), $alpha: 1);
+    }
+  }
+}
