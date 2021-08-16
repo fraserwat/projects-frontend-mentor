@@ -1,0 +1,198 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+nav {
+  padding: 2.5rem 1.5rem;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+nav img {
+  position: absolute;
+  width: auto;
+  left: 100vw;
+  -webkit-transform: translateX(calc(-50vw - 2rem)) translateY(0.5rem);
+          transform: translateX(calc(-50vw - 2rem)) translateY(0.5rem);
+}
+
+nav button {
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  background-image: url(/images/icon-hamburger.svg);
+  background-color: rgba(0, 0, 0, 0);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.hamburger__menu {
+  display: none;
+}
+
+.active.slides__slide picture::after {
+  position: absolute;
+  content: "";
+  border: black;
+  height: 2rem;
+  width: 2rem;
+  right: 0;
+}
+
+.slides__slide:not(.active) {
+  display: none;
+}
+
+.slides__slide picture {
+  margin-bottom: 4rem;
+  width: 100vw;
+}
+
+h1,
+h2 {
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+}
+
+.slides__slide button {
+  cursor: pointer;
+  letter-spacing: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0;
+  margin-bottom: 4rem;
+  margin-top: 3.5rem;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.slides__slide button img {
+  padding-left: 0.5rem;
+  display: inline;
+}
+
+.about__middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 4.5rem 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+:root {
+  font-size: 12px;
+}
+
+* {
+  font-family: "Spartan", sans-serif;
+}
+
+h1,
+h2,
+h3,
+p,
+.shop-now {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+p {
+  color: #a1a1a1;
+  line-height: 1.75rem;
+}
+/*# sourceMappingURL=main.css.map */

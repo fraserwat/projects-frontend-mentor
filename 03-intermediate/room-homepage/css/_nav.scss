@@ -1,0 +1,38 @@
+@import "variables";
+
+nav {
+  padding: 2.5rem 1.5rem;
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  img {
+    position: absolute;
+    width: auto;
+    left: 100vw;
+    transform: translateX(calc(-50vw - 2rem)) translateY(0.5rem);
+  }
+}
+
+nav button {
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  background-image: url(/images/icon-hamburger.svg);
+  background-color: rgba($color: #000000, $alpha: 0);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.hamburger__menu {
+  display: none;
+}
+
+.active.slides__slide picture::after {
+  position: absolute;
+  content: "";
+  border: rgba($color: #000000, $alpha: 1);
+  height: 2rem;
+  width: 2rem;
+  right: 0;
+}
