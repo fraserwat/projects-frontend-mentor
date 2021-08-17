@@ -65,7 +65,7 @@
     grid-template-columns: 55% 45%;
     text-align: left;
     gap: 3rem;
-    padding-bottom: 7.5rem;
+    padding-bottom: 2rem;
     align-items: center;
   }
   .stay-productive__illustration {
@@ -84,6 +84,11 @@
       padding-left: 0;
       margin-left: 0;
       margin-bottom: 0;
+      cursor: pointer;
+      transition: ease-in-out 200ms;
+      &:hover {
+        filter: brightness(1.5);
+      }
     }
     .stay-productive__cta p {
       margin-left: 0;

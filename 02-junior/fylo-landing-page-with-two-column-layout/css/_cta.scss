@@ -55,11 +55,12 @@
     }
     .cta-upper__input {
       max-width: 40rem;
+
       input {
         margin-top: auto;
         margin-bottom: auto;
         margin-right: 0.5rem;
-        width: 50%;
+        width: calc(100% - 35% - 1rem);
         min-width: 12rem;
         transform: translateY(1px);
       }

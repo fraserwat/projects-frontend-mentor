@@ -8,6 +8,9 @@
 @import "_footer";
 @import "_desktop";
 
+@import "./fontawesome/fontawesome.scss";
+@import "./fontawesome/brands.scss";
+
 body {
   font-family: "Open Sans", sans-serif;
   text-align: center;

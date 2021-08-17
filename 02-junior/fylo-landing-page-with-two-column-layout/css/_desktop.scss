@@ -1,9 +1,11 @@
 @import "_variables";
 
 @media screen and (min-width: $desktop-breakpoint) {
-  section h2,
-  form h2 {
+  section h2 {
     font-size: 2.4rem;
+  }
+  form h2 {
+    font-size: 1.9rem;
   }
   nav {
     padding-top: 4rem;
@@ -13,7 +15,7 @@
     height: 3rem;
   }
   nav a {
+    font-size: 1rem;
     margin-left: 3rem;
-    font-weight: 400;
   }
 }

@@ -5,7 +5,10 @@ form,
   display: flex;
   flex-direction: column;
 }
-
+.cta-upper__input input[type="email"] {
+  width: 80%;
+  margin-bottom: 1rem;
+}
 @media screen and (min-width: $desktop-breakpoint) {
   .cta-lower {
     padding-top: 6rem;
@@ -25,7 +28,7 @@ form,
   .cta-lower input[type="email"] {
     margin-left: 0;
   }
-  .cta-lower__right {
+  .cta-lower__input {
     display: flex;
     flex-direction: column;
     margin-top: auto;
@@ -45,4 +48,32 @@ form,
       margin-bottom: 0;
     }
   }
+}
+
+// REGEX CHECK
+.active #email {
+  // border: 3px inset solid red;
+  box-shadow: inset 0px 0px 0px 2px #f00;
+  position: relative;
+}
+.active.form__fields {
+  position: relative;
+}
+.active.form__fields::after {
+  content: "Please check your email";
+  font-size: 0.75rem;
+  color: red;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 3.1rem);
+  // display: block;
+  // @media screen and (max-width: 950px) {
+  //   right: 1.5rem;
+  //   top: 5.5em;
+  // }
+}
+.active.cta-lower__input.form__fields::after {
+  transform: translate(-50%, -0.75rem);
 }

@@ -14,6 +14,7 @@ footer {
   a {
     color: white;
     text-decoration: none;
+    font-weight: normal;
   }
   li + li {
     padding-top: 0.75rem;
@@ -22,16 +23,68 @@ footer {
 .attribution a {
   font-weight: bold;
 }
-
 // List styling
-footer ul:first-of-type li:first-of-type {
-  list-style-image: url("/images/icon-phone.svg");
+footer ul:first-of-type li:first-of-type::before {
+  content: url("/images/icon-phone.svg");
+  transform: translateY(3px);
+  margin-right: 1rem;
 }
-footer ul:first-of-type li:nth-of-type(2) {
-  list-style-image: url("/images/icon-email.svg");
+footer ul:first-of-type li:nth-of-type(2)::before {
+  content: url("/images/icon-email.svg");
+  transform: translateY(3px);
+  margin-right: 0.8rem;
+}
+
+footer ul:not(.socials-list) a {
+  transition: ease-in-out 200ms;
+  &:hover {
+    text-decoration: underline;
+    color: desaturate(lighten($bright-blue, 10%), 20%);
+  }
+}
+
+.socials-list {
+  gap: 1rem;
+  li {
+    padding-top: 0;
+
+    a i {
+      padding: 5px;
+      transition: ease-in-out 200ms;
+      border-radius: 900px;
+      border: 1px solid white;
+      &:hover {
+        color: rgba($color: hsl(207, 57%, 60%), $alpha: 1);
+        border: 1px solid rgba($color: hsl(207, 57%, 60%), $alpha: 1);
+      }
+    }
+  }
 }
 
 @media screen and (min-width: $desktop-breakpoint) {
   footer {
+    display: grid;
+    grid-template-areas:
+      "logo logo logo logo"
+      "one two three four"
+      "attr attr attr attr";
+    &:nth-child(1) {
+      grid-area: logo;
+    }
+    .attribution {
+      grid-area: attr;
+    }
+    ul:nth-of-type(1) {
+      grid-area: one;
+    }
+    ul:nth-of-type(2) {
+      grid-area: two;
+    }
+    ul:nth-of-type(3) {
+      grid-area: three;
+    }
+    ul:nth-of-type(4) {
+      grid-area: four;
+    }
   }
 }

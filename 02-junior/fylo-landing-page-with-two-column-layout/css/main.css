@@ -69,7 +69,15 @@ nav img {
   margin-right: auto;
 }
 
+@media screen and (max-width: 300px) {
+  nav img {
+    height: 1.25rem;
+  }
+}
+
 nav a {
+  font-size: clamp(0.75rem, 3.5vw, 1rem);
+  font-weight: 400;
   text-decoration: none;
   color: #070439;
   margin: auto;
@@ -118,7 +126,7 @@ nav a {
   margin-bottom: 5rem;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 850px) {
   .cta-upper {
     margin-bottom: 20vw;
     display: -ms-grid;
@@ -147,7 +155,7 @@ nav a {
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 0.5rem;
-    width: 50%;
+    width: calc(100% - 35% - 1rem);
     min-width: 12rem;
     -webkit-transform: translateY(1px);
             transform: translateY(1px);
@@ -170,7 +178,12 @@ form,
           flex-direction: column;
 }
 
-@media screen and (min-width: 800px) {
+.cta-upper__input input[type="email"] {
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 850px) {
   .cta-lower {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -191,7 +204,7 @@ form,
   .cta-lower input[type="email"] {
     margin-left: 0;
   }
-  .cta-lower__right {
+  .cta-lower__input {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -202,20 +215,47 @@ form,
     margin-top: auto;
     margin-bottom: auto;
   }
-  .cta-lower__right input[type="email"],
-  .cta-lower__right button {
+  .cta-lower__input input[type="email"],
+  .cta-lower__input button {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
   }
-  .cta-lower__right input[type="email"] {
+  .cta-lower__input input[type="email"] {
     width: 100%;
     max-width: 31.25rem;
     margin-right: 0;
   }
-  .cta-lower__right button {
+  .cta-lower__input button {
     max-width: 12.5rem;
     margin-bottom: 0;
   }
+}
+
+.active #email {
+  -webkit-box-shadow: inset 0px 0px 0px 2px #f00;
+          box-shadow: inset 0px 0px 0px 2px #f00;
+  position: relative;
+}
+
+.active.form__fields {
+  position: relative;
+}
+
+.active.form__fields::after {
+  content: "Please check your email";
+  font-size: 0.75rem;
+  color: red;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 3.1rem);
+          transform: translate(-50%, 3.1rem);
+}
+
+.active.cta-lower__input.form__fields::after {
+  -webkit-transform: translate(-50%, -0.75rem);
+          transform: translate(-50%, -0.75rem);
 }
 
 .stay-productive,
@@ -286,7 +326,7 @@ form,
           transform: translateX(-1px);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 850px) {
   .stay-productive {
     display: -ms-grid;
     display: grid;
@@ -295,7 +335,7 @@ form,
         grid-template-columns: 55% 45%;
     text-align: left;
     gap: 3rem;
-    padding-bottom: 7.5rem;
+    padding-bottom: 2rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -329,6 +369,13 @@ form,
     padding-left: 0;
     margin-left: 0;
     margin-bottom: 0;
+    cursor: pointer;
+    -webkit-transition: ease-in-out 200ms;
+    transition: ease-in-out 200ms;
+  }
+  .stay-productive__inner .stay-productive__cta:hover {
+    -webkit-filter: brightness(1.5);
+            filter: brightness(1.5);
   }
   .stay-productive__inner .stay-productive__cta p {
     margin-left: 0;
@@ -417,6 +464,7 @@ footer li,
 footer a {
   color: white;
   text-decoration: none;
+  font-weight: normal;
 }
 
 footer li + li {
@@ -427,18 +475,97 @@ footer li + li {
   font-weight: bold;
 }
 
-footer ul:first-of-type li:first-of-type {
-  list-style-image: url("/images/icon-phone.svg");
+footer ul:first-of-type li:first-of-type::before {
+  content: url("/images/icon-phone.svg");
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+  margin-right: 1rem;
 }
 
-footer ul:first-of-type li:nth-of-type(2) {
-  list-style-image: url("/images/icon-email.svg");
+footer ul:first-of-type li:nth-of-type(2)::before {
+  content: url("/images/icon-email.svg");
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+  margin-right: 0.8rem;
 }
 
-@media screen and (min-width: 800px) {
-  section h2,
-  form h2 {
+footer ul:not(.socials-list) a {
+  -webkit-transition: ease-in-out 200ms;
+  transition: ease-in-out 200ms;
+}
+
+footer ul:not(.socials-list) a:hover {
+  text-decoration: underline;
+  color: #7292e9;
+}
+
+.socials-list {
+  gap: 1rem;
+}
+
+.socials-list li {
+  padding-top: 0;
+}
+
+.socials-list li a i {
+  padding: 5px;
+  -webkit-transition: ease-in-out 200ms;
+  transition: ease-in-out 200ms;
+  border-radius: 900px;
+  border: 1px solid white;
+}
+
+.socials-list li a i:hover {
+  color: #5f9fd3;
+  border: 1px solid #5f9fd3;
+}
+
+@media screen and (min-width: 850px) {
+  footer {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "logo logo logo logo" "one two three four" "attr attr attr attr";
+  }
+  footer:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: logo;
+  }
+  footer .attribution {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: attr;
+  }
+  footer ul:nth-of-type(1) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: one;
+  }
+  footer ul:nth-of-type(2) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: two;
+  }
+  footer ul:nth-of-type(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: three;
+  }
+  footer ul:nth-of-type(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+    grid-area: four;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  section h2 {
     font-size: 2.4rem;
+  }
+  form h2 {
+    font-size: 1.9rem;
   }
   nav {
     padding-top: 4rem;
@@ -448,9 +575,58 @@ footer ul:first-of-type li:nth-of-type(2) {
     height: 3rem;
   }
   nav a {
+    font-size: 1rem;
     margin-left: 3rem;
-    font-weight: 400;
   }
+}
+
+/*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+.fa,
+.fas,
+.far,
+.fal,
+.fad,
+.fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.fa-facebook:before {
+  content: "\f09a";
+}
+
+.fa-twitter:before {
+  content: "\f099";
+}
+
+.fa-instagram:before {
+  content: "\f16d";
+}
+
+/*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../../images/webfonts/fa-brands-400.eot");
+  src: url("../../images/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../../images/webfonts/fa-brands-400.woff2") format("woff2"), url("../../images/webfonts/fa-brands-400.woff") format("woff"), url("../../images/webfonts/fa-brands-400.ttf") format("truetype"), url("../../images/webfonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+
+.fab {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
 }
 
 body {

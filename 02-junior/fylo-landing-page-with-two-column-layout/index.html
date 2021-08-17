@@ -31,7 +31,12 @@
       </ul>
     </nav>
     <main>
-      <form class="cta-upper">
+      <form
+        action="#"
+        class="cta-upper"
+        novalidate
+        onsubmit="emailRegex(event)"
+      >
         <img
           src="/images/illustration-1.svg"
           alt="Illustration - people getting files from folder"
@@ -43,7 +48,7 @@
             them wherever you need, share and collaborate with friends, family,
             and co-workers.
           </p>
-          <div class="cta-upper__input">
+          <div class="cta-upper__input form__fields">
             <input
               type="email"
               name="email"
@@ -93,7 +98,12 @@
         </section>
       </section>
 
-      <form action="" class="cta-lower">
+      <form
+        action="#"
+        class="cta-lower"
+        novalidate
+        onsubmit="emailRegex(event)"
+      >
         <div class="cta-lower__left">
           <h2>Get early access today</h2>
           <p>
@@ -102,7 +112,7 @@
             would be happy to help you.
           </p>
         </div>
-        <div class="cta-lower__right">
+        <div class="cta-lower__input form__fields">
           <input
             type="email"
             name="email"
@@ -131,9 +141,15 @@
         <li><a href="">Privacy</a></li>
       </ul>
       <ul class="socials-list">
-        <li><a href="">FB</a></li>
-        <li><a href="">TW</a></li>
-        <li><a href="">IG</a></li>
+        <li>
+          <a href=""><i class="fab fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fab fa-instagram"></i></a>
+        </li>
       </ul>
       <ul class="attribution">
         <li>
@@ -153,5 +169,6 @@
         </li>
       </ul>
     </footer>
+    <script src="/js/emailRegex.js"></script>
   </body>
 </html>
