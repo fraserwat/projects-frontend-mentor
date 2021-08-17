@@ -17,6 +17,10 @@ nav {
     color: $very-dark-blue;
     margin: auto;
     margin-left: 1rem;
+    &:hover {
+      text-decoration: underline;
+      color: desaturate(lighten($bright-blue, 10%), 20%);
+    }
   }
   margin-bottom: 4rem;
 }

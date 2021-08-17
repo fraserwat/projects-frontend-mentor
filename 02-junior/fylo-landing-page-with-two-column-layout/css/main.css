@@ -84,6 +84,11 @@ nav a {
   margin-left: 1rem;
 }
 
+nav a:hover {
+  text-decoration: underline;
+  color: #7292e9;
+}
+
 .cta-upper {
   color: #070439;
   margin-bottom: calc(6rem + 3vw);
