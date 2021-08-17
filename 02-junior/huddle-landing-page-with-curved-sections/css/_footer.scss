@@ -125,15 +125,20 @@ footer li {
   box-shadow: inset 0px 0px 0px 2px #f00;
   position: relative;
 }
-
+.active.form__fields {
+  position: relative;
+}
 .active.form__fields::after {
   content: "Please check your email";
   color: red;
   position: absolute;
-  transform: translateY(3.1rem);
+  transform: translateY(-1.5rem);
+  font-size: 0.8rem;
+  right: 1.5rem;
   // display: block;
-  @media screen and (max-width: 950px) {
-    right: 1.5rem;
-    top: 5.5em;
+  @media screen and (min-width: 950px) {
+    left: 0;
+    bottom: 0;
+    transform: translateY(1.5rem);
   }
 }

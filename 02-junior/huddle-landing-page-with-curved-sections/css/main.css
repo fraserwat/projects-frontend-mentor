@@ -438,18 +438,26 @@ footer li i {
   position: relative;
 }
 
+.active.form__fields {
+  position: relative;
+}
+
 .active.form__fields::after {
   content: "Please check your email";
   color: red;
   position: absolute;
-  -webkit-transform: translateY(3.1rem);
-          transform: translateY(3.1rem);
+  -webkit-transform: translateY(-1.5rem);
+          transform: translateY(-1.5rem);
+  font-size: 0.8rem;
+  right: 1.5rem;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (min-width: 950px) {
   .active.form__fields::after {
-    right: 1.5rem;
-    top: 5.5em;
+    left: 0;
+    bottom: 0;
+    -webkit-transform: translateY(1.5rem);
+            transform: translateY(1.5rem);
   }
 }
 
