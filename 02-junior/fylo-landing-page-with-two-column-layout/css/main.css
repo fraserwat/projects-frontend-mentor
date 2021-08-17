@@ -253,6 +253,13 @@ form,
           transform: translate(-50%, 3.1rem);
 }
 
+@media screen and (min-width: 950px) {
+  .active.form__fields::after {
+    -webkit-transform: translate(0.5rem, 3rem);
+            transform: translate(0.5rem, 3rem);
+  }
+}
+
 .active.cta-lower__input.form__fields::after {
   -webkit-transform: translate(-50%, -0.75rem);
           transform: translate(-50%, -0.75rem);

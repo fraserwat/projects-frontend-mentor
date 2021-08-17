@@ -68,11 +68,10 @@ form,
   top: 0;
   left: 50%;
   transform: translate(-50%, 3.1rem);
-  // display: block;
-  // @media screen and (max-width: 950px) {
-  //   right: 1.5rem;
-  //   top: 5.5em;
-  // }
+  @media screen and (min-width: 950px) {
+    // left: 100%;
+    transform: translate(0.5rem, 3rem);
+  }
 }
 .active.cta-lower__input.form__fields::after {
   transform: translate(-50%, -0.75rem);
