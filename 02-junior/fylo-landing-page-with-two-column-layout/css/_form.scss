@@ -51,7 +51,8 @@ form,
 }
 
 // REGEX CHECK
-.active #email {
+.active #email-upper,
+.active #email-lower {
   // border: 3px inset solid red;
   box-shadow: inset 0px 0px 0px 2px #f00;
   position: relative;

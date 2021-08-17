@@ -236,7 +236,8 @@ form,
   }
 }
 
-.active #email {
+.active #email-upper,
+.active #email-lower {
   -webkit-box-shadow: inset 0px 0px 0px 2px #f00;
           box-shadow: inset 0px 0px 0px 2px #f00;
   position: relative;
