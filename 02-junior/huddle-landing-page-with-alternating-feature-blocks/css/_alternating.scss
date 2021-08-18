@@ -12,7 +12,45 @@ main {
 }
 .alternating img {
   margin: 3rem 2rem;
+  grid-area: illustration;
+}
+.alternating .text {
+  grid-area: info;
 }
 .alternating h2 {
   margin-bottom: 1rem;
+}
+@media screen and (min-width: $desktop-breakpoint) {
+  .alternating {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    img {
+      display: inline;
+      margin: 2rem 0;
+    }
+    .text {
+      margin: auto;
+      text-align: left;
+      max-width: 500px;
+    }
+  }
+  .alternating:nth-of-type(odd) {
+    grid-template-areas: "info illustration";
+    .text {
+      margin-left: 0;
+    }
+  }
+  .alternating:nth-of-type(even) {
+    grid-template-areas: "illustration info";
+    .text {
+      margin-right: 0;
+    }
+  }
+  main .alternating {
+    padding-left: 5rem;
+  }
 }

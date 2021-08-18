@@ -13,13 +13,23 @@ body {
   font-family: "Open Sans", sans-serif;
   text-align: center;
 }
-nav,
+header,
 main section,
 footer,
 .hero,
 .alternating {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+@media screen and (min-width: $desktop-breakpoint) {
+  header,
+  main,
+  footer,
+  .hero,
+  .alternating {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
 }
 .alternating,
 .cta__container,
@@ -34,7 +44,7 @@ p {
   margin-bottom: 3rem;
 }
 
-nav,
+header,
 .socials-list {
   display: flex;
 }
@@ -51,18 +61,20 @@ button {
   background-color: rgba($color: $pink, $alpha: 1);
   box-shadow: 0 3px 5px 3px rgba($color: #000000, $alpha: 0.1);
   &:active {
-    // background-color: rgba($color: $light-pink, $alpha: 1);
+    background-color: lighten(rgba($color: $pink, $alpha: 1), 15%);
     transform: translateY(1px);
     box-shadow: 0 2px 5px 3px rgba($color: #000000, $alpha: 0.1);
   }
   @media screen and (min-width: $desktop-breakpoint) {
     font-size: 1rem;
-    padding: 1.25rem 5rem;
+    // padding: 1.25rem 5rem;
+    width: 18rem;
+    padding: 1.25rem 0;
   }
 }
 
 @media screen and (min-width: $desktop-breakpoint) {
-  nav,
+  header,
   main section,
   footer,
   .alternating {
@@ -73,7 +85,7 @@ button {
     padding-left: 3rem;
     padding-right: 3rem;
   }
-  nav {
+  header {
     img {
       transform: scale(1.25);
     }

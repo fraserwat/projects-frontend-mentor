@@ -9,8 +9,14 @@
   border-radius: 1rem;
   padding: 0;
   overflow: hidden;
+  max-width: 800px;
+  @media screen and (min-width: $desktop-breakpoint) {
+    transform: translateY(6.5rem);
+    margin-left: auto;
+    margin-right: auto;
+  }
   h2 {
-    font-size: 4.5vw;
+    font-size: clamp(1rem, 4.5vw, 2rem);
     margin-bottom: 1.5rem;
   }
 }

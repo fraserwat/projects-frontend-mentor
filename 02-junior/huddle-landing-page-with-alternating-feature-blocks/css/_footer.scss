@@ -5,30 +5,33 @@ footer {
   text-align: left;
   background-color: $very-dark-cyan;
   padding-bottom: 3rem;
-  padding-top: 7rem;
+  padding-top: 8rem;
   z-index: 1;
-}
-
-footer section {
   color: white;
   display: flex;
   flex-direction: column;
 }
-footer section img {
+address {
+  font-style: normal;
+}
+footer img {
   height: 2rem;
   width: auto;
   margin: auto auto 1rem 0;
   filter: brightness(0) invert(1);
 }
-footer section img + p {
+footer img + p {
   font-weight: 600;
 }
-footer section a {
+footer a {
   color: white;
 }
 footer ul,
 footer li {
   margin: auto 0;
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin-top: 0;
+  }
 }
 footer ul {
   margin-bottom: 1rem;
@@ -39,15 +42,18 @@ footer ul {
   a {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
   i {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin: auto;
     border: 1px solid white;
     transform: translateX(1px);
     border-radius: 9999px;
     padding: 0.25rem;
+  }
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin-top: 0;
   }
 }
 footer li {
@@ -68,30 +74,47 @@ footer li {
   list-style-image: url(/images/icon-email.svg);
 }
 
-footer li a {
+i:hover {
+  transition: ease-in-out 200ms;
+  color: rgba($color: $pink, $alpha: 1);
+  border: 1px solid rgba($color: $pink, $alpha: 1);
+}
+.socials-list a {
+  text-decoration: none;
+}
+footer ul:not(.socials-list) li a {
   text-decoration: none;
   font-size: 1.1rem;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: $desktop-breakpoint) {
   footer {
     display: grid;
-    grid-template-areas: "contact newsletter";
-    gap: 3rem;
-    form {
-      grid-area: newsletter;
-    }
-    .contact {
-      grid-area: contact;
-    }
-
-    .contact {
-      max-width: 500px;
-      padding-top: 6rem;
-    }
-    i:hover {
-      transition: ease-in-out 200ms;
-      color: rgba($color: hsl(207, 57%, 60%), $alpha: 1);
-    }
+    grid-template-areas:
+      "logo logo logo logo"
+      "one two three four";
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 1rem 3rem;
+  }
+  footer img {
+    grid-area: logo;
+  }
+  address ul {
+    grid-area: one;
+  }
+  footer ul:nth-of-type(1) {
+    grid-area: two;
+  }
+  footer ul:nth-of-type(2) {
+    grid-area: three;
+  }
+  footer ul:nth-of-type(3) {
+    grid-area: four;
+  }
+  .socials-list {
+    margin-left: 0;
   }
 }

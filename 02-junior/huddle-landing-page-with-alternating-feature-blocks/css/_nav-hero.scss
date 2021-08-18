@@ -14,7 +14,7 @@
   background-position: top center;
 }
 
-nav {
+header {
   padding: 2rem 1.5rem;
   margin-bottom: 4rem;
   img {
@@ -32,11 +32,14 @@ nav {
     box-shadow: 0 2px 5px 0 rgba($color: black, $alpha: 0.1);
     &:active {
       transform: translateY(1px);
+      background-color: white;
+      box-shadow: 0 1px 5px 0 rgba($color: black, $alpha: 0.1);
+      color: lighten($color: black, $amount: 50%);
     }
   }
 }
 @media screen and (min-width: $desktop-breakpoint) {
-  nav button {
+  header button {
     padding: 0.75rem 3.5rem;
   }
 }
@@ -64,7 +67,9 @@ nav {
   .hero {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 40fr 60fr;
+    grid-auto-columns: 45fr 55fr;
+    gap: 2rem;
+    padding-bottom: 4rem;
     img,
     .hero__text {
       display: flex;
@@ -82,6 +87,9 @@ nav {
       button {
         margin-bottom: 0;
       }
+    }
+    img {
+      margin-bottom: 0;
     }
   }
 }
