@@ -22,14 +22,16 @@
     <title>Frontend Mentor | Fylo landing page with two column layout</title>
   </head>
   <body>
-    <nav>
-      <img src="/images/logo.svg" alt="Fylo icon" />
-      <ul>
-        <li><a href="">Features</a></li>
-        <li><a href="">Team</a></li>
-        <li><a href="">Sign In</a></li>
-      </ul>
-    </nav>
+    <header>
+      <img src="/images/logo.svg" alt="Fylo" />
+      <nav>
+        <ul>
+          <li><a href="">Features</a></li>
+          <li><a href="">Team</a></li>
+          <li><a href="">Sign In</a></li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <form
         action="#"
@@ -55,7 +57,7 @@
               id="email-upper"
               placeholder="Enter your email..."
             />
-            <button>Get Started</button>
+            <button type="submit">Get Started</button>
           </div>
         </div>
       </form>
@@ -76,11 +78,11 @@
             for live collaboration. No email attachments required!
           </p>
           <div class="stay-productive__cta">
-            <p class="stay-productive__cta-text">See how Fylo works</p>
+            <a class="stay-productive__cta-text">See how Fylo works</a>
             <img src="/images/icon-arrow.svg" alt="" />
           </div>
         </div>
-        <section class="testimonial">
+        <article class="testimonial">
           <div class="testimonial__container">
             <p>
               Fylo has improved our team productivity by an order of magnitude.
@@ -88,14 +90,11 @@
               collaboration machine.
             </p>
             <div class="testimonial__person">
-              <img
-                src="/images/avatar-testimonial.jpg"
-                alt="Kyle Burton profile pic"
-              />
+              <img src="/images/avatar-testimonial.jpg" alt="Kyle Burton" />
               <p><span>Kyle Burton</span>Founder & CEO, Huddle</p>
             </div>
           </div>
-        </section>
+        </article>
       </section>
 
       <form
@@ -119,16 +118,18 @@
             id="email-lower"
             placeholder="email@example.com"
           />
-          <button>Get Started For Free</button>
+          <button type="submit">Get Started For Free</button>
         </div>
       </form>
     </main>
     <footer>
-      <img src="/images/logo.svg" alt="Fylo logo" />
-      <ul class="contact">
-        <li>Phone: +1-543-123-4567</li>
-        <li>example@fylo.com</li>
-      </ul>
+      <img src="/images/logo.svg" alt="Fylo" />
+      <address>
+        <ul class="contact">
+          <li>Phone: +1-543-123-4567</li>
+          <li>example@fylo.com</li>
+        </ul>
+      </address>
       <ul>
         <li><a href="">About Us</a></li>
         <li><a href="">Jobs</a></li>

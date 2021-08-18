@@ -10,7 +10,7 @@
   left: 0;
   top: -14.1vw;
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 20vw;
   background-image: url(/images/bg-curve-mobile.svg);
   background-repeat: no-repeat;
@@ -23,6 +23,7 @@
   h2 {
     margin-bottom: 2rem;
   }
+  a,
   p {
     text-align: left;
     margin-bottom: 1.5rem;
@@ -37,7 +38,8 @@
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
-    p {
+    a {
+      font-weight: 400;
       margin: 0;
       margin-right: 0.25rem;
     }
@@ -90,7 +92,7 @@
         filter: brightness(1.5);
       }
     }
-    .stay-productive__cta p {
+    .stay-productive__cta a {
       margin-left: 0;
     }
     .stay-productive__cta img {

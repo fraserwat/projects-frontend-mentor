@@ -4,6 +4,10 @@ footer {
   padding-top: 4rem;
   padding-bottom: 3rem;
   background-color: $very-dark-blue;
+
+  address {
+    font-style: normal;
+  }
   img {
     filter: brightness(0) invert(1);
   }
@@ -24,12 +28,12 @@ footer {
   font-weight: bold;
 }
 // List styling
-footer ul:first-of-type li:first-of-type::before {
+footer address li:first-of-type::before {
   content: url("/images/icon-phone.svg");
   transform: translateY(3px);
   margin-right: 1rem;
 }
-footer ul:first-of-type li:nth-of-type(2)::before {
+footer address li:nth-of-type(2)::before {
   content: url("/images/icon-email.svg");
   transform: translateY(3px);
   margin-right: 0.8rem;
@@ -45,7 +49,9 @@ footer ul:not(.socials-list) a {
 
 .socials-list {
   gap: 1rem;
+
   li {
+    align-items: flex-start;
     padding-top: 0;
 
     a i {
@@ -74,16 +80,16 @@ footer ul:not(.socials-list) a {
     .attribution {
       grid-area: attr;
     }
-    ul:nth-of-type(1) {
+    address {
       grid-area: one;
     }
-    ul:nth-of-type(2) {
+    ul:nth-of-type(1) {
       grid-area: two;
     }
-    ul:nth-of-type(3) {
+    ul:nth-of-type(2) {
       grid-area: three;
     }
-    ul:nth-of-type(4) {
+    ul:nth-of-type(3) {
       grid-area: four;
     }
   }
