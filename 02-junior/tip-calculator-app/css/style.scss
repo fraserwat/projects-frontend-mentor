@@ -1,0 +1,84 @@
+@import "reset";
+@import "variables";
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Space Mono", monospace;
+  background-color: $light-grayish-cyan;
+}
+
+h1 {
+  margin: 0 auto;
+  margin-top: auto;
+  margin-bottom: clamp(2.5rem, 9vw, 5.5rem);
+}
+
+main {
+  margin: 0;
+  // @TODO: GET RID OF margin-bottom: ITS TEMP
+  background-color: $white;
+  padding: 1.5rem;
+  border-radius: 1.25rem 1.25rem 0 0;
+}
+
+main {
+}
+
+form,
+section {
+  display: inline-block;
+  max-width: 350px;
+}
+
+section {
+  background-color: $very-dark-cyan;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+form label {
+  color: darken($grayish-cyan, 25%);
+  display: block;
+}
+.calculator__tip-options label {
+  display: inline-block;
+}
+
+.results {
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+.results__amount,
+.results__total {
+  display: flex;
+  justify-content: space-between;
+  h3 {
+    font-size: 1rem;
+    color: $white;
+  }
+  p {
+    color: $grayish-cyan;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+}
+.results__amount .results__amount-number,
+.results__total .results__total-number {
+  color: $strong-cyan;
+  font-weight: bold;
+  font-size: clamp(2rem, 9vw, 2.75rem);
+}
+
+.results__reset {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  color: $very-dark-cyan;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  background-color: $strong-cyan;
+  text-transform: uppercase;
+}
