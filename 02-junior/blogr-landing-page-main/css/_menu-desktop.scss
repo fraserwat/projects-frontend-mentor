@@ -1,0 +1,67 @@
+@import "variables";
+
+@media screen and (min-width: $desktop-breakpoint) {
+  body {
+    // If screen width changes while active we still need to be able to scroll
+    height: unset !important;
+    overflow-y: unset !important;
+  }
+  .outer.nav-menu:not(.active) {
+    // Default not showing outer menu before $desktop-breakpoint
+    display: flex;
+    align-items: center;
+  }
+  nav {
+    margin-bottom: 0;
+  }
+  .outer:not(.hamburger) {
+    // menu container
+    position: relative;
+    top: auto;
+    left: auto;
+    width: unset;
+    max-height: unset;
+    overflow: unset;
+    background: unset;
+    box-shadow: unset;
+    border-radius: unset;
+    padding: 0;
+    margin: 0;
+    gap: 1.5rem;
+  }
+
+  button[type="button"] {
+    // inner menu buttons
+    width: unset;
+    margin: 0;
+    padding: 0;
+    img {
+      // arrows
+    }
+  }
+  .connect {
+    margin-right: auto;
+  }
+  button[type="button"],
+  .active li a {
+  }
+  .sign-up button {
+    // sign up button
+    @include btn-white();
+    background-image: unset;
+  }
+
+  .active:not(.outer) {
+    // inner menus
+  }
+
+  .active:not(.outer) li {
+    // inner menu items
+    a {
+    }
+  }
+  .active.outer .login::before {
+    // line between Connect and Login
+    display: none;
+  }
+}

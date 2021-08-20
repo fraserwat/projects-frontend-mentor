@@ -2,21 +2,33 @@
 const btns = document.querySelectorAll(".nav-button");
 
 for (i = 0; i < btns.length; i++) {
-  let menuName = [...btns[i].classList][1];
-  document.querySelector(`.nav-menu.${menuName}`);
-
+  // console.log(document.querySelector(`.nav-menu.${menuName}`));
   btns[i].addEventListener("click", menuToggle);
 }
+
+// PREVENT SCROLL
+const bodyStyle = document.body.style; // necessary for resuming scroll
+function preventScroll() {
+  document.body.style.height = "100vh";
+  document.body.style.overflowY = "hidden";
+}
+function resumeScroll() {
+  document.body.style = bodyStyle;
+}
+
 // functions for toggling '.active' class on menu / submenus
 function menuToggle(e) {
   let menuName = [...e.target.classList];
+
   let targetMenu = document.querySelector(
     `.nav-menu.${menuName[menuName.length - 1]}`
   );
+  console.log(menuName, targetMenu);
   if (targetMenu.classList.contains("active")) {
     removeActiveClass(targetMenu);
   } else {
     addActiveClass(targetMenu);
+    preventScroll();
   }
 }
 
@@ -30,6 +42,7 @@ function removeActiveClass(target) {
     [...document.querySelectorAll(".nav-menu")].forEach((nav) =>
       nav.classList.remove("active")
     );
+    resumeScroll();
   } else {
     target.classList.remove("active");
   }

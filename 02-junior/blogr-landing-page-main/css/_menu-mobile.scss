@@ -1,0 +1,73 @@
+@import "variables";
+
+@media screen and (max-width: $desktop-breakpoint - 1px) {
+}
+.nav-menu:not(.active) {
+  // Default not showing menu before $desktop-breakpoint
+  display: none;
+}
+.outer:not(.hamburger) {
+  // menu container
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  z-index: 5;
+  width: calc(100vw - 2 * (2rem));
+  max-height: calc(100vh - 2 * (1.5rem) - 7rem);
+  margin: 2rem;
+  padding: 2rem;
+  overflow: scroll;
+  background: $white;
+  box-shadow: 0 2px 40px 2px rgba($color: #000000, $alpha: 0.3);
+  border-radius: 0.5rem;
+}
+
+button[type="button"] {
+  // inner menu buttons
+  width: 20rem;
+  margin: 0.5rem auto;
+  display: inline;
+  picture,
+  img {
+    display: inline;
+    padding-left: 5px;
+    margin: auto 0;
+  }
+}
+button[type="button"],
+.active li a {
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+.sign-up button {
+  // sign up button
+  @include btn-orange();
+  font-size: 1.3rem;
+  font-weight: 500;
+  width: 10rem;
+  height: 3.25rem;
+}
+
+.active:not(.outer) {
+  // inner menus
+  padding: 1.2rem 0 1px 0;
+  background-color: hsl(240, 2%, 95%);
+  border-radius: 0.5rem;
+}
+
+.active:not(.outer) li {
+  // inner menu items
+  margin-bottom: 1.25rem;
+  a {
+    color: hsl(240, 10%, 40%);
+    font-weight: 500;
+  }
+}
+.active.outer .login::before {
+  // line between Connect and Login
+  display: block;
+  margin: 1.5rem 0;
+  content: "";
+  width: 100%;
+  border: 1px solid hsl(240, 2%, 92%);
+}

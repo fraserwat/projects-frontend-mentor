@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+$desktop-breakpoint: 800px;
 
 $light-red: hsl(356, 100%, 66%); // CTA text
 $v-light-red: hsl(355, 100%, 74%); // CTA hover background
@@ -12,20 +12,19 @@ $v-dark-black-blue: hsl(240, 10%, 16%); // Footer background
 $bg-gradient-orange: linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
 $bg-gradient-dark: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
 
-// BUTTONS
-
 @mixin btn-white {
   color: $light-red;
   background-color: $white;
+  transition: 200ms ease-in-out;
 }
 @mixin btn-red {
   color: $white;
   border: 1px solid $white;
   background: none;
+  transition: 200ms ease-in-out;
 }
 @mixin btn-orange {
   color: $white;
-  // border: 1px solid $white;
   background: $bg-gradient-orange;
+  transition: 200ms ease-in-out;
 }
-// $bg-gradient-orange

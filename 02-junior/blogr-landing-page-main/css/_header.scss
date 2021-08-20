@@ -1,0 +1,88 @@
+@import "variables";
+
+.header__container-top {
+  display: flex;
+  justify-content: space-between;
+}
+.header__container-top img {
+  height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+header {
+  text-align: center;
+  padding: 1.5rem;
+  background: url("/images/bg-pattern-intro.svg"), $bg-gradient-orange;
+  background-size: 250vw;
+  background-position: 30%;
+  background-repeat: no-repeat;
+  // @TODO: CHANGE BORDER-RADIUS TO A MORE RESPONSIVE VALUE
+  border-radius: 0 0 0 20vw;
+  // @TODO: CHANGE MARGIN BOTTOM TO A MORE RESPONSIVE VALUE
+  margin-bottom: 4rem;
+
+  h1,
+  p {
+    color: $white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+nav {
+  margin-bottom: 2rem;
+}
+.hamburger {
+  // menu
+  transition: 200ms all ease-in-out;
+  background: url(/images/icon-hamburger.svg) no-repeat center;
+  background-size: contain;
+  border-radius: 0;
+  width: 2rem;
+  height: 2rem;
+  @media screen and (min-width: $desktop-breakpoint) {
+    display: none;
+  }
+}
+.active ~ .hamburger {
+  background-image: url(/images/icon-close.svg);
+}
+
+.header__container-button {
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+}
+.header__container-button button {
+  margin: 0.5rem;
+  width: 9rem;
+  &:first-child {
+    @include btn-white();
+    &:hover {
+      @include btn-red();
+    }
+  }
+  &:last-child {
+    @include btn-red();
+    &:hover {
+      @include btn-white();
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .header__container-top {
+    justify-content: flex-start;
+    img {
+      margin-right: 3vw;
+    }
+    nav {
+      width: 100%;
+    }
+    .nav-button.connect {
+      // margin-right: auto;
+    }
+    .login {
+      // margin-left: auto;
+    }
+  }
+}

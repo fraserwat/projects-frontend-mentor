@@ -1,0 +1,13 @@
+@import "variables";
+
+main h2 {
+  text-align: center;
+}
+article {
+  display: grid;
+  text-align: center;
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,473 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"],
+li {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.header__container-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__container-top img {
+  height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+header {
+  text-align: center;
+  padding: 1.5rem;
+  background: url("/images/bg-pattern-intro.svg"), -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
+  background: url("/images/bg-pattern-intro.svg"), linear-gradient(#ff8f70, #ff3d54);
+  background-size: 250vw;
+  background-position: 30%;
+  background-repeat: no-repeat;
+  border-radius: 0 0 0 20vw;
+  margin-bottom: 4rem;
+}
+
+header h1,
+header p {
+  color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+nav {
+  margin-bottom: 2rem;
+}
+
+.hamburger {
+  -webkit-transition: 200ms all ease-in-out;
+  transition: 200ms all ease-in-out;
+  background: url(/images/icon-hamburger.svg) no-repeat center;
+  background-size: contain;
+  border-radius: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+@media screen and (min-width: 800px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.active ~ .hamburger {
+  background-image: url(/images/icon-close.svg);
+}
+
+.header__container-button {
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+}
+
+.header__container-button button {
+  margin: 0.5rem;
+  width: 9rem;
+}
+
+.header__container-button button:first-child {
+  color: #ff525d;
+  background-color: white;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.header__container-button button:first-child:hover {
+  color: white;
+  border: 1px solid white;
+  background: none;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.header__container-button button:last-child {
+  color: white;
+  border: 1px solid white;
+  background: none;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.header__container-button button:last-child:hover {
+  color: #ff525d;
+  background-color: white;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+@media screen and (min-width: 800px) {
+  .header__container-top {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .header__container-top img {
+    margin-right: 3vw;
+  }
+  .header__container-top nav {
+    width: 100%;
+  }
+}
+
+.nav-menu:not(.active) {
+  display: none;
+}
+
+.outer:not(.hamburger) {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  z-index: 5;
+  width: calc(100vw - 2 * (2rem));
+  max-height: calc(100vh - 2 * (1.5rem) - 7rem);
+  margin: 2rem;
+  padding: 2rem;
+  overflow: scroll;
+  background: white;
+  -webkit-box-shadow: 0 2px 40px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 40px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+}
+
+button[type="button"] {
+  width: 20rem;
+  margin: 0.5rem auto;
+  display: inline;
+}
+
+button[type="button"] picture,
+button[type="button"] img {
+  display: inline;
+  padding-left: 5px;
+  margin: auto 0;
+}
+
+button[type="button"],
+.active li a {
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.sign-up button {
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
+  background: linear-gradient(#ff8f70, #ff3d54);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  font-size: 1.3rem;
+  font-weight: 500;
+  width: 10rem;
+  height: 3.25rem;
+}
+
+.active:not(.outer) {
+  padding: 1.2rem 0 1px 0;
+  background-color: #f2f2f3;
+  border-radius: 0.5rem;
+}
+
+.active:not(.outer) li {
+  margin-bottom: 1.25rem;
+}
+
+.active:not(.outer) li a {
+  color: #5c5c70;
+  font-weight: 500;
+}
+
+.active.outer .login::before {
+  display: block;
+  margin: 1.5rem 0;
+  content: "";
+  width: 100%;
+  border: 1px solid #eaeaeb;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    height: unset !important;
+    overflow-y: unset !important;
+  }
+  .outer.nav-menu:not(.active) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav {
+    margin-bottom: 0;
+  }
+  .outer:not(.hamburger) {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: unset;
+    max-height: unset;
+    overflow: unset;
+    background: unset;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+    border-radius: unset;
+    padding: 0;
+    margin: 0;
+    gap: 1.5rem;
+  }
+  button[type="button"] {
+    width: unset;
+    margin: 0;
+    padding: 0;
+  }
+  .connect {
+    margin-right: auto;
+  }
+  .sign-up button {
+    color: #ff525d;
+    background-color: white;
+    -webkit-transition: 200ms ease-in-out;
+    transition: 200ms ease-in-out;
+    background-image: unset;
+  }
+  .active.outer .login::before {
+    display: none;
+  }
+}
+
+main h2 {
+  text-align: center;
+}
+
+article {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+}
+
+article img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  padding-top: 3rem;
+  margin-top: 5rem;
+  padding-bottom: 2rem;
+  color: #c8c8cb;
+  background-color: #25252d;
+  border-radius: 0 15vw 0 0;
+}
+
+footer img {
+  width: 8rem;
+  margin: 3rem auto 2rem auto;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer li:first-of-type {
+  color: white;
+  font-weight: bold;
+  margin: 1.5rem;
+}
+
+footer li:not(li:first-of-type) {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.35rem;
+  position: relative;
+  cursor: pointer;
+}
+
+footer li:not(li:first-of-type):hover {
+  color: white;
+}
+
+footer li:not(li:first-of-type)::after {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  margin: auto;
+  height: 1px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+footer li:not(li:first-of-type):hover::after {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+@media screen and (min-width: 800px) {
+  footer {
+    border-radius: 0 8vw 0 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.5fr 1fr 1fr 1fr;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        grid-template-areas: "logo col2 col3 col4";
+  }
+  footer img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: logo;
+  }
+  footer img,
+  footer ul {
+    margin-top: 0;
+    text-align: left;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  footer li:first-of-type {
+    margin: 0 0 1rem 0;
+  }
+  footer li:not(li:first-of-type) {
+    padding-left: 0;
+  }
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    text-align: left;
+  }
+}
+
+h1,
+h2,
+h3,
+li,
+a {
+  color: #25252d;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+nav button,
+.active:not(.outer) li a {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: "Ubuntu", sans-serif;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  color: #4b5862;
+  letter-spacing: 0.03rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  border-radius: 9000px;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+}
+/*# sourceMappingURL=style.css.map */
