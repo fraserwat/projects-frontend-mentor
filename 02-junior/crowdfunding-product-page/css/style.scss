@@ -1,0 +1,51 @@
+@import "variables";
+@import "reset";
+@import "header";
+@import "main";
+
+body {
+  font-family: "Commissioner", sans-serif;
+  background-color: darken(white, 2%);
+}
+h1 {
+  margin-bottom: 1rem;
+}
+h2 {
+  margin-bottom: 1.25rem;
+}
+h3 {
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+p {
+  color: $dark-gray;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  background-color: rgba($color: #000000, $alpha: 0);
+  border: none;
+  background-repeat: no-repeat;
+}
+
+header,
+main,
+article {
+  padding: 1.5rem;
+}
+
+nav,
+article:first-of-type,
+article:nth-of-type(2) {
+  text-align: center;
+}
+
+article {
+  position: relative;
+  background-color: rgba($color: white, $alpha: 1);
+  border: 1px solid lighten($dark-gray, 45%);
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}

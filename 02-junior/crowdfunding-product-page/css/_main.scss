@@ -1,0 +1,55 @@
+@import "variables";
+
+// ARTICLE 1: TITLE CARD
+article:first-of-type {
+  margin-top: -6rem;
+}
+article:first-of-type img {
+  height: 3.5rem;
+  margin: -3.5rem auto 1rem auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  button:first-of-type {
+    width: 250px;
+    height: 3rem;
+    background-color: $moderate-cyan;
+    border-radius: 1000px;
+    font-weight: 500;
+    color: white;
+  }
+}
+.bookmark:nth-of-type(2) {
+  height: 3rem;
+  width: 3rem;
+  padding: 0;
+  background-image: url(/images/icon-bookmark.svg);
+  background-size: contain;
+}
+.bookmark:nth-of-type(3) {
+  display: none;
+}
+
+// ARTICLE 2: PROGRESS CARD
+article:nth-of-type(2) span {
+  display: block;
+  color: $black;
+  font-weight: 600;
+  font-size: 2rem;
+}
+article:nth-of-type(2) li + li {
+  position: relative;
+  margin-top: 2rem;
+}
+article:nth-of-type(2) li + li span::before {
+  content: "";
+  position: absolute;
+  border-top: solid rgba($color: $dark-gray, $alpha: 0.25) 1px;
+  width: 5rem;
+  height: 1px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-0.75rem);
+}

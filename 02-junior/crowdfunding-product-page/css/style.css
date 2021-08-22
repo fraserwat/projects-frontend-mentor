@@ -1,0 +1,229 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+header {
+  background-image: url(/images/image-hero-mobile.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 18rem;
+}
+
+@media screen and (min-width: 800px) {
+  header {
+    background-image: url(/images/image-hero-desktop.jpg);
+  }
+}
+
+header img {
+  height: 1.25rem;
+}
+
+.hamburger {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url(/images/icon-hamburger.svg);
+  background-size: cover;
+}
+
+header nav {
+  display: none;
+}
+
+article:first-of-type {
+  margin-top: -6rem;
+}
+
+article:first-of-type img {
+  height: 3.5rem;
+  margin: -3.5rem auto 1rem auto;
+}
+
+.button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+.button-container button:first-of-type {
+  width: 250px;
+  height: 3rem;
+  background-color: #3cb4ac;
+  border-radius: 1000px;
+  font-weight: 500;
+  color: white;
+}
+
+.bookmark:nth-of-type(2) {
+  height: 3rem;
+  width: 3rem;
+  padding: 0;
+  background-image: url(/images/icon-bookmark.svg);
+  background-size: contain;
+}
+
+.bookmark:nth-of-type(3) {
+  display: none;
+}
+
+article:nth-of-type(2) span {
+  display: block;
+  color: black;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+article:nth-of-type(2) li + li {
+  position: relative;
+  margin-top: 2rem;
+}
+
+article:nth-of-type(2) li + li span::before {
+  content: "";
+  position: absolute;
+  border-top: solid rgba(122, 122, 122, 0.25) 1px;
+  width: 5rem;
+  height: 1px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-0.75rem);
+          transform: translateX(-50%) translateY(-0.75rem);
+}
+
+body {
+  font-family: "Commissioner", sans-serif;
+  background-color: #fafafa;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-bottom: 1.25rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+p {
+  color: #7a7a7a;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  background-repeat: no-repeat;
+}
+
+header,
+main,
+article {
+  padding: 1.5rem;
+}
+
+nav,
+article:first-of-type,
+article:nth-of-type(2) {
+  text-align: center;
+}
+
+article {
+  position: relative;
+  background-color: white;
+  border: 1px solid #ededed;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+/*# sourceMappingURL=style.css.map */

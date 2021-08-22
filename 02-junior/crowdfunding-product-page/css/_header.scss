@@ -1,0 +1,31 @@
+@import "variables";
+
+header {
+  background-image: url(/images/image-hero-mobile.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and (min-width: $desktop-breakpoint) {
+    background-image: url(/images/image-hero-desktop.jpg);
+  }
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  height: 18rem;
+  img {
+    height: 1.25rem;
+  }
+}
+
+.hamburger {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url(/images/icon-hamburger.svg);
+  background-size: cover;
+}
+
+header nav {
+  display: none;
+}
