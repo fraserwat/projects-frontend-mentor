@@ -137,6 +137,10 @@ article:first-of-type img {
 .button-container button:first-of-type {
   width: 250px;
   height: 3rem;
+}
+
+.button-container button:first-of-type,
+.pledge-list__lower button {
   background-color: #3cb4ac;
   border-radius: 1000px;
   font-weight: 500;
@@ -176,6 +180,31 @@ article:nth-of-type(2) li + li span::before {
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-0.75rem);
           transform: translateX(-50%) translateY(-0.75rem);
+}
+
+article:nth-of-type(3) li {
+  padding: 1.5rem;
+  border: 1px solid #c7c7c7;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+article:nth-of-type(3) h3 {
+  font-size: 1rem;
+}
+
+.pledge-list__upper p {
+  color: #3cb4ac;
+}
+
+.pledge-list__lower span {
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.pledge-list__lower button {
+  padding: 1rem 2rem;
 }
 
 body {
