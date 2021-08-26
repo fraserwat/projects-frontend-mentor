@@ -563,6 +563,12 @@ footer li:not(li:first-of-type)::after {
   transition: all 0.3s ease-in-out 0s;
 }
 
+@media screen and (min-width: 800px) {
+  footer li:not(li:first-of-type)::after {
+    right: auto;
+  }
+}
+
 footer li:not(li:first-of-type):hover::after {
   visibility: visible;
   -webkit-transform: scaleX(1);
@@ -596,6 +602,7 @@ footer li:not(li:first-of-type):hover::after {
   }
   footer li:not(li:first-of-type) {
     padding-left: 0;
+    margin-bottom: 0.5rem;
   }
 }
 

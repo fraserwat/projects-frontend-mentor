@@ -43,6 +43,9 @@ footer li:not(li:first-of-type) {
     background-color: white;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out 0s;
+    @media screen and (min-width: $desktop-breakpoint) {
+      right: auto;
+    }
   }
   &:hover::after {
     visibility: visible;
@@ -71,5 +74,6 @@ footer li:not(li:first-of-type) {
   }
   footer li:not(li:first-of-type) {
     padding-left: 0;
+    margin-bottom: 0.5rem;
   }
 }
