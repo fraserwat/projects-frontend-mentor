@@ -6,8 +6,7 @@
 @import "menu-mobile";
 @import "menu-desktop";
 @import "main";
-// @import "_maincontent";
-// @import "_infrastructure";
+@import "_infrastructure";
 @import "footer";
 
 body {
@@ -16,6 +15,11 @@ body {
   @media screen and (min-width: $desktop-breakpoint) {
     text-align: left;
   }
+}
+body,
+article {
+  max-width: 100vw;
+  overflow: visible;
 }
 h1,
 h2,
@@ -40,7 +44,7 @@ h1 {
   font-size: clamp(1.9rem, 4vw, 3rem);
 }
 h2 {
-  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
 }
 h3 {
   font-size: 1.5rem;

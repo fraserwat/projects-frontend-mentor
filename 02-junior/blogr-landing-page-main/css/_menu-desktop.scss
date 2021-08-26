@@ -11,8 +11,17 @@
     display: flex;
     align-items: center;
   }
+  li button {
+    font-size: 1rem;
+  }
+  li:not(li:last-of-type) button {
+    color: white;
+  }
   nav {
     margin-bottom: 0;
+  }
+  .header__container-top {
+    margin-bottom: 5rem;
   }
   .outer:not(.hamburger) {
     // menu container
@@ -63,5 +72,26 @@
   .active.outer .login::before {
     // line between Connect and Login
     display: none;
+  }
+}
+
+// Sorting out menu visuals
+@media screen and (min-width: $desktop-breakpoint) {
+  .nav-menu:not(.outer) {
+    position: absolute;
+    background-color: white;
+    top: 3.5rem;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  .nav-menu:not(.outer) li {
+    cursor: pointer;
+    margin: 0;
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    &:hover {
+      background-color: darken(white, 5%);
+    }
   }
 }

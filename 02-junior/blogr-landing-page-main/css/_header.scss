@@ -17,9 +17,7 @@ header {
   background-size: 250vw;
   background-position: 30%;
   background-repeat: no-repeat;
-  // @TODO: CHANGE BORDER-RADIUS TO A MORE RESPONSIVE VALUE
-  border-radius: 0 0 0 20vw;
-  // @TODO: CHANGE MARGIN BOTTOM TO A MORE RESPONSIVE VALUE
+  border-radius: 0 0 0 clamp(1px, 20vw, 150px);
   margin-bottom: 4rem;
 
   h1,

@@ -1,33 +1,63 @@
 @import "_variables";
 
-.dark-blue-infrastructure {
-  margin-top: 17rem;
+.infrastructure {
+  position: relative;
+  background-color: darken($v-dark-blue, 5%);
+  border-radius: 0 8rem 0 8rem;
+  padding-bottom: 5rem;
+  padding-top: clamp(1px, 50vw, 286px);
+  margin-top: 15rem;
   margin-bottom: 3rem;
 
-  border-radius: 0 25% 0 25%;
-  color: white;
-  background: $bg-gradient-dark;
-
-  background: url("/images/bg-pattern-circles.svg"), $bg-gradient-dark;
+  background-image: url(/images/bg-pattern-circles.svg);
   background-repeat: no-repeat;
-  background-size: 35rem, auto;
-  background-position: fixed;
-  background-position-x: center, center;
-  background-position-y: -12rem, center;
+  background-size: clamp(1px, 125%, 600px);
+  background-position-x: 50%;
+  background-position-y: -10rem;
+}
 
-  .container {
-  }
-  h1 {
-  }
-  p {
-    color: white;
-  }
-  img {
-    position: relative;
-    transform: translateY(-50%);
-  }
-  .section {
-    margin-top: -15rem;
-    margin-bottom: 5rem;
+.infrastructure img {
+  width: clamp(1rem, 90vw, 520px);
+  position: absolute;
+  top: clamp(-240px, -42vw, 1rem);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.infrastructure h2,
+.infrastructure p {
+  color: white;
+}
+.infrastructure h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .infrastructure {
+    margin-top: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    border-radius: 0 6rem 0 6rem;
+    grid-template-areas: "illustration title" "illustration text";
+    grid-template-columns: 1fr 1fr;
+    img {
+      grid-area: illustration;
+      top: 0;
+      left: auto;
+      transform: translate(25%, -27.5%);
+      transform: translate(clamp(1rem, 3vw, 25%), -27.5%);
+    }
+    h2 {
+      grid-area: title;
+    }
+    p {
+      grid-area: text;
+      max-width: 650px;
+    }
+    background-size: 50vw;
+    background-position-x: left;
+    // background-position-y: -20rem;
+    background-position-y: calc(-10rem - 5vw);
   }
 }

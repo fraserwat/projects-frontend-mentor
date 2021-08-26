@@ -1,13 +1,81 @@
 @import "variables";
 
-main h2 {
+main h2,
+main h3,
+article p {
   text-align: center;
+  @media screen and (min-width: $desktop-breakpoint) {
+    text-align: left;
+  }
 }
 article {
   display: grid;
   text-align: center;
-  img {
-    margin-left: auto;
-    margin-right: auto;
+}
+article img {
+  margin-left: auto;
+  margin-right: auto;
+}
+article h2,
+article h3,
+article p {
+  padding: 0 2rem;
+  margin: 1.5rem 0;
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .simple,
+  .future {
+    grid-template-columns: 50% 50%;
+    padding-bottom: 15vw;
+    padding-top: 10vw;
+  }
+  .future {
+    grid-template-areas:
+      "title title"
+      "text illustration";
+  }
+  .future h2 {
+    grid-area: title;
+    text-align: center;
+  }
+  .future__container {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 5vw;
+  }
+  .future__editor {
+    margin-bottom: 5vw;
+  }
+  .simple {
+    grid-template-areas:
+      "illustration simple"
+      "illustration tooling";
+    padding-top: 15vw;
+  }
+  .future picture,
+  .simple picture {
+    grid-area: illustration;
+    align-self: center;
+    max-width: 600px;
+  }
+  .future picture {
+    transform: translateX(15vw) scale(1.5);
+    // max-width: 700px;
+  }
+  .simple picture {
+    transform: translateX(-12vw) scale(1.5);
+  }
+  .simple p {
+    padding-right: 20%;
+    max-width: 700px;
+  }
+  .simple__free-open-simple {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      margin-top: auto;
+      margin-bottom: 0;
+    }
   }
 }
