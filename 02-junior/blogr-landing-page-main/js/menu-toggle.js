@@ -33,6 +33,15 @@ function menuToggle(e) {
 }
 
 function addActiveClass(target) {
+  function removeAllNonOuter(menu) {
+    if (!menu.classList.contains("outer")) {
+      menu.classList.remove("active");
+    }
+  }
+  // We want to close OTHER inner menus
+  [...document.querySelectorAll(".nav-menu")].forEach((nav) =>
+    removeAllNonOuter(nav)
+  );
   target.classList.add("active");
 }
 
