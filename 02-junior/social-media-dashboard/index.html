@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Social Media Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Social Media Dashboard</h1>
+      <p>Total Followers: 23,004</p>
+    </header>
+    <aside>
+      <label for="color-switch">Dark Mode</label>
+      <input
+        type="checkbox"
+        name="dark-mode"
+        id="color-switch"
+        onchange="darkToggle()"
+      />
+    </aside>
+    <main>
+      <article class="kpis">
+        <div class="kpi facebook">
+          <p class="handle">@nathanf</p>
+          <p><span>1987</span> Followers</p>
+          <p class="change up">12 Today</p>
+        </div>
+        <div class="kpi twitter">
+          <p class="handle">@nathanf</p>
+          <p><span>1044</span> Followers</p>
+          <p class="change up">99 Today</p>
+        </div>
+        <div class="kpi instagram">
+          <p class="handle">@realnathanf</p>
+          <p><span>11k</span> Followers</p>
+          <p class="change up">1099 Today</p>
+        </div>
+        <div class="kpi youtube">
+          <p class="handle">Nathan F.</p>
+          <p><span>8239</span> Subscribers</p>
+          <p class="change down">144 Today</p>
+        </div>
+      </article>
+      <article class="kpis-secondary">
+        <h2>Overview - Today</h2>
+        <div class="kpis-secondary__container">
+          <div class="kpi facebook">
+            <h3>Page Views</h3>
+            <p class="stat">87</p>
+            <p class="percent up">3%</p>
+          </div>
+          <div class="kpi facebook">
+            <h3>Likes</h3>
+            <p class="stat">52</p>
+            <p class="percent down">2%</p>
+          </div>
+          <div class="kpi instagram">
+            <h3>Likes</h3>
+            <p class="stat">5362</p>
+            <p class="percent up">2257%</p>
+          </div>
+          <div class="kpi instagram">
+            <h3>Profile Views</h3>
+            <p class="stat">52k</p>
+            <p class="percent up">1375%</p>
+          </div>
+          <div class="kpi twitter">
+            <h3>Retweets</h3>
+            <p class="stat">117</p>
+            <p class="percent up">303%</p>
+          </div>
+          <div class="kpi twitter">
+            <h3>Likes</h3>
+            <p class="stat">507</p>
+            <p class="percent up">553%</p>
+          </div>
+          <div class="kpi youtube">
+            <h3>Likes</h3>
+            <p class="stat">107</p>
+            <p class="percent down">19%</p>
+          </div>
+          <div class="kpi youtube">
+            <h3>Total Views</h3>
+            <p class="stat">1407</p>
+            <p class="percent down">12%</p>
+          </div>
+        </div>
+      </article>
+    </main>
+    <script src="/js/dark-mode.js"></script>
+  </body>
+</html>

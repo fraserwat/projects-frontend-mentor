@@ -1,0 +1,23 @@
+@import "variables";
+@import "reset";
+@import "light-mode";
+@import "dark-mode";
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+header,
+aside,
+main {
+  transition: 200ms ease-in-out;
+}
+
+.up {
+  color: $lime-green;
+  font-weight: 700;
+}
+.down {
+  color: $bright-red;
+  font-weight: 700;
+}

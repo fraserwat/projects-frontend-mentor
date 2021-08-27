@@ -1,0 +1,25 @@
+@import "variables";
+
+header,
+aside {
+  background-color: $very-pale-blue;
+}
+main {
+  background-color: $white;
+}
+.kpi {
+  background-color: $light-grayish-blue;
+}
+
+h1,
+h2,
+.kpi span,
+.kpi .stat {
+  color: $very-dark-blue;
+}
+
+header p,
+label,
+.kpi p {
+  color: $dark-grayish-blue;
+}

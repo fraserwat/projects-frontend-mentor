@@ -1,0 +1,32 @@
+// ### Primary
+
+$lime-green: hsl(163, 72%, 41%); // - Lime Green
+$bright-red: hsl(356, 69%, 56%); // - Bright Red
+
+// - Facebook: hsl(208, 92%, 53%)
+// - Twitter: hsl(203, 89%, 53%)
+// - Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)
+// - YouTube: hsl(348, 97%, 39%)
+
+// #### Dark Theme
+// - Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%)
+// #### Light Theme
+// - Toggle: hsl(230, 22%, 74%)
+
+// ### Neutral
+
+// #### Dark Theme
+
+$darkmode-dark-blue: hsl(230, 17%, 14%); // - Very Dark Blue (BG)
+$darkmode-dark-blue-top: hsl(232, 19%, 15%); // - Very Dark Blue (Top BG)
+// - Dark Desaturated Blue (Card BG): hsl(228, 28%, 20%)
+// - Desaturated Blue (Text): hsl(228, 34%, 66%)
+// - White (Text): hsl(0, 0%, 100%)
+
+// #### Light Theme
+
+$white: hsl(0, 0%, 100%); // - White (BG)
+$very-pale-blue: hsl(225, 100%, 98%); // - Very Pale Blue (Top BG Pattern)
+$light-grayish-blue: hsl(227, 47%, 96%); // - Light Grayish Blue (Card BG)
+$dark-grayish-blue: hsl(228, 12%, 44%); // - Dark Grayish Blue (Text)
+$very-dark-blue: hsl(230, 17%, 14%); // - Very Dark Blue (Text)
