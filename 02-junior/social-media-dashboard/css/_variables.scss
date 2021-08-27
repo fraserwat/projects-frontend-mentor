@@ -3,15 +3,22 @@
 $lime-green: hsl(163, 72%, 41%); // - Lime Green
 $bright-red: hsl(356, 69%, 56%); // - Bright Red
 
-// - Facebook: hsl(208, 92%, 53%)
-// - Twitter: hsl(203, 89%, 53%)
-// - Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)
-// - YouTube: hsl(348, 97%, 39%)
+$facebook: hsl(208, 92%, 53%); // - Facebook
+$twitter: hsl(203, 89%, 53%); // - Twitter
+$instagram: linear-gradient(
+  to right,
+  hsl(37, 97%, 70%),
+  hsl(329, 70%, 58%)
+); // - Instagram
+$youtube: hsl(348, 97%, 39%); // - YouTube
 
 // #### Dark Theme
-// - Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%)
-// #### Light Theme
-// - Toggle: hsl(230, 22%, 74%)
+$toggle: hsl(230, 22%, 74%); // - Toggle
+$toggle-dark: linear-gradient(
+  to right,
+  hsl(210, 78%, 56%),
+  hsl(146, 68%, 55%)
+); // - Toggle Dark
 
 // ### Neutral
 
@@ -19,8 +26,9 @@ $bright-red: hsl(356, 69%, 56%); // - Bright Red
 
 $darkmode-dark-blue: hsl(230, 17%, 14%); // - Very Dark Blue (BG)
 $darkmode-dark-blue-top: hsl(232, 19%, 15%); // - Very Dark Blue (Top BG)
-// - Dark Desaturated Blue (Card BG): hsl(228, 28%, 20%)
-// - Desaturated Blue (Text): hsl(228, 34%, 66%)
+$darkmode-desat-blue: hsl(228, 28%, 20%); // - Dark Desaturated Blue (Card BG)
+$darkmode-desat-text: hsl(228, 34%, 66%); // - Desaturated Blue (Text)
+
 // - White (Text): hsl(0, 0%, 100%)
 
 // #### Light Theme

@@ -4,15 +4,15 @@ header,
 aside {
   background-color: $very-pale-blue;
 }
-main {
-  background-color: $white;
-}
 .kpi {
   background-color: $light-grayish-blue;
 }
 
+* {
+  color: $dark-grayish-blue;
+}
+
 h1,
-h2,
 .kpi span,
 .kpi .stat {
   color: $very-dark-blue;
@@ -20,6 +20,7 @@ h2,
 
 header p,
 label,
-.kpi p {
+h2,
+h3 {
   color: $dark-grayish-blue;
 }

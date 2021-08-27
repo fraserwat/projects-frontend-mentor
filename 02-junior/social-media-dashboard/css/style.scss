@@ -1,5 +1,7 @@
 @import "variables";
 @import "reset";
+@import "toggle";
+@import "kpis";
 @import "light-mode";
 @import "dark-mode";
 
@@ -7,17 +9,71 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+main,
 header,
-aside,
-main {
-  transition: 200ms ease-in-out;
+aside {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
+h1 {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+header p {
+  font-weight: 700;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid lighten($dark-grayish-blue, 5%);
+}
+
+aside {
+  padding-top: 1rem;
+  padding-bottom: 3.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  p {
+    color: $dark-grayish-blue;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+main {
+  margin-top: -2rem;
+}
+
+* {
+  transition: 250ms ease-in-out;
+}
+
+.kpi {
+  display: flex;
+  flex-direction: column;
+}
+
+.up,
+.down {
+  font-weight: 700;
+  position: relative;
+  margin: auto;
+  &::before {
+    position: absolute;
+    transform: translate(-0.75rem, -0.2rem);
+  }
+}
 .up {
   color: $lime-green;
-  font-weight: 700;
+  &::before {
+    content: url(/images/icon-up.svg);
+  }
 }
 .down {
   color: $bright-red;
-  font-weight: 700;
+  &::before {
+    content: url(/images/icon-down.svg);
+  }
+}
+.kpis-secondary {
+  padding-top: 2.5rem;
 }
