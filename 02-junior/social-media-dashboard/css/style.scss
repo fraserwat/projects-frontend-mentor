@@ -7,6 +7,10 @@
 
 body {
   font-family: "Inter", sans-serif;
+  @media screen and (min-width: $desktop-breakpoint) {
+    display: grid;
+    grid-template-areas: "title toggle" "b b";
+  }
 }
 
 main,
@@ -15,20 +19,38 @@ aside {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+@media screen and (min-width: $desktop-breakpoint) {
+  header *,
+  aside * {
+    transform: translateY(1rem);
+  }
+  aside p {
+    padding-top: 1rem;
+  }
+  header,
+  aside,
+  main {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+}
 
 h1 {
-  font-size: 1.5rem;
+  // font-size: 1.5rem;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
   padding-top: 1rem;
 }
 header p {
   font-weight: 700;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid lighten($dark-grayish-blue, 5%);
+  @media screen and (min-width: $desktop-breakpoint) {
+    border: none;
+  }
 }
 
 aside {
   padding-top: 1rem;
-  padding-bottom: 3.5rem;
   font-weight: 700;
   display: flex;
   justify-content: space-between;
@@ -36,20 +58,25 @@ aside {
     color: $dark-grayish-blue;
     margin-top: auto;
     margin-bottom: auto;
+    padding-bottom: 3.5rem;
+    @media screen and (min-width: $desktop-breakpoint) {
+      padding-bottom: 0;
+      margin: 0;
+    }
   }
 }
 
 main {
   margin-top: -2rem;
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin-top: -6rem;
+  }
+  padding-bottom: 3rem;
+  grid-area: b;
 }
 
 * {
   transition: 250ms ease-in-out;
-}
-
-.kpi {
-  display: flex;
-  flex-direction: column;
 }
 
 .up,

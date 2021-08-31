@@ -1,3 +1,4 @@
+$desktop-breakpoint: 950px;
 // ### Primary
 
 $lime-green: hsl(163, 72%, 41%); // - Lime Green
@@ -20,16 +21,12 @@ $toggle-dark: linear-gradient(
   hsl(146, 68%, 55%)
 ); // - Toggle Dark
 
-// ### Neutral
-
 // #### Dark Theme
 
 $darkmode-dark-blue: hsl(230, 17%, 14%); // - Very Dark Blue (BG)
 $darkmode-dark-blue-top: hsl(232, 19%, 15%); // - Very Dark Blue (Top BG)
 $darkmode-desat-blue: hsl(228, 28%, 20%); // - Dark Desaturated Blue (Card BG)
 $darkmode-desat-text: hsl(228, 34%, 66%); // - Desaturated Blue (Text)
-
-// - White (Text): hsl(0, 0%, 100%)
 
 // #### Light Theme
 
