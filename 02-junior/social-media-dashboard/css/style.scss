@@ -64,6 +64,13 @@ aside {
       margin: 0;
     }
   }
+  @media screen and (min-width: $desktop-breakpoint) {
+    justify-content: flex-end;
+    p {
+      margin-right: 3rem;
+      padding-top: calc(1.15rem);
+    }
+  }
 }
 
 main {

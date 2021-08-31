@@ -456,6 +456,18 @@ aside p {
   }
 }
 
+@media screen and (min-width: 950px) {
+  aside {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  aside p {
+    margin-right: 3rem;
+    padding-top: calc(1.15rem);
+  }
+}
+
 main {
   margin-top: -2rem;
   padding-bottom: 3rem;
