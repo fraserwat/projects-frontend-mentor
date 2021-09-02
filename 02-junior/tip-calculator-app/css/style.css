@@ -244,7 +244,7 @@ body {
           flex-direction: column;
 }
 
-h1 {
+header {
   margin: 0 auto;
   margin-top: auto;
   margin-bottom: clamp(2.5rem, 9vw, 5.5rem);
