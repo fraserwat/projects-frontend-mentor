@@ -1,0 +1,75 @@
+@import "variables";
+
+.calculator > label {
+  font-weight: bold;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+}
+
+.calculator > input,
+#custom {
+  width: 100%;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: right;
+  color: lighten($very-dark-cyan, 10%);
+  background-color: $very-light-grayish-cyan;
+  padding-right: 10px;
+}
+input::placeholder {
+  opacity: 0.5;
+}
+
+.calculator > input:not(.calculator__tip-options) {
+  position: relative;
+  margin-bottom: 1rem;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 1rem;
+}
+input#bill {
+  background-image: url(/images/icon-dollar.svg);
+}
+input#people {
+  background-image: url(/images/icon-person.svg);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.calculator__tip-options {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  grid-auto-rows: 1fr;
+  margin-bottom: 2rem;
+}
+
+// GRID BUTTONS
+
+.calculator__tip-options * {
+  font-weight: bold;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.calculator__tip-options *:not(input) {
+  color: white;
+  background-color: $very-dark-cyan;
+  text-align: center;
+  font-size: 1.5rem;
+}
+input[type="radio"] + label {
+  padding: 0.25rem 0;
+}
+input[type="radio"]:checked + label {
+  color: $very-dark-cyan;
+  background-color: $strong-cyan;
+}
+.calculator__tip-options input {
+  width: 100%;
+  background-color: $light-grayish-cyan;
+  border: none;
+}

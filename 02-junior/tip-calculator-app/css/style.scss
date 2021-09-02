@@ -1,7 +1,10 @@
 @import "reset";
 @import "variables";
+@import "calculator";
+@import "results";
 
-body {
+#app {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: "Space Mono", monospace;
@@ -16,19 +19,22 @@ h1 {
 
 main {
   margin: 0;
-  // @TODO: GET RID OF margin-bottom: ITS TEMP
   background-color: $white;
   padding: 1.5rem;
   border-radius: 1.25rem 1.25rem 0 0;
-}
 
-main {
-}
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  max-width: 800px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 
-form,
-section {
-  display: inline-block;
-  max-width: 350px;
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin-bottom: auto;
+    border-radius: 1.25rem;
+  }
 }
 
 section {
@@ -40,45 +46,4 @@ section {
 form label {
   color: darken($grayish-cyan, 25%);
   display: block;
-}
-.calculator__tip-options label {
-  display: inline-block;
-}
-
-.results {
-  overflow: hidden;
-  padding: 1.5rem;
-}
-
-.results__amount,
-.results__total {
-  display: flex;
-  justify-content: space-between;
-  h3 {
-    font-size: 1rem;
-    color: $white;
-  }
-  p {
-    color: $grayish-cyan;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-  }
-}
-.results__amount .results__amount-number,
-.results__total .results__total-number {
-  color: $strong-cyan;
-  font-weight: bold;
-  font-size: clamp(2rem, 9vw, 2.75rem);
-}
-
-.results__reset {
-  width: 100%;
-  border: none;
-  border-radius: 5px;
-  color: $very-dark-cyan;
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding: 0.5rem 0;
-  background-color: $strong-cyan;
-  text-transform: uppercase;
 }

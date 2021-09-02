@@ -23,57 +23,66 @@
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    <h1><img src="/images/logo.svg" alt="Splitter" /></h1>
-    <main>
-      <form class="calculator">
-        <label for="bill">Bill</label>
-        <input type="number" name="bill" id="bill" />
-        <label for="tip">Select Tip %</label>
-        <div class="calculator__tip-options">
-          <div>
-            <input type="radio" id="5" name="tip" value="5%" checked />
-            <label for="5">5%</label>
+    <div id="app">
+      <h1><img src="/images/logo.svg" alt="Splitter" /></h1>
+      <main>
+        <form class="calculator">
+          <label for="bill">Bill</label>
+          <input type="number" name="bill" id="bill" placeholder="0.00" />
+          <label for="tip">Select Tip %</label>
+          <div class="calculator__tip-options">
+            <div>
+              <input type="radio" id="5" name="tip" value="5%" />
+              <label for="5">5%</label>
+            </div>
+            <div>
+              <input type="radio" id="10" name="tip" value="10%" checked />
+              <label for="10">10%</label>
+            </div>
+            <div>
+              <input type="radio" id="15" name="tip" value="15%" />
+              <label for="15">15%</label>
+            </div>
+            <div>
+              <input type="radio" id="25" name="tip" value="25%" />
+              <label for="25">25%</label>
+            </div>
+            <div>
+              <input type="radio" id="50" name="tip" value="50%" />
+              <label for="50">50%</label>
+            </div>
+            <div>
+              <input
+                type="number"
+                name="tip"
+                id="custom"
+                placeholder="Custom"
+              />
+            </div>
           </div>
-          <div>
-            <input type="radio" id="10" name="tip" value="10%" checked />
-            <label for="10">10%</label>
+          <label for="people">Number of People</label>
+          <input type="number" name="people" id="people" placeholder="1" />
+        </form>
+        <section class="results">
+          <div class="results__amount">
+            <div class="results__amount-text">
+              <h3>Tip Amount</h3>
+              <p>/ person</p>
+            </div>
+            <p class="results__amount-number">£0.00</p>
           </div>
-          <div>
-            <input type="radio" id="15" name="tip" value="15%" checked />
-            <label for="15">15%</label>
+          <div class="results__total">
+            <div class="results__total-text">
+              <h3>Total</h3>
+              <p>/ person</p>
+            </div>
+            <p class="results__total-number">£0.00</p>
           </div>
-          <div>
-            <input type="radio" id="25" name="tip" value="25%" checked />
-            <label for="25">25%</label>
-          </div>
-          <div>
-            <input type="radio" id="50" name="tip" value="50%" checked />
-            <label for="50">50%</label>
-          </div>
-          <div>
-            <input type="number" name="tip" id="custom" placeholder="Custom" />
-          </div>
-        </div>
-        <label for="people">Number of People</label>
-        <input type="number" name="people" id="people" />
-      </form>
-      <section class="results">
-        <div class="results__amount">
-          <div class="results__amount-text">
-            <h3>Tip Amount</h3>
-            <p>/ person</p>
-          </div>
-          <p class="results__amount-number">£4.27</p>
-        </div>
-        <div class="results__total">
-          <div class="results__total-text">
-            <h3>Total</h3>
-            <p>/ person</p>
-          </div>
-          <p class="results__total-number">£0.00</p>
-        </div>
-        <button class="results__reset">Reset</button>
-      </section>
-    </main>
+          <button class="results__reset">Reset</button>
+        </section>
+      </main>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="vue/app.js"></script>
   </body>
 </html>

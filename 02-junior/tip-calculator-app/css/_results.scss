@@ -1,0 +1,44 @@
+@import "variables";
+
+.results {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+.results__amount,
+.results__total {
+  display: flex;
+  justify-content: space-between;
+  h3 {
+    font-size: 1rem;
+    color: $white;
+  }
+  p {
+    color: $grayish-cyan;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+}
+.results__amount .results__amount-number,
+.results__total .results__total-number {
+  color: $strong-cyan;
+  font-weight: bold;
+  font-size: clamp(2rem, 9vw, 2.75rem);
+}
+
+.results__reset {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  color: $very-dark-cyan;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  background-color: $strong-cyan;
+  text-transform: uppercase;
+  @media screen and (min-width: 275px * 2) {
+    margin-top: auto;
+  }
+}
