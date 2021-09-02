@@ -228,6 +228,11 @@ input[type="radio"]:checked + label {
   }
 }
 
+body {
+  font-family: "Space Mono", monospace;
+  background-color: #c5e4e7;
+}
+
 #app {
   min-height: 100vh;
   display: -webkit-box;
@@ -237,8 +242,6 @@ input[type="radio"]:checked + label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: "Space Mono", monospace;
-  background-color: #c5e4e7;
 }
 
 h1 {

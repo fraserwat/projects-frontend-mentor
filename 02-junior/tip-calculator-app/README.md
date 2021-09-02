@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/my-first-vue-app-UMMlGx9dL](https://www.frontendmentor.io/solutions/my-first-vue-app-UMMlGx9dL)
 - Live Site URL: [https://tip-calculator-fraser.vercel.app/](https://tip-calculator-fraser.vercel.app/)
 
 ## My process
