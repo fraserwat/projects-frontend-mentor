@@ -190,8 +190,8 @@ input[type="radio"]:checked + label {
           justify-content: space-between;
 }
 
-.results__amount h3,
-.results__total h3 {
+.results__amount h2,
+.results__total h2 {
   font-size: 1rem;
   color: white;
 }
