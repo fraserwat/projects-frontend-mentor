@@ -28,27 +28,69 @@
       <main>
         <form class="calculator">
           <label for="bill">Bill</label>
-          <input type="number" name="bill" id="bill" placeholder="0.00" />
+          <input
+            type="number"
+            name="bill"
+            id="bill"
+            placeholder="0.00"
+            v-model="bill"
+          />
           <label for="tip">Select Tip %</label>
           <div class="calculator__tip-options">
             <div>
-              <input type="radio" id="5" name="tip" value="5%" />
+              <input
+                type="radio"
+                id="5"
+                name="tip"
+                value="5"
+                v-model="tipPercent"
+                @click="resetTipField"
+              />
               <label for="5">5%</label>
             </div>
             <div>
-              <input type="radio" id="10" name="tip" value="10%" checked />
+              <input
+                type="radio"
+                id="10"
+                name="tip"
+                value="10"
+                v-model="tipPercent"
+                @click="resetTipField"
+                checked
+              />
               <label for="10">10%</label>
             </div>
             <div>
-              <input type="radio" id="15" name="tip" value="15%" />
+              <input
+                type="radio"
+                id="15"
+                name="tip"
+                value="15"
+                v-model="tipPercent"
+                @click="resetTipField"
+              />
               <label for="15">15%</label>
             </div>
             <div>
-              <input type="radio" id="25" name="tip" value="25%" />
+              <input
+                type="radio"
+                id="25"
+                name="tip"
+                value="25"
+                v-model="tipPercent"
+                @click="resetTipField"
+              />
               <label for="25">25%</label>
             </div>
             <div>
-              <input type="radio" id="50" name="tip" value="50%" />
+              <input
+                type="radio"
+                id="50"
+                name="tip"
+                value="50"
+                v-model="tipPercent"
+                @click="resetTipField"
+              />
               <label for="50">50%</label>
             </div>
             <div>
@@ -57,11 +99,18 @@
                 name="tip"
                 id="custom"
                 placeholder="Custom"
+                v-model="tipPercentDisplay"
               />
             </div>
           </div>
           <label for="people">Number of People</label>
-          <input type="number" name="people" id="people" placeholder="1" />
+          <input
+            type="number"
+            name="people"
+            id="people"
+            placeholder="1"
+            v-model="people"
+          />
         </form>
         <section class="results">
           <div class="results__amount">
@@ -69,16 +118,16 @@
               <h3>Tip Amount</h3>
               <p>/ person</p>
             </div>
-            <p class="results__amount-number">£0.00</p>
+            <p class="results__amount-number">£{{ tipAmount }}</p>
           </div>
           <div class="results__total">
             <div class="results__total-text">
               <h3>Total</h3>
               <p>/ person</p>
             </div>
-            <p class="results__total-number">£0.00</p>
+            <p class="results__total-number">£{{ total }}</p>
           </div>
-          <button class="results__reset">Reset</button>
+          <button class="results__reset" @click.prevent="reset()">Reset</button>
         </section>
       </main>
     </div>

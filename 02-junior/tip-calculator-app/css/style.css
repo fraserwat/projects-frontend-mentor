@@ -264,7 +264,7 @@ main {
           transform: translateX(-50%);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 620px) {
   main {
     margin-bottom: auto;
     border-radius: 1.25rem;
