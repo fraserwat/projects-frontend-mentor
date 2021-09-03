@@ -9,11 +9,17 @@ Vue.createApp({
   },
   computed: {
     tipAmount() {
+      if (this.bill <= 0 || this.people <= 0) {
+        return Number(0).toFixed(2);
+      }
       const amount = (this.bill || 0) * (this.tipPercent / 100),
         people = this.people || 1;
       return (amount / people).toFixed(2);
     },
     total() {
+      if (this.bill <= 0 || this.people <= 0) {
+        return Number(0).toFixed(2);
+      }
       const amount = (this.bill || 0) + Number(this.tipAmount),
         people = this.people || 1;
       return Number(amount / people).toFixed(2);

@@ -127,7 +127,9 @@ input#people {
 }
 
 input[type="radio"] {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
 }
 
 .calculator__tip-options {
@@ -245,6 +247,7 @@ body {
 }
 
 header {
+  padding-top: 2.5rem;
   margin: 0 auto;
   margin-top: auto;
   margin-bottom: clamp(2.5rem, 9vw, 5.5rem);

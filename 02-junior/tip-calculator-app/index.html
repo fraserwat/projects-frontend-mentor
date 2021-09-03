@@ -35,6 +35,7 @@
             name="bill"
             id="bill"
             placeholder="0.00"
+            oninput="if(this.value < 0) this.value = 0;"
             v-model="bill"
           />
           <label for="custom">Select Tip %</label>
@@ -101,6 +102,8 @@
                 name="tip"
                 id="custom"
                 placeholder="Custom"
+                oninput="if(this.value < 0) this.value = 0;"
+                min="0"
                 v-model="tipPercentDisplay"
               />
             </div>
@@ -111,6 +114,8 @@
             name="people"
             id="people"
             placeholder="1"
+            oninput="if(this.value < 0) this.value = 0;"
+            min="0"
             v-model="people"
           />
         </form>
@@ -129,7 +134,13 @@
             </div>
             <p class="results__total-number">£{{ total }}</p>
           </div>
-          <button class="results__reset" @click.prevent="reset()">Reset</button>
+          <button
+            class="results__reset"
+            @click.prevent="reset()"
+            aria-label="Reset calculator"
+          >
+            Reset
+          </button>
         </section>
       </main>
     </div>

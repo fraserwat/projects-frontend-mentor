@@ -36,7 +36,9 @@ input#people {
 }
 
 input[type="radio"] {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
 }
 
 .calculator__tip-options {
