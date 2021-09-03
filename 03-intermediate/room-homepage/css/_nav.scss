@@ -27,12 +27,3 @@ nav button {
 .hamburger__menu {
   display: none;
 }
-
-.active.slides__slide picture::after {
-  position: absolute;
-  content: "";
-  border: rgba($color: #000000, $alpha: 1);
-  height: 2rem;
-  width: 2rem;
-  right: 0;
-}

@@ -111,22 +111,45 @@ nav button {
   display: none;
 }
 
-.active.slides__slide picture::after {
-  position: absolute;
-  content: "";
-  border: black;
-  height: 2rem;
-  width: 2rem;
-  right: 0;
-}
-
 .slides__slide:not(.active) {
   display: none;
 }
 
 .slides__slide picture {
   margin-bottom: 4rem;
-  width: 100vw;
+  position: relative;
+  z-index: 0;
+}
+
+.slides__slide picture > img {
+  width: 100%;
+}
+
+.active.slides__slide picture > button {
+  position: absolute;
+  margin: 0;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: 25%;
+  background-position-y: center;
+  background-position-x: 45%;
+  width: 5rem;
+  height: 5rem;
+  bottom: 0;
+}
+
+.active.slides__slide picture > button:hover, .active.slides__slide picture > button:active {
+  background-color: #333333;
+}
+
+.active.slides__slide picture > button:first-of-type {
+  right: 5rem;
+  background-image: url(/images/icon-angle-left.svg);
+}
+
+.active.slides__slide picture > button:last-of-type {
+  right: 0;
+  background-image: url(/images/icon-angle-right.svg);
 }
 
 h1,

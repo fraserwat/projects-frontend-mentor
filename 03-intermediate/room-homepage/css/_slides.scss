@@ -6,7 +6,38 @@
 
 .slides__slide picture {
   margin-bottom: 4rem;
-  width: 100vw;
+  position: relative;
+  z-index: 0;
+}
+.slides__slide picture > img {
+  width: 100%;
+}
+
+$button-size: 5rem;
+
+.active.slides__slide picture > button {
+  position: absolute;
+  margin: 0;
+  background-color: rgba($color: #000000, $alpha: 1);
+  background-repeat: no-repeat;
+  background-size: 25%;
+  background-position-y: center;
+  background-position-x: 45%;
+  width: $button-size;
+  height: $button-size;
+  bottom: 0;
+  &:hover,
+  &:active {
+    background-color: lighten(#000000, 20%);
+  }
+}
+.active.slides__slide picture > button:first-of-type {
+  right: $button-size;
+  background-image: url(/images/icon-angle-left.svg);
+}
+.active.slides__slide picture > button:last-of-type {
+  right: 0;
+  background-image: url(/images/icon-angle-right.svg);
 }
 
 h1,

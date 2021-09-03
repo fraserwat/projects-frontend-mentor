@@ -36,13 +36,15 @@
     </nav>
     <main>
       <section class="slides">
-        <div class="slides__slide">
+        <div class="slides__slide active">
           <picture>
             <source
-              media="(min-width:800px)"
+              media="(min-width:700px)"
               srcset="/images/desktop-image-hero-1.jpg"
             />
             <img src="/images/mobile-image-hero-1.jpg" alt="Chair by a table" />
+            <button aria-label="Previous slide" onclick="prevSlide()"></button>
+            <button aria-label="Next slide" onclick="nextSlide()"></button>
           </picture>
           <h1>Discover innovative ways to decorate</h1>
           <p>
@@ -56,16 +58,18 @@
             Shop now <img src="/images/icon-arrow.svg" alt="Three chairs" />
           </button>
         </div>
-        <div class="slides__slide active">
+        <div class="slides__slide">
           <picture>
             <source
-              media="(min-width:800px)"
+              media="(min-width:700px)"
               srcset="/images/desktop-image-hero-2.jpg"
             />
             <img
               src="/images/mobile-image-hero-2.jpg"
               alt="Monochrome chair photo"
             />
+            <button aria-label="Previous slide" onclick="prevSlide()"></button>
+            <button aria-label="Next slide" onclick="nextSlide()"></button>
           </picture>
           <h2>We are available all across the globe</h2>
           <p>
@@ -81,10 +85,12 @@
         <div class="slides__slide">
           <picture>
             <source
-              media="(min-width:800px)"
+              media="(min-width:700px)"
               srcset="/images/desktop-image-hero-3.jpg"
             />
             <img src="/images/mobile-image-hero-3.jpg" alt="" />
+            <button aria-label="Previous slide" onclick="prevSlide()"></button>
+            <button aria-label="Next slide" onclick="nextSlide()"></button>
           </picture>
           <h2>Manufactured with the best materials</h2>
           <p>
@@ -118,5 +124,6 @@
         <img src="/images/image-about-light.jpg" alt="A chair" />
       </section>
     </main>
+    <script src="/js/slide-cycle.js"></script>
   </body>
 </html>
