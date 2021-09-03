@@ -1,0 +1,64 @@
+@import "variables";
+@media screen and (min-width: 1000px) {
+  .slides__slide {
+    display: grid;
+    grid-auto-columns: 6fr 4fr;
+    grid-template-areas: "pic txt";
+  }
+  .slides__slide > picture {
+    grid-area: pic;
+  }
+  .slides__slide > picture > img {
+    object-fit: cover;
+    height: 100%;
+  }
+  .slides__text {
+    grid-area: txt;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  button.shop-now {
+    margin: 0 2.5rem;
+  }
+  .slides__text h1 {
+    font-size: 3vw;
+  }
+  .slides__text p {
+    margin: 1.5rem 0 1.5rem 2.5rem;
+    padding-right: 2vw;
+  }
+  .slides__slide picture {
+    margin-bottom: 0;
+  }
+}
+
+// ABOUT SECTION
+@media screen and (min-width: $desktop-breakpoint) {
+  .about {
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    grid-template-areas: "about img1";
+  }
+  .about img:last-of-type {
+    display: none;
+  }
+  .about img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .about__middle {
+    grid-area: about;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .about {
+    grid-auto-columns: 30% 40% 30%;
+    grid-template-areas: "img1 about img2";
+  }
+  .about img:first-of-type {
+    grid-area: img1;
+  }
+  .about img:last-of-type {
+    display: inline-block;
+  }
+}

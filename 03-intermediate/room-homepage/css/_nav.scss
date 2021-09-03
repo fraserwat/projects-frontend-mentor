@@ -1,16 +1,21 @@
 @import "variables";
 
-nav {
-  padding: 2.5rem 1.5rem;
+header,
+.hamburger__menu {
+  padding: 2.25rem 1.5rem;
   position: absolute;
   display: flex;
-  flex-direction: row-reverse;
   img {
+    padding-top: 0.5rem;
     position: absolute;
     width: auto;
     left: 100vw;
-    transform: translateX(calc(-50vw - 2rem)) translateY(0.5rem);
+    transform: translateX(calc(-50vw - 2rem)) scale(1.4);
   }
+}
+header {
+  z-index: 2;
+  flex-direction: row-reverse;
 }
 
 nav button {
@@ -23,7 +28,42 @@ nav button {
   background-position: center;
   background-size: contain;
 }
+.hamburger__menu > li button {
+  background-image: url(/images/icon-close.svg);
+  background-size: 75%;
+  background-position: center center;
+}
+
+.hamburger__menu:not(.active) {
+  display: none;
+}
 
 .hamburger__menu {
-  display: none;
+  display: flex;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  top: 0;
+  list-style: none;
+  background-color: white;
+  width: 100vw;
+}
+.hamburger__menu li {
+  margin: auto 3vw;
+  a {
+    text-decoration: none;
+    color: black;
+    text-transform: lowercase;
+    font-weight: bold;
+    // font-size: clamp(.75rem, );
+    // font-size: 3vw;
+    font-size: clamp(0.75rem, 4vw, 1.1rem);
+  }
+}
+.hamburger__menu li:first-of-type {
+  display: flex;
+  margin-right: auto;
+  margin-left: 0;
+  margin-top: auto;
+  margin-bottom: auto;
 }

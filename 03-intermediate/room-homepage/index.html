@@ -24,16 +24,19 @@
     <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
-    <nav>
+    <header>
       <img src="/images/logo.svg" alt="Room logo" />
-      <button class="hamburger"></button>
-      <ul class="hamburger__menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <button class="hamburger"></button>
+        <ul class="hamburger__menu">
+          <li><button class="hamburger"></button></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <section class="slides">
         <div class="slides__slide active">
@@ -46,17 +49,19 @@
             <button aria-label="Previous slide" onclick="prevSlide()"></button>
             <button aria-label="Next slide" onclick="nextSlide()"></button>
           </picture>
-          <h1>Discover innovative ways to decorate</h1>
-          <p>
-            We provide unmatched quality, comfort, and style for property owners
-            across the country. Our experts combine form and function in
-            bringing your vision to life. Create a room in your own style with
-            our collection and make your property a reflection of you and what
-            you love.
-          </p>
-          <button class="shop-now">
-            Shop now <img src="/images/icon-arrow.svg" alt="Three chairs" />
-          </button>
+          <div class="slides__text">
+            <h1>Discover innovative ways to decorate</h1>
+            <p>
+              We provide unmatched quality, comfort, and style for property
+              owners across the country. Our experts combine form and function
+              in bringing your vision to life. Create a room in your own style
+              with our collection and make your property a reflection of you and
+              what you love.
+            </p>
+            <button class="shop-now">
+              Shop now <img src="/images/icon-arrow.svg" alt="Three chairs" />
+            </button>
+          </div>
         </div>
         <div class="slides__slide">
           <picture>
@@ -71,16 +76,19 @@
             <button aria-label="Previous slide" onclick="prevSlide()"></button>
             <button aria-label="Next slide" onclick="nextSlide()"></button>
           </picture>
-          <h2>We are available all across the globe</h2>
-          <p>
-            With stores all over the world, it's easy for you to find furniture
-            for your home or place of business. Locally, we’re in most major
-            cities throughout the country. Find the branch nearest you using our
-            store locator. Any questions? Don't hesitate to contact us today.
-          </p>
-          <button class="shop-now">
-            Shop now <img src="/images/icon-arrow.svg" alt="" />
-          </button>
+          <div class="slides__text">
+            <h2>We are available all across the globe</h2>
+            <p>
+              With stores all over the world, it's easy for you to find
+              furniture for your home or place of business. Locally, we’re in
+              most major cities throughout the country. Find the branch nearest
+              you using our store locator. Any questions? Don't hesitate to
+              contact us today.
+            </p>
+            <button class="shop-now">
+              Shop now <img src="/images/icon-arrow.svg" alt="" />
+            </button>
+          </div>
         </div>
         <div class="slides__slide">
           <picture>
@@ -92,17 +100,20 @@
             <button aria-label="Previous slide" onclick="prevSlide()"></button>
             <button aria-label="Next slide" onclick="nextSlide()"></button>
           </picture>
-          <h2>Manufactured with the best materials</h2>
-          <p>
-            Our modern furniture store provide a high level of quality. Our
-            company has invested in advanced technology to ensure that every
-            product is made as perfect and as consistent as possible. With three
-            decades of experience in this industry, we understand what customers
-            want for their home and office. Shop now About our furniture
-          </p>
-          <button class="shop-now">
-            Shop now <img src="/images/icon-arrow.svg" alt="" />
-          </button>
+          <div class="slides__text">
+            <h2>Manufactured with the best materials</h2>
+            <p>
+              Our modern furniture store provide a high level of quality. Our
+              company has invested in advanced technology to ensure that every
+              product is made as perfect and as consistent as possible. With
+              three decades of experience in this industry, we understand what
+              customers want for their home and office. Shop now About our
+              furniture
+            </p>
+            <button class="shop-now">
+              Shop now <img src="/images/icon-arrow.svg" alt="" />
+            </button>
+          </div>
         </div>
       </section>
       <section class="about">
@@ -125,5 +136,6 @@
       </section>
     </main>
     <script src="/js/slide-cycle.js"></script>
+    <script src="/js/menu.js"></script>
   </body>
 </html>
