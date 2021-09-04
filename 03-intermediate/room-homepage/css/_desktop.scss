@@ -7,7 +7,7 @@
   }
   .slides__slide > picture {
     grid-area: pic;
-    height: 36rem;
+    min-height: 36rem;
   }
   .slides__slide > picture > img {
     object-fit: cover;
@@ -21,6 +21,9 @@
   }
   button.shop-now {
     margin: 0 2.5rem;
+    &:hover {
+      opacity: 0.5;
+    }
   }
   .slides__text h1,
   .slides__text h2 {
