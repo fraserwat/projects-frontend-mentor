@@ -7,6 +7,7 @@
   }
   .slides__slide > picture {
     grid-area: pic;
+    height: 36rem;
   }
   .slides__slide > picture > img {
     object-fit: cover;
@@ -14,16 +15,20 @@
   }
   .slides__text {
     grid-area: txt;
-    margin-top: auto;
+    margin-top: 5rem;
     margin-bottom: auto;
+    min-width: 520px;
   }
   button.shop-now {
     margin: 0 2.5rem;
   }
-  .slides__text h1 {
-    font-size: 3vw;
+  .slides__text h1,
+  .slides__text h2 {
+    font-size: 2.25rem;
   }
   .slides__text p {
+    // font-size: 0.95vw;
+    // line-height: 1.75vw;
     margin: 1.5rem 0 1.5rem 2.5rem;
     padding-right: 2vw;
   }
@@ -60,5 +65,19 @@
   }
   .about img:last-of-type {
     display: inline-block;
+  }
+}
+
+// Slide buttons
+@media screen and (min-width: 1000px) {
+  $botton-size: 5rem;
+  .active.slides__slide picture > button:first-of-type {
+    right: -1 * $botton-size;
+  }
+  .active.slides__slide picture > button:last-of-type {
+    right: -2 * $button-size;
+  }
+  .slides__text {
+    padding-bottom: $button-size;
   }
 }

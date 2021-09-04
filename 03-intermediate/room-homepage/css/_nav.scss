@@ -55,8 +55,6 @@ nav button {
     color: black;
     text-transform: lowercase;
     font-weight: bold;
-    // font-size: clamp(.75rem, );
-    // font-size: 3vw;
     font-size: clamp(0.75rem, 4vw, 1.1rem);
   }
 }
@@ -66,4 +64,48 @@ nav button {
   margin-left: 0;
   margin-top: auto;
   margin-bottom: auto;
+}
+
+@media screen and (min-width: 1000px) {
+  header {
+    flex-direction: row;
+  }
+  nav button {
+    display: none;
+  }
+  header img {
+    margin-top: 1rem;
+    margin-left: 4vw;
+    position: relative;
+    height: 1.25rem;
+    left: auto;
+    transform: scale(1.5);
+  }
+  .hamburger__menu:not(.active) {
+    display: flex;
+    max-width: 60vw;
+    background-color: rgba($color: #000000, $alpha: 0);
+  }
+  .hamburger__menu li:first-of-type {
+    margin: 0;
+  }
+  .hamburger__menu {
+    position: absolute;
+    left: 0;
+    padding-top: 3.5rem;
+    margin-left: clamp(7rem, 11vw, 10rem);
+    gap: 0;
+  }
+  .hamburger__menu > li {
+    margin: 0;
+    margin-left: 2.25vw;
+  }
+  .hamburger__menu > li a {
+    font-weight: normal;
+    font-size: 1rem;
+    color: white;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

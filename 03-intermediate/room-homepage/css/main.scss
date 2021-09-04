@@ -5,6 +5,10 @@
 @import "about";
 @import "desktop";
 
+body {
+  min-height: 100vh;
+}
+
 * {
   font-family: "Spartan", sans-serif;
 }
