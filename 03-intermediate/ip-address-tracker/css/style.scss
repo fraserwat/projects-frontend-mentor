@@ -1,0 +1,85 @@
+@import "variables";
+@import "reset";
+
+body {
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-weight: 500;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+h2 {
+  color: $dark-gray;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+header {
+  position: relative;
+  background-image: linear-gradient(
+      to right,
+      rgba($color: #fff, $alpha: 0),
+      rgba($color: lightblue, $alpha: 0.25)
+    ),
+    url(/images/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1.5rem 2rem;
+  padding-bottom: 8rem;
+}
+form {
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 1rem;
+}
+input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.9rem 1.1rem;
+  border: none;
+}
+button[type="submit"] {
+  position: absolute;
+  right: 0;
+  width: 3.5rem;
+  background-image: url(/images/icon-arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  border: none;
+  background-color: rgba($color: #000000, $alpha: 1);
+}
+aside {
+  position: absolute;
+  width: 85vw;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.output {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 1.1em;
+}
+.output:last-of-type {
+  margin-bottom: 0;
+}
+input,
+aside {
+  box-shadow: 0 0 12px 5px rgba($color: $dark-gray, $alpha: 0.1);
+}
+
+main {
+  width: 100vw;
+  height: 100%;
+  flex: 1 0 auto;
+}

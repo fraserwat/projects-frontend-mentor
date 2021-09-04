@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Frontend Mentor | IP Address Tracker</title>
+  </head>
+  <body>
+    <header>
+      <h1>IP Address Tracker</h1>
+      <form action="">
+        <input type="text" placeholder="Search IP Address or Domain" /><button
+          type="submit"
+          aria-label="submit"
+        ></button>
+      </form>
+      <aside>
+        <h2>IP Address</h2>
+        <p class="output">{{ ipAddress }}</p>
+        <h2>Location</h2>
+        <p class="output">{{ location }}</p>
+        <h2>Timezone</h2>
+        <p class="output">{{ timezone }}</p>
+        <h2>ISP</h2>
+        <p class="output">{{ ISP }}</p>
+      </aside>
+    </header>
+    <main></main>
+  </body>
+</html>

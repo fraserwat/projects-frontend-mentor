@@ -1,0 +1,170 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-weight: 500;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  color: #969696;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+header {
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(173, 216, 230, 0.25))), url(/images/pattern-bg.png);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(173, 216, 230, 0.25)), url(/images/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1.5rem 2rem;
+  padding-bottom: 8rem;
+}
+
+form {
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 1rem;
+}
+
+input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.9rem 1.1rem;
+  border: none;
+}
+
+button[type="submit"] {
+  position: absolute;
+  right: 0;
+  width: 3.5rem;
+  background-image: url(/images/icon-arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  border: none;
+  background-color: black;
+}
+
+aside {
+  position: absolute;
+  width: 85vw;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.output {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 1.1em;
+}
+
+.output:last-of-type {
+  margin-bottom: 0;
+}
+
+input,
+aside {
+  -webkit-box-shadow: 0 0 12px 5px rgba(150, 150, 150, 0.1);
+          box-shadow: 0 0 12px 5px rgba(150, 150, 150, 0.1);
+}
+
+main {
+  width: 100vw;
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+/*# sourceMappingURL=style.css.map */
