@@ -9,16 +9,25 @@ body {
 h1 {
   color: white;
   font-weight: 500;
-  font-size: 1.75rem;
+  font-size: clamp(1.75rem, 3vw, 2.1rem);
   margin-bottom: 1.5rem;
 }
 h2 {
   color: $dark-gray;
   font-size: 0.8rem;
-  font-weight: 700;
+  font-size: clamp(0.8rem, 2vw, 1.25rem);
+  font-weight: 500;
+  //   @media screen and (min-width: ) {}
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
+
+form,
+input,
+aside {
+  border-radius: 1rem;
+}
+
 header {
   position: relative;
   background-image: linear-gradient(
@@ -33,21 +42,24 @@ header {
   padding-bottom: 8rem;
 }
 form {
-  margin-bottom: 1.5rem;
+  margin: auto;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
   position: relative;
   overflow: hidden;
   padding: 0;
-  border-radius: 1rem;
+  width: 85vw;
+  max-width: 600px;
 }
 input {
   width: 100%;
+  margin: auto;
   font-size: 1.2rem;
   padding: 0.9rem 1.1rem;
   border: none;
 }
 button[type="submit"] {
   position: absolute;
-  right: 0;
+  right: 0rem;
   width: 3.5rem;
   background-image: url(/images/icon-arrow.svg);
   background-position: center;
@@ -62,16 +74,42 @@ aside {
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
-  border-radius: 1rem;
   padding: 1.5rem;
+  max-width: 1250px;
 }
-.output {
+ul {
+  padding: 0;
+  @media screen and (min-width: 1000px) {
+    display: grid;
+    grid-template-columns: 10fr 10fr 10fr 9fr;
+    text-align: left;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+li {
+  position: relative;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: clamp(1.25rem, 2.25vw, 2rem);
   margin-bottom: 1.1em;
+  list-style: none;
+  @media screen and (min-width: 1000px) {
+    margin-bottom: 0;
+  }
 }
-.output:last-of-type {
+@media screen and (min-width: 1000px) {
+  li:not(li:last-of-type)::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 1.5rem;
+    border-right: $dark-gray solid 1px;
+  }
+}
+li:last-of-type {
   margin-bottom: 0;
+  border: none;
 }
 input,
 aside {

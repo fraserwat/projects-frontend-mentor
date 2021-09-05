@@ -21,25 +21,39 @@
     <title>Frontend Mentor | IP Address Tracker</title>
   </head>
   <body>
-    <header>
-      <h1>IP Address Tracker</h1>
-      <form action="">
-        <input type="text" placeholder="Search IP Address or Domain" /><button
-          type="submit"
-          aria-label="submit"
-        ></button>
-      </form>
-      <aside>
-        <h2>IP Address</h2>
-        <p class="output">{{ ipAddress }}</p>
-        <h2>Location</h2>
-        <p class="output">{{ location }}</p>
-        <h2>Timezone</h2>
-        <p class="output">{{ timezone }}</p>
-        <h2>ISP</h2>
-        <p class="output">{{ ISP }}</p>
-      </aside>
-    </header>
-    <main></main>
+    <div id="app">
+      <header>
+        <h1>IP Address Tracker</h1>
+        <form action="">
+          <input type="text" placeholder="Search IP Address or Domain" /><button
+            type="submit"
+            aria-label="submit"
+          ></button>
+        </form>
+        <aside>
+          <ul>
+            <li>
+              <h2>IP Address</h2>
+              <p class="output">{{ ipAddress }}</p>
+            </li>
+            <li>
+              <h2>Location</h2>
+              <p class="output">{{ location }}</p>
+            </li>
+            <li>
+              <h2>Timezone</h2>
+              <p class="output">{{ timezone }}</p>
+            </li>
+            <li>
+              <h2>ISP</h2>
+              <p class="output">{{ ISP }}</p>
+            </li>
+          </ul>
+        </aside>
+      </header>
+      <main></main>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="vue/app.js"></script>
   </body>
 </html>
