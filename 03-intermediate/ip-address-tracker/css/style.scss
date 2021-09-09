@@ -4,6 +4,8 @@
 body {
   font-family: "Rubik", sans-serif;
   text-align: center;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 h1 {
@@ -19,7 +21,7 @@ h2 {
   font-weight: 500;
   //   @media screen and (min-width: ) {}
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  // margin-bottom: 0.5rem;
 }
 
 form,
@@ -74,7 +76,7 @@ aside {
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
-  padding: 1.5rem;
+  padding: 0.5rem 1.5rem;
   max-width: 1250px;
 }
 ul {
@@ -95,6 +97,9 @@ li {
   list-style: none;
   @media screen and (min-width: 1000px) {
     margin-bottom: 0;
+    &:not(li:last-of-type) {
+      padding-right: 1.5rem;
+    }
   }
 }
 @media screen and (min-width: 1000px) {
@@ -114,10 +119,15 @@ li:last-of-type {
 input,
 aside {
   box-shadow: 0 0 12px 5px rgba($color: $dark-gray, $alpha: 0.1);
+  z-index: 2;
 }
 
 main {
   width: 100vw;
   height: 100%;
   flex: 1 0 auto;
+}
+
+#mapid {
+  height: 80vh;
 }

@@ -19,6 +19,18 @@
     />
     <link rel="stylesheet" href="/css/style.css" />
     <title>Frontend Mentor | IP Address Tracker</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
   </head>
   <body>
     <div id="app">
@@ -28,30 +40,31 @@
           <input type="text" placeholder="Search IP Address or Domain" /><button
             type="submit"
             aria-label="submit"
+            v-on:click="inputHandler"
           ></button>
         </form>
         <aside>
           <ul>
             <li>
               <h2>IP Address</h2>
-              <p class="output">{{ ipAddress }}</p>
+              <p class="output" v-if="ipAddress">{{ ipAddress }}</p>
             </li>
             <li>
               <h2>Location</h2>
-              <p class="output">{{ location }}</p>
+              <p class="output" v-if="location">{{ location }}</p>
             </li>
             <li>
               <h2>Timezone</h2>
-              <p class="output">{{ timezone }}</p>
+              <p class="output" v-if="timezone">{{ timezone }}</p>
             </li>
             <li>
               <h2>ISP</h2>
-              <p class="output">{{ ISP }}</p>
+              <p class="output" v-if="ISP">{{ ISP }}</p>
             </li>
           </ul>
         </aside>
       </header>
-      <main></main>
+      <main id="mapid"></main>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="vue/app.js"></script>

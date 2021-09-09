@@ -79,6 +79,8 @@ select {
 body {
   font-family: "Rubik", sans-serif;
   text-align: center;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 h1 {
@@ -94,7 +96,6 @@ h2 {
   font-size: clamp(0.8rem, 2vw, 1.25rem);
   font-weight: 500;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
 }
 
 form,
@@ -150,7 +151,7 @@ aside {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background-color: white;
-  padding: 1.5rem;
+  padding: 0.5rem 1.5rem;
   max-width: 1250px;
 }
 
@@ -182,6 +183,9 @@ li {
   li {
     margin-bottom: 0;
   }
+  li:not(li:last-of-type) {
+    padding-right: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -204,6 +208,7 @@ input,
 aside {
   -webkit-box-shadow: 0 0 12px 5px rgba(150, 150, 150, 0.1);
           box-shadow: 0 0 12px 5px rgba(150, 150, 150, 0.1);
+  z-index: 2;
 }
 
 main {
@@ -212,5 +217,9 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
+}
+
+#mapid {
+  height: 80vh;
 }
 /*# sourceMappingURL=style.css.map */
