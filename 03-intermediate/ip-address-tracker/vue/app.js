@@ -22,7 +22,7 @@ Vue.createApp({
   },
   methods: {
     async updateLocationData(ip) {
-      const apiKey = process.env.IPAPI;
+      const apiKey = `process.env.IPAPI`;
       await fetch(
         `https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${ip}`
       )
@@ -41,11 +41,11 @@ Vue.createApp({
         .then(() => this.updateMapData(this.longitude, this.latitude));
     },
     createMap(lat, long) {
-      const mapApi = process.env.MAPAPI;
       this.mapObject = L.map("mapid", {
         zoomControl: false,
         scrollWheelZoom: false,
       }).setView([lat, long], 12);
+      const mapApi = `process.env.MAPAPI`;
       L.tileLayer(
         "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
         {
