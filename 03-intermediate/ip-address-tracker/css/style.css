@@ -104,6 +104,12 @@ aside {
   border-radius: 1rem;
 }
 
+form,
+input,
+button {
+  cursor: pointer;
+}
+
 header {
   position: relative;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(173, 216, 230, 0.25))), url(/images/pattern-bg.png);
@@ -132,6 +138,12 @@ input {
   border: none;
 }
 
+input.fail {
+  color: red;
+  -webkit-box-shadow: inset 0 0 0px 3px red;
+          box-shadow: inset 0 0 0px 3px red;
+}
+
 button[type="submit"] {
   position: absolute;
   right: 0rem;
@@ -142,6 +154,10 @@ button[type="submit"] {
   height: 100%;
   border: none;
   background-color: black;
+}
+
+button[type="submit"]:hover {
+  background-color: #333333;
 }
 
 aside {

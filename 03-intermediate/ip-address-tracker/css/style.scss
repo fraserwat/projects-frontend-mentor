@@ -29,7 +29,11 @@ input,
 aside {
   border-radius: 1rem;
 }
-
+form,
+input,
+button {
+  cursor: pointer;
+}
 header {
   position: relative;
   background-image: linear-gradient(
@@ -59,6 +63,10 @@ input {
   padding: 0.9rem 1.1rem;
   border: none;
 }
+input.fail {
+  color: red;
+  box-shadow: inset 0 0 0px 3px red;
+}
 button[type="submit"] {
   position: absolute;
   right: 0rem;
@@ -69,6 +77,9 @@ button[type="submit"] {
   height: 100%;
   border: none;
   background-color: rgba($color: #000000, $alpha: 1);
+  &:hover {
+    background-color: lighten(#000, 20%);
+  }
 }
 aside {
   position: absolute;

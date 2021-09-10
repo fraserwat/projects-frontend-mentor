@@ -77,12 +77,26 @@ Vue.createApp({
     },
     async inputHandler(e) {
       e.preventDefault();
-      let inputIP = document.querySelector("input").value;
+      const ipRegEx = new RegExp(
+          "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
+        ),
+        input = document.querySelector("input");
+      let inputIP = input.value;
+      // REGEX Check
+      if (!ipRegEx.test(inputIP) && inputIP.length >= 1) {
+        input.classList.add("fail");
+        return false;
+      }
+      input.classList.remove("fail");
+
+      // Allow for empty string
       if (inputIP == "") {
         inputIP = await fetch("https://api.ipify.org/?format=json")
           .then((rsp) => rsp.json())
           .then((rsp) => rsp.ip);
       }
+
+      // Update data()
       this.ipAddress = inputIP;
       this.updateLocationData(this.ipAddress);
     },
