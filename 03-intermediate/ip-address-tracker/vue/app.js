@@ -42,6 +42,7 @@ Vue.createApp({
         })
         .then(() => this.updateMapData(this.longitude, this.latitude));
     },
+
     createMap(lat, long) {
       this.mapObject = L.map("mapid", {
         zoomControl: false,
@@ -75,6 +76,7 @@ Vue.createApp({
       this.mapObject.setView(coords, 12);
       this.markerObject.setLatLng(coords);
     },
+
     async inputHandler(e) {
       e.preventDefault();
       const ipRegEx = new RegExp(
@@ -82,6 +84,7 @@ Vue.createApp({
         ),
         input = document.querySelector("input");
       let inputIP = input.value;
+
       // REGEX Check
       if (!ipRegEx.test(inputIP) && inputIP.length >= 1) {
         input.classList.add("fail");
