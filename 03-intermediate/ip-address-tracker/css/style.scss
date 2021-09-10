@@ -26,7 +26,7 @@ h2 {
 
 form,
 input,
-aside {
+.output__container {
   border-radius: 1rem;
 }
 form,
@@ -81,7 +81,7 @@ button[type="submit"] {
     background-color: lighten(#000, 20%);
   }
 }
-aside {
+.output__container {
   position: absolute;
   width: 85vw;
   left: 50%;
@@ -128,7 +128,7 @@ li:last-of-type {
   border: none;
 }
 input,
-aside {
+.output__container {
   box-shadow: 0 0 12px 5px rgba($color: $dark-gray, $alpha: 0.1);
   z-index: 2;
 }

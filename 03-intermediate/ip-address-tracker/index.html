@@ -35,14 +35,14 @@
     <div id="app">
       <header>
         <h1>IP Address Tracker</h1>
-        <form action="">
+        <form>
           <input type="text" placeholder="Search IP Address or Domain" /><button
             type="submit"
             aria-label="submit"
             v-on:click="inputHandler"
           ></button>
         </form>
-        <aside>
+        <div class="output__container">
           <ul>
             <li>
               <h2>IP Address</h2>
@@ -61,7 +61,7 @@
               <p class="output" v-if="ISP">{{ ISP }}</p>
             </li>
           </ul>
-        </aside>
+        </div>
       </header>
       <main id="mapid"></main>
     </div>
