@@ -59,10 +59,11 @@ form {
 input {
   width: 100%;
   margin: auto;
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
   padding: 0.9rem 1.1rem;
   border: none;
 }
+
 input.fail {
   color: red;
   box-shadow: inset 0 0 0px 3px red;
