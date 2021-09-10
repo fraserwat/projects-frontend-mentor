@@ -35,6 +35,7 @@ Vue.createApp({
           this.ISP = rsp.isp;
 
           if (this.longitude == null) {
+            // If we haven't declared a previous lat/lng, it will be the first load
             this.createMap(rsp.location.lat, rsp.location.lng);
           }
           this.longitude = rsp.location.lng;
@@ -48,7 +49,6 @@ Vue.createApp({
         zoomControl: false,
         scrollWheelZoom: false,
       }).setView([lat, long], 12);
-      const mapApi = TOKEN.MAPAPI;
       L.tileLayer(
         "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
         {
@@ -58,7 +58,7 @@ Vue.createApp({
           id: "mapbox/streets-v11",
           tileSize: 512,
           zoomOffset: -1,
-          accessToken: mapApi,
+          accessToken: TOKEN.MAPAPI,
         }
       ).addTo(this.mapObject);
       document.getElementById("mapid").style.zIndex = 1;
