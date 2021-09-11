@@ -1,0 +1,57 @@
+@import "variables";
+
+// HEADER
+header {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+header > img {
+  height: 1.5rem;
+}
+#menu {
+  $button: 2rem;
+  height: $button;
+  width: $button;
+  border: none;
+  background-color: transparent;
+  background-image: url("/images/icon-hamburger.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: 0.2s ease-in-out;
+}
+#menu.active {
+  background-image: url(/images/icon-close.svg);
+}
+
+// NAVBAR
+nav {
+  display: none;
+}
+button#menu.active + nav {
+  display: flex;
+  position: absolute;
+  background: white;
+  font-weight: 300;
+  width: 85vw;
+  border-radius: 7px;
+  left: 50%;
+  top: 6rem;
+  transform: translateX(-50%);
+  font-size: 1.25rem;
+  padding: 2rem;
+}
+button#menu.active + nav ul li + li {
+  margin-top: 1.5rem;
+}
+button#menu.active + nav > ul {
+  margin: auto;
+}
+@media screen and (max-width: $desktop-breakpoint) {
+  button#menu.active + nav > ul li:last-of-type {
+    display: none;
+  }
+}
