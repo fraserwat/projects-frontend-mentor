@@ -1,0 +1,30 @@
+@import "variables";
+
+.latest-articles {
+  background-color: $very-light-gray;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+.latest-articles__container {
+  padding: 1.5rem;
+}
+.latest-articles__container > .article {
+  text-align: left;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: white;
+  padding-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+.article > img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.article *:not(img) {
+  padding: 0 2rem;
+}
+.article > p.author {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}

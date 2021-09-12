@@ -1,10 +1,28 @@
 @import "reset";
 @import "variables";
 @import "nav";
+@import "hero";
+@import "why-easybank";
+@import "latest-articles";
+@import "footer";
 
 body {
   font-family: "Public Sans", sans-serif;
   text-align: center;
+}
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: $dark-blue;
+}
+h2 {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+}
+p {
+  color: $grayish-blue;
 }
 ul {
   list-style: none;
@@ -12,4 +30,17 @@ ul {
 }
 footer {
   background-color: $dark-blue;
+}
+button:not(#menu) {
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  border: none;
+
+  color: white;
+  font-weight: 700;
+  background-color: transparent;
+  background-image: linear-gradient(to right, $lime-green, $bright-cyan);
+  &:active {
+    transform: translateY(1px);
+  }
 }

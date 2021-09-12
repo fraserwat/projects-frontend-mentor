@@ -1,0 +1,25 @@
+@import "variables";
+
+.why-easybank {
+  background-color: $light-grayish-blue;
+  padding: 4rem 1rem;
+}
+
+.why-easybank__features {
+  margin-top: 2rem;
+}
+
+.why-easybank__features > .feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.why-easybank__features > .feature:last-of-type {
+  margin-bottom: 0;
+}
+
+.feature > img {
+  margin: auto;
+  margin-bottom: 1rem;
+}

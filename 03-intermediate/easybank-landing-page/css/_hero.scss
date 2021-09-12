@@ -1,0 +1,20 @@
+@import "variables";
+
+.hero {
+  padding-bottom: 4rem;
+}
+
+.hero__picture {
+  margin-top: -40%;
+  padding: 0 1.5rem;
+  background-image: url(/images/bg-intro-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__text > h1 {
+  font-size: 2.5rem;
+}
+.hero__text > p {
+  margin-bottom: 1.5rem;
+}

@@ -1,0 +1,30 @@
+@import "variables";
+
+footer {
+  padding: 3rem;
+}
+footer > img {
+  margin: auto;
+}
+footer > ul {
+  margin: 2rem 0;
+}
+footer > ul li {
+  color: $light-grayish-blue;
+  margin-bottom: 1rem;
+}
+footer > ul.socials {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+footer > ul.socials li {
+  margin: 0.5rem 0.5rem;
+  transition: ease-in-out 0.25s;
+  img {
+    height: 1.5rem;
+  }
+}
+footer > button {
+  margin-bottom: 2rem;
+}
