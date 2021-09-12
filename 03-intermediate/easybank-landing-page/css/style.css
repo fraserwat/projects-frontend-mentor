@@ -147,6 +147,28 @@ button#menu.active + nav > ul {
   }
 }
 
+.nav-bg {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .nav-bg.active {
+    display: inline;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(45, 49, 77, 0.8)), to(rgba(45, 49, 77, 0)));
+    background-image: linear-gradient(to bottom, rgba(45, 49, 77, 0.8), rgba(45, 49, 77, 0));
+    z-index: 0;
+  }
+  nav,
+  header {
+    z-index: 1;
+  }
+}
+
 .hero {
   padding-bottom: 4rem;
 }

@@ -56,3 +56,28 @@ button#menu.active + nav > ul {
     display: none;
   }
 }
+
+// MENU BACKGROUND FILTER
+.nav-bg {
+  display: none;
+}
+@media screen and (max-width: $desktop-breakpoint) {
+  .nav-bg.active {
+    display: inline;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(
+      to bottom,
+      rgba($dark-blue, 0.8),
+      rgba($dark-blue, 0)
+    );
+    z-index: 0;
+  }
+  nav,
+  header {
+    z-index: 1;
+  }
+}
