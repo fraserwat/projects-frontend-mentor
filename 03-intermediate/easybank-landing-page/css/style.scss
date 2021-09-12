@@ -44,3 +44,47 @@ button:not(#menu) {
     transform: translateY(1px);
   }
 }
+.hero__container,
+.why-easybank__text,
+.why-easybank__features,
+.latest-articles__container,
+.latest-articles > h2,
+.footer__container {
+  margin: auto;
+  max-width: 1500px;
+}
+.latest-articles,
+.why-easybank {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+header {
+  margin: auto;
+  max-width: calc(1500px + 3rem);
+}
+
+.why-easybank__features,
+.latest-articles__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+@media screen and (min-width: 830px) {
+  .latest-articles__container,
+  .why-easybank__features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1000px) {
+  .latest-articles__container,
+  .why-easybank__features {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .feature {
+    text-align: left;
+    img {
+      margin-left: 0;
+    }
+  }
+}

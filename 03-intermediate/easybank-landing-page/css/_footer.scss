@@ -1,30 +1,80 @@
 @import "variables";
 
-footer {
+.footer__container {
   padding: 3rem;
 }
-footer > img {
+.footer__container > img {
   margin: auto;
 }
-footer > ul {
+.footer__container > ul {
   margin: 2rem 0;
 }
-footer > ul li {
+.footer__container > ul li {
   color: $light-grayish-blue;
   margin-bottom: 1rem;
 }
-footer > ul.socials {
+.footer__container > ul.socials {
   display: flex;
   justify-content: center;
   margin-bottom: 0;
 }
-footer > ul.socials li {
+.footer__container > ul.socials li {
   margin: 0.5rem 0.5rem;
   transition: ease-in-out 0.25s;
   img {
     height: 1.5rem;
   }
 }
-footer > button {
+.footer__container > button {
   margin-bottom: 2rem;
+}
+
+// DESKTOP VIEW
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .footer__container {
+    display: grid;
+    grid-template-areas: "logo links request" "socials links copyright";
+  }
+  .footer__container > img,
+  .footer__container > ul.socials,
+  .footer__container > ul,
+  .footer__container > button,
+  .footer__container > p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .footer__container > img {
+    grid-area: logo;
+    margin-left: 0;
+  }
+  .footer__container > ul.socials {
+    grid-area: socials;
+    align-self: end;
+    justify-content: left;
+  }
+  .footer__container > ul {
+    text-align: left;
+    grid-area: links;
+    columns: 2;
+    li {
+      margin-top: auto;
+    }
+  }
+  .footer__container > ul > li:nth-of-type(3),
+  .footer__container > ul > li:nth-of-type(6) {
+    margin-bottom: 0;
+  }
+  .footer__container > button {
+    grid-area: request;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.75rem 2rem;
+    margin-left: auto;
+  }
+  .footer__container > p {
+    margin-top: auto;
+    text-align: right;
+    grid-area: copyright;
+  }
 }

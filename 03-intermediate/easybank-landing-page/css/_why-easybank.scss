@@ -12,7 +12,7 @@
 .why-easybank__features > .feature {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 2rem 0;
 }
 .why-easybank__features > .feature:last-of-type {
@@ -20,6 +20,23 @@
 }
 
 .feature > img {
-  margin: auto;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem auto;
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .why-easybank {
+    text-align: left;
+  }
+  .why-easybank__text > h2 {
+    padding-left: 0;
+  }
+  .why-easybank__text > p {
+    max-width: 800px;
+  }
+  .feature {
+    text-align: left;
+  }
+  .feature > img {
+    margin-left: 0;
+  }
 }

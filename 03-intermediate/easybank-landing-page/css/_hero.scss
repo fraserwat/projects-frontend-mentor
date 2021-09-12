@@ -18,3 +18,38 @@
 .hero__text > p {
   margin-bottom: 1.5rem;
 }
+@media screen and (min-width: $desktop-breakpoint) {
+  .hero {
+    padding: 0;
+    // background-image: ;
+    // background-repeat: no-repeat;
+    // background-position-x: 150%;
+    // background-position-y: 50%;
+    // background-size: auto;
+    // padding-bottom: 0;
+  }
+  .hero__container {
+    text-align: left;
+    display: grid;
+    grid-template-areas: "herotext mockup";
+    overflow: visible;
+    margin-right: 0 !important;
+  }
+  .hero__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: herotext;
+    padding-left: 3rem;
+  }
+  .hero__picture {
+    grid-area: mockup;
+    background-image: url(/images/bg-intro-desktop.svg);
+    background-size: auto 100%;
+    background-position-y: 4rem;
+    overflow: visible;
+  }
+  .hero__text > button {
+    width: fit-content;
+  }
+}

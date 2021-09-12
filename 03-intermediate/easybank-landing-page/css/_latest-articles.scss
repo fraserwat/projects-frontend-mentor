@@ -7,7 +7,7 @@
 }
 
 .latest-articles__container {
-  padding: 1.5rem;
+  padding: 1.5rem 0;
 }
 .latest-articles__container > .article {
   text-align: left;
@@ -17,14 +17,37 @@
   padding-bottom: 3rem;
   margin-bottom: 2rem;
 }
-.article > img {
+.article > .article__image {
   width: 100%;
+  height: 15rem;
   margin-bottom: 2rem;
+  background-position: center;
+  background-size: auto cover;
+  background-repeat: no-repeat;
 }
-.article *:not(img) {
+.article:nth-of-type(1) > .article__image {
+  background-image: url(/images/image-currency.jpg);
+}
+.article:nth-of-type(2) > .article__image {
+  background-image: url(/images/image-restaurant.jpg);
+}
+.article:nth-of-type(3) > .article__image {
+  background-image: url(/images/image-plane.jpg);
+}
+.article:nth-of-type(4) > .article__image {
+  background-image: url(/images/image-confetti.jpg);
+}
+.article *:not(.article__image) {
   padding: 0 2rem;
 }
 .article > p.author {
   font-size: 0.9rem;
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .latest-articles > h2 {
+    text-align: left;
+    padding-left: 0;
+  }
 }
