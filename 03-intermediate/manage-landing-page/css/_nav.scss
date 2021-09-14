@@ -1,0 +1,11 @@
+@import "variables";
+
+nav {
+  display: none;
+  position: relative;
+}
+
+button#menu.active + nav {
+  display: flex;
+  position: absolute;
+}

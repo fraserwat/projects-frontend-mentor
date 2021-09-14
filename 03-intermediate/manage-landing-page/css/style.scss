@@ -1,6 +1,11 @@
 @import "reset";
 @import "variables";
+@import "nav";
 
 body {
   font-family: "Be Vietnam", sans-serif;
+}
+
+li.card:not(.active) {
+  display: none;
 }

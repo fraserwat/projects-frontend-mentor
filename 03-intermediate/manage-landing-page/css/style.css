@@ -76,7 +76,23 @@ select {
   }
 }
 
+nav {
+  display: none;
+  position: relative;
+}
+
+button#menu.active + nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+}
+
 body {
   font-family: "Be Vietnam", sans-serif;
+}
+
+li.card:not(.active) {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
