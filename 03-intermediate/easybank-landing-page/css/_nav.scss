@@ -56,7 +56,9 @@ button#menu.active + nav > ul {
     display: none;
   }
 }
-
+header > button:not(#menu) {
+  display: none;
+}
 // MENU BACKGROUND FILTER
 .nav-bg {
   display: none;
@@ -79,5 +81,30 @@ button#menu.active + nav > ul {
   nav,
   header {
     z-index: 1;
+  }
+}
+
+// DESKTOP NAVBAR
+@media screen and (min-width: $desktop-breakpoint) {
+  #menu {
+    display: none;
+  }
+  nav,
+  nav > ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav > ul {
+    flex-direction: row;
+    margin: 0;
+    gap: 0 1rem;
+  }
+  nav > ul > li {
+    margin: 0 auto;
+    opacity: 0.6;
+  }
+  header > button {
+    display: inline;
   }
 }

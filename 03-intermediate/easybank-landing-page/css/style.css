@@ -147,6 +147,10 @@ button#menu.active + nav > ul {
   }
 }
 
+header > button:not(#menu) {
+  display: none;
+}
+
 .nav-bg {
   display: none;
 }
@@ -169,6 +173,39 @@ button#menu.active + nav > ul {
   }
 }
 
+@media screen and (min-width: 800px) {
+  #menu {
+    display: none;
+  }
+  nav,
+  nav > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav > ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 0;
+    gap: 0 1rem;
+  }
+  nav > ul > li {
+    margin: 0 auto;
+    opacity: 0.6;
+  }
+  header > button {
+    display: inline;
+  }
+}
+
 .hero {
   padding-bottom: 4rem;
 }
@@ -182,7 +219,7 @@ button#menu.active + nav > ul {
 }
 
 .hero__text > h1 {
-  font-size: 2.5rem;
+  width: 38vw;
 }
 
 .hero__text > p {
@@ -192,6 +229,12 @@ button#menu.active + nav > ul {
 @media screen and (min-width: 800px) {
   .hero {
     padding: 0;
+    background-image: url(/images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: auto 60vw;
+    background-position-x: 50vw;
+    background-position-y: center;
+    z-index: 0;
   }
   .hero__container {
     text-align: left;
@@ -199,7 +242,9 @@ button#menu.active + nav > ul {
     display: grid;
         grid-template-areas: "herotext mockup";
     overflow: visible;
-    margin-right: 0 !important;
+    position: relative;
+    height: 60vh;
+    z-index: 0;
   }
   .hero__text {
     display: -webkit-box;
@@ -215,16 +260,19 @@ button#menu.active + nav > ul {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: herotext;
-    padding-left: 3rem;
+    width: 50%;
   }
   .hero__picture {
+    position: absolute;
+    z-index: 0;
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: mockup;
-    background-image: url(/images/bg-intro-desktop.svg);
-    background-size: auto 100%;
-    background-position-y: 4rem;
-    overflow: visible;
+    background-image: none;
+    width: 50vw;
+    max-width: 600px;
+    right: -100%;
+    padding: 0;
   }
   .hero__text > button {
     width: -webkit-fit-content;
@@ -465,13 +513,27 @@ h3 {
   color: #2d314d;
 }
 
+h1 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+}
+
 h2 {
-  font-size: 2rem;
+  font-size: clamp(2rem, 3vw, 2.5rem);
   padding: 0 1.5rem;
+}
+
+h3 {
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
 }
 
 p {
   color: #9698a6;
+  font-size: 1.25rem;
+}
+
+p,
+ul li {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
 }
 
 ul {
@@ -506,7 +568,7 @@ button:not(#menu):active {
 .latest-articles > h2,
 .footer__container {
   margin: auto;
-  max-width: 1500px;
+  max-width: 1300px;
 }
 
 .latest-articles,
