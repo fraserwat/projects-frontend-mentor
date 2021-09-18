@@ -1,5 +1,8 @@
 @import "variables";
 
+header {
+  background-color: $white;
+}
 // HEADER
 .header__container {
   display: flex;
@@ -7,7 +10,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 0;
-  background-color: $white;
 }
 header > img {
   height: 1.5rem;
@@ -90,10 +92,6 @@ header {
 
 // DESKTOP NAVBAR
 @media screen and (min-width: $desktop-breakpoint) {
-  // header {
-  //   // padding-left: 3rem;
-  //   // padding-right: 3rem;
-  // }
   #menu {
     display: none;
   }

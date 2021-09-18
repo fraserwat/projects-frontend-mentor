@@ -73,7 +73,12 @@ header,
 }
 header {
   margin: auto;
-  // max-width: calc(1500px + 3rem);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  @media screen and (min-width: $desktop-breakpoint) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 .why-easybank__features,

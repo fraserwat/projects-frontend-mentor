@@ -76,6 +76,10 @@ select {
   }
 }
 
+header {
+  background-color: white;
+}
+
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,7 +92,6 @@ select {
       -ms-flex-align: center;
           align-items: center;
   padding: 1.5rem 0;
-  background-color: white;
 }
 
 header > img {
@@ -584,6 +587,15 @@ header,
 
 header {
   margin: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media screen and (min-width: 800px) {
+  header {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 .why-easybank__features,

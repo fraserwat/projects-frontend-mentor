@@ -3,7 +3,7 @@ const bodyStyle = document.body.style; // saving default for when we freeze scro
 function preventScroll() {
   document.body.style.height = "100vh";
   document.body.style.overflowY = "hidden";
-  document.body.style.position = "fixed";
+  // document.body.style.position = "fixed";
 }
 
 function resumeScroll() {
