@@ -1,12 +1,12 @@
 @import "variables";
 
 // HEADER
-header {
+.header__container {
   display: flex;
   position: relative;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1.5rem 0;
   background-color: $white;
 }
 header > img {
@@ -32,33 +32,37 @@ header > img {
 nav {
   display: none;
 }
-button#menu.active + nav {
-  display: flex;
-  position: absolute;
-  background: white;
-  font-weight: 300;
-  width: 85vw;
-  border-radius: 7px;
-  left: 50%;
-  top: 6rem;
-  transform: translateX(-50%);
-  font-size: 1.25rem;
-  padding: 2rem;
-}
-button#menu.active + nav ul li + li {
-  margin-top: 1.5rem;
-}
-button#menu.active + nav > ul {
-  margin: auto;
+header {
+  position: relative;
+  z-index: 1;
 }
 @media screen and (max-width: $desktop-breakpoint) {
-  button#menu.active + nav > ul li:last-of-type {
+  button#menu.active + nav {
+    display: flex;
+    position: absolute;
+    background: white;
+    font-weight: 300;
+    width: 85vw;
+    border-radius: 7px;
+    left: 50%;
+    top: 6rem;
+    transform: translateX(-50%);
+    font-size: 1.25rem;
+    padding: 2rem;
+  }
+  button#menu.active + nav ul li + li {
+    margin-top: 1.5rem;
+  }
+  button#menu.active + nav > ul {
+    margin: auto;
+  }
+}
+@media screen and (max-width: $desktop-breakpoint) {
+  .header__container > button:not(#menu) {
     display: none;
   }
 }
-header > button:not(#menu) {
-  display: none;
-}
+
 // MENU BACKGROUND FILTER
 .nav-bg {
   display: none;
@@ -76,16 +80,20 @@ header > button:not(#menu) {
       rgba($dark-blue, 0.8),
       rgba($dark-blue, 0)
     );
-    z-index: 0;
+    z-index: 1;
   }
   nav,
   header {
-    z-index: 1;
+    z-index: 2;
   }
 }
 
 // DESKTOP NAVBAR
 @media screen and (min-width: $desktop-breakpoint) {
+  // header {
+  //   // padding-left: 3rem;
+  //   // padding-right: 3rem;
+  // }
   #menu {
     display: none;
   }

@@ -55,6 +55,7 @@ button:not(#menu) {
     transform: translateY(1px);
   }
 }
+.header__container,
 .hero__container,
 .why-easybank__text,
 .why-easybank__features,
@@ -64,6 +65,7 @@ button:not(#menu) {
   margin: auto;
   max-width: 1300px;
 }
+header,
 .latest-articles,
 .why-easybank {
   padding-left: 3rem;
@@ -71,7 +73,7 @@ button:not(#menu) {
 }
 header {
   margin: auto;
-  max-width: calc(1500px + 3rem);
+  // max-width: calc(1500px + 3rem);
 }
 
 .why-easybank__features,

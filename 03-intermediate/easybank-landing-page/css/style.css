@@ -76,7 +76,7 @@ select {
   }
 }
 
-header {
+.header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,7 +87,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1.5rem;
+  padding: 1.5rem 0;
   background-color: white;
 }
 
@@ -116,39 +116,40 @@ nav {
   display: none;
 }
 
-button#menu.active + nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  background: white;
-  font-weight: 300;
-  width: 85vw;
-  border-radius: 7px;
-  left: 50%;
-  top: 6rem;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  font-size: 1.25rem;
-  padding: 2rem;
-}
-
-button#menu.active + nav ul li + li {
-  margin-top: 1.5rem;
-}
-
-button#menu.active + nav > ul {
-  margin: auto;
+header {
+  position: relative;
+  z-index: 1;
 }
 
 @media screen and (max-width: 800px) {
-  button#menu.active + nav > ul li:last-of-type {
-    display: none;
+  button#menu.active + nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    background: white;
+    font-weight: 300;
+    width: 85vw;
+    border-radius: 7px;
+    left: 50%;
+    top: 6rem;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-size: 1.25rem;
+    padding: 2rem;
+  }
+  button#menu.active + nav ul li + li {
+    margin-top: 1.5rem;
+  }
+  button#menu.active + nav > ul {
+    margin: auto;
   }
 }
 
-header > button:not(#menu) {
-  display: none;
+@media screen and (max-width: 800px) {
+  .header__container > button:not(#menu) {
+    display: none;
+  }
 }
 
 .nav-bg {
@@ -165,11 +166,11 @@ header > button:not(#menu) {
     height: 100vh;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(45, 49, 77, 0.8)), to(rgba(45, 49, 77, 0)));
     background-image: linear-gradient(to bottom, rgba(45, 49, 77, 0.8), rgba(45, 49, 77, 0));
-    z-index: 0;
+    z-index: 1;
   }
   nav,
   header {
-    z-index: 1;
+    z-index: 2;
   }
 }
 
@@ -208,6 +209,7 @@ header > button:not(#menu) {
 
 .hero {
   padding-bottom: 4rem;
+  background-color: #fafafa;
 }
 
 .hero__picture {
@@ -228,7 +230,6 @@ header > button:not(#menu) {
 
 @media screen and (min-width: 800px) {
   .hero {
-    padding: 0;
     background-image: url(/images/bg-intro-desktop.svg);
     background-repeat: no-repeat;
     background-size: auto 60vw;
@@ -241,7 +242,6 @@ header > button:not(#menu) {
     display: -ms-grid;
     display: grid;
         grid-template-areas: "herotext mockup";
-    overflow: visible;
     position: relative;
     height: 60vh;
     z-index: 0;
@@ -272,7 +272,6 @@ header > button:not(#menu) {
     width: 50vw;
     max-width: 600px;
     right: -100%;
-    padding: 0;
   }
   .hero__text > button {
     width: -webkit-fit-content;
@@ -350,7 +349,7 @@ header > button:not(#menu) {
 }
 
 .article > .article__image {
-  width: 100%;
+  max-width: 100%;
   height: 15rem;
   margin-bottom: 2rem;
   background-position: center;
@@ -390,8 +389,12 @@ header > button:not(#menu) {
   }
 }
 
+footer {
+  padding: 0 3rem;
+}
+
 .footer__container {
-  padding: 3rem;
+  padding: 3rem 0;
 }
 
 .footer__container > img {
@@ -561,6 +564,7 @@ button:not(#menu):active {
           transform: translateY(1px);
 }
 
+.header__container,
 .hero__container,
 .why-easybank__text,
 .why-easybank__features,
@@ -571,6 +575,7 @@ button:not(#menu):active {
   max-width: 1300px;
 }
 
+header,
 .latest-articles,
 .why-easybank {
   padding-left: 3rem;
@@ -579,7 +584,6 @@ button:not(#menu):active {
 
 header {
   margin: auto;
-  max-width: calc(1500px + 3rem);
 }
 
 .why-easybank__features,

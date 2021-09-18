@@ -2,6 +2,7 @@
 
 .hero {
   padding-bottom: 4rem;
+  background-color: hsl(0, 0%, 98%);
 }
 
 .hero__picture {
@@ -20,7 +21,6 @@
 }
 @media screen and (min-width: $desktop-breakpoint) {
   .hero {
-    padding: 0;
     background-image: url(/images/bg-intro-desktop.svg);
     background-repeat: no-repeat;
     background-size: auto 60vw;
@@ -32,7 +32,6 @@
     text-align: left;
     display: grid;
     grid-template-areas: "herotext mockup";
-    overflow: visible;
     position: relative;
     height: 60vh;
     z-index: 0;
@@ -52,7 +51,7 @@
     width: 50vw;
     max-width: 600px;
     right: -100%;
-    padding: 0;
+    // padding: 0;
   }
   .hero__text > button {
     width: fit-content;

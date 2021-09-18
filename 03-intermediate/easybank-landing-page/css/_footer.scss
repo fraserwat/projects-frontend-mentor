@@ -1,7 +1,10 @@
 @import "variables";
 
+footer {
+  padding: 0 3rem;
+}
 .footer__container {
-  padding: 3rem;
+  padding: 3rem 0;
 }
 .footer__container > img {
   margin: auto;
