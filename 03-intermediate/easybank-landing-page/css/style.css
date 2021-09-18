@@ -213,6 +213,8 @@ header {
 .hero {
   padding-bottom: 4rem;
   background-color: #fafafa;
+  width: 100vw;
+  overflow-y: visible;
 }
 
 .hero__picture {
@@ -224,7 +226,7 @@ header {
 }
 
 .hero__text > h1 {
-  width: 38vw;
+  width: clamp(1px, 38vw, 650px);
 }
 
 .hero__text > p {
@@ -239,17 +241,20 @@ header {
     background-position-x: 50vw;
     background-position-y: center;
     z-index: 0;
+    position: relative;
+    overflow-y: visible !important;
   }
   .hero__container {
+    position: relative;
     text-align: left;
     display: -ms-grid;
     display: grid;
         grid-template-areas: "herotext mockup";
-    position: relative;
-    height: 60vh;
+    grid-auto-columns: 1fr 1fr;
     z-index: 0;
   }
   .hero__text {
+    padding: 6rem 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -263,18 +268,14 @@ header {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: herotext;
-    width: 50%;
   }
   .hero__picture {
     position: absolute;
-    z-index: 0;
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: mockup;
     background-image: none;
-    width: 50vw;
-    max-width: 600px;
-    right: -100%;
+    top: 10rem;
+    overflow-y: visible;
+    -webkit-transform: translateX(100%) translateY(10rem);
+            transform: translateX(100%) translateY(10rem);
   }
   .hero__text > button {
     width: -webkit-fit-content;
@@ -506,6 +507,10 @@ footer {
   }
 }
 
+:root {
+  max-width: 100vw;
+}
+
 body {
   font-family: "Public Sans", sans-serif;
   text-align: center;
@@ -579,6 +584,7 @@ button:not(#menu):active {
 }
 
 header,
+.hero,
 .latest-articles,
 .why-easybank {
   padding-left: 3rem;

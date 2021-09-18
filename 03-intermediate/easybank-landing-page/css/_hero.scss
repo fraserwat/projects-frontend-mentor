@@ -3,6 +3,8 @@
 .hero {
   padding-bottom: 4rem;
   background-color: hsl(0, 0%, 98%);
+  width: 100vw;
+  overflow-y: visible;
 }
 
 .hero__picture {
@@ -14,7 +16,7 @@
 }
 
 .hero__text > h1 {
-  width: 38vw;
+  width: clamp(1px, 38vw, 650px);
 }
 .hero__text > p {
   margin-bottom: 1.5rem;
@@ -27,31 +29,30 @@
     background-position-x: 50vw;
     background-position-y: center;
     z-index: 0;
+    position: relative;
+    overflow-y: visible !important;
   }
   .hero__container {
+    position: relative;
     text-align: left;
     display: grid;
     grid-template-areas: "herotext mockup";
-    position: relative;
-    height: 60vh;
+    grid-auto-columns: 1fr 1fr;
     z-index: 0;
   }
   .hero__text {
+    padding: 6rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     grid-area: herotext;
-    width: 50%;
   }
   .hero__picture {
     position: absolute;
-    z-index: 0;
-    grid-area: mockup;
     background-image: none;
-    width: 50vw;
-    max-width: 600px;
-    right: -100%;
-    // padding: 0;
+    top: 10rem;
+    overflow-y: visible;
+    transform: translateX(100%) translateY(10rem);
   }
   .hero__text > button {
     width: fit-content;
