@@ -1,0 +1,18 @@
+@import "reset";
+@import "variables";
+@import "card";
+@import "profile-card";
+
+#app {
+  background-color: hsl(226, 43%, 10%);
+  font-family: "Rubik", sans-serif;
+  padding: 3rem 1.5rem;
+}
+
+h1,
+h2 {
+  color: $white;
+}
+h2 {
+  font-weight: 500;
+}

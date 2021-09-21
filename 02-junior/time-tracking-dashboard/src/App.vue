@@ -1,25 +1,35 @@
 <template>
-  <header>
-    <profile-card user-name="jeremy robson"/>
-  </header>
+  <profile-card username="jeremy robson"/>
   <main>
-    <card activity="work" this-week="" last-week=""/>
-    <card activity="play" this-week="" last-week=""/>
-    <card activity="study" this-week="" last-week=""/>
-    <card activity="exercise" this-week="" last-week=""/>
-    <card activity="social" this-week="" last-week=""/>
-    <card activity="self care" this-week="" last-week=""/>
+    <!-- v-bind:timeframe should be equal to a calculated property based on this.currentTimeframe and "user" from userProfile -->
+    <card 
+      v-for="user in userProfile" 
+      :key="user.title" 
+      v-bind:title="user.title" 
+      v-bind:timeframe="this.currentTimeframe" 
+    />
   </main>
 </template>
 
 <script>
 import Card from './components/Card.vue'
 import ProfileCard from './components/ProfileCard.vue'
+import UserData from './data/jeremy-robson.json'
 
 export default {
   name: 'App',
+  data () {
+    return  {
+      currentTimeframe: "Weekly",
+      userProfile: UserData
+    }
+  },
   components: {
     ProfileCard, Card 
   }
 }
 </script>
+
+<style>
+  @import "assets/css/style.css";
+</style>

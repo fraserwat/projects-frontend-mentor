@@ -1,0 +1,52 @@
+@import "variables";
+
+header {
+  background-color: $dark-purple;
+  margin-bottom: 2rem;
+}
+header,
+.profile-card__title {
+  border-radius: 1rem;
+}
+h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: capitalize;
+  margin: auto;
+}
+.profile-card__title {
+  padding: 1.5rem;
+  background-color: $header-purple;
+  display: flex;
+}
+.profile-card__title img {
+  height: 5rem;
+  margin: auto 0;
+  margin-right: 0.5rem;
+}
+.profile-card__title span {
+  text-transform: none;
+  display: block;
+  color: $light-purple;
+  font-size: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+}
+label {
+  padding: 1.5rem 0;
+  font-size: 1.2rem;
+  color: $light-purple;
+}
+input[type="radio"]:checked + label {
+  color: $white;
+}
