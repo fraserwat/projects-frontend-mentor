@@ -19,6 +19,7 @@
   background-color: $dark-purple;
   padding: 1.5rem;
   display: grid;
+  align-items: center;
   grid-template-areas: "activity btn" "thisweek lastweek";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -30,7 +31,8 @@ h2 {
 .card__data > button {
   margin-left: auto;
   border: none;
-  width: 2rem;
+  width: 1.75rem;
+  height: 1.75rem;
   background-color: rgba($color: #000000, $alpha: 0);
   background-image: url("/img/icon-ellipsis.svg");
   background-size: contain;
@@ -42,6 +44,7 @@ h2 {
   font-size: 1.6rem;
 }
 .card__data > p:last-of-type {
+  text-align: right;
   color: $light-purple;
   font-size: 1.2rem;
 }

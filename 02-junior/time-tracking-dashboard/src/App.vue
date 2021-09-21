@@ -1,7 +1,6 @@
 <template>
   <profile-card username="jeremy robson"/>
   <main>
-    <!-- v-bind:timeframe should be equal to a calculated property based on this.currentTimeframe and "user" from userProfile -->
     <card 
       v-for="user in userProfile" 
       :key="user.title" 

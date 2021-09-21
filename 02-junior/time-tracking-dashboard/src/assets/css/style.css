@@ -95,6 +95,9 @@ select {
   padding: 1.5rem;
   display: -ms-grid;
   display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
       grid-template-areas: "activity btn" "thisweek lastweek";
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
@@ -109,7 +112,8 @@ h2 {
 .card__data > button {
   margin-left: auto;
   border: none;
-  width: 2rem;
+  width: 1.75rem;
+  height: 1.75rem;
   background-color: rgba(0, 0, 0, 0);
   background-image: url("/img/icon-ellipsis.svg");
   background-size: contain;
@@ -123,6 +127,7 @@ h2 {
 }
 
 .card__data > p:last-of-type {
+  text-align: right;
   color: #bdc2ff;
   font-size: 1.2rem;
 }
