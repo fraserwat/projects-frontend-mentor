@@ -3,17 +3,16 @@
         <div class="card__data">
             <h2>{{title}}</h2>
             <button></button>
-            <p>{{hours}}hrs</p>
-            <p>Last Week - {{lastWeek}}hrs</p>
+            <p>{{userdata.current}}hrs</p>
+            <p>Last Week - {{ userdata.previous }}hrs</p>
         </div>
-        <!-- <img :src="getImgUrl(title)" alt=""> -->
     </section>
 </template>
 
 <script>
 export default {
     name: "Card",
-    props: ["title", "hours", "lastWeek", "timeframe"],
+    props: ["title", "hours", "lastWeek", "userdata"],
     computed: {
         cardBackground() {
             const vars = {
@@ -32,7 +31,6 @@ export default {
     },
     methods: {
         getImgUrl (t) {
-            console.log(t)
             return `img/icon-${t.toLowerCase().replace(' ', '-')}.svg`
         },
     }

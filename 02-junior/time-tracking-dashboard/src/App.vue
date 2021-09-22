@@ -1,11 +1,11 @@
 <template>
-  <profile-card username="jeremy robson"/>
+  <profile-card username="jeremy robson" @timeframe-change="updateTimeframe"/>
   <main>
     <card 
-      v-for="user in userProfile" 
-      :key="user.title" 
+      v-for="(user, index) in userProfile" 
       v-bind:title="user.title" 
-      v-bind:timeframe="this.currentTimeframe" 
+      :key="user.title" 
+      v-bind:userdata="userProfile[index].timeframes[this.currentTimeframe]"
     />
   </main>
 </template>
@@ -19,12 +19,17 @@ export default {
   name: 'App',
   data () {
     return  {
-      currentTimeframe: "Weekly",
+      currentTimeframe: "weekly",
       userProfile: UserData
     }
   },
   components: {
     ProfileCard, Card 
+  },
+  methods: {
+    updateTimeframe (newTime) {
+      this.currentTimeframe = newTime;
+    }
   }
 }
 </script>
