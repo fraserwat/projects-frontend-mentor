@@ -1,0 +1,274 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.hero {
+  overflow: hidden;
+}
+
+.hero > img:first-of-type {
+  width: 8rem;
+  margin: 3rem auto;
+}
+
+.hero > img:last-of-type {
+  width: 100vw;
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  margin-bottom: 1.5rem;
+}
+
+.button-div {
+  margin: 1.5rem;
+}
+
+.button-div button:first-of-type {
+  margin-bottom: 1rem;
+}
+
+.one {
+  padding-top: 4rem;
+}
+
+.image__container {
+  width: 100%;
+  padding-top: 1.5rem;
+  margin-bottom: 3rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (min-width: 650px) {
+  .image__container {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.image__container > img {
+  width: 100%;
+  max-width: 16rem;
+  border-radius: 0.5rem;
+}
+
+.one > span {
+  color: #4d96a9;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.two {
+  background-image: url("../images/mobile/image-footer.jpg");
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(77, 150, 169, 0.8);
+          box-shadow: inset 0 0 0 1000px rgba(77, 150, 169, 0.8);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.two > h2,
+.two > p:not(.number) {
+  color: white;
+}
+
+.two > button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 4rem;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.hero,
+.fade-in {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  margin: auto;
+}
+
+h1 span {
+  display: block;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+.one > h2,
+.two > h2 {
+  padding: 1rem 1.5rem;
+  max-width: 28rem;
+}
+
+p {
+  color: #87879d;
+}
+
+.one > p,
+.two > p {
+  margin: 1.5rem;
+}
+
+button {
+  border-radius: 1000px;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-weight: 900;
+  color: white;
+}
+
+button.cyan {
+  background-color: #4d96a9;
+}
+
+button.cyan span {
+  color: #8fe3f9;
+}
+
+button.purple {
+  background-color: #855fb1;
+}
+
+button.purple span {
+  color: #d9b8ff;
+}
+
+.fade-in {
+  margin-top: 8rem;
+  padding-top: 3rem;
+  position: relative;
+}
+
+p.number {
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.75rem;
+  border-radius: 999px;
+  font-weight: 900;
+  border: rgba(135, 135, 157, 0.25) solid 2px;
+}
+
+.two > p.number {
+  background-color: white;
+}
+
+p.number::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: calc(-5rem - 2px);
+  width: 0;
+  height: 5rem;
+  border: rgba(135, 135, 157, 0.25) solid 1px;
+}
+/*# sourceMappingURL=style.css.map */

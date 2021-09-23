@@ -1,0 +1,26 @@
+@import "variables";
+
+.hero {
+  overflow: hidden;
+}
+
+.hero > img:first-of-type {
+  width: 8rem;
+  margin: 3rem auto;
+}
+.hero > img:last-of-type {
+  width: 100vw;
+  transform: scale(1.25);
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  margin-bottom: 1.5rem;
+}
+
+.button-div {
+  margin: 1.5rem;
+}
+.button-div button:first-of-type {
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,100 @@
+@import "variables";
+@import "reset";
+@import "hero";
+@import "midsection";
+@import "footer";
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.hero,
+.fade-in {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  margin: auto;
+  span {
+    display: block;
+  }
+}
+h2 {
+  // font-size: clamp(2rem, ,2.5rem);
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+.one > h2,
+.two > h2 {
+  padding: 1rem 1.5rem;
+  max-width: 28rem;
+}
+
+p {
+  color: $text-grey;
+}
+.one > p,
+.two > p {
+  margin: 1.5rem;
+}
+button {
+  border-radius: 1000px;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-weight: 900;
+  color: white;
+}
+button.cyan {
+  background-color: $cyan;
+}
+button.cyan span {
+  color: #8fe3f9;
+}
+button.purple {
+  background-color: $purple;
+}
+button.purple span {
+  color: #d9b8ff;
+}
+
+// Numbers at top of sections
+.fade-in {
+  margin-top: 8rem;
+  padding-top: 3rem;
+  position: relative;
+}
+p.number {
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.75rem;
+  border-radius: 999px;
+  font-weight: 900;
+  border: rgba($color: $text-grey, $alpha: 0.25) solid 2px;
+}
+.two > p.number {
+  background-color: white;
+}
+
+p.number::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(-5rem - 2px);
+  width: 0;
+  height: 5rem;
+  border: rgba($color: $text-grey, $alpha: 0.25) solid 1px;
+}

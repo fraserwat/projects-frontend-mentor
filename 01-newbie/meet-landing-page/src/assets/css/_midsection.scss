@@ -1,0 +1,31 @@
+@import "variables";
+
+.one {
+  padding-top: 4rem;
+}
+
+.image__container {
+  width: 100%;
+  padding-top: 1.5rem;
+  margin-bottom: 3rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media screen and (min-width: 650px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.image__container > img {
+  width: 100%;
+  max-width: 16rem;
+  border-radius: 0.5rem;
+}
+
+.one > span {
+  color: $cyan;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
